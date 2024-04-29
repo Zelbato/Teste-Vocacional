@@ -46,11 +46,14 @@ header .logo {
     font-size: 15px;
 }
 
-header span {
+header .gradient {
     font-size: 25px;
     color: #206ab8;
 }
 
+header .teste {
+    color: #206ab8;
+}
 
 header ul {
     flex: 2;
@@ -170,8 +173,151 @@ header .criar:hover {
     }
 }
 
+.main .inicio {
+    background-image: url(Imagens/imagem-teste.jpg);
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px #252525;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.main .inicio-content {
+    padding: 0px 50% 0px 5%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.main h2 {
+    margin-top: 20px;
+    color: #252525;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.main .description {
+
+
+    margin-top: 20%;
+    
+    height: 50vh;
+    width: 100%;
+    background-color: #f3f6f9b0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #252525;
+}
+
+.main .texto {
+    color: #206ab8;
+}
+
+.main span {
+    color: #252525;
+}
+
+.main .texto,span {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main .button {
+    background: #206ab8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 10px #252525;
+
+
+}
+
+.main .button:hover {
+    background: #174a81;
+    box-shadow: 0px 0px 10px #252525;
+    transform: scale(1.05);
+}
+
+.main .button a {
+    text-decoration: none;
+
+    color: #f3f6f9;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+
+.main h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: #252525;
+        font-style: italic;
+}
+
+.main p {
+    padding: 0px 30px;
+    font-size: 18px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #252525;
+}
+
+.main .sobre {
+    padding: 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    
+}
+
+.main .dicas-estudo {
+    background-color: #206ab8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
+    margin-top: 25%;
     width: 100%;
     min-height: 250px;
     background: rgb(27, 27, 27);
