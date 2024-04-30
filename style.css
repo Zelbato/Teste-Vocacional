@@ -28,9 +28,9 @@ header {
     align-items: center;
     position: absolute;
     z-index: 99;
-    box-shadow: 0 5px 100px #000000c5;
-    background: rgb(25, 25, 25);
-    border-bottom: 1px solid rgb(25,25,25);
+    box-shadow: 0 5px 100px #00000000;
+    background: rgba(25, 25, 25, 0);
+    border-bottom: 1px solid rgb(25, 25, 25);
 }
 
 #chk1 {
@@ -174,7 +174,7 @@ header .criar:hover {
 }
 
 .main .inicio {
-    background-image: url(Imagens/imagem-teste.jpg);
+    background-image: url(Imagens/estudante.jpeg);
     background-repeat: no-repeat;
     box-shadow: 0px 0px 20px #252525;
     height: 100vh;
@@ -196,7 +196,7 @@ header .criar:hover {
 
 .main h2 {
     margin-top: 20px;
-    color: #252525;
+    color: #f3f6f9;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -211,10 +211,10 @@ header .criar:hover {
     
     height: 50vh;
     width: 100%;
-    background-color: #f3f6f9b0;
+    background-color: transparent;
     padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px #252525;
+    /* box-shadow: 0px 0px 20px #252525; */
 }
 
 .main .texto {
@@ -222,7 +222,7 @@ header .criar:hover {
 }
 
 .main span {
-    color: #252525;
+    color: #f3f6f9;
 }
 
 .main .texto,span {
@@ -265,24 +265,7 @@ header .criar:hover {
 
 
 
-.main h1 {
-        font-size: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 500;
-        color: #252525;
-        font-style: italic;
-}
 
-.main p {
-    padding: 0px 30px;
-    font-size: 18px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #252525;
-}
 
 .main .sobre {
     padding: 20px 40px;
@@ -290,6 +273,62 @@ header .criar:hover {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+    
+}
+
+.sobre .sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #252525;
+    font-style: italic;
+}
+
+.sobre .paragrafo {
+    width: 600px;
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    margin: 0px 40px 40px;
+    padding: 20px 40px;
+
+    border: 1px solid #206ab8;
+    border-radius: 10px;
+}
+
+.sobre p {
+font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+color: #252525;
+text-align: justify;
+}
+
+.sobre .image-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+    margin-bottom: 40px;
+}
+
+.sobre .image-content img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
     
 }
 
