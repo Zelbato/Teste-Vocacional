@@ -25,8 +25,6 @@ a {
 }
 
 
-
-
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -37,7 +35,7 @@ header {
     position: absolute;
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
-    background: rgba(25, 25, 25, 0);
+    background: rgba(25, 25, 25);
     border-bottom: 1px solid rgb(25, 25, 25);
 }
 
@@ -183,259 +181,8 @@ header .criar:hover {
 
 /*Fim do menu  */
 
-.main .inicio {
-    background-image: url(Imagens/estudante.jpeg);
-    background-repeat: no-repeat;
-    box-shadow: 0px 0px 20px #252525;
-    height: 680px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
 
-}
-
-.inicio .inicio-content {
-    padding: 0px 50% 0px 5%;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.inicio h2 {
-    margin-top: 20px;
-    color: #f3f6f9;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.inicio .description {
-    
-    height: 50vh;
-    width: 100%;
-    background-color:transparent;
-    padding: 10px 20px;
-    border-radius: 10px;
-    /* box-shadow: 0px 0px 20px #252525; */
-}
-
-.inicio .texto {
-    color: #206ab8;
-}
-
-.inicio span {
-    color: #f3f6f9;
-}
-
-.inicio .texto,span {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.inicio .button {
-    background: #206ab8;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    transition: all 0.5s ease;
-    box-shadow: 0px 0px 10px #252525;
-
-
-}
-
-.inicio .button:hover {
-    background: #174a81;
-    box-shadow: 0px 0px 10px #252525;
-    transform: scale(1.05);
-}
-
-.inicio .button a {
-    text-decoration: none;
-
-    color: #f3f6f9;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-
-@media(max-width:800px){
-    .main .inicio {
-        height: 90vh;
-        width: 100%;
-    }
-    .inicio .description {
-        padding: 0px 15px;
-        height: auto;
-        width: 370px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .inicio h2 {
-        font-size: 30px;
-        text-align: justify;
-        margin-bottom: 10px;
-    }
-    .inicio span {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-}
-
-.main .sobre {
-    width: 100%;
-    height: 100vh;
-    padding: 20px 40px;
-
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.sobre .sobre-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.sobre h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: #252525;
-    font-style: italic;
-}
-
-.sobre .paragrafo {
-    width: 700px;
-    height: 300px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    margin: 0px 40px 40px;
-    padding: 20px 40px;
-
-    border: 1px solid #206ab8;
-    border-radius: 25px;
-}
-
-.sobre h3 {
-    color: #252525;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    text-align: center;
-
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 2px #252525;
-}
-
-.sobre p {
-font-size: 18px;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 600;
-color: #252525;
-text-align: justify;
-}
-
-.sobre .image-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    
-    margin-bottom: 40px;
-}
-
-.sobre .image-content img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    
-}
-
-
-@media (max-width:800px ){
-    .main .sobre {
-        height: 90vh;
-        width: 100%;
-
-    }
-    .sobre .sobre-content{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobre .paragrafo {
-        height: auto;
-        width: 350px;
-        padding: 15px 30px;
-
-        border-radius: 25px;
-    }
-
-    .sobre h3 {
-        margin-top: 20px;
-        font-size: 25px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .sobre p {
-        font-size: 18px;
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    .sobre .image-content {
-        margin-bottom: 60px;
-    }
-    
-}
-
-
-.main .dicas-estudo {
-    background-color: #206ab8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 40px;
-}
-
-
-
-
-
-
-
-
+/* Inicio do rodape */
 
 footer {
     margin-top: 25%;
@@ -558,4 +305,68 @@ footer .boxs:nth-child(4) {
         width: auto;
         margin-top: 15px;
     }
+}
+/* fim do rodape */
+
+/* Inicio da estilização do termo de uso    */
+.main .termos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.termos{
+    color: #252525;
+    height: 90vh;
+    width: 100%;
+}
+.sobre .sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #252525;
+    font-style: italic;
+}
+.sobre .paragrafo {
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0px 40px 40px;
+    padding: 20px 40px;
+
+    border: 1px solid #7a7a7a;
+    border-radius: 2px;
+}
+
+.sobre h3 {
+    color: #252525;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+
+    margin-bottom: 30px;
+ 
+}
+
+.sobre p {
+font-size: 17px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+color: #252525;
+text-align: justify;
 }
