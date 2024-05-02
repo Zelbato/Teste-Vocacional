@@ -8,7 +8,6 @@ body {
     height: 100vh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-position: center;
     background: #f3f6f9;
 }
 
@@ -50,7 +49,7 @@ header .logo {
     flex: 1;
     color: #f3f6f9;
     margin-left: 50px;
-    text-transform:none;
+    text-transform: none;
     font-size: 15px;
 }
 
@@ -82,7 +81,7 @@ header ul li a {
     position: relative;
 }
 
-header ul li a::after{
+header ul li a::after {
     content: " ";
     width: 15%;
     height: 2px;
@@ -93,7 +92,7 @@ header ul li a::after{
     transition: 0.5s ease-in-out;
 }
 
-header ul li a:hover::after{
+header ul li a:hover::after {
     width: 100%;
 }
 
@@ -102,40 +101,18 @@ header .menu-mobile {
     display: none;
 }
 
-header .login{
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #f5f5f5;
-}
-
-header .criar {
-    background: #206ab8;
-    border-radius: 5px;
-    margin-left: 10px;
-    border: none;
-    color: #f3f6f9;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    padding: 7px 10px;
-    text-transform:uppercase;
-}
-
-header .criar:hover {
-    box-shadow: rgba(255, 187, 109, 0.498)  0px 0px 15px ;
-    transform:scale(1.1);
-}
-
 @media(max-width:800px) {
 
 
     header {
         background: rgb(25, 25, 25);
-        position: relative;
+        position: fixed;
+        width: 100%;
     }
 
     header ul {
-        position: absolute;/*Mudar a barra*/
+        position: absolute;
+        /*Mudar a barra*/
         top: 100px;
         right: 100%;
         background: rgba(25, 25, 25);
@@ -154,12 +131,12 @@ header .criar:hover {
 
     }
 
-    header .menu-mobile img{
+    header .menu-mobile img {
         margin-top: 12px;
         width: 35px;
         height: 35px;
     }
-    
+
 
     #chk1:checked~ul {
         right: 0;
@@ -186,8 +163,7 @@ header .criar:hover {
 .main .inicio {
     background-image: url(Imagens/estudante.jpeg);
     background-repeat: no-repeat;
-    box-shadow: 0px 0px 20px #252525;
-    height: 680px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -215,10 +191,10 @@ header .criar:hover {
 }
 
 .inicio .description {
-    
+
     height: 50vh;
     width: 100%;
-    background-color:transparent;
+    background-color: transparent;
     padding: 10px 20px;
     border-radius: 10px;
     /* box-shadow: 0px 0px 20px #252525; */
@@ -232,7 +208,8 @@ header .criar:hover {
     color: #f3f6f9;
 }
 
-.inicio .texto,span {
+.inicio .texto,
+span {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -270,11 +247,28 @@ header .criar:hover {
     font-weight: 600;
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
     .main .inicio {
         height: 90vh;
-        width: 100%;
+        width:100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(/Imagens/estudante.jpeg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
     }
+
+    .inicio .inicio-content {
+        padding:20px 0px 40px 0px;
+    
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+    }
+
     .inicio .description {
         padding: 0px 15px;
         height: auto;
@@ -283,11 +277,13 @@ header .criar:hover {
         flex-direction: column;
         justify-content: center;
     }
+
     .inicio h2 {
         font-size: 30px;
         text-align: justify;
         margin-bottom: 10px;
     }
+
     .inicio span {
         font-size: 18px;
         text-align: center;
@@ -297,18 +293,17 @@ header .criar:hover {
 
 }
 
-.main .sobre {
+.sobre {
+    height: 80vh;
     width: 100%;
-    height: 100vh;
-    padding: 20px 40px;
 
     display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
     align-items: center;
     justify-content: center;
-    
+
+    padding: 10px 40px;
 }
+
 
 .sobre .sobre-content {
     display: flex;
@@ -355,11 +350,11 @@ header .criar:hover {
 }
 
 .sobre p {
-font-size: 18px;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 600;
-color: #252525;
-text-align: justify;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #252525;
+    text-align: justify;
 }
 
 .sobre .image-content {
@@ -368,7 +363,7 @@ text-align: justify;
     align-items: center;
     justify-content: center;
 
-    
+
     margin-bottom: 40px;
 }
 
@@ -377,17 +372,18 @@ text-align: justify;
     width: 100%;
     height: auto;
     border-radius: 5px;
-    
+
 }
 
 
-@media (max-width:800px ){
+@media (max-width:800px) {
     .main .sobre {
-        height: 90vh;
+        height: 100vh;
         width: 100%;
 
     }
-    .sobre .sobre-content{
+
+    .sobre .sobre-content {
         display: flex;
         flex-direction: column;
     }
@@ -416,19 +412,151 @@ text-align: justify;
     .sobre .image-content {
         margin-bottom: 60px;
     }
-    
+
 }
 
+/*Cards*/
 
-.main .dicas-estudo {
-    background-color: #206ab8;
+
+
+section.cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 10px 40px;
+    background: #111827;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.cards .card-titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px 40px;
+    text-align: center;
+    margin-bottom:-100px;
+
+    width: 100%;
 }
 
+.cards h1 {
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow:0px 0px 20px #206ab8;
+    color: #f3f6f9;
+    text-align: center;
+}
+
+.cards aside.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: white;
+    border-radius: 8px;
+    max-width: 350px;
+    height: 200px;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.cards aside.card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #111827;
+    
+}
+
+.cards aside.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.cards aside.card button {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #f3f6f9;
+    margin-bottom: 20px;
+    
+    transition: all 0.5;
+}
+
+.cards aside.card button:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.cards aside  button {
+    background: linear-gradient(to right, #206ab8, #174a81);
+}
+
+.cards aside button:hover {
+    background: linear-gradient(to right, #174a81, #111827);
+    transition: all 0.5s;
+}
+
+
+.cards aside {
+    box-shadow: 20px 20px 50px -30px #3e8de2;
+}
+
+
+@media screen and (max-width: 660px) {
+    section.cards {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0px;
+    }
+
+    .cards .card-titulo {
+        width: 100%;
+        height: auto;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .cards h1 {
+        font-size: 35px;
+        
+    }
+
+    .cards aside.card {
+    
+        max-width: auto;
+        height: 180px;
+    
+        padding:10px;
+        margin: 10px;
+        border-radius: 10px;
+        
+    }
+
+
+    section.cards aside.card button {
+        font-size: 70%;
+    }
+}
 
 
 
@@ -512,7 +640,7 @@ footer .boxs:nth-child(4) {
     width: 40px;
     height: 40px;
     text-align: center;
-    
+
     background: transparent;
     color: #f3f6f9;
     border-radius: 5px;
