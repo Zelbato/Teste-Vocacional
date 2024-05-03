@@ -5,10 +5,9 @@
 }
 
 body {
-    height: 100vh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f6f9;
+    background: #111827;
 }
 
 a {
@@ -36,8 +35,10 @@ header {
     position: absolute;
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
-    background: rgba(25, 25, 25, 0);
+    background: rgb(25, 25, 25);
     border-bottom: 1px solid rgb(25, 25, 25);
+    transition: 0.5s;
+
 }
 
 #chk1 {
@@ -158,376 +159,138 @@ header .menu-mobile {
     }
 }
 
-/*Fim do menu  */
+/*Fim do Menu*/
 
-.main .inicio {
-    background-image: url(Imagens/estudante.jpeg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-
-}
-
-.inicio .inicio-content {
-    padding: 0px 50% 0px 5%;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.inicio h2 {
-    margin-top: 20px;
-    color: #f3f6f9;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.inicio .description {
-
-    height: 50vh;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px 20px;
-    border-radius: 10px;
-    /* box-shadow: 0px 0px 20px #252525; */
-}
-
-.inicio .texto {
-    color: #206ab8;
-}
-
-.inicio span {
-    color: #f3f6f9;
-}
-
-.inicio .texto,
-span {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.inicio .button {
-    background: #206ab8;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    transition: all 0.5s ease;
-    box-shadow: 0px 0px 10px #252525;
-
-
-}
-
-.inicio .button:hover {
-    background: #174a81;
-    box-shadow: 0px 0px 10px #252525;
-    transform: scale(1.05);
-}
-
-.inicio .button a {
-    text-decoration: none;
-
-    color: #f3f6f9;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-
-@media(max-width:800px) {
-    .main .inicio {
-        height: 90vh;
-        width:100% ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url(/Imagens/estudante.jpeg) no-repeat center;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .inicio .inicio-content {
-        padding:20px 0px 40px 0px;
-    
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
-        width: auto;
-    }
-
-    .inicio .description {
-        padding: 0px 15px;
-        height: auto;
-        width: 370px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .inicio h2 {
-        font-size: 30px;
-        text-align: justify;
-        margin-bottom: 10px;
-    }
-
-    .inicio span {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-}
-
-.sobre {
-    height: 80vh;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 40px;
-}
-
-
-.sobre .sobre-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.sobre h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: #252525;
-    font-style: italic;
-}
-
-.sobre .paragrafo {
-    width: 700px;
-    height: 300px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    margin: 0px 40px 40px;
-    padding: 20px 40px;
-
-    border: 1px solid #206ab8;
-    border-radius: 25px;
-}
-
-.sobre h3 {
-    color: #252525;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    text-align: center;
-
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 2px #252525;
-}
-
-.sobre p {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: #252525;
-    text-align: justify;
-}
-
-.sobre .image-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-    margin-bottom: 40px;
-}
-
-.sobre .image-content img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-
-}
-
-
-@media (max-width:800px) {
-    .main .sobre {
-        height: 100vh;
-        width: 100%;
-
-    }
-
-    .sobre .sobre-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobre .paragrafo {
-        height: auto;
-        width: 350px;
-        padding: 15px 30px;
-
-        border-radius: 25px;
-    }
-
-    .sobre h3 {
-        margin-top: 20px;
-        font-size: 25px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .sobre p {
-        font-size: 18px;
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    .sobre .image-content {
-        margin-bottom: 60px;
-    }
-
-}
-
-/*Cards*/
-
-
-
-section.cards {
+section.cards-user {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 
-    margin: 0 auto;
-    padding: 10px 40px;
+    padding: 40px;
     background: #111827;
 
-    height: 100vh;
+    height: 120vh;
     width: 100%;
 }
 
-.cards .card-titulo {
+/* .cards-user .card-titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom:-100px;
+    margin-bottom:-15%;
 
     width: 100%;
-}
+} */
 
-.cards h1 {
-    font-size: 50px;
+/* .cards-user h1 {
+    font-size: 30px;
     font-weight: 600;
     text-shadow:0px 0px 20px #206ab8;
     color: #f3f6f9;
     text-align: center;
-    margin-bottom: 5%;
-}
+    margin-bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+} */
 
-.cards aside.card {
+.cards-user aside.card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 
-    background: white;
-    border-radius: 8px;
-    max-width: 350px;
-    height: 200px;
+    background: #f3f6f9;
+    border-radius: 5px;
+    width: 600px;
+    height: 450px;
 
-    padding: 20px;
-    margin: 10px 1px 20px 10px;
+    padding: 10px;
+    margin: 0 auto;
+    /* margin: 10px 1px 20px 10px; */
+
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.cards-user aside.card:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 10px 70px -30px #007bff;   
 }
 
 
-.cards aside.card h3 {
-    font-size: 20px;
+.cards-user aside.card h3 {
+    font-size: 25px;
+    border-bottom: 1px solid #aaaaaa;
     margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: auto;
+    width: 100%;
     font-weight: 600;
     color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards-user aside.card span {
+    font-weight: 600;
+    text-align: justify;
     
+    max-width: 550px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    padding: 0px 20px;
 }
 
-.cards aside.card span {
+.cards-user aside.card p {
     font-weight: 300;
-    max-width: 240px;
-    font-size: 15px;
-    margin-bottom: 10px;
 }
 
 
-.cards aside.card button {
-    padding: 10px 15px;
+.cards-user aside.card button {
+
+
+    background: linear-gradient(to right, #111827, #174a81);
+    padding: 10px 25px;
     text-transform: uppercase;
     border-radius: 5px;
     border: 0;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: #f3f6f9;
     margin-bottom: 20px;
+    margin: 10px 30%;
     
-    transition: all 0.5;
-}
-
-.cards aside.card button:hover {
-    transform: scale(1.05);
     transition: all 0.5s;
 }
 
-.cards aside  button {
-    background: linear-gradient(to right, #206ab8, #174a81);
+.cards-user aside.card button:hover {
+    transition: all 0.5s;
 }
 
-.cards aside button:hover {
+
+
+.cards-user aside button:hover {
     background: linear-gradient(to right, #174a81, #111827);
     transition: all 0.5s;
 }
 
 
-.cards aside {
+.cards-user aside {
     box-shadow: 20px 20px 50px -30px #3e8de2;
 }
 
 
 @media screen and (max-width: 660px) {
-    section.cards {
+    section.cards-user {
         width: 100%;
         flex-direction: column;
         height: auto;
         padding: 40px 0px;
     }
 
-    .cards .card-titulo {
+    .cards-user .card-titulo {
         width: 100%;
         height: auto;
         padding: 0px 20px;
@@ -537,12 +300,12 @@ section.cards {
         margin-bottom: 20px;
     }
     
-    .cards h1 {
+    .cards-user h1 {
         font-size: 35px;
         
     }
 
-    .cards aside.card {
+    .cards-user aside.card {
     
         max-width: auto;
         height: 180px;
@@ -554,20 +317,15 @@ section.cards {
     }
 
 
-    section.cards aside.card button {
+    section.cards-user aside.card button {
         font-size: 70%;
     }
 }
 
 
 
-
-
-
-
-
 footer {
-    margin-top: 25px;
+    margin-top: 5px;
     width: 100%;
     min-height: 250px;
     background: rgb(27, 27, 27);
