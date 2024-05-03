@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -314,18 +315,21 @@ footer .boxs:nth-child(4) {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
 }
 .termos{
     color: #252525;
-    height: 90vh;
+    height: 65vh;
     width: 100%;
+
 }
 .sobre .sobre-content {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 150vh;
+    padding: 10px;
 }
 
 .sobre h1 {
@@ -336,6 +340,7 @@ footer .boxs:nth-child(4) {
     font-weight: 600;
     color: #252525;
     font-style: italic;
+
 }
 .sobre .paragrafo {
     width: 1200px;
@@ -354,9 +359,9 @@ footer .boxs:nth-child(4) {
 
 .sobre h3 {
     color: #252525;
-    font-size: 40px;
+    font-size: 27px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-weight: 300;
     text-align: center;
 
     margin-bottom: 30px;
@@ -364,9 +369,23 @@ footer .boxs:nth-child(4) {
 }
 
 .sobre p {
-font-size: 17px;
+font-size: 16px;
 font-family: Arial, Helvetica, sans-serif;
-font-weight: 600;
+font-weight: 200;
 color: #252525;
 text-align: justify;
 }
+
+.uso li{
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    flex-direction: column;
+}
+@media(max-width:1000px) {
+   
+}
+
+
