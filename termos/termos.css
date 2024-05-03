@@ -186,7 +186,7 @@ header .criar:hover {
 /* Inicio do rodape */
 
 footer {
-    margin-top: 25%;
+    margin-top: 10%;
     width: 100%;
     min-height: 250px;
     background: rgb(27, 27, 27);
@@ -234,7 +234,7 @@ footer .boxs:nth-child(4) {
 
 .footer {
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -244,7 +244,7 @@ footer .boxs:nth-child(4) {
 
 .footer h2 {
     color: #f3f6f9;
-    font-size: 40px;
+    font-size:20px;
 }
 
 
@@ -257,8 +257,8 @@ footer .boxs:nth-child(4) {
     justify-content: center;
     align-items: center;
 
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 10px;
     text-align: center;
     
     background: transparent;
@@ -273,7 +273,7 @@ footer .boxs:nth-child(4) {
 
 .sociais .social a {
     color: #f3f6f9;
-    font-size: 20px;
+    font-size: 15px;
     transition: 0.5s;
 }
 
@@ -309,27 +309,111 @@ footer .boxs:nth-child(4) {
 }
 /* fim do rodape */
 
+
+
 /* Inicio da estilização do termo de uso    */
 .main .termos {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-   
-}
-.termos{
-    color: #252525;
-    height: 65vh;
     width: 100%;
+    height: 100%;
+    padding: 15% 40px 10px 40px;
+}
 
+.termos {
+    width: 100%;
+    height: 100%;
+}
+
+.termos .termos-titulo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.termos .termos-uso {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+    margin: 20px 0px;
+
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+
+.termos .termos-paragrafo {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.termos .termos-paragrafo  p {
+    margin: 10px 0px;
+}
+
+
+
+@media (max-width: 800px) {
+    .main .termos {
+        width: 100%;
+        height: 100%;
+        padding: 40px 20px;
+        margin: 10px 0px;
+        
+    }
+
+    .termos .termos-titulo  {
+        font-size: 15px;
+    }
+
+    .termos .termos-uso  {
+        padding: 10px 5px;
+
+        border: none;
+    }
+
+    .termos .termos-paragrafo {
+        padding: 10px 0;
+        }
+
+    .termos .termos-paragrafo  p {
+        padding: 10px 5px;
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .termos ul {
+        padding: 10px 5px;
+        font-size: 15px;
+        list-style: none;
+    }
+}
+
+
+
+
+/* }
+.termos{
+
+    width: 100%;
+    height: 50vh;
+    padding: 20px 40px;
 }
 .sobre .sobre-content {
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 150vh;
-    padding: 10px;
+    flex-direction: column;
 }
 
 .sobre h1 {
@@ -388,4 +472,4 @@ text-align: justify;
    
 }
 
-
+ */
