@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +9,12 @@ body {
     height: 100vh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
     background: #f3f6f9;
 }
 
 a {
-    color: #000000;
+    color: #f3f6f9;
     text-decoration: none;
 }
 
@@ -22,6 +24,7 @@ a {
         flex-direction: column;
     }
 }
+
 
 /*Inicio do Menu*/
 header {
@@ -33,7 +36,7 @@ header {
     position: absolute;
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
-    background: rgb(255, 255, 255);
+    background: rgba(25, 25, 25);
     border-bottom: 1px solid rgb(25, 25, 25);
 }
 
@@ -44,7 +47,7 @@ header {
 
 header .logo {
     flex: 1;
-    color: #000000;
+    color: #f3f6f9;
     margin-left: 50px;
     text-transform:none;
     font-size: 15px;
@@ -71,7 +74,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #f3f6f9;
     font-weight: 500;
     text-transform: capitalize;
     padding: 5px 7px;
@@ -126,7 +129,7 @@ header .criar:hover {
 
 
     header {
-        background: rgb(255, 255, 255);
+        background: rgb(25, 25, 25);
         position: relative;
     }
 
@@ -134,7 +137,7 @@ header .criar:hover {
         position: absolute;/*Mudar a barra*/
         top: 100px;
         right: 100%;
-        background: rgb(255, 255, 255);
+        background: rgba(25, 25, 25);
         height: calc(100vh - 100px);
         width: 100%;
         flex-direction: column;
@@ -180,416 +183,10 @@ header .criar:hover {
 /*Fim do menu  */
 
 
-
-
-
-.main .inicio {
-    background-image: url(Imagens/estudante.jpeg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-
-}
-
-.inicio .inicio-content {
-    padding: 0px 50% 0px 5%;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.inicio h2 {
-    margin-top: 20px;
-    color: #f3f6f9;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.inicio .description {
-
-    height: 50vh;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px 20px;
-    border-radius: 10px;
-    /* box-shadow: 0px 0px 20px #252525; */
-}
-
-.inicio .texto {
-    color: #206ab8;
-}
-
-.inicio span {
-    color: #f3f6f9;
-}
-
-.inicio .texto,
-span {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.inicio .button {
-    background: #206ab8;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    transition: all 0.5s ease;
-    box-shadow: 0px 0px 10px #252525;
-
-
-}
-
-.inicio .button:hover {
-    background: #174a81;
-    box-shadow: 0px 0px 10px #252525;
-    transform: scale(1.05);
-}
-
-.inicio .button a {
-    text-decoration: none;
-
-    color: #f3f6f9;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-
-@media(max-width:800px) {
-    .main .inicio {
-        height: 90vh;
-        width:100% ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url(/Imagens/estudante.jpeg) no-repeat center;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .inicio .inicio-content {
-        padding:20px 0px 40px 0px;
-    
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
-        width: auto;
-    }
-
-    .inicio .description {
-        padding: 0px 15px;
-        height: auto;
-        width: 370px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .inicio h2 {
-        font-size: 30px;
-        text-align: justify;
-        margin-bottom: 10px;
-    }
-
-    .inicio span {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-}
-
-.sobre {
-    height: 80vh;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 40px;
-}
-
-
-.sobre .sobre-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.sobre h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: #252525;
-    font-style: italic;
-}
-
-.sobre .paragrafo {
-    width: 700px;
-    height: 300px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    margin: 0px 40px 40px;
-    padding: 20px 40px;
-
-    border: 1px solid #206ab8;
-    border-radius: 25px;
-}
-
-.sobre h3 {
-    color: #252525;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    text-align: center;
-
-    margin-bottom: 30px;
-    text-shadow: 0px 0px 2px #252525;
-}
-
-.sobre p {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: #252525;
-    text-align: justify;
-}
-
-.sobre .image-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-    margin-bottom: 40px;
-}
-
-.sobre .image-content img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-
-}
-
-
-@media (max-width:800px) {
-    .main .sobre {
-        height: 100vh;
-        width: 100%;
-
-    }
-
-    .sobre .sobre-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobre .paragrafo {
-        height: auto;
-        width: 350px;
-        padding: 15px 30px;
-
-        border-radius: 25px;
-    }
-
-    .sobre h3 {
-        margin-top: 20px;
-        font-size: 25px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .sobre p {
-        font-size: 18px;
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    .sobre .image-content {
-        margin-bottom: 60px;
-    }
-
-}
-
-/*Cards*/
-
-
-
-section.cards {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    margin: 0 auto;
-    padding: 10px 40px;
-    background: #111827;
-
-    height: 100vh;
-    width: 100%;
-}
-
-.cards .card-titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom:-100px;
-
-    width: 100%;
-}
-
-.cards h1 {
-    font-size: 50px;
-    font-weight: 600;
-    text-shadow:0px 0px 20px #206ab8;
-    color: #f3f6f9;
-    text-align: center;
-}
-
-.cards aside.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    background: white;
-    border-radius: 8px;
-    max-width: 350px;
-    height: 200px;
-
-    padding: 10px;
-    margin: 10px;
-}
-
-
-.cards aside.card h3 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #111827;
-    
-}
-
-.cards aside.card span {
-    font-weight: 300;
-    max-width: 240px;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-
-.cards aside.card button {
-    padding: 10px 15px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
-    color: #f3f6f9;
-    margin-bottom: 20px;
-    
-    transition: all 0.5;
-}
-
-.cards aside.card button:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
-}
-
-.cards aside  button {
-    background: linear-gradient(to right, #206ab8, #174a81);
-}
-
-.cards aside button:hover {
-    background: linear-gradient(to right, #174a81, #111827);
-    transition: all 0.5s;
-}
-
-
-.cards aside {
-    box-shadow: 20px 20px 50px -30px #3e8de2;
-}
-
-
-@media screen and (max-width: 660px) {
-    section.cards {
-        width: 100%;
-        flex-direction: column;
-        height: auto;
-        padding: 40px 0px;
-    }
-
-    .cards .card-titulo {
-        width: 100%;
-        height: auto;
-        padding: 0px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    
-    .cards h1 {
-        font-size: 35px;
-        
-    }
-
-    .cards aside.card {
-    
-        max-width: auto;
-        height: 180px;
-    
-        padding:10px;
-        margin: 10px;
-        border-radius: 10px;
-        
-    }
-
-
-    section.cards aside.card button {
-        font-size: 70%;
-    }
-}
-
-
-
-
-
-
-
+/* Inicio do rodape */
 
 footer {
-    margin-top: 25%;
+    margin-top: 10%;
     width: 100%;
     min-height: 250px;
     background: rgb(27, 27, 27);
@@ -637,7 +234,7 @@ footer .boxs:nth-child(4) {
 
 .footer {
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -647,7 +244,7 @@ footer .boxs:nth-child(4) {
 
 .footer h2 {
     color: #f3f6f9;
-    font-size: 40px;
+    font-size:20px;
 }
 
 
@@ -660,10 +257,10 @@ footer .boxs:nth-child(4) {
     justify-content: center;
     align-items: center;
 
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 10px;
     text-align: center;
-
+    
     background: transparent;
     color: #f3f6f9;
     border-radius: 5px;
@@ -676,7 +273,7 @@ footer .boxs:nth-child(4) {
 
 .sociais .social a {
     color: #f3f6f9;
-    font-size: 20px;
+    font-size: 15px;
     transition: 0.5s;
 }
 
@@ -710,3 +307,165 @@ footer .boxs:nth-child(4) {
         margin-top: 15px;
     }
 }
+/* fim do rodape */
+
+
+
+/* Inicio da estilização do termo de uso    */
+.main .termos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15% 40px 10px 40px;
+}
+
+.termos {
+    width: 100%;
+    height: 100%;
+}
+
+.termos .termos-titulo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.termos .termos-uso {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+    margin: 20px 0px;
+
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+
+.termos .termos-paragrafo {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.termos .termos-paragrafo  p {
+    margin: 10px 0px;
+}
+
+
+
+@media (max-width: 800px) {
+    .main .termos {
+        width: 100%;
+        height: 100%;
+        padding: 40px 20px;
+        margin: 10px 0px;
+        
+    }
+
+    .termos .termos-titulo  {
+        font-size: 15px;
+    }
+
+    .termos .termos-uso  {
+        padding: 10px 5px;
+
+        border: none;
+    }
+
+    .termos .termos-paragrafo {
+        padding: 10px 0;
+        }
+
+    .termos .termos-paragrafo  p {
+        padding: 10px 5px;
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .termos ul {
+        padding: 10px 5px;
+        font-size: 15px;
+        list-style: none;
+    }
+}
+
+
+.termos{
+
+    width: 100%;
+    height: 50vh;
+    padding: 20px 40px;
+}
+.sobre .sobre-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #252525;
+    font-style: italic;
+
+}
+.sobre .paragrafo {
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0px 40px 40px;
+    padding: 20px 40px;
+
+    border: 1px solid #7a7a7a;
+    border-radius: 2px;
+}
+
+.sobre h3 {
+    color: #252525;
+    font-size: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-align: center;
+
+    margin-bottom: 30px;
+ 
+}
+
+.sobre p {
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 200;
+color: #252525;
+text-align: justify;
+}
+
+.uso li{
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    flex-direction: column;
+}
+@media(max-width:1000px) {
+   
+}
+
