@@ -429,7 +429,7 @@ section.cards {
     padding: 10px 40px;
     background: #111827;
 
-    height: 100vh;
+    height: 150vh;
     width: 100%;
 }
 
@@ -479,7 +479,7 @@ section.cards {
 
 .cards aside.card span {
     font-weight: 300;
-    max-width: 240px;
+    max-width: 300px;
     font-size: 15px;
     margin-bottom: 10px;
 }
