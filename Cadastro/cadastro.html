@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -19,127 +19,85 @@
     <!--Google Fonts-->
     <title>Teste Vocacional</title>
 </head>
+
 <body>
-    <!--Menu do site-->
-    <!-- <header class="header">
 
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="Imagens/cardapio.png" alt="">
-            </label>
-        </div>
+    <main class="main">
+        <article class="container">
+            <section class="form-image">
+                <img src="/Imagens/pessoas2.svg" alt="image">
+            </section>
 
-        <input type="checkbox" name="" id="chk1">
+            <section class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <div class="login-button">
+                            <button> <a href="#">Entrar</a> </button>
+                        </div>
+                    </div>
 
-        <div class="logo">
-            <h1><a href="/Teste-Vocacional/index.html">Teste <span class="gradient">Vocacional</span>.</a></h1>
-        </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                        </div>
 
-        <ul>
-            <li><a id="#home" href="index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="/Teste-Vocacional/Vocacional/Users/users.html" id="destaque"><span class="teste">Teste Vocacional</span></a></li>
-            <li><a id="#facul" href="#" id="eventos">Faculdades</a></li>
+                        <div class="input-box">
+                            <label for="lastname">Sobrenome</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        </div>
 
-            <a href="Cadastro/cadastro.html">
-                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img src="/Imagens/user.png" alt="image"> Cadastro</button>
-                </button>
-            </a>
-        </ul>
-    </header> -->
-
-<!--Inicio do Login e Cadastro-->
-
-
-<main class="main">
-
-    <section class="cadastro">
-
-        <aside class="container">
-            <div class="content first-content">
-                <div class="first-column">
-                    <h2 class="title title-primary">Bem-vindo de volta!</h2>
-                    <p class="description description-primary">Para manter-se conectado conosco</p>
-                    <p class="description description-primary">Faça o login com suas informações pessoais</p>
-                    <button id="signin" class="btn btn-primary">ENTRAR</button>
-                </div>    
-                <div class="second-column">
-                    <h2 class="title title-second">Criar uma conta</h2>
-
-                    <p class="description description-second">Use seu e-mail para se cadastrar:</p>
-                    <form class="form">
-                        <label class="label-input" for="">
-                            <i class="far fa-user icon-modify"></i>
-                            <input type="text" placeholder="Name">
-                        </label>
                         
-                        <label class="label-input" for="">
-                            <i class="far fa-envelope icon-modify"></i>
-                            <input type="email" placeholder="Email">
-                        </label>
+                        <div class="input-box">
+                            <label for="number">Telefone</label>
+                            <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        </div>
                         
-                        <label class="label-input" for="">
-                            <i class="fas fa-lock icon-modify"></i>
-                            <input type="password" placeholder="Password">
-                        </label>
+                        <div class="input-box">
+                            <label for="date">Data de Nascimento</label>
+                            <input id="date" type="date" name="date" placeholder="Digite seu data de nascimento" required>
+                        </div>
                         
-                        
-                        <button class="btn btn-second">Cadastrar</button>        
-                    </form>
-                </div><!-- second column -->
-            </div><!-- first content -->
-        </aside>
-    </section>
-</main>
- 
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                        </div>
 
- 
-    <!-- <div class="content second-content">
-        <div class="first-column">
-            <h2 class="title title-primary">hello, friend!</h2>
-            <p class="description description-primary">Enter your personal details</p>
-            <p class="description description-primary">and start journey with us</p>
-            <button id="signup" class="btn btn-primary">INSCREVER-SE</button>
-        </div>
-        <div class="second-column">
-            <h2 class="title title-second">sign in to developer</h2>
-            <div class="social-media">
-                <ul class="list-social-media">
-                    <a class="link-social-media" href="#">
-                        <li class="item-social-media">
-                            <i class="fab fa-facebook-f"></i>
-                        </li>
-                    </a>
-                    <a class="link-social-media" href="#">
-                        <li class="item-social-media">
-                            <i class="fab fa-google-plus-g"></i>
-                        </li>
-                    </a>
-                    <a class="link-social-media" href="#">
-                        <li class="item-social-media">
-                            <i class="fab fa-linkedin-in"></i>
-                        </li>
-                    </a>
-                </ul>
-            </div><
-            <p class="description description-second">or use your email account:</p>
-            <form class="form">
-            
-                <label class="label-input" for="">
-                    <i class="far fa-envelope icon-modify"></i>
-                    <input type="email" placeholder="Email">
-                </label>
-            
-                <label class="label-input" for="">
-                    <i class="fas fa-lock icon-modify"></i>
-                    <input type="password" placeholder="Password">
-                </label>
-            
-                <a class="password" href="#">forgot your password?</a>
-                <button class="btn btn-second">sign in</button>
-            </form>
-        </div><!-- second column -->
-    </div><!-- second-content -->
-</div> -->
-<script src="js/app.js"></script>
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        </div>
+                    </div>
+
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                            <h6>Você Trabalha</h6>
+                        </div>
+
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input type="radio" id="sim" name="gender">
+                                <label for="sim">Sim</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="não" name="gender">
+                                <label for="não">Não</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="continue-button">
+                        <button><a href="#">Continuar</a></button>
+                    </aside>
+                </form>
+            </section>
+        </article>
+    </main>
+
 </body>
+
 </html>
