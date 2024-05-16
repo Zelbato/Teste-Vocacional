@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.main .container {
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 10px 30px 30px #0000001c;
+    border-radius: 8px;
+
+}
+
+.main .form {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fcfcfc;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.main .form-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.main .form-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.main .form-header p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align:justify;
+}
+
+.main .form-header h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #206ab8;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.main .login-button {
+    display: flex;
+    align-items: center;
+}
+
+.main .login-button button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #206ab8;
+    transition: all .5s;
+}
+
+.main .login-button button a {
+    font-weight: 600;
+}
+
+.main .login-button button:hover {
+    background-color: #174a81;
+    box-shadow: 0px 0px 10px #111827;
+    transform: scale(1.05);
+}
+
+.main .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.main .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.main .input-box input {
+    margin: 10px 0 0px;
+    padding: 13px 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.main .input-box input:hover {
+    box-shadow: 1px 1px 6px #111827;
+    transition: all .5s;
+    background: #f5f5f5;
+}
+
+.main .input-box input:focus-visible {
+    outline: 1px solid #206ab8;
+}
+
+.main .input-box label,
+.main .gender-title h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.main .input-box::placeholder {
+    color: #000000be;
+}
+
+.main .recuperar-senha a{
+    font-size: 14px;
+    color: #0e0e0e;
+}
+
+.main .recuperar-senha a:hover {
+    color: #206ab8;
+}
+
+.main .continue-button button {
+    width: 100%;
+    margin-top: 10px;
+    background: #206ab8;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main .continue-button button:hover {
+    background: #174a81;
+    color: #f3f6f9;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #111827;
+}
+
+.main .continue-button button a {
+    text-decoration: none;
+    color: #f3f6f9;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .main .container {
+        width: 50%;
+    }
+
+    .main .form {
+        width: 100%;
+    }
+
+    .main .input-box input {
+        margin: 0px 10px;
+    }
+
+    .main .input-group .recuperar-senha a{
+        padding: 0px 45px;
+    }
+
+
+}
+
+@media screen and (max-width: 1064px) {
+
+    .main {
+        height: auto;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main .container {
+        width: auto;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .mian .input-group {
+        flex-direction: column;
+
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 100%;
+    }
+
+    .main .gender-inputs {
+        margin: 20px 0px;
+    }
+
+    .main .gender-group {
+        flex-direction: column;
+    }
+
+    .main .gender-input {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main .form-image {
+        display: none;
+    }
+
+
+    .main .container {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .main .form {
+        background: none;
+    }
+
+    .main .form-header h1 {
+        font-size: 30px;
+    }
+
+    .main .input-box input {
+        margin: 10px 0;
+        padding: 8px 25px;
+        box-shadow: none;
+        border-radius: 0px;
+        border-bottom: 0.5px solid #111827;
+        transition: all 0.3s;
+    }
+
+    .main .input-box input:hover {
+        border-radius: 5px;
+        padding: 10px 25px;
+        background: transparent;
+    }
+
+    .main .input-box input:focus-visible {
+        border: none;
+        outline: none;
+    }
+
+    .main .input-group .recuperar-senha a{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+}
