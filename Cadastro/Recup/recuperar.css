@@ -97,8 +97,7 @@ body {
 
 .main .input-box input {
     margin: 10px 0 0px;
-    padding: 13px 50px;
-    align-items:center ;
+    padding: 13px 100%;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
@@ -220,6 +219,11 @@ body {
 
 @media screen and (max-width: 550px) {
 
+    .main {
+        padding: 20% 0;
+
+    }
+
     .main .form-image {
         display: none;
     }
@@ -239,18 +243,23 @@ body {
         font-size: 30px;
     }
 
+    .main .input-box {
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+
     .main .input-box input {
+        font-size: 16px;
+
         margin: 10px 0;
-        padding: 8px 25px;
-        box-shadow: none;
-        border-radius: 0px;
-        border-bottom: 0.5px solid #111827;
+        width: auto;
         transition: all 0.3s;
+        border-radius: 5px;
     }
 
     .main .input-box input:hover {
         border-radius: 5px;
-        padding: 10px 25px;
+
         background: transparent;
     }
 
