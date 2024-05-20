@@ -52,11 +52,11 @@ body {
 }
 
 .main .form-header h1 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     position: relative;
     color: #111827;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .main .form-header p {
@@ -82,26 +82,6 @@ body {
     align-items: center;
 }
 
-.main .login-button button {
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #206ab8;
-    transition: all .5s;
-}
-
-.main .login-button button a {
-    font-weight: 600;
-}
-
-.main .login-button button:hover {
-    background-color: #174a81;
-    box-shadow: 0px 0px 10px #111827;
-    transform: scale(1.05);
-}
-
 .main .input-group {
     display: flex;
     flex-wrap: wrap;
@@ -117,7 +97,8 @@ body {
 
 .main .input-box input {
     margin: 10px 0 0px;
-    padding: 13px 100%;
+    padding: 13px 50px;
+    align-items:center ;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
