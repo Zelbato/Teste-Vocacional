@@ -84,8 +84,8 @@ body {
 
 .main .input-group {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content:baseline;
     padding: 20px 0;
 }
 
@@ -96,8 +96,10 @@ body {
 }
 
 .main .input-box input {
+    text-align: center;
+    border: 1px solid #d1d5db;
     margin: 10px 0 0px;
-    padding: 13px 100%;
+    padding: 13px 85px;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
@@ -157,6 +159,18 @@ body {
     color: #f3f6f9;
     font-size: 18px;
     font-weight: 600;
+}
+
+.voltar {
+    margin-top: 10px;
+    display: none;
+}
+
+.voltar button {
+    width: 100%;
+    background: #206ab8;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -274,5 +288,41 @@ body {
         align-items: center;
         justify-content: end;
         flex-direction: column;
+    }
+
+    .voltar {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+
+        padding: 40px 20px;
+    }
+
+    .voltar .voltar-content {
+        display: flex;
+        align-items: end;
+    }
+    
+    .voltar button {
+        width: 50px;
+        height: 50px;
+        border: none;
+        background:#0000001c;
+        box-shadow:0px 0px 10px #f5f5f5;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        transition: all 0.5s;
+    }
+
+    .voltar a {
+        text-decoration: none;
+        
+    }
+
+    .voltar button:hover {
+        background: #0000001c;
+        box-shadow:0px 0px 10px #0e0e0e;
     }
 }
