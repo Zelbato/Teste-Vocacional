@@ -184,7 +184,7 @@ header .menu-mobile {
 /*Fim do menu  */
 
 .main .inicio {
-    background-image: url(Imagens/estudante.jpeg);
+    background-image: url(Src/assets/Imagens/estudante.jpeg);
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
@@ -277,7 +277,7 @@ span {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(/Imagens/estudante.jpeg) no-repeat center;
+        background: url(Src/assets/Imagens/estudante.jpeg) no-repeat center;
         background-size: cover;
         background-attachment: fixed;
     }
@@ -312,6 +312,7 @@ span {
         text-align: center;
         margin-bottom: 10px;
     }
+    
 
 
 }
@@ -503,39 +504,9 @@ section.cards {
 .cards aside.card span {
     font-weight: 300;
     max-width: 300px;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
-
-
-.cards aside.card button {
-    padding: 10px 15px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
-    color: #f3f6f9;
-    margin-bottom: 20px;
-    
-    transition: all 0.5;
-}
-
-.cards aside.card button:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
-}
-
-.cards aside  button {
-    background: linear-gradient(to right, #206ab8, #174a81);
-}
-
-.cards aside button:hover {
-    background: linear-gradient(to right, #174a81, #111827);
-    transition: all 0.5s;
-}
-
 
 .cards aside {
     box-shadow: 20px 20px 50px -30px #3e8de2;
@@ -562,7 +533,11 @@ section.cards {
     
     .cards h1 {
         font-size: 35px;
-        
+    }
+
+    .cards aside.card span {
+        font-weight: 300;
+        font-size: 20px;
     }
 
     .cards aside.card {
