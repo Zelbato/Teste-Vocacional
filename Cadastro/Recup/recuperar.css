@@ -197,15 +197,13 @@ body {
 @media screen and (max-width: 1064px) {
 
     .main {
-        height: auto;
-        width: auto;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
 
     .main .container {
-        width: auto;
+        width: 60%;
         height: auto;
         padding: 20px 10px;
     }
@@ -234,7 +232,7 @@ body {
 @media screen and (max-width: 550px) {
 
     .main {
-        padding: 20% 0;
+        padding: 5% 0 20%;
 
     }
 
@@ -319,6 +317,15 @@ body {
     .voltar a {
         text-decoration: none;
         
+    }
+
+    
+    .voltar a i {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #000000;
+        font-size: 20px;
     }
 
     .voltar button:hover {
