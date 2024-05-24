@@ -97,6 +97,30 @@ header ul li a:hover::after {
     width: 100%;
 }
 
+
+header .cadastro {
+    background: #206ab8;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    padding: 7px 10px;
+    text-transform:uppercase;
+}
+
+header .cadastro img {
+    width: 12px;
+    margin-right: 5px;
+}
+
+header .cadastro:hover {
+    background: #174a81;
+    box-shadow: #111827 0px 0px 15px ;
+    transform:scale(1.1);
+}
+
 header .menu-mobile {
     font-size: 2em;
     display: none;
