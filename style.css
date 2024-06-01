@@ -313,9 +313,8 @@ span {
         margin-bottom: 10px;
     }
     
-
-
 }
+
 
 .sobre {
     height: 80vh;
@@ -335,7 +334,21 @@ span {
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: all 0.5s;
+
+    animation: deslizar 2s ease-in-out infinite alternate;
+    position: relative;
 }
+
+@keyframes deslizar {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
 
 .sobre h1 {
     font-size: 50px;
@@ -370,13 +383,13 @@ span {
     text-align: center;
 
     margin-bottom: 30px;
-    text-shadow: 0px 0px 2px #252525;
+    text-shadow: 0px 0px 1px #252525;
 }
 
 .sobre p {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-weight:300;
     color: #252525;
     text-align: justify;
 }
