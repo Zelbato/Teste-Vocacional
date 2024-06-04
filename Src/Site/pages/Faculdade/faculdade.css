@@ -36,7 +36,7 @@ header {
     position: absolute;
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
-    background: rgba(25, 25, 25);
+    background: rgba(25, 25, 25, 0);
     border-bottom: 1px solid rgb(25, 25, 25);
 }
 
@@ -181,6 +181,66 @@ header .criar:hover {
 }
 
 /*Fim do menu  */
+
+/*Sobre Facul*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+    padding: 0;
+}
+
+.main .sobre {
+        background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 40px 20px;
+}
+
+.main .sobre-facul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+}
+
+.main ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style: none;
+}
+
+.main ul li {
+    display: flex;
+    align-items: center;
+    background:transparent;
+    border: 1px solid #f3f6f9;
+    
+    padding: 10px 40px;
+    margin: 20px 100px;
+    transition: all 0.5s;
+
+}
+
+.main ul li:hover {
+    background-color: #00000033;
+    transform: scale(1.02);
+}
+
+.main ul li a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
 
 
 /* Inicio do rodape */
