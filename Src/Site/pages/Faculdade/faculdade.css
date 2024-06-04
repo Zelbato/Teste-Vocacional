@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +36,7 @@ header {
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
     background: rgba(25, 25, 25, 0);
-    border-bottom: 1px solid rgb(25, 25, 25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.199);
 }
 
 #chk1 {
@@ -49,7 +48,7 @@ header .logo {
     flex: 1;
     color: #f3f6f9;
     margin-left: 50px;
-    text-transform:none;
+    text-transform: none;
     font-size: 15px;
 }
 
@@ -81,7 +80,7 @@ header ul li a {
     position: relative;
 }
 
-header ul li a::after{
+header ul li a::after {
     content: " ";
     width: 15%;
     height: 2px;
@@ -92,7 +91,7 @@ header ul li a::after{
     transition: 0.5s ease-in-out;
 }
 
-header ul li a:hover::after{
+header ul li a:hover::after {
     width: 100%;
 }
 
@@ -101,7 +100,7 @@ header .menu-mobile {
     display: none;
 }
 
-header .login{
+header .login {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -117,11 +116,35 @@ header .criar {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     padding: 7px 10px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 header .criar:hover {
-    box-shadow: rgba(255, 187, 109, 0.498)  0px 0px 15px ;
+    box-shadow: rgba(255, 187, 109, 0.498) 0px 0px 15px;
+    transform: scale(1.1);
+}
+
+
+header .cadastro {
+    background: #206ab8;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    padding: 7px 10px;
+    text-transform:uppercase;
+}
+
+header .cadastro img {
+    width: 12px;
+    margin-right: 5px;
+}
+
+header .cadastro:hover {
+    background: #174a81;
+    box-shadow: #111827 0px 0px 15px ;
     transform:scale(1.1);
 }
 
@@ -134,7 +157,8 @@ header .criar:hover {
     }
 
     header ul {
-        position: absolute;/*Mudar a barra*/
+        position: absolute;
+        /*Mudar a barra*/
         top: 100px;
         right: 100%;
         background: rgba(25, 25, 25);
@@ -153,12 +177,12 @@ header .criar:hover {
 
     }
 
-    header .menu-mobile img{
+    header .menu-mobile img {
         margin-top: 12px;
         width: 35px;
         height: 35px;
     }
-    
+
 
     #chk1:checked~ul {
         right: 0;
@@ -187,28 +211,30 @@ header .criar:hover {
 .main {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+
     width: 100%;
     padding: 0;
 }
 
-.main .sobre {
-        background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        padding: 40px 20px;
+.main .link {
+    background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+    /* filter: brightness(50%);  Deixou escuro */ 
+
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 20px;
 }
 
-.main .sobre-facul {
+.main .link-facul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10% 0;
+    margin: 15% 0 0 0;
 }
 
 .main ul {
@@ -221,9 +247,9 @@ header .criar:hover {
 .main ul li {
     display: flex;
     align-items: center;
-    background:transparent;
+    background: transparent;
     border: 1px solid #f3f6f9;
-    
+
     padding: 10px 40px;
     margin: 20px 100px;
     transition: all 0.5s;
@@ -231,7 +257,7 @@ header .criar:hover {
 }
 
 .main ul li:hover {
-    background-color: #00000033;
+    background-color: #00000058;
     transform: scale(1.02);
 }
 
@@ -241,6 +267,106 @@ header .criar:hover {
     font-weight: 500;
 }
 
+.main h2 {
+    color: #f3f6f9;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 0px 40px;
+    text-align: justify;
+}
+
+.main h2 span {
+    color: #007bff;
+}
+
+/*Texto sobre Faculdade*/
+
+.main .faculdade {
+    height: 100vh;
+    width: 100%;
+    padding: 10% 20px 0px;
+}
+
+.main .sobre-facul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .sobre-facul h1 {
+    font-size: 35px;
+    color: #25252597;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 1100px) {
+    /*Versão Mobile*/
+
+    .main .link {
+        height: 60vh;
+    }
+
+    .main .link-facul {
+        margin: 20% 0 0 0;
+    }
+
+    .main ul li {
+        margin: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .main .link {
+        height: 50vh;
+    }
+
+    .main .link-facul {
+        margin: 15% 0 0 0;
+    }
+
+    .main ul li {
+        margin: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main .link {
+        height: 50vh;
+    }
+
+    .main .link-facul {
+        margin: 25% 0 0 0;
+        flex-direction: column;
+    }
+
+    .main ul li {
+        margin: 20px 5px;
+        padding: 10px;
+
+    }
+
+    .main h2 {
+        padding: 10px;
+    }
+
+    /* Sobre Faculdade*/
+
+    .main .faculdade {
+        flex-direction: column;
+        padding: 10% 40px 0;
+
+    }
+
+    .main .sobre-facul h1 {
+        font-size: 25px;
+    }
+}
 
 
 /* Inicio do rodape */
@@ -304,7 +430,7 @@ footer .boxs:nth-child(4) {
 
 .footer h2 {
     color: #f3f6f9;
-    font-size:20px;
+    font-size: 20px;
 }
 
 
@@ -320,7 +446,7 @@ footer .boxs:nth-child(4) {
     width: 10px;
     height: 10px;
     text-align: center;
-    
+
     background: transparent;
     color: #f3f6f9;
     border-radius: 5px;
@@ -365,8 +491,11 @@ footer .boxs:nth-child(4) {
     .boxs h2 {
         width: auto;
         margin-top: 15px;
+        padding-bottom: 10px;
+
     }
 }
+
 /* fim do rodape */
 
 
@@ -415,7 +544,7 @@ footer .boxs:nth-child(4) {
     padding: 20px 40px;
 }
 
-.termos .termos-paragrafo  p {
+.termos .termos-paragrafo p {
     margin: 10px 0px;
 }
 
@@ -427,14 +556,14 @@ footer .boxs:nth-child(4) {
         height: 100%;
         padding: 40px 20px;
         margin: 10px 0px;
-        
+
     }
 
-    .termos .termos-titulo  {
+    .termos .termos-titulo {
         font-size: 15px;
     }
 
-    .termos .termos-uso  {
+    .termos .termos-uso {
         padding: 10px 5px;
 
         border: none;
@@ -442,9 +571,9 @@ footer .boxs:nth-child(4) {
 
     .termos .termos-paragrafo {
         padding: 10px 0;
-        }
+    }
 
-    .termos .termos-paragrafo  p {
+    .termos .termos-paragrafo p {
         padding: 10px 5px;
         font-size: 15px;
         margin: 10px 0;
@@ -458,12 +587,13 @@ footer .boxs:nth-child(4) {
 }
 
 
-.termos{
+.termos {
 
     width: 100%;
     height: 50vh;
     padding: 20px 40px;
 }
+
 .sobre .sobre-content {
     width: 100%;
     height: auto;
@@ -483,6 +613,7 @@ footer .boxs:nth-child(4) {
     font-style: italic;
 
 }
+
 .sobre .paragrafo {
     width: 1200px;
     height: auto;
@@ -506,18 +637,18 @@ footer .boxs:nth-child(4) {
     text-align: center;
 
     margin-bottom: 30px;
- 
+
 }
 
 .sobre p {
-font-size: 16px;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 200;
-color: #252525;
-text-align: justify;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: #252525;
+    text-align: justify;
 }
 
-.uso li{
+.uso li {
     width: 1200px;
     height: auto;
     align-items: center;
@@ -525,7 +656,5 @@ text-align: justify;
     font-weight: 200;
     flex-direction: column;
 }
-@media(max-width:1000px) {
-   
-}
 
+@media(max-width:1000px) {}
