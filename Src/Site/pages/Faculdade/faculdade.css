@@ -217,8 +217,8 @@ header .cadastro:hover {
 }
 
 .main .link {
-    background-image: url(/Src/assets/Imagens/pessoas-estud.jpeg);
-    /* filter: brightness(50%);  Deixou escuro */ 
+    background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+    filter: brightness(50%);  /*Deixou escuro*/ 
 
     background-repeat: no-repeat;
     height: 70vh;
@@ -275,16 +275,16 @@ header .cadastro:hover {
     text-align: justify;
 }
 
-.main h2 span {
+.main h2 span a {
     color: #007bff;
 }
 
 /*Texto sobre Faculdade*/
 
 .main .faculdade {
-    height: 100vh;
+    height: auto;
     width: 100%;
-    padding: 10% 20px 0px;
+    padding: 5% 20px 0px;
 }
 
 .main .sobre-facul {
@@ -294,12 +294,66 @@ header .cadastro:hover {
     align-items: center;
 }
 
-.main .sobre-facul h1 {
+.main .title-facul h1{
+    padding: 20px 25% 10px 0%; 
     font-size: 35px;
     color: #25252597;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    text-transform: uppercase;
+
+    
+    /* color: #25252597;
+    margin: 10px 0 20px;
+    font-weight: 400;
+    font-size: 1.7rem;
+    padding: 10px 20px 0; */
+}
+
+.main .txt-facul {
+    margin: 1rem 20% 0px 13%;
+
+    color: #333333;
+    display: block;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: -90px;
+    margin-inline-end: 0px; */
+    unicode-bidi: isolate;
+}
+
+.main .txt-facul p {
+    /* padding: 0;
+    color: #636262;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    line-height: 20px; */
+
+    padding: 15px 20px;
+    color: #333;
+    line-height: 1.6em;
+    font-size: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.main .sub-title-facul {
+    margin: 5px 31% 0px 13%;
+    padding: 20px;
+}
+
+.main .sub-title-facul h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #7a7a7a;
+}
+
+.main .sub-title-facul h3 {
+    color: #7a7a7a;
+    font-weight: 100;
+    font-size: 25px;
 }
 
 
@@ -337,7 +391,14 @@ header .cadastro:hover {
 @media screen and (max-width: 550px) {
 
     .main .link {
-        height: 50vh;
+        height: 60vh;
+
+        background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+        /* filter: brightness(50%);  Deixou escuro */ 
+        width: 100%;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 40px 20px;
     }
 
     .main .link-facul {
@@ -363,7 +424,7 @@ header .cadastro:hover {
 
     }
 
-    .main .sobre-facul h1 {
+    .main .title-facul h1 {
         font-size: 25px;
     }
 }
