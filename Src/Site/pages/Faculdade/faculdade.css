@@ -287,6 +287,18 @@ header .cadastro:hover {
     padding: 5% 20px 0px;
 }
 
+.main .bolsas {
+    height: auto;
+    width: 100%;
+    padding: 5% 20px 0px;
+}
+
+.main .cotas {
+    height: auto;
+    width: 100%;
+    padding: 5% 20px 0px;
+}
+
 .main .sobre-descrit {
     display: flex;
     flex-direction: column;
@@ -371,8 +383,65 @@ header .cadastro:hover {
 }
 
 
+/*IMAGE COTA-RACIAL*/
+.main .img-cota {
+    background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+    width: 900px;
+    height: 450px;
+    
+    border-radius: 15px;
+    margin: 40px auto;
+    background-size:cover ;
+    background-position: center;
+
+}
+
+.main .img-faculdade {
+    background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+    width: 900px;
+    height: 450px;
+    
+    border-radius: 15px;
+    margin: 40px auto;
+    background-size:cover ;
+    background-position: center;
+}
+
+.main .img-bolsas {
+    background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+    width: 800px;
+    height: 400px;
+    
+    border-radius: 15px;
+    margin: 40px auto;
+    background-size:cover ;
+    background-position: center;
+}
+
+
 @media screen and (max-width: 1100px) {
     /*Versão Mobile*/
+
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
 
     .main .link {
         height: 70vh;
@@ -388,6 +457,16 @@ header .cadastro:hover {
     }
 
     .main .faculdade {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .bolsas {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .cotas {
         margin: 0 auto;
         padding: 20px;
     }
@@ -408,6 +487,27 @@ header .cadastro:hover {
 }
 
 @media screen and (max-width: 950px) {
+
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
 
     .main .link {
         height: 50vh;
@@ -442,8 +542,30 @@ header .cadastro:hover {
 
 @media screen and (max-width: 550px) {
 
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+    
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
     .main .link {
-        height: 60vh;
+        height: 50vh;
 
         background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
         /* filter: brightness(50%);  Deixou escuro */
@@ -468,7 +590,7 @@ header .cadastro:hover {
         padding: 10px;
     }
 
-    /* Sobre faculdade*/
+    /* SOBRE FACULDADE*/
 
     .main .faculdade {
         flex-direction: column;
@@ -476,7 +598,14 @@ header .cadastro:hover {
 
     }
 
+    /*SOBRE BOLSAS*/
     .main .bolsas {
+        padding: 10% 40px 0;
+        flex-direction: column;
+    }
+
+    /*SOBRE COTAS*/
+    .main .cotas {
         padding: 10% 40px 0;
         flex-direction: column;
     }
