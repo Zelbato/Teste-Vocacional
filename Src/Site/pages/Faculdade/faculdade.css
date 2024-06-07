@@ -36,7 +36,7 @@ header {
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
     background: rgba(25, 25, 25, 0);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.199); */
 }
 
 #chk1 {
@@ -134,7 +134,7 @@ header .cadastro {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     padding: 7px 10px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 header .cadastro img {
@@ -144,8 +144,8 @@ header .cadastro img {
 
 header .cadastro:hover {
     background: #174a81;
-    box-shadow: #111827 0px 0px 15px ;
-    transform:scale(1.1);
+    box-shadow: #111827 0px 0px 15px;
+    transform: scale(1.1);
 }
 
 @media(max-width:800px) {
@@ -206,7 +206,7 @@ header .cadastro:hover {
 
 /*Fim do menu  */
 
-/*Sobre Facul*/
+/*Sobre descrit*/
 
 .main {
     display: flex;
@@ -229,7 +229,7 @@ header .cadastro:hover {
     padding: 40px 20px;
 }
 
-.main .link-facul {
+.main .link-descrit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +279,7 @@ header .cadastro:hover {
     color: #007bff;
 }
 
-/*Texto sobre Faculdade*/
+/*Texto sobre descritdade*/
 
 .main .faculdade {
     height: auto;
@@ -287,21 +287,22 @@ header .cadastro:hover {
     padding: 5% 20px 0px;
 }
 
-.main .sobre-facul {
+.main .sobre-descrit {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main .title-facul h1{
-    padding: 20px 25% 10px 0%; 
+.main .title-descrit h1 {
+    padding: 20px 20% 10px 10%;
+    margin: 20px 0 10px;
     font-size: 35px;
     color: #25252597;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
 
-    
+
     /* color: #25252597;
     margin: 10px 0 20px;
     font-weight: 400;
@@ -309,7 +310,7 @@ header .cadastro:hover {
     padding: 10px 20px 0; */
 }
 
-.main .txt-facul {
+.main .txt-descrit {
     margin: 1rem 20% 0px 13%;
 
     color: #333333;
@@ -321,7 +322,7 @@ header .cadastro:hover {
     unicode-bidi: isolate;
 }
 
-.main .txt-facul p {
+.main .txt-descrit p {
     /* padding: 0;
     color: #636262;
     font-size: 18px;
@@ -339,21 +340,34 @@ header .cadastro:hover {
 
 }
 
-.main .sub-title-facul {
-    margin: 5px 31% 0px 13%;
+.main .txt-descrit strong {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.main .sub-title-descrit {
+    margin: 5px 20% 0px 10%;
     padding: 20px;
 }
 
-.main .sub-title-facul h2 {
+.main .sub-title-descrit h4 {
     font-size: 25px;
     font-weight: 400;
     color: #7a7a7a;
 }
 
-.main .sub-title-facul h3 {
+.main .sub-title-descrit h3 {
     color: #7a7a7a;
     font-weight: 100;
     font-size: 25px;
+}
+
+.main .sub-descrit h3{
+    color: #4a4a4a;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 
@@ -361,30 +375,68 @@ header .cadastro:hover {
     /*Versão Mobile*/
 
     .main .link {
-        height: 60vh;
+        height: 70vh;
     }
 
-    .main .link-facul {
+
+    .main .link-descrit {
         margin: 20% 0 0 0;
     }
 
     .main ul li {
         margin: 20px 50px;
     }
+
+    .main .faculdade {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 35px;
+        padding: 20px 10% 10px 5%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 10% 0px ;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 15% 0px 10%;
+        padding: 20px;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
 
     .main .link {
         height: 50vh;
     }
 
-    .main .link-facul {
+    .main .link-descrit {
         margin: 15% 0 0 0;
     }
 
     .main ul li {
         margin: 20px 10px;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 35px;
+        padding: 20px 15% 10px 10%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 5% 0px ;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 10% 0px 5%;
+        padding: 20px;
+    }
+
+    .main .sub-title-descrit h3 {
+        font-size: 20px;
     }
 }
 
@@ -394,14 +446,14 @@ header .cadastro:hover {
         height: 60vh;
 
         background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
-        /* filter: brightness(50%);  Deixou escuro */ 
+        /* filter: brightness(50%);  Deixou escuro */
         width: 100%;
         background-position: center;
         background-attachment: fixed;
         padding: 40px 20px;
     }
 
-    .main .link-facul {
+    .main .link-descrit {
         margin: 25% 0 0 0;
         flex-direction: column;
     }
@@ -416,7 +468,7 @@ header .cadastro:hover {
         padding: 10px;
     }
 
-    /* Sobre Faculdade*/
+    /* Sobre faculdade*/
 
     .main .faculdade {
         flex-direction: column;
@@ -424,8 +476,38 @@ header .cadastro:hover {
 
     }
 
-    .main .title-facul h1 {
-        font-size: 25px;
+    .main .bolsas {
+        padding: 10% 40px 0;
+        flex-direction: column;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 22px;
+        padding: 20px 3% 10px 3%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 0% 0px ;
+    }
+
+    .main .txt-descrit p {
+        padding: 15px 0px;
+        color: #333;
+        line-height: 1.6em;
+        font-size: 15px;
+        max-width: auto;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 1% 0px 1%;
+        padding: 20px;
+    }
+
+    .main .sub-title-descrit h3 {
+        font-size: 18px;
+    }
+    .main .sub-title-descrit h4 {
+        font-size: 18px;
     }
 }
 
