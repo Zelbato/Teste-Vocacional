@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Questôes</title>
+    <link rel="stylesheet" href="questoes.css">
+
+    <!--Icones Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Google Fonts-->
+    <title>Teste Vocacional</title>
 </head>
+
 <body>
-    
+
+    <main class="main">
+        <article class="container">
+
+            <aside class="form-prof">
+                <section class="area">
+                    <div class="checklist">
+
+                        <div class="lista">
+                            <h2>Areas de Atuação</h2>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="negocios" name="gender">
+                            <label for="negocios">Administração, negócios e serviços.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="designer" name="gender">
+                            <label for="designer">Artes e Design.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="biologica" name="gender">
+                            <label for="biologica">Ciências Biológicas e da Terra.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="sistema" name="gender">
+                            <label for="sistema">Análise e Desenvolvimento de Sistemas.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="humana" name="gender">
+                            <label for="humana">Ciências Sociais e Humanas.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="comunicacao" name="gender">
+                            <label for="comunicacao">Comunicação e Informação.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="producao" name="gender">
+                            <label for="producao">Engenharia e Produção.</label>
+                        </div>
+
+                        <div class="checklist-input">
+                            <input type="checkbox" id="saude" name="gender">
+                            <label for="saude">Saúde e Bem-estar.</label>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <section class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <h1>Cadastro de Questões</h1>
+                    </div>
+
+                    <div class="title">
+                        <h2>Questão </h2>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="questao ">Questão</label>
+                            <input class="criar-questao" id="questao" type="text" name="questao"
+                                placeholder="Digite a questão" required>
+                        </div>
+                    </div>
+
+                    <div class="subTitle">
+                        <h2>Alternativas</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="text">Alternativa 1</label>
+                            <input class="criar-altern" id="text" type="text" name="text" placeholder="" required>
+                        </div>
+
+
+                        <div class="input-box">
+                            <label for="text">Alternativa 2</label>
+                            <input class="criar-altern" id="text" type="text" name="text" placeholder="" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="text">Alternativa 3 </label>
+                            <input class="criar-altern" id="text" type="text" name="text" placeholder="" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="text">Alternativa 4</label>
+                            <input class="criar-altern" id="text" type="text" name="text" placeholder="" required>
+                        </div>
+
+                    </div>
+
+
+
+                    <aside class="continue-button">
+                        <button><a href="#">Cadastrar Questão</a></button>
+                    </aside>
+                </form>
+            </section>
+        </article>
+    </main>
+
 </body>
+
 </html>
