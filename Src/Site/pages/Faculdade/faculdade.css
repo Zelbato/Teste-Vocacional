@@ -32,11 +32,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 99;
     box-shadow: 0 5px 100px #00000000;
-    background: rgba(25, 25, 25, 0);
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.199); */
+    transition: all 0.5s;
+}
+
+header.rolagem {
+    background: #111827;
+    border-bottom:1px solid #111827;
 }
 
 #chk1 {

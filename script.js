@@ -11,18 +11,17 @@ function menu() {
     }
 }
 
+/*
 let boxBusca = document.querySelector('.busca');
 let lupa = document.querySelector('.lupa-buscar');
 let btnFechar = document.querySelector('.btn-fechar');
 
 lupa.addEventListener('click', () => {
     boxBusca.classList.add('ativar')
-
-})
-
+})*/
 
 //muda cor do menu
 window.addEventListener('scroll', function (){
-    let header = document.querySelector('#header');
-    header.classList.toggle('rolagem',window.scrollY > 1);
+    let header = document.querySelector('.header');
+    header.classList.toggle('rolagem',window.scrollY > 500);
 })
