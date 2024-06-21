@@ -39,8 +39,8 @@ header {
 }
 
 header.rolagem {
-    background: #111827;
-    border-bottom:1px solid #111827;
+    background: rgb(27, 27, 27);
+    border-bottom:1px solid rgb(27, 27, 27);
 }
 
 #chk1 {
