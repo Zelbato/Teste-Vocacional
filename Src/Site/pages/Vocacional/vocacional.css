@@ -374,6 +374,12 @@ footer .boxs {
 
 }
 
+footer .boxs .logo span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #206ab8;
+}
+
 footer .boxs:nth-child(4) {
     width: 400px;
 }
@@ -478,5 +484,15 @@ footer .boxs:nth-child(4) {
     .boxs h2 {
         width: auto;
         margin-top: 15px;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer h2 {
+        width: auto;
+        font-size: 20px;
     }
 }

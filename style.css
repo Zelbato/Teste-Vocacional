@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+    height: auto;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background: #f3f6f9;
@@ -20,6 +20,13 @@ a {
     .main {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    a {
+        color: #f3f6f9;
+        text-decoration: none;
     }
 }
 
@@ -134,7 +141,7 @@ header .cadastro:hover {
 }
 
 header .menu-mobile {
-    font-size: 2em;
+    font-size: -2em;
     display: none;
 }
 
@@ -165,13 +172,12 @@ header .menu-mobile {
 
     header .menu-mobile {
         display: block;
-        width: 25%;
+        width: 20%;
         text-align: center;
 
     }
 
     header .menu-mobile img {
-        margin-top: 12px;
         width: 35px;
         height: 35px;
     }
@@ -179,17 +185,18 @@ header .menu-mobile {
 
     #chk1:checked~ul {
         right: 0;
+        
     }
 }
 
 @media(max-width:600px) {
-    header .logo {
-        font-size: 12px;
-        margin-left: 4px;
+    header .logo a{
+        font-size: auto;
+        margin: 0px 45px 0px 0px;
     }
 
-    header span {
-        font-size: 24px;
+    header .gradient {
+        font-size: auto;
     }
 
     header ul {
@@ -379,7 +386,7 @@ span {
 
 .sobre .paragrafo {
     width: 700px;
-    height: 300px;
+    height: auto;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -423,16 +430,15 @@ span {
 
 .sobre .image-content img {
     max-width: 400px;
-    width: 100%;
+    width: auto;
     height: auto;
     border-radius: 5px;
-
 }
 
 
 @media (max-width:800px) {
     .main .sobre {
-        height: 100vh;
+        height: auto;
         width: 100%;
 
     }
@@ -466,6 +472,10 @@ span {
 
     .sobre .image-content {
         margin-bottom: 60px;
+    }
+
+    .sobre .image-content img {
+        max-width: 350px;
     }
 
 }
@@ -614,14 +624,14 @@ footer .boxs {
 footer .boxs .logo a {
     font-weight: bold;
 
-    font-size: 35px;
+    font-size: 30px;
     color: #f3f6f9;
     text-decoration: none;
 
 }
 
 footer .boxs .logo span {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #206ab8;
 }
@@ -638,7 +648,7 @@ footer .boxs:nth-child(4) {
 }
 
 .boxs ul li {
-    margin: 10px 0px;
+    margin: 10px -15px;
     list-style: none;
 }
 
@@ -730,5 +740,20 @@ footer .boxs:nth-child(4) {
     .boxs h2 {
         width: auto;
         margin-top: 15px;
+    }
+
+    footer ul li {
+        width: 100%;
+        
+
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer h2 {
+        font-size: 20px;
     }
 }

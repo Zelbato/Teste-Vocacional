@@ -818,17 +818,10 @@ footer .boxs {
     padding: 20px 40px;
 }
 
-footer .boxs .logo a {
-    font-weight: bold;
 
-    font-size: 35px;
-    color: #f3f6f9;
-    text-decoration: none;
-
-}
 
 footer .boxs .logo span {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #206ab8;
 }
@@ -937,5 +930,15 @@ footer .boxs:nth-child(4) {
     .boxs h2 {
         width: auto;
         margin-top: 15px;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer h2 {
+        width: auto;
+        font-size: 20px;
     }
 }
