@@ -253,7 +253,27 @@ header .menu-mobile {
     display: block;
     /* width: 100%; */
     text-align: left;
+}
 
+.option-list .option:hover {
+    background:#355899;
+    border-color:#355899;
+    color: #f5f5f594;
+}
+
+.option-list .option.correct {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #00a63d;
+    color: #00a63d;
+    transform: scale(1.02);
+
+}
+
+.option-list .option.incorrect {
+    background: rgba(255, 255, 255, .1);
+    color: rgb(221, 0, 0);
+    border-color: rgba(221, 0, 0);
+    transform: scale(1.02);
 }
 
 .quiz-footer {
