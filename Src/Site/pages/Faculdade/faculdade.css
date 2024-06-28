@@ -50,14 +50,17 @@ header.rolagem {
 
 header .logo {
     flex: 1;
-    color: #f3f6f9;
     margin-left: 50px;
+}
+
+header .logo a {
+    color: #f3f6f9;
     text-transform: none;
-    font-size: 15px;
+    font-size: 40px;
 }
 
 header .gradient {
-    font-size: 25px;
+    font-size: 40px;
     color: #206ab8;
 }
 

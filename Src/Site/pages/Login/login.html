@@ -22,6 +22,33 @@
 
 <body>
 
+    <header class="header">
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+            </label>
+        </div>
+
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="/index.html">Career  <span class="gradient">Fit</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" class="teste-vocacaco" href="/Src/Site/pages/Vocacional/vocacional.html"><span
+                        class="teste">Teste Vocacional</span></a></li>
+            <li><a id="#facul" class="faculdade" href="/Src/Site/pages//Faculdade/faculdade.html">Faculdades</a></li>
+
+            <a href="/Src/Site/pages/Cadastro/cadastro.html">
+                <button id="cadastro" class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
+                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
+                </button>
+            </a>
+        </ul>
+    </header>
+
     <main class="main">
         <article class="container">
             <section class="form-image">
@@ -68,6 +95,8 @@
             </section>
         </article>
     </main>
+
+    <script src="login.js"></script>
 
 </body>
 
