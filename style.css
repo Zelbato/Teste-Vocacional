@@ -288,8 +288,7 @@ span {
 
 .inicio .button:hover {
     background: #174a81;
-    box-shadow: 0px 0px 10px #252525;
-    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #25252558;
 }
 
 .inicio .button a {
