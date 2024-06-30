@@ -120,25 +120,3 @@ function questCounter(index) {
     const questTotal = document.querySelector('.question-total');
     questTotal.textContent = `${index} de ${questions.length} Questôes`;
 }
-
-
-function showResultBox() {
-    quizBox.classList.remove('active');
-    resultBox.classList.add('active');
-
-    let progressStartValue = -1;
-    let progressEndValue = (userScore / questions.length) * 100;
-    let speed = 20;
-
-    let progress = setInterval(() => {
-        progressStartValue++;
-
-        progressValue.textContent = `${progressStartValue}%`;
-        circuloProgress.style.background = `conic-gradient(#355899 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
-
-        if(progressStartValue == progressEndValue) {
-            clearInterval(progress);
-        }
-       
-    }, speed);
-}

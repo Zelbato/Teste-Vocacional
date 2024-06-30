@@ -62,19 +62,19 @@ header.rolagem {
 
 }
 
-header .logo a {
+header .logo {
     flex: 1;
-    color: #f3f6f9;
     margin-left: 50px;
-    text-transform: none;
+}
 
-    font-size: 30px;
+header .logo a {
+    color: #f3f6f9;
     text-decoration: none;
-
+    font-size: 40px;
 }
 
 header .gradient {
-    font-size: 30px;
+    font-size: 40px;
     color: #206ab8;
 }
 
@@ -266,7 +266,10 @@ header .menu-mobile {
     border-color: #00a63d;
     color: #00a63d;
     transform: scale(1.02);
+}
 
+.option-list .option.disabled {
+    pointer-events: none;
 }
 
 .option-list .option.incorrect {
@@ -304,6 +307,18 @@ header .menu-mobile {
     cursor: pointer;
    pointer-events: none;
     transition: .5s;    
+}
+
+.quiz-footer .next-btn.active {
+    pointer-events: auto;
+    color: #fff;
+    background: #206ab8;
+    border: 2px solid #206ab8;
+}
+
+.quiz-footer .next-btn.active:hover {
+    background: #174a81;
+    border: 2px solid #174a81;
 }
 
 .quiz-section .result-box {

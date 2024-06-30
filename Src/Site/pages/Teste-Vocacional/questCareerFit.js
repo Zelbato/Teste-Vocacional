@@ -1,13 +1,13 @@
 let questions = [
     {
         numb: 1,
-        question:"Quais dessas palavras nos usamos em um aeroporto? ",
-        answer:"C. Airplane, Airport, baggage, fligth ticket and board",
+        question:"O emprego ideal é aquele no qual você: ",
+        answer:"A. Aprende Muito",
         options: [
-            "A.  Visa, airport, board, Gate, hand ladder",
-            "B. Gate, airport, airplane, foot and retired",
-            "C. Airplane, Airport, baggage, fligth ticket and board",
-            "D. Check-in, Gate, Visa, hand ladder and pocket watch"
+            "A.  Aprende Muito",
+            "B. Contribui com a sociedade",
+            "C. Traz segurança",
+            "D. Surpreende ou emociona as pessoas"
         ]
     },
 
