@@ -11,6 +11,16 @@ body {
     background: #f3f6f9;
 }
 
+.js-global {
+    opacity: 0;
+    transition: .5s;
+    transform: translateX(-10rem);
+}
+
+.js-global.active {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 
 h1 {
@@ -49,15 +59,15 @@ header.rolagem {
 
 header .logo {
     flex: 1;
-    color: #f3f6f9;
     margin-left: 50px;
-    text-transform: none;
 }
 
 header .logo a {
-    font-size: 40px;
     color: #f3f6f9;
     text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header .gradient {
@@ -77,15 +87,29 @@ header ul {
 
 header ul li {
     list-style: none;
+    padding: 7px 0px;
 }
 
 header ul li a {
+    text-decoration: none;
+    color: #f3f6f9;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 5px 7px;
+    position: relative;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul li a span {
     text-decoration: none;
     color: #f3f6f9;
     font-weight: 500;
     text-transform: capitalize;
     padding: 5px 7px;
     position: relative;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header ul li a::after {
@@ -258,7 +282,7 @@ header .cadastro:hover {
     color: #206ab8;
 }
 
-.inicio span {
+.inicio span.texto-2 {
     color: #f3f6f9;
 }
 
@@ -289,6 +313,7 @@ span {
 .inicio .button:hover {
     background: #174a81;
     box-shadow: 0px 0px 10px #25252558;
+    transform: scale(0.9);
 }
 
 .inicio .button a {
