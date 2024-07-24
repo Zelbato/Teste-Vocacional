@@ -47,14 +47,17 @@ header {
 
 header .logo {
     flex: 1;
-    color: #f3f6f9;
     margin-left: 50px;
-    text-transform:none;
-    font-size: 15px;
+}
+
+header .logo a {
+    color: #f3f6f9;
+    text-transform: none;
+    font-size: 40px;
 }
 
 header .gradient {
-    font-size: 25px;
+    font-size: 40px;
     color: #206ab8;
 }
 
@@ -368,12 +371,11 @@ text-align: justify;
 }
 
 
-/* Inicio do rodape */
-
+/*Rodapé*/
 footer {
-    margin-top: 10%;
     width: 100%;
     min-height: 250px;
+    border-top: 1px solid #f3f6f923;
     background: rgb(27, 27, 27);
     display: flex;
     position: relative;
@@ -383,6 +385,15 @@ footer .boxs {
     width: 320px;
     min-height: 150px;
     padding: 20px 40px;
+}
+
+footer .boxs .logo a {
+    font-weight: bold;
+
+    font-size: 30px;
+    color: #f3f6f9;
+    text-decoration: none;
+
 }
 
 footer .boxs .logo span {
@@ -399,11 +410,11 @@ footer .boxs:nth-child(4) {
     color: #f3f6f9;
     margin-bottom: 25px;
     width: 150px;
-    border-bottom: 3px solid #206ab8;
+    border-bottom: 1px solid #686868be;
 }
 
 .boxs ul li {
-    margin: 10px 0px;
+    margin: 10px -15px;
     list-style: none;
 }
 
@@ -458,12 +469,19 @@ footer .boxs:nth-child(4) {
         margin-top: 15px;
     }
 
-    
+    footer ul li {
+        width: 100%;
+        
+
+    }
+
     .footer {
         width: 100%;
         height: auto;
     }
 
-
+    .footer h2 {
+        font-size: 20px;
+    }
 }
 /* fim do rodape */
