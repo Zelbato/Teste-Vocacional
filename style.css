@@ -483,9 +483,9 @@ span {
     .sobre .paragrafo {
         height: auto;
         width: 350px;
-        padding: 15px 30px;
-
-        border-radius: 25px;
+        padding: 10px 30px;
+        
+        border: none;
     }
 
     .sobre h3 {
