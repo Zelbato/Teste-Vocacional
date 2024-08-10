@@ -1,12 +1,5 @@
 
 
-//muda cor do menu
-window.addEventListener('scroll', function (){
-    let header = document.querySelector('.header');
-    header.classList.toggle('rolagem',window.scrollY > 150);
-})
-
-
 function menu(){
 
     let menuMobile = document.querySelector(".menu-mobile");
@@ -27,5 +20,3 @@ lupa.addEventListener('click', ()=> {
    boxBusca.classList.add('ativar')
 
 })
-
-

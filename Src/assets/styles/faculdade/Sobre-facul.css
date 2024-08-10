@@ -1,0 +1,19 @@
+
+
+
+.main .faculdade {
+    height: auto;
+    width: 100%;
+    padding: 5% 20px 0px;
+}
+
+.main .img-faculdade {
+    background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+    width: 900px;
+    height: 450px;
+
+    border-radius: 15px;
+    margin: 40px auto;
+    background-size: cover;
+    background-position: center;
+}

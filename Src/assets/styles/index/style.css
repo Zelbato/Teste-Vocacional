@@ -1,0 +1,43 @@
+
+@import '/Src/assets/global/style/header/header.css';
+@import '/Src/assets/styles/index/section-1.css';
+@import '/Src/assets/styles/index/sobre.css';
+@import '/Src/assets/styles/index/cards.css';
+@import '/Src/assets/global/style/footer/footer.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f9;
+}
+
+.js-global {
+    opacity: 0;
+    transition: .5s;
+    transform: translateX(-10rem);
+}
+
+.js-global.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+h1 {
+    color: #f3f6f9;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

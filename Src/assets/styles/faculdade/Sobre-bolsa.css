@@ -1,0 +1,18 @@
+
+
+.main .bolsas {
+    height: auto;
+    width: 100%;
+    padding: 5% 20px 0px;
+}
+
+.main .img-bolsas {
+    background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+    width: 800px;
+    height: 400px;
+
+    border-radius: 15px;
+    margin: 40px auto;
+    background-size: cover;
+    background-position: center;
+}

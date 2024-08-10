@@ -20,6 +20,7 @@
     <title>Teste Vocacional</title>
 </head>
 
+
 <body>
 
     <header class="header">
@@ -52,11 +53,11 @@
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
+                <img src="imagemLogin.svg" alt="image">
             </section>
 
             <section class="form">
-                <form action="#">
+                <form action="cadastro.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
@@ -69,12 +70,12 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                            <input id="name" type="text" name="name" placeholder="Digite seu name" required>
                         </div>
 
                         <div class="input-box">
                             <label for="date">Data de Nascimento</label>
-                            <input id="date" type="date" name="date" placeholder="Digite seu data de nascimento" >
+                            <input id="date" type="date" name="data_nascimento" placeholder="Digite seu data de nascimento" >
                         </div>
                       
 
@@ -85,48 +86,50 @@
                         
                         <div class="input-box">
                             <label for="local">Localização </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
+                            <input id="local" type="local" name="cep" placeholder="Digite seu CEP" required>
                         </div>
                         
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                          
                         </div>
 
                         <div class="input-box">
                             <label for="password">Confirmar Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Confirme sua senha" required>
+                            <input id="password" type="password" name="confirmSenha" placeholder="Confirme sua senha" required>
                         </div>
                     </div>
+
+                    <!--
 
                     <div class="gender-inputs">
                         <div class="gender-title">
                             <h6>Entrar como: </h6>
                         </div>
 
-                        <div class="gender-group">
+                        <div class="gender-group" >
                             <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
+                                <input type="radio" id="estudante" name="cadEstudante">
                                 <label for="estudante">Estudante</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
+                                <input type="radio" id="profissional" name="cadProfissional">
                                 <label for="profissional">Profissional</label>
                             </div>
                         </div>
                     </div>
-
+                    -->
                     <aside class="continue-button">
-                        <button><a href="#">Cadastrar</a></button>
+                        <button><a href="/index.html">Cadastrar</a></button>
                     </aside>
                 </form>
             </section>
         </article>
     </main>
 
-    <script src="/Src/js/cadastro.js"></script>
+    <script src="/Src/assets/js/cadastro.js"></script>
 
 </body>
 

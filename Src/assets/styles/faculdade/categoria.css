@@ -1,0 +1,72 @@
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 0;
+}
+
+.main .link {
+    background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+    /* filter: brightness(50%);  Deixou escuro  */
+
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 20px;
+}
+
+.main .link-descrit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15% 0 0 0;
+}
+
+.main ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style: none;
+}
+
+.main ul li {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #f3f6f9;
+
+    padding: 10px 40px;
+    margin: 20px 100px;
+    transition: all 0.5s;
+
+}
+
+.main ul li:hover {
+    background-color: #00000058;
+    transform: scale(1.02);
+}
+
+.main ul li a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.main h2 {
+    color: #f3f6f9;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 0px 40px;
+    text-align: justify;
+}
+
+.main h2 span a {
+    color: #007bff;
+}

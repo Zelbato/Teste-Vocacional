@@ -1,0 +1,223 @@
+
+
+@media screen and (max-width: 1100px) {
+    /*Versão Mobile*/
+
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 600px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .main .link {
+        height: 70vh;
+    }
+
+
+    .main .link-descrit {
+        margin: 20% 0 0 0;
+    }
+
+    .main ul li {
+        margin: 20px 50px;
+    }
+
+    .main .faculdade {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .bolsas {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .cotas {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 35px;
+        padding: 20px 10% 10px 5%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 10% 0px;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 15% 0px 10%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 450px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .main .link {
+        height: 50vh;
+    }
+
+    .main .link-descrit {
+        margin: 15% 0 0 0;
+    }
+
+    .main ul li {
+        margin: 20px 10px;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 35px;
+        padding: 20px 15% 10px 10%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 5% 0px;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 10% 0px 5%;
+        padding: 20px;
+    }
+
+    .main .sub-title-descrit h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main .img-cota {
+        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+
+    }
+
+    .main .img-faculdade {
+        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
+    .main .img-bolsas {
+        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        width: 300px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
+    .main .link {
+        height: 50vh;
+
+        background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+        /* filter: brightness(50%);  Deixou escuro */
+        width: 100%;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 40px 20px;
+    }
+
+    .main .link-descrit {
+        margin: 25% 0 0 0;
+        flex-direction: column;
+    }
+
+    .main ul li {
+        margin: 20px 5px;
+        padding: 10px;
+
+    }
+
+    .main h2 {
+        padding: 10px;
+    }
+
+    /* SOBRE FACULDADE*/
+
+    .main .faculdade {
+        flex-direction: column;
+        padding: 10% 40px 0;
+
+    }
+
+    /*SOBRE BOLSAS*/
+    .main .bolsas {
+        padding: 10% 40px 0;
+        flex-direction: column;
+    }
+
+    /*SOBRE COTAS*/
+    .main .cotas {
+        padding: 10% 40px 0;
+        flex-direction: column;
+    }
+
+    .main .title-descrit h1 {
+        font-size: 22px;
+        padding: 20px 3% 10px 3%;
+    }
+
+    .main .txt-descrit {
+        margin: 1rem 0% 0px;
+    }
+
+    .main .txt-descrit p {
+        padding: 15px 0px;
+        color: #333;
+        line-height: 1.6em;
+        font-size: 15px;
+        max-width: auto;
+    }
+
+    .main .sub-title-descrit {
+        margin: 5px 1% 0px 1%;
+        padding: 20px;
+    }
+
+    .main .sub-title-descrit h3 {
+        font-size: 18px;
+    }
+
+    .main .sub-title-descrit h4 {
+        font-size: 18px;
+    }
+}

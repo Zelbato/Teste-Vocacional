@@ -1,0 +1,85 @@
+
+
+
+.main .sobre-descrit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .title-descrit h1 {
+    padding: 20px 20% 10px 10%;
+    margin: 20px 0 10px;
+    font-size: 35px;
+    color: #25252597;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+
+    /* color: #25252597;
+    margin: 10px 0 20px;
+    font-weight: 400;
+    font-size: 1.7rem;
+    padding: 10px 20px 0; */
+}
+
+.main .txt-descrit {
+    margin: 1rem 20% 0px 13%;
+
+    color: #333333;
+    display: block;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: -90px;
+    margin-inline-end: 0px; */
+    unicode-bidi: isolate;
+}
+
+.main .txt-descrit p {
+    /* padding: 0;
+    color: #636262;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    line-height: 20px; */
+
+    padding: 15px 20px;
+    color: #333;
+    line-height: 1.6em;
+    font-size: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.main .txt-descrit strong {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.main .sub-title-descrit {
+    margin: 5px 20% 0px 10%;
+    padding: 20px;
+}
+
+.main .sub-title-descrit h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #7a7a7a;
+}
+
+.main .sub-title-descrit h3 {
+    color: #7a7a7a;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.main .sub-descrit h3 {
+    color: #4a4a4a;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}

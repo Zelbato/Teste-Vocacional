@@ -1,0 +1,150 @@
+
+
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.main .container {
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 10px 30px 30px #0000001c;
+    border-radius: 8px;
+
+}
+
+.main .form {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fcfcfc;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.main .form-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.main .form-header h1 {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.main .form-header p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align:justify;
+}
+
+.main .form-header h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #206ab8;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.main .login-button {
+    display: flex;
+    align-items: center;
+}
+
+.main .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.main .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.main .input-box input {
+    margin: 10px 0;
+    padding:20px 5.3rem;
+    border: none;
+    border-bottom: 1px solid #575757;
+    background: transparent;
+}
+
+.main .input-box input:hover {
+    transition: all .5s;
+    border-bottom: 1px solid #206ab8;
+}
+
+.main .input-box input:focus-visible {
+    outline: none;
+}
+
+
+.main .input-box label,
+.main .gender-title h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.main .input-box::placeholder {
+    color: #000000;
+}
+
+.main .continue-button button {
+    width: 100%;
+    margin-top: 10px;
+    background: #206ab8;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main .continue-button button:hover {
+    background: #174a81;
+    color: #f3f6f9;
+    transform: scale(0.98);
+}
+
+.main .continue-button button a {
+    text-decoration: none;
+    color: #f3f6f9;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.voltar {
+    margin-top: 10px;
+    display: none;
+}
+
+.voltar button {
+    width: 100%;
+    background: #206ab8;
+    padding: 10px;
+    border-radius: 50%;
+}
