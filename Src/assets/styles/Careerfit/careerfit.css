@@ -1,0 +1,42 @@
+
+/*Global*/
+@import '/Src/assets/global/style/header/header-2.css';
+@import '/Src/assets/global/style/footer/footer.css';
+/*Global*/
+
+/*Imports*/
+@import '/Src/assets/styles/Careerfit/quiz.css';
+/*Imports*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f9;
+}
+
+a {
+    color: #f3f6f9;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    a {
+        color: #f3f6f9;
+        text-decoration: none;
+    }
+}
+
