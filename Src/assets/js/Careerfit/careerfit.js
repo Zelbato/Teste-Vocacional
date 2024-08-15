@@ -32,7 +32,6 @@ lupa.addEventListener('click', ()=> {
 
 const main = document.querySelector('.main');
 const quizSelection = document.querySelector('.quiz-section');
-const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
 
 
