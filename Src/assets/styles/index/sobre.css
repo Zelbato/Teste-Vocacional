@@ -118,12 +118,12 @@
         border: none;
     }
 
-    .sobre h3 {
-        margin-top: 20px;
-        font-size: 25px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
+        .sobre h3 {
+            margin-top: 20px;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
 
     .sobre p {
         font-size: 18px;
