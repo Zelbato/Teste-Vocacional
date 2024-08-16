@@ -43,7 +43,7 @@
     font-size: 30px;
     font-weight: 600;
     position: relative;
-    color: #111827;
+    color: var(--azulEscuro);
     margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@
     display: block;
     width: 50%;
     height: 3px;
-    background: #206ab8;
+    background: var(--azulHover);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -87,13 +87,13 @@
     margin: 10px 0;
     padding:20px 5.3rem;
     border: none;
-    border-bottom: 1px solid #575757;
+    border-bottom: 1px solid var(--txtDescritivo);
     background: transparent;
 }
 
 .main .input-box input:hover {
     transition: all .5s;
-    border-bottom: 1px solid #206ab8;
+    border-bottom: 1px solid var(--azulHover);
 }
 
 .main .input-box input:focus-visible {
@@ -109,13 +109,13 @@
 }
 
 .main .input-box::placeholder {
-    color: #000000;
+    color: var(--preto);
 }
 
 .main .continue-button button {
     width: 100%;
     margin-top: 10px;
-    background: #206ab8;
+    background: var(--azul);
 
     padding: 10px;
     border: none;
@@ -125,14 +125,14 @@
 }
 
 .main .continue-button button:hover {
-    background: #174a81;
-    color: #f3f6f9;
+    background: var(--azulHover);
+    color: var(--white);
     transform: scale(0.98);
 }
 
 .main .continue-button button a {
     text-decoration: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-size: 18px;
     font-weight: 600;
 }
@@ -144,7 +144,7 @@
 
 .voltar button {
     width: 100%;
-    background: #206ab8;
+    background: var(--azulHover);
     padding: 10px;
     border-radius: 50%;
 }

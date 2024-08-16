@@ -85,7 +85,7 @@
         padding: 8px 25px;
         box-shadow: none;
         border-radius: 0px;
-        border-bottom: 0.5px solid #111827;
+        border-bottom: 0.5px solid var(--azulEscuro);
         transition: all 0.3s;
     }
 

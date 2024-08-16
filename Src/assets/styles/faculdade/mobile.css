@@ -146,7 +146,7 @@
     }
 
     .main .link {
-        height: 50vh;
+        height: 60vh;
 
         background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
         /* filter: brightness(50%);  Deixou escuro */
@@ -157,18 +157,22 @@
     }
 
     .main .link-descrit {
-        margin: 25% 0 0 0;
+        margin: 50% 0 0 0;
         flex-direction: column;
     }
 
     .main ul li {
         margin: 20px 5px;
         padding: 10px;
+    }
 
+    .main ul li a {
+        font-size: 18px;
     }
 
     .main h2 {
         padding: 10px;
+        font-weight: 300;
     }
 
     /* SOBRE FACULDADE*/

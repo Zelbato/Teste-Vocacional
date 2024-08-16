@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #206ab8;
+    background: var(--azul);
     padding: 10px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -66,7 +66,7 @@
     display: block;
     width: 50%;
     height: 3px;
-    background: #206ab8;
+    background: var(--azul);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -83,7 +83,7 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    background: #206ab8;
+    background: var(--azul);
     transition: all .5s;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .main .login-button button:hover {
-    background-color: #174a81;
+    background-color: var(--azulHover);
     box-shadow: 0 0 10px #11182752;
 }
 
@@ -160,13 +160,13 @@
 .main .gender-input label {
     font-size: 18px;
     font-weight: 600;
-    color: #000000c0;
+    color: #000000be;
 }
 
 .main .continue-button button {
     width: 100%;
     margin-top: 10px;
-    background: #206ab8;
+    background: var(--azul);
 
     padding: 10px;
     border: none;
@@ -176,14 +176,14 @@
 }
 
 .main .continue-button button:hover {
-    background: #174a81;
-    color: #f3f6f9;
+    background: var(--azulHover);
+    color: var(--white);
     box-shadow: 0 0 10px #11182752;
 }
 
 .main .continue-button button a {
     text-decoration: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-size: 18px;
     font-weight: 600;
 }

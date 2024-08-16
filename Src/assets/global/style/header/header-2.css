@@ -10,7 +10,7 @@ header {
     align-items: center;
     position: relative;
     z-index: 99;
-    background: rgb(27, 27, 27);
+    background: var(--preto);
     box-shadow: 0 5px 100px #00000000;
     transition: all 0.5s;
 }
@@ -26,18 +26,19 @@ header .logo {
 }
 
 header .logo a {
-    color: #f3f6f9;
+    color: var(--white);
     font-size: 40px;
+    font-weight: 500;
     text-decoration: none;
 }
 
 header .gradient {
     font-size: 40px;
-    color: #206ab8;
+    color: var(--azul);
 }
 
 header .teste {
-    color: #206ab8;
+    color: var(--azul);
 }
 
 header ul {
@@ -52,7 +53,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-weight: 500;
     text-transform: capitalize;
     padding: 5px 7px;
@@ -63,7 +64,7 @@ header ul li a::after {
     content: " ";
     width: 15%;
     height: 2px;
-    background: #206ab8;
+    background: var(--azul);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,11 +88,11 @@ header .login {
 }
 
 header .criar {
-    background: #206ab8;
+    background: var(--azul);
     border-radius: 5px;
     margin-left: 10px;
     border: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     padding: 7px 10px;
@@ -105,33 +106,38 @@ header .criar:hover {
 
 
 header .cadastro {
-    background: #206ab8;
-    border-radius: 5px;
-    margin-left: 10px;
+    background: transparent;
+    cursor: pointer;
+    color: var(--white);
     border: none;
-    color: #fff;
-    font-weight: bold;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 17px;
+
+    margin-left: 10px;
+    padding:8px  10px;
+
     transition: all 0.3s ease-in-out;
-    padding: 7px 10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
+
+/* header .cadastro:hover {
+    background: var(--azul);
+    border: 1px solid var(--azul);
+    color: var(--white);
+} */
 
 header .cadastro img {
     width: 12px;
     margin-right: 5px;
 }
 
-header .cadastro:hover {
-    background: #174a81;
-    box-shadow: #111827 0px 0px 15px;
-    transform: scale(1.1);
-}
 
 @media(max-width:800px) {
 
 
     header {
-        background: rgb(25, 25, 25);
+        background:var(--preto);
         position: relative;
     }
 
@@ -140,7 +146,7 @@ header .cadastro:hover {
         /*Mudar a barra*/
         top: 100px;
         right: 100%;
-        background: rgba(25, 25, 25);
+        background: var(--preto);
         height: calc(100vh - 100px);
         width: 100%;
         flex-direction: column;

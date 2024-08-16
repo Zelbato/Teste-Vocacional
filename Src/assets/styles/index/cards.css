@@ -17,7 +17,7 @@ section.cards {
 
     margin: 0 auto;
     padding: 40px;
-    background: rgb(27, 27, 27);
+    background: var(--preto);
 
 }
 
@@ -31,9 +31,8 @@ section.cards {
 
 .cards h1 {
     font-size: 50px;
-    font-weight: 600;
-    text-shadow: 0px 0px 20px #206ab8;
-    color: #f3f6f9;
+    font-weight: 500;
+    color: var(--white);
     text-align: center;
     margin-bottom: 5%;
 }
@@ -44,7 +43,7 @@ section.cards {
     align-items: center;
     text-align: center;
 
-    background: white;
+    background: var(--white);
     border-radius: 8px;
     max-width: 350px;
     height: 200px;
@@ -67,12 +66,12 @@ section.cards {
 .cards aside.card span {
     font-weight: 300;
     max-width: 300px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .cards aside:hover {
-    box-shadow: 20px 20px 60px -15px #3e8de2;
+    box-shadow: 20px 20px 60px -15px #3e8de26e;
 }
 
 

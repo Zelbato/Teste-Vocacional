@@ -12,8 +12,8 @@ header {
 }
 
 header.rolagem {
-    background: rgb(27, 27, 27);
-    border-bottom: 1px solid rgb(27, 27, 27);
+    background: var(--preto);
+    border-bottom: 1px solid var(--preto);
 }
 
 #chk1 {
@@ -27,20 +27,20 @@ header .logo {
 }
 
 header .logo a {
-    color: #f3f6f9;
+    color: var(--white);
     text-decoration: none;
     font-size: 40px;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-family: var(--font);
 }
 
 header .gradient {
     font-size: 40px;
-    color: #206ab8;
+    color: var(--azul);
 }
 
 header .teste {
-    color: #206ab8;
+    color: var(--azul);
 }
 
 header ul {
@@ -56,31 +56,31 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-weight: 400;
     text-transform: capitalize;
     padding: 5px 7px;
     position: relative;
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
 }
 
 header ul li a span {
     text-decoration: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-weight: 500;
     text-transform: capitalize;
     padding: 5px 7px;
     position: relative;
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
 }
 
 header ul li a::after {
     content: " ";
     width: 15%;
     height: 2px;
-    background: #206ab8;
+    background: var(--azul);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -104,11 +104,11 @@ header .login {
 }
 
 header .criar {
-    background: #206ab8;
+    background: var(--azul);
     border-radius: 5px;
     margin-left: 10px;
     border: none;
-    color: #f3f6f9;
+    color: var(--white);
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     padding: 7px 10px;
@@ -122,27 +122,29 @@ header .criar:hover {
 
 
 header .cadastro {
-    background: #206ab8;
-    border-radius: 5px;
-    margin-left: 10px;
+    background: transparent;
+    cursor: pointer;
+    color: var(--white);
     border: none;
-    color: #fff;
-    font-weight: bold;
+    border-radius: 25px;
+    font-size: 17px;
+
+    margin-left: 10px;
+    padding: 8px 14px;
+
     transition: all 0.3s ease-in-out;
-    padding: 7px 10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
+
+/* header .cadastro:hover {
+    color: var(--azul);
+} */
 
 header .cadastro img {
     width: 12px;
     margin-right: 5px;
 }
 
-header .cadastro:hover {
-    background: #174a81;
-    box-shadow: #111827 0px 0px 15px;
-    transform: scale(1.1);
-}
 
 @media(max-width:800px) {
 

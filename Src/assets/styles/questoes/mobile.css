@@ -64,7 +64,7 @@
         font-size: 20px;
         font-weight: 600;
         position: relative;
-        color: #f3f6f9;
+        color: var(--white);
         margin-top: -70px;/*Teste*/
     
     }
@@ -82,7 +82,7 @@
         font-size: 28px;
         font-weight: 600;
         position: relative;
-        color: #111827;
+        color: var(--azulEscuro);
         margin-bottom: 10px;
     }
 
@@ -144,7 +144,7 @@
 
     .main .form-prof .checklist-input label {
         font-size: 20px;
-        color: #f3f6f9;
+        color: var(--white);
         border: none;
         padding: 10px;
     }
@@ -190,7 +190,7 @@
 
     .main .input-box input:hover {
         transition: all .5s;
-        background: #f5f5f5;
+        background: var(--white);
     }
 
 

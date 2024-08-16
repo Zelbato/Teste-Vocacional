@@ -3,6 +3,7 @@
 /*Imports*/
 @import '/Src/assets/styles/recuperacao/form.css';
 @import '/Src/assets/styles/recuperacao/mobile.css';
+@import '/Src/assets/global/style/index.css';
 
 * {
     margin: 0;
