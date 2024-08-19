@@ -1,121 +1,51 @@
+let currentQuestionIndex = 0;
+let score = 0;
 
+document.addEventListener('DOMContentLoaded', function() {
+    loadQuestion();
 
-
-//muda cor do menu
-window.addEventListener('scroll', function (){
-    let header = document.querySelector('.header');
-    header.classList.toggle('rolagem',window.scrollY > 150);
-})
-
-
-function menu(){
-
-    let menuMobile = document.querySelector(".menu-mobile");
-    if(menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "/Src/assets/Imagens/cardapio.png";
-    } else {
-        menuMobile.classList.add('open');
-        document.querySelector(".icon").src = "/Src/assets/Imagens/botao-excluir.png";
-    }
-}
-
-let boxBusca = document.querySelector('.busca');
-let lupa = document.querySelector('.lupa-buscar');
-let btnFechar = document.querySelector('.btn-fechar');
-
-lupa.addEventListener('click', ()=> {
-   boxBusca.classList.add('ativar')
-
-})
-
-
-const main = document.querySelector('.main');
-const quizSelection = document.querySelector('.quiz-section');
-const resultBox = document.querySelector('.result-box');
-
-
-let quesCount = 0;
-let quesNumb = 1;
-let userScore = 0;
-
-const nextBtn = document.querySelector('.next-btn');
-
-nextBtn.onclick = () => {//Proxima questão
-    if (quesCount < questions.length - 1) {
-        quesCount++;
-        showQuestions(quesCount);
-
-        quesNumb++;
-        questCounter(quesNumb);
-
-        nextBtn.classList.remove('active');
-
-    } else {
-        showResultBox();
-    }
-
-}
-
-const optionList = document.querySelector('.option-list');
-
-optionList.onclick = () => {//Selecionar a opção
-
-}
-
-//Recebendo as questôes e opções em array
-
-function showQuestions(index) {
-    const questionText = document.querySelector('.question-text');
-    questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
-
-    let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
-    <div class="option"><span>${questions[index].options[1]}</span></div>
-    <div class="option"><span>${questions[index].options[2]}</span></div>
-    <div class="option"><span>${questions[index].options[3]}</span></div>`;
-
-    optionList.innerHTML = optionTag;
-
-    const option = document.querySelectorAll('.option');
-    for (let i = 0; i < option.length; i++) {
-        option[i].setAttribute('onclick', 'optionSelected(this)');
-    }
-}
-
-function optionSelected(answer) {
-    let userAnswer = answer.textContent;
-    let correctAnswer = questions[quesCount].answer;
-    let allOptions = optionList.children.length;
-
-    if (userAnswer == correctAnswer) {
-        answer.classList.add('correct');
-        userScore += 1;
-        headerScore();
-
-    } else {
-        answer.classList.add('incorrect');
-
-        //se a resposta estiver incorreta, selecione automaticamente a resposta correta
-
-        for (let i = 0; i < allOptions; i++) {
-            if (optionList.children[i].textContent == correctAnswer) {
-                optionList.children[i].setAttribute('class', 'option correct');
+    document.querySelector('.next-btn').addEventListener('click', function() {
+        const selectedOption = document.querySelector('input[name="option"]:checked');
+        
+        if (selectedOption) {
+            const selectedValue = selectedOption.value;
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Verifica se a resposta está correta
+            if (selectedValue === currentQuestion.correctAnswer) {
+                score++;
             }
+            
+            // Avança para a próxima pergunta
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        } else {
+            alert('Por favor, selecione uma opção!');
         }
+    });
+});
 
-
-    }
-
-    //se o usuário selecionou outra opção, desativou todas as opções
-
-    for (let i = 0; i < allOptions; i++) {
-        optionList.children[i].classList.add('disabled');
-    }
-
-    nextBtn.classList.add('active');
+function loadQuestion() {
+    const question = questions[currentQuestionIndex];
+    document.querySelector('.question-text').textContent = question.question;
+    
+    const optionsHtml = question.options.map((option, index) => `
+        <div class="option">
+            <input type="radio" id="option${index}" name="option" value="${option.value}">
+            <label for="option${index}">${option.text}</label>
+        </div>
+    `).join('');
+    
+    document.querySelector('.option-list').innerHTML = optionsHtml;
+    document.querySelector('.question-total').textContent = `${currentQuestionIndex + 1} / ${questions.length} Questões`;
 }
 
-function questCounter(index) {
-    const questTotal = document.querySelector('.question-total');
-    questTotal.textContent = `${index} de ${questions.length} Questôes`;
+function showResult() {
+    document.querySelector('.quiz').style.display = 'none';
+    document.querySelector('.result-box').style.display = 'block';
+    document.querySelector('.score-text').textContent = `Você acertou ${score} de ${questions.length}`;
 }
