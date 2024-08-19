@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Src/assets/styles/index/style.css">
+
+    <!--Icones Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <title>Teste Vocacional</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+            </label>
+        </div>
+
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="/index.html">Career <span class="gradient">Fit</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+                        class="teste">Teste Vocacional</span></a></li>
+            <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+
+            <a href="/Src/Public/cadastro/tela_cadastro.php">
+                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><i class="fa-regular fa-user"></i> Cadastro</button>
+                </button>
+            </a>
+        </ul>
+    </header>
+
+    <!--Sobre Nós-->
+
+    <!--PAG-1-->
+    <main class="main ">
+        <section class="inicio ">
+            <div class="inicio-content">
+                <div class="description ">
+                    <h2></h2><!--Importante-->
+
+                    <span class="texto"></span>
+                    <span class="texto-2"></span>
+
+                    <br>
+
+                    <button class="button"> <a href="Src/pages/vocacional.html" class="teste-btn">Teste
+                            Vocacional</a> </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--SOBRE TESTE-->
+        <section class="sobre js-global">
+
+            <div class="sobre-content">
+
+                <div class="image-content">
+                    <img src="Src/assets/Imagens/estudante-formando.png" alt="image">
+                </div>
+
+                <div class="paragrafo">
+                    <h3>O que é o Teste Vocacional?</h3>
+                    <p>O Teste Vocacional é uma ferramenta que busca avaliar o perfil de cada pessoa
+                        e direcioná-la para a melhor escolha sobre qual carreira seguir. Esse teste
+                        vai ajudar a entender mais sobre suas habilidades e aptidões, indicando as
+                        melhores carreiras para o seu perfil, com base nos seus interesses e
+                        gostos.
+
+
+
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--CARDS-->
+        <section class="cards ">
+
+            <div class="card-titulo js-global">
+                <h1>Benefícios</h1>
+            </div>
+
+            <aside class="card contact js-global">
+
+                <h3>Inteligência lógico-matemática</h3>
+                <span>Resolução de problemas matemáticos, habilidades analíticas e lógicas.
+                </span>
+
+            </aside>
+
+            <aside class="card shop js-global">
+
+                <h3>Inteligência linguística</h3>
+                <span>Usar a linguagem para a compreensão e linguagem de modo eficaz.</span>
+
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3>Inteligência espacial</h3>
+                <span>Está ligada a compreender, reconhecer e criar imagens de maneira distinta.</span>
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3>Inteligência musical</h3>
+                <span>Indivíduos que possuem facilidade em aprender e tocar instrumentos musicais.</span>
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3>Inteligência físico-cinestésica</h3>
+                <span>Alta habilidade de coordenação motora entre corpo e mente está ligada geralmente a atletas.</span>
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3> Inteligência intrapessoal</h3>
+                <span>Compreensão de suas próprias emoções, motivos e metas.</span>
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3>Inteligência naturalista</h3>
+                <span>Compreensão geológica, cuidado com os animais e cultivos de plantas.</span>
+            </aside>
+
+            <aside class="card about js-global">
+
+                <h3>Inteligência existencial</h3>
+                <span>Compreender questões profundas como a existência e sentido da vida.</span>
+            </aside>
+
+        </section>
+    </main>
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+
+            <div class="logo">
+                <h1><a href="index.html">Career <span class="gradient">Fit</span>.</a></h1>
+            </div>
+
+
+            <!-- <h2>Criadores</h2>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="index.html">Home </a></li>
+                <li><a href="Src/pages/vocacional.html">Teste Vocacional </a></li>
+                <li><a href="Src/pages/faculdade.html">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="Src/pages/termos.html">Termos de uso </a></li>
+                <li><a href="Src/pages/politica.html">Política de Privacidade </a></li>
+                <li><a href="#">FAQ </a></li>
+            </ul>
+        </div>
+
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <p>Copyright © 2024 Career Fit. Todos os direitos reservados.</p>
+
+    </div>
+
+    <script src="/Src/assets/js/index.js"></script>
+
+</body>
+
+</html>

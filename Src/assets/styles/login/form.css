@@ -138,7 +138,7 @@
 .main .continue-button button:hover {
     background: var(--azulHover);
     color: #f3f6f9;
-    box-shadow: 0 0 10px var(azulEscuro)52;
+    box-shadow: 0 0 10px var(--azulEscuro)52;
 }
 
 .main .continue-button button a {

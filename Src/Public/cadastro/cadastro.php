@@ -1,8 +1,6 @@
 <?php
 
-include("../config.php");
-
-require_once "../config.php";
+require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -16,18 +14,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //   $cadEstudante = $_POST['cadEstudante'];
   //  $cadProfissional = $_POST['cadProfissional'];
    
+  if ($senha !== $confirmSenha) {
+    echo "As senhas não coincidem!";
+    exit();
 }
+$senha = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO cadastrar (name,email,senha,confirmSenha,cep,data_nascimento) VALUES (?,?,?,?,?,?)";
+$sql  = 'INSERT INTO usuario (name,email,senha,confirmSenha,cep,data_nascimento,nivel) VALUES (?,?,?,?,?,?,?)';
 
 $stmt = $conexao->prepare($sql);
-$stmt->bind_param("ssssss", $name, $email, $senha,$confirmSenha, $cep, $data_nascimento);
+$nivel = 'user';
+
+$stmt->bind_param("sssssss", $name,$email,$senha,$confirmSenha,$cep,$data_nascimento,$nivel);
+
+
 $stmt->execute();
 
-
-
-
 $stmt -> close();
+
 $conexao-> close();
+
+}
 ?>
 
