@@ -19,7 +19,7 @@
 
 }
 
-/*Checklist de Profissão*/
+/* Checklist de Profissão
 .main .form-prof {
     width: 30%;
     display: flex;
@@ -74,22 +74,25 @@
     color: var(--white);
     border: none;
     padding: 5px;
-}
+} */
 
 
 
 /*Cadastro de Questão*/
 .main .form {
-    width: 70%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: transparent;
     /* background: var(--white); */
-    padding: 20px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    /* border: 1px solid var(--azul); */
+    padding: 40px 40px;
+    margin:0px 10%;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 20px 20px 60px -30px var(--azulHover);
 }
 
 .main .form-header {
@@ -102,8 +105,8 @@
     font-size: 25px;
     font-weight: 500;
     position: relative;
-    color: var(--azulEscuro);
-    margin-bottom: 50px;
+    color: var(--azulHover);
+    margin-bottom: 20px;
 }
 
 .main .form-header h1::after {
@@ -111,7 +114,7 @@
     display: block;
     width: 50%;
     height: 3px;
-    background: var(azul);
+    background: var(--azulHover);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -134,7 +137,7 @@
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .main .input-box input {
@@ -157,15 +160,27 @@
     outline: 1px solid var(azul);
 }
 
+.main .input-box select {
+    margin: 10px 0;
+    padding: 10px 5px;
+    max-width: 200px;
+}
+
+.main .input-box select option {
+    background: var(--white);
+    color: var(--azulHover);
+    font-size: 14px;
+}
+
 .main .input-box label,
 .main .gender-title h6 {
     font-size: 18px;
     font-weight: 600;
-    color: #000000a5;
+    color: var(--azulHover);
 }
 
 .main .input-box::placeholder {
-    color: #000000be;
+    color: var(--azulHover);
 }
 
 /*Botão*/
