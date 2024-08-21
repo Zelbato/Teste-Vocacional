@@ -80,7 +80,7 @@
 
 /*Cadastro de Questão*/
 .main .form {
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,8 +88,8 @@
     background: transparent;
     /* background: var(--white); */
     /* border: 1px solid var(--azul); */
-    padding: 40px 40px;
-    margin:0px 10%;
+    padding: 40px;
+    margin:0px 15% 0 15%;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     box-shadow: 20px 20px 60px -30px var(--azulHover);
