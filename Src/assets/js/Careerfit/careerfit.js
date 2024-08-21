@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Por favor, selecione uma opção!');
         }
+            
     });
+    
 });
 
 function loadQuestion() {
@@ -39,6 +41,12 @@ function loadQuestion() {
             <label for="option${index}">${option.text}</label>
         </div>
     `).join('');
+
+    const optionList = document.querySelector('.option-list');
+
+    optionList.action = () => {//Selecionar a opção
+    
+    }
     
     document.querySelector('.option-list').innerHTML = optionsHtml;
     document.querySelector('.question-total').textContent = `${currentQuestionIndex + 1} / ${questions.length} Questões`;
@@ -49,3 +57,4 @@ function showResult() {
     document.querySelector('.result-box').style.display = 'block';
     document.querySelector('.score-text').textContent = `Você acertou ${score} de ${questions.length}`;
 }
+

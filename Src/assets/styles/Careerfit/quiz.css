@@ -34,14 +34,15 @@
     flex-direction: column;
     transition: all .5s;
     background: var(--white);
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    
+    box-shadow: 20px 20px 60px -40px var(--azul);
 }
 
 /* Efeito ao passar o mouse sobre o quiz */
-.quiz-section .quiz:hover {
-    box-shadow: 20px 20px 60px -40px var(--azul);
+/* .quiz-section .quiz:hover {
     transform: scale(1.02);
-}
+} */
 
 /* Estilo das perguntas */
 .quiz-section h2 {
@@ -64,6 +65,15 @@
     text-align: left;
     cursor: pointer;
     transition: .3s;
+}
+
+.option-list .option.active {
+    background: var(--azulClaro);
+    display: contents;
+}
+
+.option input {
+    display:contents;
 }
 
 .option-list .option:hover {
