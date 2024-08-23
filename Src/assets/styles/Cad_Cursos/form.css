@@ -2,7 +2,7 @@
 
 
 .main {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -11,54 +11,49 @@
 }
 
 .main .container {
+    width: 95%;
+    height: 90vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    width: 40%;
-    height: 45vh;
-    display: flex;
+    /* box-shadow: 10px 30px 30px #0000001c; */
     border-radius: 8px;
-    transition: all 0.5s;
+
 }
 
-.main .container:hover {
-    box-shadow:10px 0px 30px #00000044;
-}
-
+/*Cadastro de faculdade*/
 .main .form {
-    width: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: transparent;
+    /* background: var(--white); */
+    /* border: 1px solid var(--azul); */
     padding: 40px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    margin:0px 12% 0 12%;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    /* box-shadow: 20px 20px 60px -30px var(--azulHover); */
 }
 
 .main .form-header {
-    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
 
 }
 
 .main .form-header h1 {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
     position: relative;
-    color: var(--azulEscuro);
-    margin-bottom: 20px;
+    color: var(--azulHover);
+    margin-bottom: 10%;
 }
 
 .main .form-header h1::after {
     content: "";
     display: block;
-    width: 50%;
+    width: 60%;
     height: 3px;
     background: var(--azulHover);
     margin: 0 auto;
@@ -66,22 +61,23 @@
     border-radius: 10px;
 }
 
-.main .login-button {
-    display: flex;
-    align-items: center;
-}
+/* .main .title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 40px 0;
+} */
 
 .main .input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 0 ;
+    padding: auto 0 ;
 }
 
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .main .input-box input {
@@ -104,20 +100,32 @@
     outline: 1px solid var(azul);
 }
 
+.main .input-box select {
+    margin: 10px 0;
+    padding: 10px 5px;
+    max-width: 200px;
+}
+
+.main .input-box select option {
+    background: var(--white);
+    color: var(--azulHover);
+    font-size: 14px;
+}
 
 .main .input-box label,
 .main .gender-title h6 {
     font-size: 18px;
     font-weight: 600;
-    color: #000000c0;
+    color: var(--azulHover);
 }
 
 .main .input-box::placeholder {
-    color: var(--preto);
+    color: var(--azulHover);
 }
 
+/*Botão*/
 .main .continue-button button {
-    width: 100%;
+    width: 25%;
     margin-top: 10px;
     background: var(--azul);
 
@@ -131,24 +139,12 @@
 .main .continue-button button:hover {
     background: var(--azulHover);
     color: var(--white);
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 .main .continue-button button a {
     text-decoration: none;
     color: var(--white);
     font-size: 18px;
-    font-weight: 600;
-}
-
-.voltar {
-    margin-top: 10px;
-    display: none;
-}
-
-.voltar button {
-    width: 100%;
-    background: var(--azulHover);
-    padding: 10px;
-    border-radius: 50%;
+    font-weight: 500;
 }

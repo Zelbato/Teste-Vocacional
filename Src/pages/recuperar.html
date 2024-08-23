@@ -22,6 +22,37 @@
 
 <body>
 
+    <header class="header">
+
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+            </label>
+        </div>
+
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="/index.html">Career <span class="gradient">Fit</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+                        class="teste">Teste Vocacional</span></a>
+            </li>
+            <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+
+            <a href="/Src/pages/cadastro.html">
+                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
+                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
+                </button>
+            </a>
+
+        </ul>
+    </header>
+
+
     <aside class="voltar">
         <div class="voltar-content">
             <button class="voltar-btn"> <a href="/Src/pages/login.html"><i class="bi bi-arrow-left"></i></a></button>
@@ -42,10 +73,6 @@
                         <div class="title">
                             <h1>Recuperar Senha</h1>
                         </div>
-
-                        <p>A gente sabe que às vezes dá aquele branco! É só digitar seu e-mail que rapidinho a gente te
-                            envia as instruções para você recuperar sua senha</p>
-
                     </div>
 
                     <div class="input-group">
