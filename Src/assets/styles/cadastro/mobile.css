@@ -53,11 +53,21 @@
 @media screen and (max-width: 550px) {
 
     .main {
-        background: var(--white);
+        background:transparent;
     }
 
     .main .container {
         width: 100%;
+}
+
+.main .input-box input {
+    width: 250px;
+    height: 40px;
+}
+
+.main .continue-button button {
+    width: 95%;
+    height: 40px;
 }
 
 }

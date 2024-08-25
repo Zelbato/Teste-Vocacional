@@ -2,12 +2,12 @@
 
 
 .main {
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 40px 0px;
 }
 
 .main .container {
@@ -18,65 +18,6 @@
     border-radius: 8px;
 
 }
-
-/* Checklist de Profissão
-.main .form-prof {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--azulHover);
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.main .form-prof .lista {
-    font-size: 17px;
-    font-weight: 100;
-    position: relative;
-    color: var(--white);
-    margin: 20px 0;
-
-}
-
-.main .form-prof .lista::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 3px;
-    background: var(--azulEscuro);
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
-
-.main .form-prof .area {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main .form-prof .checklist {
-    padding: 10px;
-}
-
-.main .form-prof .checklist-input {
-    padding: 15px;
-}
-
-.main .form-prof .checklist-input label {
-    font-size: 16px;
-    color: var(--white);
-    border: none;
-    padding: 5px;
-} */
-
-
 
 /*Cadastro de Questão*/
 .main .form {
@@ -92,7 +33,7 @@
     margin:0px 12% 0 12%;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    box-shadow: 20px 20px 60px -30px var(--azulHover);
+    /* box-shadow: 20px 20px 60px -30px var(--azulHover); */
 }
 
 .main .form-header {

@@ -1,7 +1,6 @@
 
 
 
-
 @media (max-width: 800px) {
     .main .termos {
         width: 100%;
@@ -10,9 +9,9 @@
         margin: 10px 0px;
         
     }
-    
+
     .termos .termos-titulo  {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .termos .termos-uso  {
@@ -24,13 +23,13 @@
     .termos .termos-paragrafo {
         padding: 10px 0;
     }
-
+    
     .termos .termos-paragrafo  p {
         padding: 10px 5px;
         font-size: 15px;
         margin: 10px 0;
     }
-
+    
     .termos ul {
         padding: 10px 5px;
         font-size: 15px;

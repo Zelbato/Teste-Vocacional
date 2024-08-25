@@ -111,13 +111,12 @@
 
 .main .input-box input {
     margin: 10px 10px;
-    padding: 13px 30px;
+    width: 225px;
+    height: 40px;
+    padding: 0 15px;
     border: none;
-    border-bottom: 1px solid #575757;
-    /* border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c; */
-    background: transparent;
-    transition: all .5s;
+    border-bottom:1px solid var(--azulHover) ;
+    outline: none;
 }
 
 .main .input-box input:hover {

@@ -11,16 +11,16 @@
 }
 
 .main .container {
-    width: 50%;
+    width: 80%;
     height: 90vh;
     display: flex;
-    box-shadow: 10px 30px 30px #00000008;
+    box-shadow: 10px 30px 30px #00000000;
     border-radius: 8px;
 
 }
 
 .main .form-image {
-    width: 50%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,15 +35,16 @@
 }
 
 .main .form {
-    width: 60%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: transparent;
     padding: 40px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px; box-shadow: 20px 20px 50px -30px var(--azulHover);
+    /* border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; box-shadow: 20px 20px 50px -30px var(--azulHover); */
 }
 
 .main .form-header {
@@ -87,19 +88,22 @@
 
 .main .input-box input {
     margin: 10px 0;
-    padding: 13px 25px;
+    width: 350px;
+    height: 40px;
+    padding: 0 15px;
     border: none;
-    border-bottom: 1px solid var(--txtTitulo);
-    background: transparent;
+    border-bottom:1px solid var(--azulHover) ;
+    outline: none;
 }
 
 .main .input-box input:hover {
     transition: all .5s;
-    border-bottom: 1px solid var(--azul);
+    background: var(--white);
+    outline: none;
 }
 
 .main .input-box input:focus-visible {
-    outline: none;
+    outline: 1px solid var(azul);
 }
 
 .main .input-box label,

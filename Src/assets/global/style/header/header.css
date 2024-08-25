@@ -171,6 +171,7 @@ header .cadastro img {
     header .menu-mobile {
         display: block;
         width: 25%;
+        margin-bottom: 5%;
         text-align: center;
 
     }
