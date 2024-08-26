@@ -1,4 +1,6 @@
 
+
+
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -6,10 +8,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     z-index: 99;
+    background: var(--preto);
+    box-shadow: 0 5px 100px #00000000;
     transition: all 0.5s;
 }
+
 
 header.rolagem {
     background: var(--preto);
@@ -28,10 +33,9 @@ header .logo {
 
 header .logo a {
     color: var(--white);
-    text-decoration: none;
     font-size: 40px;
     font-weight: 500;
-    font-family: var(--font);
+    text-decoration: none;
 }
 
 header .gradient {
@@ -51,29 +55,15 @@ header ul {
 
 header ul li {
     list-style: none;
-    padding: 7px 0px;
 }
 
 header ul li a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 5px 7px;
-    position: relative;
-    font-size: 17px;
-    font-family: var(--font);
-}
-
-header ul li a span {
     text-decoration: none;
     color: var(--white);
     font-weight: 500;
     text-transform: capitalize;
     padding: 5px 7px;
     position: relative;
-    font-size: 17px;
-    font-family: var(--font);
 }
 
 header ul li a::after {
@@ -127,17 +117,20 @@ header .cadastro {
     color: var(--white);
     border: none;
     border-radius: 25px;
+    font-weight: 500;
     font-size: 17px;
 
     margin-left: 10px;
-    padding: 8px 14px;
+    padding:8px  10px;
 
     transition: all 0.3s ease-in-out;
     text-transform: capitalize;
 }
 
 /* header .cadastro:hover {
-    color: var(--azul);
+    background: var(--azul);
+    border: 1px solid var(--azul);
+    color: var(--white);
 } */
 
 header .cadastro img {
@@ -150,8 +143,8 @@ header .cadastro img {
 
 
     header {
-        background: rgb(25, 25, 25);
-        position: fixed;
+        background:var(--preto);
+        position: relative;
     }
 
     header ul {
@@ -159,7 +152,7 @@ header .cadastro img {
         /*Mudar a barra*/
         top: 100px;
         right: 100%;
-        background: rgba(25, 25, 25);
+        background: var(--preto);
         height: calc(100vh - 100px);
         width: 100%;
         flex-direction: column;
@@ -171,9 +164,8 @@ header .cadastro img {
     header .menu-mobile {
         display: block;
         width: 25%;
-        margin-bottom: 5%;
         text-align: center;
-
+        margin-bottom: 5%;
     }
 
     header .menu-mobile img {
