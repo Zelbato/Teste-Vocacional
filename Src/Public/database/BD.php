@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS questions (
     question_text TEXT NOT NULL
 ); -->
 
-          <!-- como inserir um admin => INSERT INTO usuario (name,email,senha,confirmSenha,cep,data_nascimento,nivel) VALUES ('calebe','cal@gmail.com',1234,1234,15770000,01032007,'admin'); -->
+    <!-- como inserir um admin => INSERT INTO usuario (name,email,senha,confirmSenha,cep,data_nascimento,nivel) VALUES ('calebe','cal@gmail.com',1234,1234,15770000,01032007,'admin'); -->
 
 
 <!-- Tabela de alternativas

@@ -20,7 +20,6 @@
     <title>Teste Vocacional</title>
 </head>
 
-
 <body>
 
     <header class="header">
@@ -53,7 +52,7 @@
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="imagemLogin.svg" alt="image">
+                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
             </section>
 
             <section class="form">
@@ -70,7 +69,7 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Nome</label>
-                            <input id="name" type="text" name="name" placeholder="Digite seu name" required>
+                            <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
                         </div>
 
                         <div class="input-box">
@@ -101,35 +100,33 @@
                         </div>
                     </div>
 
-                    <!--
-
-                    <div class="gender-inputs">
+                    <!-- <div class="gender-inputs">
                         <div class="gender-title">
                             <h6>Entrar como: </h6>
                         </div>
 
-                        <div class="gender-group" >
+                        <div class="gender-group">
                             <div class="gender-input">
-                                <input type="radio" id="estudante" name="cadEstudante">
+                                <input type="radio" id="estudante" name="gender">
                                 <label for="estudante">Estudante</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" id="profissional" name="cadProfissional">
+                                <input type="radio" id="profissional" name="gender">
                                 <label for="profissional">Profissional</label>
                             </div>
                         </div>
-                    </div>
-                    -->
+                    </div> -->
+
                     <aside class="continue-button">
-                        <button><a href="/index.html">Cadastrar</a></button>
+                        <button><a href="#">Cadastrar</a></button>
                     </aside>
                 </form>
             </section>
         </article>
     </main>
 
-    <script src="/Src/assets/js/cadastro.js"></script>
+    <script src="/Src/js/cadastro.js"></script>
 
 </body>
 
