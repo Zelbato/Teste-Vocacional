@@ -16,19 +16,20 @@
     justify-content: center;
     flex-direction: column;
 
-    width: 40%;
+    width: 30%;
     height: 60vh;
     display: flex;
     border-radius: 8px;
     transition: all 0.5s;
+    border:  10px solid var(--azul);
 }
 
 .main .container:hover {
-    box-shadow:10px 0px 30px #00000044;
+    box-shadow:10px 0px 30px #00000017;
 }
 
 .main .form {
-    width: auto;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +38,7 @@
     padding: 40px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    
 }
 
 .main .form-header {
@@ -58,12 +60,13 @@
 .main .form-header h1::after {
     content: "";
     display: block;
-    width: 50%;
+    width: 25%;
     height: 3px;
     background: var(--azulHover);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
+    
 }
 
 .main .login-button {
@@ -82,6 +85,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
+
 }
 
 .main .input-box input {

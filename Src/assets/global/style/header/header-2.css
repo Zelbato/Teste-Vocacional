@@ -22,7 +22,7 @@ header {
 
 header .logo {
     flex: 1;
-    margin-left: 50px;
+    margin: 0 5%;
 }
 
 header .logo a {
@@ -42,13 +42,14 @@ header .teste {
 }
 
 header ul {
-    flex: 2;
+    flex: 4;/* flex 2 ou 4 */
     display: flex;
     justify-content: space-evenly;
 }
 
 header ul li {
     list-style: none;
+    margin: auto 0;
 }
 
 header ul li a {
@@ -58,6 +59,7 @@ header ul li a {
     text-transform: capitalize;
     padding: 5px 7px;
     position: relative;
+    font-size: 18px;
 }
 
 header ul li a::after {
@@ -112,7 +114,7 @@ header .cadastro {
     border: none;
     border-radius: 25px;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 18px;
 
     margin-left: 10px;
     padding:8px  10px;
@@ -128,7 +130,7 @@ header .cadastro {
 } */
 
 header .cadastro img {
-    width: 12px;
+    width: 16px;
     margin-right: 5px;
 }
 

@@ -73,6 +73,7 @@
         width: 100%;
         height: auto;
         box-shadow: none;
+        border: none;
     }
 
     .main .container:hover {
@@ -84,7 +85,7 @@
     }
 
     .main .form-header h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     .main .input-box {
