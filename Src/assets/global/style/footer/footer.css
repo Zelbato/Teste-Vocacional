@@ -4,7 +4,7 @@
 footer {
     width: 100%;
     min-height: 250px;
-    border-top: 1px solid var(--white)23;
+    border-top: 1px solid var(--txtDescritivo);
     background: var(--preto);
     display: flex;
     position: relative;
@@ -69,6 +69,7 @@ footer .boxs:nth-child(4) {
     justify-content: end;
     align-items: center;
     background: var(--preto);
+    border-top: 1px solid var(--txtDescritivo);
     padding: 0px 40px;
 
 }
