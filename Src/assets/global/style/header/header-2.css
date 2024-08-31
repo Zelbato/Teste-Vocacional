@@ -1,6 +1,4 @@
 
-
-
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -82,60 +80,32 @@ header .menu-mobile {
     display: none;
 }
 
-header .login {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #f5f5f5;
+header .mobile-entrar, .mobile-excluir {
+  display: none;
 }
 
-header .criar {
-    background: var(--azul);
-    border-radius: 5px;
-    margin-left: 10px;
-    border: none;
-    color: var(--white);
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    padding: 7px 10px;
-    text-transform: uppercase;
-}
+@media(max-width:1100px) {
+    header .logo a {
+        font-size: 30px;
+        margin-left: 4px;
+    }
 
-header .criar:hover {
-    box-shadow: rgba(255, 187, 109, 0.498) 0px 0px 15px;
-    transform: scale(1.1);
-}
-
-
-header .cadastro {
-    background: transparent;
-    cursor: pointer;
-    color: var(--white);
-    border: none;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 18px;
-
-    margin-left: 10px;
-    padding:8px  10px;
-
-    transition: all 0.3s ease-in-out;
-    text-transform: capitalize;
-}
-
-/* header .cadastro:hover {
-    background: var(--azul);
-    border: 1px solid var(--azul);
-    color: var(--white);
-} */
-
-header .cadastro img {
-    width: 16px;
-    margin-right: 5px;
+    header .gradient{
+        font-size: 30px;
+    }
 }
 
 
 @media(max-width:800px) {
+
+    header .logo a {
+        font-size: 35px;
+        margin-left: 17%;
+    }
+
+    header .gradient{
+        font-size: 35px;
+    }
 
 
     header {
@@ -152,7 +122,7 @@ header .cadastro img {
         height: calc(100vh - 100px);
         width: 100%;
         flex-direction: column;
-        align-items: center;
+        align-items:center;
         transition: right 0.5s linear;
         display: flex;
     }
@@ -174,12 +144,17 @@ header .cadastro img {
     #chk1:checked~ul {
         right: 0;
     }
+
+    header .mobile-entrar,
+    .mobile-excluir {
+        display:inline;/*Faz aparecer*/
+      }
 }
 
 @media(max-width:600px) {
     header .logo {
         font-size: 12px;
-        margin-left: 4px;
+        margin-left: -8%;
     }
 
     header span {
@@ -189,6 +164,119 @@ header .cadastro img {
     header ul {
         width: 100%;
     }
+
+    header .mobile-entrar, .mobile-excluir {
+      visibility: visible;
+    }
 }
 
 /*Fim do menu  */
+
+.menu-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--azul);
+    /* border-bottom: 5px solid var(--blueDark); */
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.menu-button:hover {
+    background-color: var(--azulHover);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 0.2rem 0;
+    border-radius: 12px;
+    background-color: var(--dark);
+    transform: scaleX(100%);
+    z-index: 1;
+    margin-left: 35%;
+    margin-top: 4.9%;
+    display: flex;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tooltip.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    width: 0;
+    height: 0;
+    margin-left: 27%;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--dark);
+    
+    
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    border-left: 1px solid #ffffff27;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item:nth-last-child(0) {
+    border-left: none;
+}
+
+/* .menu-item:hover {
+    background-color: var(--black);
+} */
+
+.tooltip .menu-item-icon {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.tooltip .menu-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.tooltip .menu-item-content-title {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.tooltip .menu-item-content-subtitle {
+    color: var(--azul);
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+@media(max-width:800px) {
+
+    .menu-button {
+        display: none;
+    }
+
+    .tooltip {
+    display: none;
+    }
+}
