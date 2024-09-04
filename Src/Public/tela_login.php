@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/assets/styles/cadastro/cadastro.css">
+    <link rel="stylesheet" href="../login.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -22,6 +22,7 @@
 
 <body>
 
+
     <header class="header">
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -32,7 +33,7 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="/index.html"> Career  <span class="gradient">Fit</span>.</a></h1>
+            <h1><a href="/index.html">Career  <span class="gradient">Fit</span>.</a></h1>
         </div>
 
         <ul>
@@ -41,7 +42,7 @@
                         class="teste">Teste Vocacional</span></a></li>
             <li><a id="#facul" class="faculdade" href="/Src/pages/faculdade.html">Faculdades</a></li>
 
-            <a href="cadastro.html">
+            <a href="/Src/pages/cadastro.html">
                 <button id="cadastro" class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
                         src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
                 </button>
@@ -52,81 +53,52 @@
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
+                <img src="../imagemLogin.svg" alt="image">
             </section>
 
             <section class="form">
-                <form action="cadastro.php" method="POST">
+                <form action="login.php" method="POST">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Cadastre-se</h1>
+                            <h1>Entrar</h1>
                         </div>
-                        <div class="login-button">
-                            <button> <a href="/Src/pages/login.html">Login</a> </button>
-                        </div>
+        
                     </div>
 
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="firstname">Nome</label>
+                            <label for="name">Nome</label>
                             <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
                         </div>
 
-                        <div class="input-box">
-                            <label for="date">Data de Nascimento</label>
-                            <input id="date" type="date" name="data_nascimento" placeholder="Digite seu data de nascimento" >
-                        </div>
-                      
-
+                        
                         <div class="input-box">
                             <label for="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                         </div>
-                        
-                        <div class="input-box">
-                            <label for="local">Localização </label>
-                            <input id="local" type="local" name="cep" placeholder="Digite seu CEP" required>
-                        </div>
-                        
+
                         <div class="input-box">
                             <label for="password">Senha</label>
                             <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
-                         
                         </div>
 
-                        <div class="input-box">
-                            <label for="password">Confirmar Senha</label>
-                            <input id="password" type="password" name="confirmSenha" placeholder="Confirme sua senha" required>
+                        <div class="recuperar-senha">
+                            <a href="/Src/pages/recuperar.html">Esqueceu sua senha?</a>
                         </div>
                     </div>
 
-                    <!-- <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
+                  
 
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
-                                <label for="estudante">Estudante</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
-                                <label for="profissional">Profissional</label>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <aside class="continue-button">
-                        <button><a href="#">Cadastrar</a></button>
-                    </aside>
+                    
+                       <button class="inputSubmit" type="submit" name="submit" value="enviar">Logar</button>
+                     
+                    
                 </form>
             </section>
         </article>
     </main>
 
-    <script src="/Src/js/cadastro.js"></script>
+    <script src="/Src/js/login.js"></script>
 
 </body>
 

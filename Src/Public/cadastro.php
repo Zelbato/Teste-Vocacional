@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Cadastro efetuado com sucesso!";
+        
     } else {
         echo "Erro: " . $stmt->error;
     }
