@@ -1,0 +1,26 @@
+
+
+.main .gerenciar {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+
+    padding: 40px 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.gerenciar .gerenciar-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gerenciar-content .gerenciar-title h1{
+    font-size: 35px;
+    font-family: var(--font);
+    font-weight: 500;
+    padding: 20px 0;
+}
+
