@@ -188,7 +188,7 @@ header .mobile-entrar, .mobile-excluir {
     background-color: var(--dark);
     transform: scaleX(100%);
     z-index: 1;
-    margin-left: 35%;
+    margin-left: 5%;
     margin-top: 4.9%;
     display: flex;
 

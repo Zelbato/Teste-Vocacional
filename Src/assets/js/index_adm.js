@@ -1,3 +1,13 @@
+
+const tooltip = document.querySelector(".tooltip");
+const menuButton = document.querySelector(".menu-button");
+
+menuButton.addEventListener("click", () => {
+    tooltip.classList.toggle("active");
+    alternarMenuButtonIcon();
+})
+
+
 //selecting all required elements
 const start_btn_home = document.querySelector(".start_btn");
 const start_btn = document.querySelector(".start_btn #button_play");

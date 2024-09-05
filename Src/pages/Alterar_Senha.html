@@ -16,6 +16,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
     <title>Teste Vocacional</title>
 </head>
@@ -43,11 +46,43 @@
             </li>
             <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
 
-            <a href="/Src/pages/cadastro.html">
-                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
-                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
-                </button>
+            <li><a class="mobile-entrar" href="/Src/pages/faculdade.html" id="eventos">Entrar</a></li>
+            <li><a class="mobile-excluir" href="/Src/pages/faculdade.html" id="eventos">Excluir conta</a></li>
+
+            <a href="#" class="menu-button">
+                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
+        
+            <div class="tooltip">
+                <a href="/Src/pages/cadastro.html" class="menu-item">
+               
+        
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                           Ainda não se cadastrou?<br>
+                           Clique aqui para se cadastrar!
+                        </span>
+                        
+                        <span class="menu-item-content-subtitle">
+                          
+                            Cadastrar-se <br>
+                             Login
+                         </span>
+                    </div>
+                </a>
+        
+                <a href="/Src/pages/questoe.html" class="menu-item">
+        
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                           Deseja excluir sua conta <br>
+                           Clique aqui para finalizar!
+                        </span>
+                        <span class="menu-item-content-subtitle">
+                            Excluir conta
+                         </span>
+                    </div>
+                </a> 
 
         </ul>
     </header>
@@ -100,6 +135,9 @@
             </section>
         </article>
     </main>
+
+
+    <script src="/Src/assets/js/Alterar_Senha.js"></script>
 
 </body>
 
