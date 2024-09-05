@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/assets/styles/index/style.css">
+    <link rel="stylesheet" href="/Src/public/asstes/Css/style.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -17,7 +17,9 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,12 +46,13 @@
 
         <ul>
             <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
-                        class="teste">Teste Vocacional</span></a></li>
+            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span class="teste">Teste
+                        Vocacional</span></a></li>
             <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
 
-            <a href="/Src/Public/cadastro/tela_cadastro.php">
-                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><i class="fa-regular fa-user"></i> Cadastro</button>
+            <a href="/Src/pages/cadastro.html">
+                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
+                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
                 </button>
             </a>
         </ul>

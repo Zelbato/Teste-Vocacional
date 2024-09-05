@@ -1,0 +1,73 @@
+
+
+@media screen and (max-width: 1300px) {
+    .main .form-image {
+        display: none;
+    }
+
+    .main .container {
+        width: 70%;
+    }
+
+    .main .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    
+    .main {
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main .container {
+        width: 90%;
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .mian .input-group {
+        flex-direction: column;
+
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 100%;
+    }
+
+    .main .gender-inputs {
+        margin: 20px 0px;
+    }
+
+    .main .gender-group {
+        flex-direction: column;
+    }
+
+    .main .gender-input {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main {
+        background:transparent;
+    }
+
+    .main .container {
+        width: 100%;
+}
+
+.main .input-box input {
+    width: 250px;
+    height: 40px;
+}
+
+.main .continue-button button {
+    width: 95%;
+    height: 40px;
+}
+
+}

@@ -1,0 +1,132 @@
+
+
+
+.main .inicio {
+    background-image: url(/Src/assets/Imagens/estudante.jpeg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.inicio .inicio-content {
+    padding: 0px 50% 0px 5%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.inicio h2 {
+    margin-top: 20px;
+    color: var(--white);
+    font-size: 40px;
+    font-family: var(--font);
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.inicio .description {
+
+    height: 50vh;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 20px #252525; */
+}
+
+.inicio .texto {
+    color: var(--azul);
+}
+
+.inicio span.texto-2 {
+    color: var(--white);
+}
+
+.inicio .texto,
+span {
+    font-size: 20px;
+    font-family: var(--font);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.inicio .button {
+    background: var(--azul);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    transition: all 0.5s ease;
+
+
+}
+
+.inicio .button:hover {
+    background: var(--azulHover);
+    transform: scale(0.9);
+}
+
+.inicio .button a {
+    text-decoration: none;
+
+    color: var(--white);
+    font-size: 18px;
+    font-family: var(--font);
+    font-weight: 600;
+}
+
+@media(max-width:800px) {
+    .main .inicio {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(/Src/assets/Imagens/estudante.jpeg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .inicio .inicio-content {
+        padding: 20px 0px 40px 0px;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+    }
+
+    .inicio .description {
+        padding: 0px 15px;
+        height: auto;
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .inicio h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .inicio span {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}

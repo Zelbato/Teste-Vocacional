@@ -1,0 +1,110 @@
+
+
+
+@media screen and (max-width: 1300px) {
+
+    .main .container {
+        width: 70%;
+    }
+
+    .main .form {
+        width: 100%;
+    }
+
+    .main .input-box input {
+        margin: 0px 10px;
+    }
+
+    .main .input-group .recuperar-senha a{
+        padding: 0px 45px;
+    }
+
+
+}
+
+@media screen and (max-width: 1064px) {
+
+    .main {
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main .container {
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .mian .input-group {
+        flex-direction: column;
+
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 100%;
+    }
+
+    .main .gender-inputs {
+        margin: 20px 0px;
+    }
+
+    .main .gender-group {
+        flex-direction: column;
+    }
+
+    .main .gender-input {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .main .form-image {
+        display: none;
+    }
+
+
+    .main .container {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .main .form {
+        background: none;
+    }
+
+    .main .form-header h1 {
+        font-size: 30px;
+    }
+
+    .main .input-box input {
+        width: 250px;
+        height: 40px;
+        padding: 0 15px;
+        border: none;
+        border-bottom:1px solid var(--azulHover) ;
+        outline: none;
+    }
+
+    .main .input-box input:hover {
+        border-radius: 5px;
+        padding: 10px 25px;
+        background: transparent;
+    }
+
+    .main .input-box input:focus-visible {
+        border: none;
+        outline: none;
+    }
+
+    .main .input-group .recuperar-senha a{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+}
