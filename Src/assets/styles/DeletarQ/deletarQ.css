@@ -24,3 +24,43 @@
     padding: 20px 0;
 }
 
+.gerenciar-content table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.gerenciar-content table td.exec-question {
+    height: 350px;
+    width: 400px;
+}
+.gerenciar-content table td.d-question {
+width: 200px;
+}
+
+.gerenciar-content table tr {
+    border-bottom: 1px solid #ddd;
+    padding: 40px;
+}
+
+.gerenciar-content table tr th {
+    background-color: #f0f0f0;
+    font-size: 24px;
+}
+
+.gerenciar-content button {
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul);
+    border: none;
+    color: var(--white);
+    border-radius: 8px;
+     margin-left: 30%;
+}
