@@ -1,11 +1,14 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/assets/styles/Cad_Faculdade/cad_Faculdade.css">
-
+    <!-- <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css"> -->
+    <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css">
+    
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--Icones Bootstrap-->
@@ -36,7 +39,7 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
@@ -89,92 +92,56 @@
 
     <main class="main">
         <article class="container">
-            <!-- <section class="form-image">
-                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
-            </section> -->
-
             <section class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h1>Cadastro de Localização da Faculdade</h1>
-                        </div>
-                        <div class="cursos-button">
-                            <button> <a href="/Src/pages/cad_Cursos.html">Cursos</a> </button>
-                        </div>
-                    </div>
-
+                <h1>Cadastro de Questões</h1>
+                <form id="questionForm" action="../Services/criarq.php" method="POST">
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="faculdade">Nome da Faculdade</label>
-                            <input id="faculdade" type="text" name="faculdade" placeholder="Digite a faculdade" required>
-                            <select name="" id="">
-                                <option value="">Area de Atuação</option>
-                                <option value="">Administração, negócios e serviços</option>
-                                <option value="">Artes e Design</option>
-                                <option value="">Ciências Biológicas e da Terra</option>
-                                <option value="">Análise e Desenvolvimento de Sistemas</option>
-                                <option value="">Ciências Sociais e Humanas</option>
-                                <option value="">Comunicação e Informação</option>
-                                <option value="">Engenharia e Produção</option>
-                                <option value="">Saúde e Bem-estar</option>
-                            </select>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="date">URL da Faculdade</label>
-                            <input id="date" type="text" name="date" placeholder="Digite a URL" required>
-                        </div>
-                      
-
-                        <div class="input-box">
-                            <label for="description">Descrição do Curso</label>
-                            <input id="description" type="text" name="description" placeholder="Descrição do curso" required>
-                        </div>
-                        
-                        <div class="input-box">
-                            <label for="local">Localização </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
-                        </div>
-                        
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                         
-                        </div>
-
-                        <div class="input-box">
-                            <label for="password">Confirmar Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Confirme sua senha" required>
+                            <label for="question_text">Questão</label>
+                            <input class="criar-questao" id="question_text" type="text" name="question_text" placeholder="Digite a questão" required>
                         </div>
                     </div>
 
-                    <!-- <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
+                    <div id="options-container">
+                        <!-- Div para opções -->
+                    </div>
 
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
-                                <label for="estudante">Estudante</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
-                                <label for="profissional">Profissional</label>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <aside class="continue-button">
-                        <button><a href="#">Cadastrar Faculdade</a></button>
-                    </aside>
+                    <button type="button" onclick="addOption()">Adicionar Opção</button><br>
+                    <button type="submit">Cadastrar Questão</button>
                 </form>
             </section>
         </article>
     </main>
 
+    <script>
+        let optionCount = 1;
+
+        function addOption() {
+            const optionsContainer = document.getElementById('options-container');
+            const newOptionDiv = document.createElement('div');
+            newOptionDiv.classList.add('input-group');
+            newOptionDiv.innerHTML = `
+                <div class="input-box">
+                    <label for="option_text_${optionCount}">Alternativa ${optionCount}</label>
+                    <input class="criar-altern" id="option_text_${optionCount}" type="text" name="options[${optionCount}][text]" placeholder="${String.fromCharCode(64 + optionCount)}. " required>
+                    <select name="options[${optionCount}][career]" required>
+                        <option value="lawyer">Área de Atuação</option>
+                        <option value="math_teacher">Administração, Negócios e Serviços</option>
+                        <option value="programmer">Artes e Design</option>
+                        <option value="math_teacher">Ciências Biológicas e da Terra</option>
+                        <option value="programmer">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="lawyer">Ciências Sociais e Humanas</option>
+                        <option value="lawyer">Comunicação e Informação</option>
+                        <option value="math_teacher">Engenharia e Produção</option>
+                        <option value="lawyer">Saúde e Bem-estar</option>
+                    </select>
+                </div>
+            `;
+            optionsContainer.appendChild(newOptionDiv);
+            optionCount++;
+        }
+    </script>
+    
     <!--RODAPÉ-->
     <footer>
         <div class="boxs">
@@ -224,7 +191,7 @@
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
     </div>
 
-    <script src="/Src/js/cadastro.js"></script>
+    <script src="/Src/assets/js/questoes.js"></script>
 
 </body>
 

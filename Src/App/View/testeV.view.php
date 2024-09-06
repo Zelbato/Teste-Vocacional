@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/assets/styles/login/login.css">
+    <link rel="stylesheet" href="/Src/assets/styles/Careerfit/careerfit.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -22,9 +21,7 @@
     <!--Google Fonts-->
     <title>Teste Vocacional</title>
 </head>
-
 <body>
-
     <header class="header">
 
         <div class="menu-mobile">
@@ -36,7 +33,7 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php">Career <span class="gradient">Fit</span>.</a></h1>
         </div>
 
         <ul>
@@ -87,55 +84,68 @@
         </ul>
     </header>
 
+    <!-- <div id="loader"></div> -->
+
     <main class="main">
-        <article class="container">
-            <section class="form-image">
-                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
-            </section>
+        <section class="quiz-section">
+            <div class="quiz">
+                <h2 class="question-text">O emprego ideal é aquele no qual você:</h2>
+                <div class="option-list">
+                    <!-- As opções serão geradas dinamicamente pelo JavaScript -->
+                </div>
+                <div class="quiz-footer">
+                    <span class="question-total">1 / 30 Questões</span>
+                    <button class="next-btn">Próxima Pergunta</button>
+                </div>
+            </div>
 
-            <section class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h1>Entrar</h1>
-                        </div>
-        
-                    </div>
-
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="firstname">Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
-                        </div>
-
-                        
-                        <div class="input-box">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                        </div>
-
-                        <div class="recuperar-senha">
-                            <a href="/Src/pages/recuperar.html">Esqueceu sua senha?</a>
-                        </div>
-                    </div>
-
-                  
-
-                    <aside class="continue-button">
-                        <button><a href="#">Entrar</a></button>
-                    </aside>
-                </form>
-            </section>
-        </article>
+            <div class="result-box"><!--Parte de Localização-->
+                <h2>Resultado do Teste</h2>
+                <div class="result-container">
+                    <span class="score-text">Você acertou 0 de 30</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="/Src/assets/js/login.js"></script>
+    <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+            <div class="logo">
+                <h1><a href="index.html">Career <span class="gradient">Fit</span>.</a></h1>
+            </div>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Src/Site/pages/Vocacional/vocacional.html">Teste Vocacional</a></li>
+                <li><a href="/Src/Site/pages/Faculdade/faculdade.html">Faculdades</a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="/Src/Site/pages/termos/termos.html">Termos de uso</a></li>
+                <li><a href="/Src/Site/pages/termos/politica_privacidade/politica.html">Política de Privacidade</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
 
+    <div class="footer">
+        <p>© 2024 Career Fit. Todos os direitos reservados.</p>
+    </div>
+
+    <script src="/Src/assets/js/Careerfit/questCareerFit.js"></script>
+    <script src="/Src/assets/js/Careerfit/careerfit.js"></script>
 </body>
-
 </html>

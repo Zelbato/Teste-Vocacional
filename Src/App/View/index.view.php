@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/public/asstes/Css/style.css">
+    <link rel="stylesheet"  href="/Src/public/asstes/Css/style.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -30,33 +32,67 @@
 
 <body>
 
-    <header class="header">
+<header class="header">
 
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
-            </label>
-        </div>
+<div class="menu-mobile">
+    <label for="chk1" onclick="menu()">
+        <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+    </label>
+</div>
 
-        <input type="checkbox" name="" id="chk1">
+<input type="checkbox" name="" id="chk1">
 
-        <div class="logo">
-            <h1><a href="/index.html">Career <span class="gradient">Fit</span>.</a></h1>
-        </div>
+<div class="logo">
+    <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
+</div>
 
-        <ul>
-            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span class="teste">Teste
-                        Vocacional</span></a></li>
-            <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+<ul>
+    <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+    <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+                class="teste">Teste Vocacional</span></a>
+    </li>
+    <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
 
-            <a href="/Src/pages/cadastro.html">
-                <button class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
-                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
-                </button>
-            </a>
-        </ul>
-    </header>
+    <li><a class="mobile-entrar" href="../View/cadastro.view.php" id="eventos">Entrar</a></li>
+    <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+
+    <a href="#" class="menu-button">
+         <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+    </a>
+
+    <div class="tooltip">
+        <a href="/Src/pages/cadastro.html" class="menu-item">
+       
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Ainda não se cadastrou?<br>
+                   Clique aqui para se cadastrar!
+                </span>
+                
+                <span class="menu-item-content-subtitle">
+                  
+                    Cadastrar-se <br>
+                     Login
+                 </span>
+            </div>
+        </a>
+
+        <a href="/Src/pages/questoe.html" class="menu-item">
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Deseja excluir sua conta <br>
+                   Clique aqui para finalizar!
+                </span>
+                <span class="menu-item-content-subtitle">
+                    Excluir conta
+                 </span>
+            </div>
+        </a> 
+
+</ul>
+</header>
 
     <!--Sobre Nós-->
 
@@ -176,7 +212,7 @@
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="index.html">Career <span class="gradient">Fit</span>.</a></h1>
+                <h1><a href="index.html">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -215,7 +251,7 @@
     </footer>
 
     <div class="footer">
-        <p>Copyright © 2024 Career Fit. Todos os direitos reservados.</p>
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
 
     </div>
 

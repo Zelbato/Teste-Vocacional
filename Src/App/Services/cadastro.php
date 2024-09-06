@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];

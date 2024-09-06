@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
 session_start(); // Iniciar a sessão deve ser feito logo no início do script
 
 // Contagem das respostas e definição da carreira mais comum

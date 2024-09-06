@@ -143,8 +143,8 @@ header .mobile-entrar, .mobile-excluir {
 
 @media(max-width:600px) {
     header .logo {
-        font-size: 12px;
-        margin-left: 4px;
+        width: 120px;
+        /* margin-left: 4px; */
     }
 
     header span {

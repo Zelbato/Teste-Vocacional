@@ -1,6 +1,5 @@
 <?php
-// index.php
-require 'config.php'; // Inclui a configuração do banco de dados
+require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";// Inclui a configuração do banco de dados
 
 session_start(); // Inicia a sessão
 

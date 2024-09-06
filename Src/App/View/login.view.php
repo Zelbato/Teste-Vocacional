@@ -23,32 +23,67 @@
 <body>
 
 
-    <header class="header">
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
-            </label>
-        </div>
+<header class="header">
 
-        <input type="checkbox" name="" id="chk1">
+<div class="menu-mobile">
+    <label for="chk1" onclick="menu()">
+        <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+    </label>
+</div>
 
-        <div class="logo">
-            <h1><a href="/index.html">Career  <span class="gradient">Fit</span>.</a></h1>
-        </div>
+<input type="checkbox" name="" id="chk1">
 
-        <ul>
-            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" class="teste-vocacaco" href="/Src/pages/vocacional.html"><span
-                        class="teste">Teste Vocacional</span></a></li>
-            <li><a id="#facul" class="faculdade" href="/Src/pages/faculdade.html">Faculdades</a></li>
+<div class="logo">
+    <h1><a href="index.view.php">Career <span class="gradient">Careers</span>.</a></h1>
+</div>
 
-            <a href="/Src/pages/cadastro.html">
-                <button id="cadastro" class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
-                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
-                </button>
-            </a>
-        </ul>
-    </header>
+<ul>
+    <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+    <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+                class="teste">Teste Vocacional</span></a>
+    </li>
+    <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+
+    <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
+    <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+
+    <a href="#" class="menu-button">
+         <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+    </a>
+
+    <div class="tooltip">
+        <a href="/Src/pages/cadastro.html" class="menu-item">
+       
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Ainda não se cadastrou?<br>
+                   Clique aqui para se cadastrar!
+                </span>
+                
+                <span class="menu-item-content-subtitle">
+                  
+                    Cadastrar-se <br>
+                     Login
+                 </span>
+            </div>
+        </a>
+
+        <a href="/Src/pages/questoe.html" class="menu-item">
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Deseja excluir sua conta <br>
+                   Clique aqui para finalizar!
+                </span>
+                <span class="menu-item-content-subtitle">
+                    Excluir conta
+                 </span>
+            </div>
+        </a> 
+
+</ul>
+</header>
 
     <main class="main">
         <article class="container">
@@ -57,7 +92,7 @@
             </section>
 
             <section class="form">
-                <form action="login.php" method="POST">
+                <form action="../Services/login.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Entrar</h1>
@@ -71,7 +106,6 @@
                             <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
                         </div>
 
-                        
                         <div class="input-box">
                             <label for="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email" required>
@@ -87,10 +121,8 @@
                         </div>
                     </div>
 
-                  
-
                     
-                       <button class="inputSubmit" type="submit" name="submit" value="enviar">Logar</button>
+                       <button class="inputSubmit" type="submit" name="submit" value="enviar"><a href="adm.view.php">Logar</a></button>
                      
                     
                 </form>

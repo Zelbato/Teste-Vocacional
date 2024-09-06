@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/Public/assets/Css/cadastro/cadastro.css">
+    <link rel="stylesheet" href="/Src/Public/assets/css/cadastro/cadastro.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,32 +26,67 @@
 
 <body>
 
-    <header class="header">
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
-            </label>
-        </div>
+<header class="header">
 
-        <input type="checkbox" name="" id="chk1">
+<div class="menu-mobile">
+    <label for="chk1" onclick="menu()">
+        <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+    </label>
+</div>
 
-        <div class="logo">
-            <h1><a href="/index.html"> Career  <span class="gradient">Fit</span>.</a></h1>
-        </div>
+<input type="checkbox" name="" id="chk1">
 
-        <ul>
-            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" class="teste-vocacaco" href="/Src/pages/vocacional.html"><span
-                        class="teste">Teste Vocacional</span></a></li>
-            <li><a id="#facul" class="faculdade" href="/Src/pages/faculdade.html">Faculdades</a></li>
+<div class="logo">
+    <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+</div>
 
-            <a href="cadastro.html">
-                <button id="cadastro" class="cadastro" data-toggle="modal" data-target="#ModalCriarEvento"><img
-                        src="/Src/assets/Imagens/user.png" alt="image"> Cadastro</button>
-                </button>
-            </a>
-        </ul>
-    </header>
+<ul>
+    <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+    <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+                class="teste">Teste Vocacional</span></a>
+    </li>
+    <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+
+    <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
+    <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+
+    <a href="#" class="menu-button">
+         <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+    </a>
+
+    <div class="tooltip">
+        <a href="/Src/pages/cadastro.html" class="menu-item">
+       
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Ainda não se cadastrou?<br>
+                   Clique aqui para se cadastrar!
+                </span>
+                
+                <span class="menu-item-content-subtitle">
+                  
+                    Cadastrar-se <br>
+                     Login
+                 </span>
+            </div>
+        </a>
+
+        <a href="/Src/pages/questoe.html" class="menu-item">
+
+            <div class="menu-item-content">
+                <span class="menu-item-content-title">
+                   Deseja excluir sua conta <br>
+                   Clique aqui para finalizar!
+                </span>
+                <span class="menu-item-content-subtitle">
+                    Excluir conta
+                 </span>
+            </div>
+        </a> 
+
+</ul>
+</header>
 
     <main class="main">
         <article class="container">
@@ -58,13 +95,13 @@
             </section>
 
             <section class="form">
-                <form action="cadastro.php" method="POST">
+                <form action="../Services/cadastro.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
                         </div>
                         <div class="login-button">
-                            <button> <a href="/Src/pages/login.html">Login</a> </button>
+                            <button> <a href="../View/login.view.php">Login</a> </button>
                         </div>
                     </div>
 
@@ -86,7 +123,7 @@
                         </div>
                         
                         <div class="input-box">
-                            <label for="local">Localização </label>
+                            <label for="local">CEP </label>
                             <input id="local" type="local" name="cep" placeholder="Digite seu CEP" required>
                         </div>
                         
@@ -102,28 +139,9 @@
                         </div>
                     </div>
 
-                    <!--
 
-                    <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
-
-                        <div class="gender-group" >
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="cadEstudante">
-                                <label for="estudante">Estudante</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="cadProfissional">
-                                <label for="profissional">Profissional</label>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                     <aside class="continue-button">
-                        <button><a href="#">Cadastrar</a></button>
+                        <button>Cadastrar</button>
                     </aside>
                 </form>
             </section>

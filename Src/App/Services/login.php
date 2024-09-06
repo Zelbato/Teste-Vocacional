@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-require_once "config.php";
+require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = $_POST['senha'];

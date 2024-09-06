@@ -1,6 +1,6 @@
 <?php
 require "ver_tipo.php";
-require 'config.php';
+require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $question_id = $_POST['question_id'];
