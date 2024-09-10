@@ -4,7 +4,7 @@
 /*Inicio do Menu*/
 header {
     width: 100%;
-    height: 100px;
+    height: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +57,7 @@ header ul {
 
 header ul li {
     list-style: none;
-    margin: auto 0;
+    margin: 0 7% 0 0;
 }
 
 header ul li a {
@@ -125,7 +125,8 @@ header .mobile-entrar, .mobile-excluir {
     }
 
     header .menu-mobile img {
-        margin-top: 12px;
+        margin-top: 35%;
+        margin-left: 5%;
         width: 35px;
         height: 35px;
     }
@@ -144,7 +145,7 @@ header .mobile-entrar, .mobile-excluir {
 @media(max-width:600px) {
     header .logo {
         font-size: 12px;
-        margin-left: 4px;
+        margin-left: -2.5%;
     }
 
     header span {
@@ -273,6 +274,9 @@ header .mobile-entrar, .mobile-excluir {
 
     .tooltip {
     display: none;
+    left: 0;
+    top: 0;
+    padding: 0;
     }
 }
 
