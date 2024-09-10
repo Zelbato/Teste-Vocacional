@@ -1,12 +1,11 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/Src/public/asstes/Css/style.css">
+   <link rel="stylesheet" type="text/css" href="../../Public/assets/Css/index/style.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -28,6 +27,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--Bootstrap-->
     <title>Teste Vocacional</title>
+
+    <style>
+    
+
+
+    </style>
 </head>
 
 <body>

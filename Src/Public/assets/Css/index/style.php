@@ -1,4 +1,4 @@
-<?php header("Context-type: text/css"); ?>
+<?php header("Context-type: text\css"); ?>
 
 
 
