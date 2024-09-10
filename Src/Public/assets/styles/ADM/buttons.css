@@ -1,0 +1,168 @@
+
+
+
+.info_box .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info-list {
+    padding: 15px 30px;
+}
+
+.info_box .info-list .info {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+.info_box .info-list .info span {
+    font-weight: 600;
+    color: #007bff;
+}
+
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.start_btn {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.start_btn.activeInfo,
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn button {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--azul);
+    width: 250px;
+    height: 75px;
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.start_btn #button_score {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--azul);
+    width: 250px;
+    height: 75px;
+    padding: 25px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.info_box {
+    width: 610px;
+    height: 300px;
+    background: var(--white);
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 112px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--azul);
+    transition: all 0.3s ease;
+}
+
+.info_box .buttons a {
+    margin: 20px 5px;    
+    width: 112px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--azul);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.buttons a.restart {
+    color: var(--white);
+    background: var(--azul);
+}
+
+.buttons a.restart:hover {
+    background: #0263ca;
+}
+
+.buttons button.salvar {
+    color: var(--white);
+    background: var(--azul);
+}
+
+.buttons button.salvar:hover {
+    background: #0263ca;
+}
+
+.buttons button.quit {
+    color: var(--azul);
+    background: var(--white);
+}
+
+.buttons button.quit:hover {
+    color: var(--white);
+    background: var(--azul);
+}

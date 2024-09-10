@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css"> -->
-    <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/questoes/questoes.css">
     
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -32,7 +32,7 @@
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
             </label>
         </div>
 
@@ -43,7 +43,7 @@
         </div>
 
         <ul>
-            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
+            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
             <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
@@ -57,7 +57,7 @@
             </a>
         
             <div class="tooltip">
-                <a href="/Src/pages/cadastro.html" class="menu-item">
+                <a href="cadastro.view.php" class="menu-item">
                
         
                     <div class="menu-item-content">

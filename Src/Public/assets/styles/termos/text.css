@@ -1,0 +1,51 @@
+
+
+
+/* Inicio da estilização do termo de uso    */
+.main .termos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 5% 40px 10px 40px;
+}
+
+.termos {
+    width: 100%;
+    height: 100%;
+}
+
+.termos .termos-titulo {
+    font-size: 20px;
+    font-family: var(--font);
+    margin-bottom: 20px;
+}
+
+.termos .termos-uso {
+    font-size: 15px;
+    font-family: var(--font);
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+    margin: 20px 0px;
+    font-weight: 500;
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+
+.termos .termos-paragrafo {
+    font-size: 15px;
+    font-family: var(--font);
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.termos .termos-paragrafo  p {
+    margin: 10px 0px;
+}
+

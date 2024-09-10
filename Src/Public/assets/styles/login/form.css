@@ -1,0 +1,153 @@
+
+
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.main .container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 10px 30px 30px #00000000;
+    border-radius: 8px;
+
+}
+
+.main .form-image {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul);
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.main .form-image img {
+    width: 100%;
+}
+
+.main .form {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    padding: 40px;
+    /* border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; box-shadow: 20px 20px 50px -30px var(--azulHover); */
+}
+
+.main .form-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main .form-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    color: var(azulEscuro);
+    margin-bottom: 10px;
+}
+
+.main .form-header h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--azul);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.main .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.main .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.main .input-box input {
+    margin: 10px 0;
+    width: 350px;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-bottom:1px solid var(--azulHover) ;
+    outline: none;
+}
+
+.main .input-box input:hover {
+    transition: all .5s;
+    background: var(--white);
+    outline: none;
+}
+
+.main .input-box input:focus-visible {
+    outline: 1px solid var(azul);
+}
+
+.main .input-box label,
+.main .gender-title h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.main .input-box::placeholder {
+    color: #000000be;
+}
+
+.main .recuperar-senha a{
+    font-size: 14px;
+    color: var(--azulHover);
+    text-decoration: none;
+}
+
+.main .recuperar-senha a:hover {
+    color: var(--azul);
+}
+
+.main .continue-button button {
+    width: 100%;
+    margin-top: 10px;
+    background: var(--azul);
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main .continue-button button:hover {
+    background: var(--azulHover);
+    color: #f3f6f9;
+    box-shadow: 0 0 10px var(--azulEscuro)52;
+}
+
+.main .continue-button button a {
+    text-decoration: none;
+    color: #f3f6f9;
+    font-size: 18px;
+    font-weight: 600;
+}

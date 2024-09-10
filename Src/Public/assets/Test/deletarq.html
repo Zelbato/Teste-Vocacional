@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciar Questões</title>
+    <link rel="stylesheet" href="/Src/assets/styles/DeletarQ/deletar.css">
+</head>
+<body>
+
+    <main class="main">
+        <section class="gerenciar">
+            <div class="gerenciar-content">
+            <div class="gerenciar-title">
+                <h1>Gerenciar Questões</h1>
+            </div>
+
+            <table border="1">
+                <tr>
+                    <th>Texto da Questão</th>
+                    <th>Ação</th>
+                </tr>
+           
+                    <tr>
+                        <td class="exec-question"></td>
+                        <td class="d-question ">
+                            <form method="post" action="deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
+                                <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
+                                <button type="submit">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+               
+            </table>
+
+            <a href="criarq.php">Adicionar Nova Questão</a>
+        </div>
+        </section>
+    </main>
+
+
+ 
+        
+
+
+   
+
+
+</body>
+</html>

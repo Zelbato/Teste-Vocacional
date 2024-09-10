@@ -1,4 +1,44 @@
 
+
+const initTypingAnimation = () => {
+  const title = document.querySelector('.cards .card-titulo h1')
+  const span = document.querySelector('.cards .card-titulo .sub-title')
+
+  const typingAnimation = (element) => {
+
+      if (element == title) {
+          element.innerHTML = 'Bem Vindo devolta,  '
+          const textToArray = element.innerHTML.split('')
+          element.innerHTML = ''
+
+          textToArray.forEach((item, index) => {
+              setTimeout(() => element.innerHTML += item, 120 * index)
+          })
+
+      } else if (element == span) {
+          element.innerHTML = 'Área do Administrador! \n '
+          const textToArray = element.innerHTML.split('')
+          element.innerHTML = ''
+
+          textToArray.forEach((item, index) => {
+              setTimeout(() => element.innerHTML += item, 150 * index)
+          })
+
+      }
+
+  }
+
+  typingAnimation(title)
+  setTimeout(() => typingAnimation(span), 1600)
+
+}
+
+
+
+initTypingAnimation()
+
+
+
 const tooltip = document.querySelector(".tooltip");
 const menuButton = document.querySelector(".menu-button");
 
@@ -52,10 +92,22 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 // if restartQuiz button clicked
 restart_quiz.onclick = () => {
     localStorage.setItem("mostRecentScore", userScore); /*go to the end page*/
-    return window.location.assign("/Src/App/View/cadastrarQ.php");
+    return window.location.assign("./Src/assets/pages/questoe.html");
   };
   
   // if quitQuiz button clicked
   quit_quiz.onclick = () => {
     window.location.reload(); //reload the current window
   };
+
+  function menu() {
+
+    let menuMobile = document.querySelector(".menu-mobile");
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "/Src/assets/Imagens/cardapio.png";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector(".icon").src = "/Src/assets/Imagens/botao-excluir.png";
+    }
+}

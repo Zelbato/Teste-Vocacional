@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Src/Public/assets/css/cadastro/cadastro.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/cadastro/cadastro.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -41,11 +41,11 @@
 </div>
 
 <ul>
-    <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-    <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+    <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
+    <li><a id="#vocacional" href="../../pages/vocacional.html" id="destaque"><span
                 class="teste">Teste Vocacional</span></a>
     </li>
-    <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+    <li><a id="#facul" href="../../pages/faculdade.html" id="eventos">Faculdades</a></li>
 
     <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
     <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
@@ -55,7 +55,7 @@
     </a>
 
     <div class="tooltip">
-        <a href="/Src/pages/cadastro.html" class="menu-item">
+        <a href="cadastro.view.php" class="menu-item">
        
 
             <div class="menu-item-content">
@@ -72,7 +72,7 @@
             </div>
         </a>
 
-        <a href="/Src/pages/questoe.html" class="menu-item">
+        <a href="#" class="menu-item">
 
             <div class="menu-item-content">
                 <span class="menu-item-content-title">
@@ -91,7 +91,7 @@
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="imagemLogin.svg" alt="image">
+                <img src="../../Public/assets/Imagens/imagemLogin.svg" alt="image">
             </section>
 
             <section class="form">
@@ -148,8 +148,11 @@
         </article>
     </main>
 
-    <script src="/Src/js/cadastro.js"></script>
+    <script src="../../Public/assets/js/cadastro.js"></script>
 
 </body>
 
 </html>
+
+
+

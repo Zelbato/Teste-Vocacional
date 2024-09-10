@@ -1,0 +1,132 @@
+
+
+
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+}
+
+section.cards-user {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 40px;
+    background: transparent;
+
+    height: 90vh;
+    width: 100%;
+}
+
+/* .cards-user .card-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom:-15%;
+
+    width: 100%;
+} */
+
+/* .cards-user h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow:0px 0px 20px #206ab8;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+} */
+
+.cards-user aside.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background: transparent;
+    border-radius: 5px;
+    width: 900px;
+    height: 370px;
+
+    padding: 10px;
+    margin: 0 auto;
+    /* margin: 10px 1px 20px 10px; */
+
+    transition: all 0.5s;
+    /* cursor: pointer; */
+}
+
+/* .cards-user aside.card:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 10px 70px -30px #007bff;    
+} */
+
+
+.cards-user aside.card h3 {
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+    padding:10px 20px;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+    color: #252525;
+    font-family: var(--font);
+}
+
+.cards-user aside.card span {
+    font-weight: 400;
+    text-align: justify;
+    line-height: 25px;
+    max-width: 900px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    padding: 0px 20px;
+}
+
+.cards-user aside.card p {
+    font-weight: 300;
+    font-size: 15px;
+    
+}
+
+
+.cards-user aside.card button {
+
+
+    background: linear-gradient(to right, var(--azulEscuro), var(--azulHover));
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 20px;
+    margin: 10px 30%;
+    
+    transition: all 0.5s;
+}
+
+.cards-user aside.card button:hover {
+    transition: all 0.5s;
+}
+
+
+
+.cards-user aside button:hover {
+    background: linear-gradient(to right, var(--azulHover), var(--azulEscuro));
+    transition: all 0.5s;
+}
+
+
+.cards-user aside {
+    box-shadow: 20px 20px 50px -40px var(--azulHover);
+}

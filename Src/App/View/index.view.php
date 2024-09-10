@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="../../Public/assets/Css/index/style.css">
+   <link rel="stylesheet" type="text/css" href="../../Public/assets/styles/index/style.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -41,22 +41,22 @@
 
 <div class="menu-mobile">
     <label for="chk1" onclick="menu()">
-        <img class="icon" id="icon-mobile" src="/Src/assets/Imagens/cardapio.png" alt="">
+        <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
     </label>
 </div>
 
 <input type="checkbox" name="" id="chk1">
 
 <div class="logo">
-    <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
+    <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
 </div>
 
 <ul>
-    <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-    <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+    <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
+    <li><a id="#vocacional" href="../../pages/vocacional.html" id="destaque"><span
                 class="teste">Teste Vocacional</span></a>
     </li>
-    <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+    <li><a id="#facul" href="../../pages/faculdade.html" id="eventos">Faculdades</a></li>
 
     <li><a class="mobile-entrar" href="../View/cadastro.view.php" id="eventos">Entrar</a></li>
     <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
@@ -66,7 +66,7 @@
     </a>
 
     <div class="tooltip">
-        <a href="/Src/pages/cadastro.html" class="menu-item">
+        <a href="../View/cadastro.view.php" class="menu-item">
        
 
             <div class="menu-item-content">
@@ -83,7 +83,7 @@
             </div>
         </a>
 
-        <a href="/Src/pages/questoe.html" class="menu-item">
+        <a href="#" class="menu-item">
 
             <div class="menu-item-content">
                 <span class="menu-item-content-title">
@@ -113,7 +113,7 @@
 
                     <br>
 
-                    <button class="button"> <a href="Src/pages/vocacional.html" class="teste-btn">Teste
+                    <button class="button"> <a href="../../pages/vocacional.html" class="teste-btn">Teste
                             Vocacional</a> </button>
 
                 </div>
@@ -127,7 +127,7 @@
             <div class="sobre-content">
 
                 <div class="image-content">
-                    <img src="Src/assets/Imagens/estudante-formando.png" alt="image">
+                    <img src="../../Public/assets/Imagens/estudante-formando.png" alt="image">
                 </div>
 
                 <div class="paragrafo">
@@ -231,16 +231,16 @@
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="index.html">Home </a></li>
-                <li><a href="Src/pages/vocacional.html">Teste Vocacional </a></li>
-                <li><a href="Src/pages/faculdade.html">Faculdades </a></li>
+                <li><a href="index.view.php">Home </a></li>
+                <li><a href="../../pages/vocacional.html">Teste Vocacional </a></li>
+                <li><a href="../../pages/faculdade.html">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="Src/pages/termos.html">Termos de uso </a></li>
-                <li><a href="Src/pages/politica.html">Política de Privacidade </a></li>
+                <li><a href="../../pages/termos.html">Termos de uso </a></li>
+                <li><a href="../../pages/politica.html">Política de Privacidade </a></li>
                 <li><a href="#">FAQ </a></li>
             </ul>
         </div>
@@ -260,7 +260,7 @@
 
     </div>
 
-    <script src="/Src/assets/js/index.js"></script>
+    <script src="../../Public/assets/js/index.js"></script>
 
 </body>
 
