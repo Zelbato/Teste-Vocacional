@@ -34,13 +34,13 @@ header .logo {
 header .logo a {
     color: var(--white);
     font-family: var(--font);
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
     text-decoration: none;
 }
 
 header .gradient {
-    font-size: 40px;
+    font-size: 30px;
     color: var(--azul);
 }
 
@@ -143,8 +143,8 @@ header .mobile-entrar, .mobile-excluir {
 
 @media(max-width:600px) {
     header .logo {
-        width: 120px;
-        /* margin-left: 4px; */
+        font-size: 12px;
+        margin-left: 4px;
     }
 
     header span {
@@ -182,16 +182,23 @@ header .mobile-entrar, .mobile-excluir {
 }
 
 .tooltip {
+    width: 250px;
+    height: auto;
+
     position: absolute;
     padding: 0.2rem 0;
     border-radius: 12px;
     background-color: var(--dark);
     transform: scaleX(100%);
     z-index: 1;
-    margin-left: 35%;
-    margin-top: 4.9%;
+    left: 83.5%;
+    top: 90%;
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
     opacity: 0;
     visibility: hidden;
 }
@@ -203,12 +210,11 @@ header .mobile-entrar, .mobile-excluir {
 
 .tooltip::before {
     content: "";
-    position: absolute;
-    left: 50%;
-    top: -5%;
+    position: fixed;
+    left: 48%;
+    top: -3%;
     width: 0;
     height: 0;
-    margin-left: 27%;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid var(--dark);
@@ -219,19 +225,20 @@ header .mobile-entrar, .mobile-excluir {
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px 40px;
+    text-decoration: none;
+    gap: 40px;
+    padding: 20px 30px;
     border-left: 1px solid #ffffff27;
     transition: all 0.2s ease-in-out;
 }
+
+
 
 .menu-item:nth-last-child(0) {
     border-left: none;
 }
 
-/* .menu-item:hover {
-    background-color: var(--black);
-} */
+
 
 .tooltip .menu-item-icon {
     color: var(--white);
@@ -268,7 +275,5 @@ header .mobile-entrar, .mobile-excluir {
     display: none;
     }
 }
-
-/*Fim do menu  */
 
 

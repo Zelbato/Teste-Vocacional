@@ -1,4 +1,6 @@
 
+
+
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -6,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position:relative;
     z-index: 99;
     background: var(--preto);
     box-shadow: 0 5px 100px #00000000;
@@ -20,18 +22,19 @@ header {
 
 header .logo {
     flex: 1;
-    margin: 0 5%;
+    margin: 0px 5% 0px ;
 }
 
 header .logo a {
     color: var(--white);
-    font-size: 40px;
+    font-family: var(--font);
+    font-size: 35px;
     font-weight: 500;
     text-decoration: none;
 }
 
 header .gradient {
-    font-size: 40px;
+    font-size: 30px;
     color: var(--azul);
 }
 
@@ -43,6 +46,7 @@ header ul {
     flex: 4;/* flex 2 ou 4 */
     display: flex;
     justify-content: space-evenly;
+    margin: 10px 0;
 }
 
 header ul li {
@@ -81,31 +85,11 @@ header .menu-mobile {
 }
 
 header .mobile-entrar, .mobile-excluir {
-  display: none;
-}
-
-@media(max-width:1100px) {
-    header .logo a {
-        font-size: 30px;
-        margin-left: 4px;
-    }
-
-    header .gradient{
-        font-size: 30px;
-    }
-}
-
+    display: none;
+  }
+  
 
 @media(max-width:800px) {
-
-    header .logo a {
-        font-size: 35px;
-        margin-left: 17%;
-    }
-
-    header .gradient{
-        font-size: 35px;
-    }
 
 
     header {
@@ -122,7 +106,7 @@ header .mobile-entrar, .mobile-excluir {
         height: calc(100vh - 100px);
         width: 100%;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         transition: right 0.5s linear;
         display: flex;
     }
@@ -131,7 +115,7 @@ header .mobile-entrar, .mobile-excluir {
         display: block;
         width: 25%;
         text-align: center;
-
+        margin-bottom: 5%;
     }
 
     header .menu-mobile img {
@@ -154,7 +138,7 @@ header .mobile-entrar, .mobile-excluir {
 @media(max-width:600px) {
     header .logo {
         font-size: 12px;
-        margin-left: -8%;
+        margin-left: 0px;
     }
 
     header span {
@@ -166,11 +150,9 @@ header .mobile-entrar, .mobile-excluir {
     }
 
     header .mobile-entrar, .mobile-excluir {
-      visibility: visible;
-    }
+        visibility: visible;
+      }
 }
-
-/*Fim do menu  */
 
 .menu-button {
     height: 50px;
@@ -194,16 +176,23 @@ header .mobile-entrar, .mobile-excluir {
 }
 
 .tooltip {
+    width: 250px;
+    height: auto;
+
     position: absolute;
     padding: 0.2rem 0;
     border-radius: 12px;
     background-color: var(--dark);
     transform: scaleX(100%);
     z-index: 1;
-    margin-left: 35%;
-    margin-top: 4.9%;
+    left: 83.5%;
+    top: 90%;
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
     opacity: 0;
     visibility: hidden;
 }
@@ -215,12 +204,11 @@ header .mobile-entrar, .mobile-excluir {
 
 .tooltip::before {
     content: "";
-    position: absolute;
-    left: 50%;
-    top: -5%;
+    position: fixed;
+    left: 48%;
+    top: -3%;
     width: 0;
     height: 0;
-    margin-left: 27%;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid var(--dark);
@@ -231,19 +219,20 @@ header .mobile-entrar, .mobile-excluir {
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px 40px;
+    text-decoration: none;
+    gap: 40px;
+    padding: 20px 30px;
     border-left: 1px solid #ffffff27;
     transition: all 0.2s ease-in-out;
 }
+
+
 
 .menu-item:nth-last-child(0) {
     border-left: none;
 }
 
-/* .menu-item:hover {
-    background-color: var(--black);
-} */
+
 
 .tooltip .menu-item-icon {
     color: var(--white);
@@ -280,3 +269,5 @@ header .mobile-entrar, .mobile-excluir {
     display: none;
     }
 }
+
+

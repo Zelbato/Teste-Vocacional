@@ -1,7 +1,7 @@
 @import '/Src/assets/global/style/header/header-2.css';
-
+@import '/Src/assets/global/style/footer/footer.css';
 @import '/Src/assets/styles/ADM/buttons.css';
-@import '/Src/assets/styles/ADM/buttons.css';
+@import '/Src/assets/styles/ADM/adm-cards.css';
 @import '/Src/assets/global/style/index.css';
 
 * {
