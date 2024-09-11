@@ -87,10 +87,12 @@
         </ul>
     </header>
 
-    <main class="main">
+    <main class="main"> <div class="link">
+        <div id="title">
                   <h1>Gerenciar Questões</h1>
-            <a href="criarq.php">Adicionar Nova Questão</a>
-            </div>
+                  <a href="criarq.php">Adicionar Nova questão?</a></div></div>
+           
+        
         <section class="gerenciar">
          
             <div class="gerenciar-content">
@@ -109,9 +111,20 @@
                                 <button id="btn-default" type="submit">Excluir</button>
                             </form>
                         </div>
-
         </div>
-        </div>
+        <div class="container">
+            <div class="text">
+                <th>Texto da Questão</th>
+                <th>Ação</th>
+            </div>
+                    <div class="exec-question"></div>
+                    <div class="d-question ">
+                        <form method="post" action="deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
+                            <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
+                            <button id="btn-default" type="submit">Excluir</button>
+                        </form>
+                    </div>
+    </div>
         </div>
     </div>
         </section>
