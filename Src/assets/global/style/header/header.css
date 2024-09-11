@@ -57,7 +57,7 @@ header ul {
 
 header ul li {
     list-style: none;
-    margin: 0 1% 0 0;
+    margin: 1% 1% 0 0;
 }
 
 header ul li a {
@@ -212,7 +212,7 @@ header .mobile-entrar, .mobile-excluir {
 .tooltip::before {
     content: "";
     position: fixed;
-    left: 48%;
+    left: 50%;
     top: -3%;
     width: 0;
     height: 0;

@@ -68,66 +68,81 @@ width: 200px;
      margin-left: 30%;
 } */
 
-.container{
+.container {
     display: flex;
     flex-direction: row;
-    gap: 12px;
-   padding: 8% 28px;
+    gap: 40px;
+    padding: 8% 28px;
     width: 100%;
     align-items: center;
-   margin-bottom: 19px;
+    margin-bottom: 19px;
     border-radius: 7px;
-    box-shadow: 5px 5px 15px rgba(7, 95, 110, 0.9);
+    box-shadow: 5px 5px 15px var(--verdeAgua);
 }
-.gerenciar-content{
+
+.gerenciar-content {
     display: flex;
-  
     justify-content: center;
 }
-#btn-default{
-  background-color: rgb(0, 102, 255);
-  padding: 8% 28px;
-  border-radius: 7px;
-  font-family: var(--font);
-  color: #ffffff;
-  font-weight: bold;
- border: none;
-cursor: pointer;
--webkit-transition: -webkit-transform .5s ease;
-transition: transform .5s ease;
-transition: 0.5s;
+
+#btn-default {
+    background-color:var(--azulClaro);
+    padding: 8% 28px;
+    border-radius: 7px;
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: 0.5s;
 }
-#btn-default:hover{
+
+#btn-default:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-background-color: var(--vermelho);
+    background-color: var(--vermelho);
 
 }
 
 
-#title{
-  display: flex;
-  flex-direction: row;
-margin-bottom: 70px;
-  gap: 300px;
-  justify-content: center;
+#title {
+    display: flex;
+    flex-direction: row;
+    margin: 5% 20px 40px ;
+    gap: 385px;
+    justify-content: center;
 
 }
-#title h1{
+
+#title h1 {
     font-weight: 600;
     border-bottom: 3px solid var(--azul);
 }
-.link{
+
+.link {
     justify-content: right;
     display: flex;
-    padding:  26px 22px;
- 
- 
+    padding: 26px 22px;
 }
-.link a{
-       color: rgb(9, 12, 175);
-    font-size: 15px;
-    margin-bottom: 0;
-    transition: 0.5s;
 
+.link a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    background: var(--azul);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 12px 20px ;
+    
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.link a:hover {
+    background: var(--azulHover);
+    transform: scale(0.98);
 }
