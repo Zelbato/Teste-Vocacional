@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
     <title>Teste Vocacional</title>
 </head>
@@ -88,29 +89,31 @@
 
     <main class="main">
                   <h1>Gerenciar Questões</h1>
+            <a href="criarq.php">Adicionar Nova Questão</a>
             </div>
         <section class="gerenciar">
-            <div class="container">
+         
             <div class="gerenciar-content">
             <div class="gerenciar-title">
       
 
-          
+             <div class="container">
                 <div class="text">
                     <th>Texto da Questão</th>
                     <th>Ação</th>
                 </div>
-                        <div class="exec-question"></td>
-                        <td class="d-question ">
+                        <div class="exec-question"></div>
+                        <div class="d-question ">
                             <form method="post" action="deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
                                 <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
-                                <button type="submit">Excluir</button>
+                                <button id="btn-default" type="submit">Excluir</button>
                             </form>
                         </div>
 
-            <a href="criarq.php">Adicionar Nova Questão</a>
         </div>
         </div>
+        </div>
+    </div>
         </section>
     </main>
 
