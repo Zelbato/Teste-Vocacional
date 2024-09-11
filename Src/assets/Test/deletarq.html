@@ -87,31 +87,29 @@
     </header>
 
     <main class="main">
+                  <h1>Gerenciar Questões</h1>
+            </div>
         <section class="gerenciar">
+            <div class="container">
             <div class="gerenciar-content">
             <div class="gerenciar-title">
-                <h1>Gerenciar Questões</h1>
-            </div>
+      
 
-            <table border="1">
-                <tr>
+          
+                <div class="text">
                     <th>Texto da Questão</th>
                     <th>Ação</th>
-                </tr>
-           
-                    <tr>
-                        <td class="exec-question"></td>
+                </div>
+                        <div class="exec-question"></td>
                         <td class="d-question ">
                             <form method="post" action="deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
                                 <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
                                 <button type="submit">Excluir</button>
                             </form>
-                        </td>
-                    </tr>
-               
-            </table>
+                        </div>
 
             <a href="criarq.php">Adicionar Nova Questão</a>
+        </div>
         </div>
         </section>
     </main>
