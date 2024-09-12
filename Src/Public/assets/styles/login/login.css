@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
-@import '/Src/assets/global/style/header/header-2.css';
-@import '/Src/assets/styles/login/form.css';
-@import '/Src/assets/styles/login/mobile.css';
-@import '/Src/assets/global/style/index.css';
+@import '../../Global/style/header/header-2.css';
+@import './form.css';
+@import './mobile.css';
+@import '../../Global/style/index.css';
 
 
 * {

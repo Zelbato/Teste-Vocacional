@@ -1,8 +1,8 @@
-@import '/Src/assets/global/style/header/header-2.css';
-@import '/Src/assets/global/style/footer/footer.css';
-@import '/Src/assets/global/style/index.css';
-@import '/Src/assets/styles/Alterar_Senha/form.css';
-@import '/Src/assets/styles/Alterar_Senha/mobile.css';
+@import '../../Global/style/header/header-2.css';
+@import '../../Global/style/footer/footer.css';
+@import '../../Global/style/index.css';
+@import './form.css';
+@import './mobile.css';
 
 
 * {

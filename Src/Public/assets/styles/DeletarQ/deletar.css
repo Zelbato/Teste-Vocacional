@@ -1,7 +1,7 @@
-@import '/Src/assets/global/style/header/header-2.css';
-@import '/Src/assets/global/style/footer/footer.css';
-@import '/Src/assets/global/style/index.css';
-@import '/Src/assets/styles/DeletarQ/deletarQ.css';
+@import '../../Global/style/header/header-2.css';
+@import '../../Global/style/footer/footer.css';
+@import '../../Global/style/index.css';
+@import './deletarQ.css';
 
 * {
     box-sizing: border-box;

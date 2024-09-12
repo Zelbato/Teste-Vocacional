@@ -9,7 +9,7 @@
 }
 
 .main .link {
-    background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+    background-image: url(../../Img/pessoaComput.jpeg);
     /* filter: brightness(50%);  Deixou escuro  */
 
     background-repeat: no-repeat;

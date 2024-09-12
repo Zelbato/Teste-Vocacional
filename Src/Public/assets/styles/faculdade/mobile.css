@@ -4,21 +4,21 @@
     /*Versão Mobile*/
 
     .main .img-cota {
-        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        background-image: url(../../Img/cota-racial.jpeg);
         width: 600px;
         height: 250px;
         margin: 20px 0;
     }
 
     .main .img-faculdade {
-        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        background-image: url(../../Img/faculdade.jpeg);
         width: 600px;
         height: 250px;
         margin: 20px 0;
     }
 
     .main .img-bolsas {
-        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        background-image: url(../../Img/bolsa-estudos.png);
         width: 600px;
         height: 250px;
         margin: 20px 0;
@@ -70,21 +70,21 @@
 @media screen and (max-width: 950px) {
 
     .main .img-cota {
-        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        background-image:url(../../Img/cota-racial.jpeg);
         width: 450px;
         height: 200px;
         margin: 20px 0;
     }
 
     .main .img-faculdade {
-        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        background-image: url(../../Img/faculdade.jpeg);
         width: 450px;
         height: 200px;
         margin: 20px 0;
     }
 
     .main .img-bolsas {
-        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        background-image:url(../../Img/bolsa-estudos.png);
         width: 450px;
         height: 200px;
         margin: 20px 0;
@@ -124,7 +124,7 @@
 @media screen and (max-width: 550px) {
 
     .main .img-cota {
-        background-image: url(/Src/assets/Imagens/cota-racial.jpeg);
+        background-image: url(../../Img/cota-racial.jpeg);
         width: 300px;
         height: 150px;
         margin: 20px 0;
@@ -132,14 +132,14 @@
     }
 
     .main .img-faculdade {
-        background-image: url(/Src/assets/Imagens/faculdade.jpeg);
+        background-image: url(../../Img/faculdade.jpeg);
         width: 300px;
         height: 150px;
         margin: 20px 0;
     }
 
     .main .img-bolsas {
-        background-image: url(/Src/assets/Imagens/bolsa-estudos.png);
+        background-image: url(../../Img/bolsa-estudos.png);
         width: 300px;
         height: 150px;
         margin: 20px 0;
@@ -148,7 +148,7 @@
     .main .link {
         height: 60vh;
 
-        background-image: url(/Src/assets/Imagens/pessoaComput.jpeg);
+        background-image: url(../../Img/pessoaComput.jpeg);
         /* filter: brightness(50%);  Deixou escuro */
         width: 100%;
         background-position: center;

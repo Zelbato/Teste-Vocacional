@@ -1,0 +1,44 @@
+
+@media screen and (max-width: 660px) {
+    section.cards {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0px;
+    }
+
+    .cards .card-titulo {
+        width: 100%;
+        height: auto;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .cards h1 {
+        font-size: 35px;
+    }
+
+    .cards aside.card span {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .cards aside.card {
+
+        max-width: auto;
+        height: auto;
+
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+
+    }
+
+
+    section.cards aside.card button {
+        font-size: 70%;
+    }
+}

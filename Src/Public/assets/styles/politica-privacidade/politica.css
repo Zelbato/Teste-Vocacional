@@ -1,12 +1,12 @@
 /*Global*/
-@import '/Src/assets/global/style/header/header-2.css';
-@import '/Src/assets/global/style/footer/footer.css';
-@import '/Src/assets/global/style/index.css';
+@import '../../Global/style/header/header-2.css';
+@import '../../Global/style/footer/footer.css';
+@import '../../Global/style/index.css';
 /*Global*/
 
 /*Imports*/
-@import '/Src/assets/styles/politica-privacidade/text.css';
-@import '/Src/assets/styles/politica-privacidade/mobile.css';
+@import './text.css';
+@import './mobile.css';
 /*Imports*/
 
 
