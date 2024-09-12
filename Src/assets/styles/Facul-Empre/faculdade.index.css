@@ -1,0 +1,25 @@
+@import '../../global/style/header/header-2.css';
+@import '../../global/style/index.css';
+@import '../../global/style/footer/footer.css';
+@import './faculdade.cards.css';
+@import './faculdade.buttons.css';
+@import './faculdade.mobile.css';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--azul);
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var();
+}

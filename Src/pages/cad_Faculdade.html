@@ -97,43 +97,37 @@
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Cadastro de Localização da Faculdade</h1>
+                            <h1>Cadastro de Instituição</h1>
                         </div>
-                        <div class="cursos-button">
+                        <!-- <div class="cursos-button">
                             <button> <a href="/Src/pages/cad_Cursos.html">Cursos</a> </button>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="input-group">
+                        
                         <div class="input-box">
-                            <label for="faculdade">Nome da Faculdade</label>
-                            <input id="faculdade" type="text" name="faculdade" placeholder="Digite a faculdade" required>
-                            <select name="" id="">
-                                <option value="">Area de Atuação</option>
-                                <option value="">Administração, negócios e serviços</option>
-                                <option value="">Artes e Design</option>
-                                <option value="">Ciências Biológicas e da Terra</option>
-                                <option value="">Análise e Desenvolvimento de Sistemas</option>
-                                <option value="">Ciências Sociais e Humanas</option>
-                                <option value="">Comunicação e Informação</option>
-                                <option value="">Engenharia e Produção</option>
-                                <option value="">Saúde e Bem-estar</option>
-                            </select>
+                            <label for="faculdade">Nome Fantasia</label>
+                            <input id="faculdade" type="text" name="faculdade" placeholder="Nome Fantasia" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="date">URL da Faculdade</label>
+                            <label for="date">URL da Instituição</label>
                             <input id="date" type="text" name="date" placeholder="Digite a URL" required>
-                        </div>
-                      
-
-                        <div class="input-box">
-                            <label for="description">Descrição do Curso</label>
-                            <input id="description" type="text" name="description" placeholder="Descrição do curso" required>
                         </div>
                         
                         <div class="input-box">
-                            <label for="local">Localização </label>
+                            <label for="raz-social">Razão Social</label>
+                            <input id="raz-social" type="text" name="raz-social" placeholder="Razão Social" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="cnpj">CNPJ </label>
+                            <input id="cnpj" type="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="local">CEP </label>
                             <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
                         </div>
                         
@@ -142,33 +136,10 @@
                             <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                          
                         </div>
-
-                        <div class="input-box">
-                            <label for="password">Confirmar Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Confirme sua senha" required>
-                        </div>
                     </div>
 
-                    <!-- <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
-
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
-                                <label for="estudante">Estudante</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
-                                <label for="profissional">Profissional</label>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <aside class="continue-button">
-                        <button><a href="#">Cadastrar Faculdade</a></button>
+                        <button><a href="#">Cadastrar Instituição</a></button>
                     </aside>
                 </form>
             </section>

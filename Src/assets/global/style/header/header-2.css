@@ -260,6 +260,37 @@ header .mobile-entrar, .mobile-excluir {
     margin: 5px 0 0 0;
 }
 
+
+@media(max-width:1300px){
+    .menu-item{
+        padding: 10px 20px;
+    }
+
+    .tooltip {
+        width: 225px;
+        left: 82%;
+    }
+
+    .tooltip::before {
+        left: 80%;
+    }
+}
+
+@media(max-width:1024px) {
+    .menu-item {
+        padding: 10px 20px;
+    }
+
+    .tooltip {
+        padding: 10px 20px;
+        left:75% ;
+    }
+
+    .tooltip::before {
+        left: 70%;
+    }
+}
+
 @media(max-width:800px) {
 
     .menu-button {

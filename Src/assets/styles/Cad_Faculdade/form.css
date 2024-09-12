@@ -97,7 +97,7 @@
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .main .input-box input {
