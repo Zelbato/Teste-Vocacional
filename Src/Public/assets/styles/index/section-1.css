@@ -2,7 +2,7 @@
 
 
 .main .inicio {
-    background-image: url(../../Imagens/estudante.jpeg);
+    background-image: url(/Src/assets/Imagens/estudante.jpeg);
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;

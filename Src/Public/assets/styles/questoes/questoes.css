@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 
-@import '../../global/style/header/header-2.css';
-@import '../../global/style/index.css';
-@import './form.css';
-@import './mobile.css';
+/*Imports*/
+@import '/Src/assets/styles/questoes/form.css';
+@import '/Src/assets/styles/questoes/mobile.css';
+@import '/Src/assets/global/style/header/header-2.css';
+@import '/Src/assets/global/style/footer/footer.css';
+
+@import '/Src/assets/global/style/index.css';
 
 
 

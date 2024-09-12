@@ -57,7 +57,7 @@ header ul {
 
 header ul li {
     list-style: none;
-    margin: 0 1% 0 0;
+    margin: 1% 1% 0 0;
 }
 
 header ul li a {
@@ -192,7 +192,7 @@ header .mobile-entrar, .mobile-excluir {
     background-color: var(--dark);
     transform: scaleX(100%);
     z-index: 1;
-    left: 85.5%;/* ou 83.5% */
+    left: 83.5%;
     top: 90%;
     display: flex;
     align-items: center;
@@ -264,6 +264,37 @@ header .mobile-entrar, .mobile-excluir {
     color: var(--azul);
     font-size: 14px;
     margin: 5px 0 0 0;
+}
+
+
+@media(max-width:1300px){
+    .menu-item{
+        padding: 10px 20px;
+    }
+
+    .tooltip {
+        width: 225px;
+        left: 82%;
+    }
+
+    .tooltip::before {
+        left: 80%;
+    }
+}
+
+@media(max-width:1024px) {
+    .menu-item {
+        padding: 10px 20px;
+    }
+
+    .tooltip {
+        padding: 10px 20px;
+        left:75% ;
+    }
+
+    .tooltip::before {
+        left: 70%;
+    }
 }
 
 @media(max-width:800px) {
