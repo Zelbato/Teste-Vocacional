@@ -90,6 +90,17 @@
     outline: none;
 }
 
+.main .input-box input#file {
+    border: none;
+}
+.main .input-box input#file:focus-visible {
+    outline: none;
+}
+
+.main .input-box input#file:hover {
+    background: transparent;
+}
+
 .main .input-box input:hover {
     transition: all .5s;
     background: var(--white);
@@ -99,6 +110,8 @@
 .main .input-box input:focus-visible {
     outline: 1px solid var(azul);
 }
+
+
 
 .main .input-box select {
     margin: 10px 0;
