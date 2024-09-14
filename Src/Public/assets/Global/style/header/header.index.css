@@ -1,6 +1,3 @@
-
-
-
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -8,7 +5,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:fixed;
+    position: fixed;
     z-index: 99;
     background: transparent;
     box-shadow: 0 5px 100px #00000000;
@@ -28,7 +25,7 @@ header.rolagem {
 
 header .logo {
     flex: 1;
-    margin: 0px 5% 0px ;
+    margin: 0px 5% 0px;
 }
 
 header .logo a {
@@ -49,7 +46,8 @@ header .teste {
 }
 
 header ul {
-    flex: 4;/* flex 2 ou 4 */
+    flex: 4;
+    /* flex 2 ou 4 */
     display: flex;
     justify-content: space-evenly;
     margin: 10px 0;
@@ -57,7 +55,8 @@ header ul {
 
 header ul li {
     list-style: none;
-    margin: 1% 1% 0 0; /* ou 1% 7% 0 0*/
+    margin: 1% 1% 0 0;
+    /* ou 1% 7% 0 0*/
 }
 
 header ul li a {
@@ -65,22 +64,26 @@ header ul li a {
     color: var(--white);
     font-weight: 500;
     text-transform: capitalize;
-   
+
     position: relative;
     font-size: 18px;
 }
-.position{
+
+.position {
     justify-content: center;
     padding: 8% 28px;
     text-decoration: none;
     margin-bottom: 5px;
 }
-.position a{
+
+.position a {
     text-decoration: none;
 }
-.des{
+
+.des {
     margin-bottom: 8px;
 }
+
 header ul li a::after {
     content: " ";
     width: 15%;
@@ -101,16 +104,17 @@ header .menu-mobile {
     display: none;
 }
 
-header .mobile-entrar, .mobile-excluir {
+header .mobile-entrar,
+.mobile-excluir {
     display: none;
-  }
-  
+}
+
 
 @media(max-width:800px) {
 
 
     header {
-        background:var(--preto);
+        background: var(--preto);
         position: relative;
     }
 
@@ -149,8 +153,9 @@ header .mobile-entrar, .mobile-excluir {
 
     header .mobile-entrar,
     .mobile-excluir {
-        display:inline;/*Faz aparecer*/
-      }
+        display: inline;
+        /*Faz aparecer*/
+    }
 }
 
 @media(max-width:600px) {
@@ -167,9 +172,10 @@ header .mobile-entrar, .mobile-excluir {
         width: 100%;
     }
 
-    header .mobile-entrar, .mobile-excluir {
+    header .mobile-entrar,
+    .mobile-excluir {
         visibility: visible;
-      }
+    }
 }
 
 .menu-button {
@@ -184,9 +190,9 @@ header .mobile-entrar, .mobile-excluir {
     align-items: center;
     justify-content: center;
     transition: all .5s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .menu-button:hover {
@@ -211,8 +217,8 @@ header .mobile-entrar, .mobile-excluir {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-    
+
+
     opacity: 0;
     visibility: hidden;
 }
@@ -264,7 +270,7 @@ header .mobile-entrar, .mobile-excluir {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
 }
 
 .tooltip .menu-item-content-title {
@@ -280,8 +286,8 @@ header .mobile-entrar, .mobile-excluir {
     margin: 5px 0 0 0;
 }
 
-@media(max-width:1300px){
-    .menu-item{
+@media(max-width:1300px) {
+    .menu-item {
         padding: 10px 20px;
     }
 
@@ -302,7 +308,7 @@ header .mobile-entrar, .mobile-excluir {
 
     .tooltip {
         padding: 10px 20px;
-        left:75% ;
+        left: 75%;
     }
 
     .tooltip::before {
@@ -317,100 +323,165 @@ header .mobile-entrar, .mobile-excluir {
     }
 
     .tooltip {
-    display: none;
-    left: 0;
-    top: 0;
-    padding: 0;
+        display: none;
+        left: 0;
+        top: 0;
+        padding: 0;
     }
-    
+
 }
 
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 15%;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 
-    background-color: rgba(0, 0, 0, 0.63); 
-  }
-  
-  /* Modal Content */
-  .quadro {
-background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+/* Modal Content */
+.quadro {
+    background-color: var(--white);
     margin: auto;
     padding: 20px;
     border-radius: 7px;
-    width: 30%;
+    max-width: 500px; /*30%*/
+    height: auto; /*50%*/
     text-align: center;
-    height: 50%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  }
-  
-  /* The Close Button */
-  .close {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.title-pop {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    padding: 20px 20px 0px;
+    border-bottom: 1px solid var(--azul);
+
+}
+
+.title-pop i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: var(--azul); /*var(--vermelho)*/
+    margin-bottom: 5px;
+}
+.title-pop button.excluir {
+    background: var(--azul);
+    width: 20px;
+    height: 40px;
+    margin-left: 45%;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.title-pop button.excluir:hover {
+    background: var(--azulHover);
+    transform: none;
+}
+
+.title-pop button.excluir i {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+}
+
+
+.title-pop  h2{
+    font-size: 26px;
+    font-family: var(--font);
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.pgf {
+    font-size: 16px;
+    font-family: var(--font);
+    font-weight: 400;
+    margin: 20px 10px;
+    text-align: left;
+}
+
+.pgf span {
+    font-size: 18px;
+    color: var(--vermelho);
+    
+}
+
+/* The Close Button */
+.close {
 
     font-size: 28px;
     font-weight: bold;
-    background: #008cff;
-color: var(--white);
+    background: var(--azul);
+    color: var(--white);
     border-radius: 8px;
-    padding: 12px 20px ;
+    padding: 12px 20px;
     border: none;
     font-size: 15px;
     transition: 0.5s;
     width: 40%;
-    
 
-  }
-  
-  .close:hover,
-  .close:focus {
- 
+
+}
+
+.close:hover,
+.close:focus {
+
     text-decoration: none;
     cursor: pointer;
-   
-  }
+
+}
+
 .btn-default {
-    background: #008cff;
+    background: var(--azul);
 
     border-radius: 8px;
-    padding: 12px 20px ;
+    padding: 12px 20px;
     border: none;
     font-size: 15px;
     transition: 0.5s;
     width: 40%;
-    
+
 }
 
-.btn-default:hover{
-    transform: scale(0.94);
+.btn-default:hover {
+    transform: scale(0.98);
     background-color: var(--vermelho);
 }
-.btn-default a{
+
+.btn-default a {
     text-decoration: none;
-        color: var(--white);
-        font-weight: bold;
+    color: var(--white);
+    font-weight: bold;
 }
-#btn-pop{
+
+#btn-pop {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
     align-items: center;
+    gap: 200px;
 }
-.close:hover{
-    transform: scale(0.94);
-    background-color: var(--azul);
+
+.close:hover {
+    transform: scale(0.98);
+    background-color: var(--azulHover);
 }
-#myBtn{
+
+#myBtn {
     cursor: pointer;
 }
