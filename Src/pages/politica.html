@@ -50,8 +50,7 @@
             <li><a id="#facul" href="faculdade.html" id="eventos">Faculdades</a></li>
 
             <li><a class="mobile-entrar" href="cadastro.html" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="./ADM/index_Adm.html" id="eventos">Excluir conta</a></li>
-
+           
             <a href="#" class="menu-button">
                  <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
@@ -74,22 +73,31 @@
                     </div>
                 </a>
         
-                <a href="./ADM/index_Adm.html" class="menu-item">
-        
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                           Deseja excluir sua conta <br>
-                           Clique aqui para finalizar!
-                        </span>
-                        <span class="menu-item-content-subtitle">
-                            Excluir conta
-                         </span>
-                    </div>
-                </a> 
+               
+               
+              
 
         </ul>
     </header>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="quadro">
+            <div class="title-pop">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2 id="titulo">Confirmação</h2>
+            </div>
 
+            <div class="pgf">
+                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                <br>
+               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+            </div>
+
+            <div id="btn-pop">
+                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <setion class="termos">
             <div class="termos-titulo">
