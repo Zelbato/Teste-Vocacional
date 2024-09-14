@@ -203,27 +203,30 @@ header .mobile-entrar, .mobile-excluir {
     position: absolute;
     padding: 0.2rem 0;
     border-radius: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     background-color: var(--dark);
     transform: scaleX(100%);
     z-index: 1;
-    left: 83.5%;
-    top: 90%;
+    left: 83.55%;
+    top: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
-    
+
     opacity: 0;
     visibility: hidden;
 }
+
 
 .tooltip.active {
     opacity: 1;
     visibility: visible;
 }
 
-.tooltip::before {
+/* .tooltip::before {
     content: "";
     position: fixed;
     left: 50%;
@@ -233,9 +236,7 @@ header .mobile-entrar, .mobile-excluir {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid var(--dark);
-    
-    
-}
+} */
 
 .menu-item {
     display: flex;
