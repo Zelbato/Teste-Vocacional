@@ -59,7 +59,8 @@
             </a>
 
             <div class="tooltip">
-                <a href="./Src/pages/cadastro.html" class="menu-item">
+                <div class="position">
+                <a href="./Src/pages/cadastro.html" >
 
 
                     <div class="menu-item-content">
@@ -76,27 +77,43 @@
                     </div>
                 </a>
 
-                <a href="./Src/pages/ADM/index_Adm.html" class="menu-item">
+              <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
                             Deseja excluir sua conta <br>
                             Clique aqui para finalizar!
                         </span>
-                        <span class="menu-item-content-subtitle">
-                            Excluir conta
+                        <span  id="myBtn" class="menu-item-content-subtitle">
+                         excluir conta
                         </span>
-                    </div>
-                </a>
+</div>
+                        </div>
+                 
+            
 
         </ul>
+        
     </header>
 
     <!--Sobre Nós-->
 
     <!--PAG-1-->
     <main class="main ">
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="quadro">
+         
+              <p>Excluir permanentemente!!!</p>
+              <div id="btn-pop">
+              <button class="close">Cancelar</button> <button class="btn-default"> <a href="" >Excluir</a></button>
+          </div>
+          </div>
+          </div>
         <section class="inicio ">
+        
+              
             <div class="inicio-content">
                 <div class="description ">
                     <h2></h2><!--Importante-->
@@ -253,7 +270,35 @@
     </div>
 
     <script src="./Src/Public/assets/Js/index.js"></script>
-
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        
 </body>
 
+  
 </html>
