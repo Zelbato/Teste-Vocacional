@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css"> -->
     <link rel="stylesheet" href="../../Public/assets/styles/Cad_Faculdade/cad_Faculdade.css">
-
+    
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--Icones Bootstrap-->
@@ -29,7 +30,7 @@
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../Public/assets/Img/cardapio.png" alt="">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
             </label>
         </div>
 
@@ -47,8 +48,7 @@
             <li><a id="#facul" href="../faculdade.html" id="eventos">Faculdades</a></li>
 
             <li><a class="mobile-entrar" href="../cadastro.html" id="eventos">Entrar</a></li>
-            
-
+           
             <a href="#" class="menu-button">
                  <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
@@ -71,71 +71,91 @@
                     </div>
                 </a>
         
-                <a href="../ADM/index_Adm.html" class="menu-item">
-         
+               
 
         </ul>
     </header>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="quadro">
+            <div class="title-pop">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2 id="titulo">Confirmação</h2>
+            </div>
 
+            <div class="pgf">
+                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                <br>
+               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+            </div>
+
+            <div id="btn-pop">
+                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <article class="container">
-            <!-- <section class="form-image">
-                <img src="/Src/assets/Imagens/imagemLogin.svg" alt="image">
-            </section> -->
 
             <section class="form">
                 <form action="#">
                     <div class="form-header">
-                        <div class="title">
-                            <h1>Cadastro de Instituição</h1>
-                        </div>
-                        <!-- <div class="cursos-button">
-                            <button> <a href="/Src/pages/cad_Cursos.html">Cursos</a> </button>
-                        </div> -->
+                        <h1>Cadastro de Faculdade</h1>
                     </div>
 
+                    
                     <div class="input-group">
-                        
                         <div class="input-box">
-                            <label for="faculdade">Nome Fantasia</label>
-                            <input id="faculdade" type="text" name="faculdade" placeholder="Nome Fantasia" required>
+                            <label for="n-fantasia ">Nome Fantasia</label>
+                            <input class="n-fantasia" id="n-fantasia" type="text" name="n-fantasia"
+                                placeholder="Nome Fantasia" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="date">URL da Instituição</label>
-                            <input id="date" type="text" name="date" placeholder="Digite a URL" required>
-                        </div>
-                        
-                        <div class="input-box">
-                            <label for="raz-social">Razão Social</label>
-                            <input id="raz-social" type="text" name="raz-social" placeholder="Razão Social" required>
-                        </div>
-                        
-                        <div class="input-box">
-                            <label for="cnpj">CNPJ </label>
-                            <input id="cnpj" type="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+                            <label for="r-social">Razão Social</label>
+                            <input class="r-social" id="text" type="text" name="r-social" placeholder="Razão Social" required>
+                           
                         </div>
 
                         <div class="input-box">
-                            <label for="local">CEP </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
+                            <label for="url-faculdade">URL da Faculdade</label>
+                            <input class="url-faculdade" id="text" type="url" name="url-faculdade" placeholder="Digite a URL" required>
+                          
                         </div>
+
+
                         
+                        <div class="input-box">
+                            <label for="cep">CEP </label>
+                            <input class="cep" id="text" type="text" name="cep" placeholder="Digite seu CEP" required>
+                           
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cnpj">CNPJ</label>
+                            <input class="cnpj" id="text" type="text" name="cnpj" placeholder="Digite o CNPJ " required>
+                          
+                        </div>
+
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                         
+                            <input class="password" id="text" type="text" name="password" placeholder="Digite sua senha " required>
+                          
                         </div>
+
+
                     </div>
 
+
+
                     <aside class="continue-button">
-                        <button><a href="#">Cadastrar Instituição</a></button>
+                        <button type="submit"><a href="faculdade.index.html">Finalizar Cadastro</a></button>
                     </aside>
-                </form>
+                </form> 
             </section>
         </article>
     </main>
-
+    
     <!--RODAPÉ-->
     <footer>
         <div class="boxs">
@@ -183,7 +203,7 @@
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
     </div>
 
-    <script src="../../Public/assets/styles/cadastro/cadastro.css"></script>
+    <script src="../../Public/assets/Js/faculdade.index.js"></script>
 
 </body>
 

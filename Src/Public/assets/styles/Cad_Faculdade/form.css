@@ -47,7 +47,7 @@
     font-weight: 500;
     position: relative;
     color: var(--azulHover);
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 
 .main .form-header h1::after {
@@ -62,12 +62,6 @@
 }
 
 
-/* .main .title {
-    font-size: 17px;
-    font-weight: 600;
-    margin: 40px 0;
-} */
-
 .main .input-group {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +72,7 @@
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 3.5%;
 }
 
 .main .input-box input {

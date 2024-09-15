@@ -2,26 +2,28 @@
 
 
 .main {
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 40px 0px;
 }
 
 .main .container {
     width: 95%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     /* box-shadow: 10px 30px 30px #0000001c; */
     border-radius: 8px;
 
 }
 
-/*Cadastro de faculdade*/
+/*Cadastro de Questão*/
 .main .form {
     width: 100%;
+    height: auto;
+    /* background: var(--azul); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,13 +49,13 @@
     font-weight: 500;
     position: relative;
     color: var(--azulHover);
-    margin-bottom: 10%;
+    margin-bottom: 40px;
 }
 
 .main .form-header h1::after {
     content: "";
     display: block;
-    width: 60%;
+    width: 50%;
     height: 3px;
     background: var(--azulHover);
     margin: 0 auto;
@@ -61,11 +63,6 @@
     border-radius: 10px;
 }
 
-/* .main .title {
-    font-size: 17px;
-    font-weight: 600;
-    margin: 40px 0;
-} */
 
 .main .input-group {
     display: flex;
@@ -77,7 +74,7 @@
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 2.5%;
 }
 
 .main .input-box input {
@@ -90,17 +87,6 @@
     outline: none;
 }
 
-.main .input-box input#file {
-    border: none;
-}
-.main .input-box input#file:focus-visible {
-    outline: none;
-}
-
-.main .input-box input#file:hover {
-    background: transparent;
-}
-
 .main .input-box input:hover {
     transition: all .5s;
     background: var(--white);
@@ -111,18 +97,36 @@
     outline: 1px solid var(azul);
 }
 
-
-
-.main .input-box select {
-    margin: 10px 0;
-    padding: 10px 5px;
-    max-width: 200px;
+#picture__input {
+display: none;
 }
 
-.main .input-box select option {
-    background: var(--white);
-    color: var(--azulHover);
-    font-size: 14px;
+.main .input-box .picture {
+    width: 400px;
+    height: 250px;
+    /* aspect-ratio: 16/9; */
+    object-fit: contain;
+    background: var(--cinzaClaro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txtDescritivo);
+    border: 2px dashed var(--txtDescritivo);
+    cursor: pointer;
+    font-family: var(--font);
+    transition:all .5s ease-in-out;
+}
+
+.main .input-box .picture:hover {
+    background: var(--cinzaMedio);
+    color: var(--cinzaClaro);
+}
+
+.main .input-box .picture img {
+    width: 400px;
+    height: 250px;
+    object-fit: contain;
+
 }
 
 .main .input-box label,
