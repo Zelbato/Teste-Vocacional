@@ -1,3 +1,4 @@
+import '../../Global/Js/faculdade.global.js';
 
 
 const initTypingAnimation = () => {

@@ -1,6 +1,6 @@
-@import '../../global/style/header/header-2.css';
-@import '../../global/style/index.css';
-@import '../../global/style/footer/footer.css';
+@import '../../../global/style/header/header-2.css';
+@import '../../../global/style/index.css';
+@import '../../../global/style/footer/footer.css';
 @import './faculdade.cards.css';
 @import './faculdade.buttons.css';
 @import './faculdade.mobile.css';
