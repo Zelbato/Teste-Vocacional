@@ -1,7 +1,10 @@
-@import '../../../global/style/header/header-2.css';
-@import '../../../global/style/index.css';
-@import '../../../global/style/footer/footer.css';
-@import './excluir.cards.css';
+
+@import '../../../Global/style/header/header-2.css';
+@import '../../../Global/style/footer/footer.css';
+@import '../../../Global/style/index.css';
+@import './meuCurso.cards.css';
+@import './meuCurso.mobile.css';
+
 
 
 * {
