@@ -1,6 +1,7 @@
 
 
 @media screen and (max-width: 660px) {
+
     section.cards {
         width: 100%;
         flex-direction: column;
@@ -29,7 +30,7 @@
 
     .cards aside.card {
 
-        max-width: auto;
+        max-width: 270px;
         height: auto;
 
         padding: 10px;
