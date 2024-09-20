@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Public/assets/styles/PagFaculdade/Excluir_Faculdade/excluir.faculdade.css">
-    
+    <link rel="stylesheet" href="../../Public/assets/styles/PagFaculdade/Excluir_Faculdade/delete.facul.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -84,9 +84,7 @@
                             Deseja excluir sua conta <br>
                             Clique aqui para finalizar!
                         </span>
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
+                        
                     </div>
                 </div>
 
@@ -103,7 +101,7 @@
             </div>
 
             <div class="pgf">
-                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                <p>Deseja realmente excluir a conta desta faculdade? <br>Essa opção apagará todos os dados desta empresa</p>
                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
@@ -111,9 +109,10 @@
                 <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
             </div>
         </div>
+        
     </div>
 
-    <!-- <main class="main">
+     <main class="main">
 
         <div class="content-title">
             <div id="title">
@@ -125,48 +124,49 @@
         </div>
 
 
-        <section class="gerenciar">
-
-            <div class="gerenciar-content">
-                <div class="gerenciar-title">
 
 
-                    <div class="container">
-                        <div class="text">
-                            <th>Texto da Questão</th>
-                            <th>Ação</th>
-                        </div>
-                        <div class="exec-question"></div>
-                        <div class="d-question ">
-                            <form method="post" action="deletar_quest.php"
-                                onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
-                                <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
-                                <button id="btn-default" type="submit">Excluir</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="text">
-                            <th>Texto da Questão</th>
-                            <th>Ação</th>
-                        </div>
-                        <div class="exec-question"></div>
-                        <div class="d-question ">
-                            <form method="post" action="deletar_quest.php"
-                                onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');">
-                                <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
-                                <button id="btn-default" type="submit">Excluir</button>
-                            </form>
-                        </div>
-                    </div>
+            <div class="gerenciar-ex">
+          
+
+              
+                <div class="quadro-ex">
+                    <div class="img-ex"><img src="../../Public/assets/Img/cerimonia-de-formatura-virtual.png" alt=""></div>
+                    <div class="position-ex">
+                    <div class="text"><ul><li><b>Nome:</b> Unifunec</li>
+                        <li><b>Cidade:</b> Santa Fé do Sul</li>
+                        <li><b>CEP:</b> 12229-790</li>
+                        <li><b>CNPJ:</b> DFHJVNS3892EJKD3</li></div>
+                       
+                        <button   id="bt">
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                            Excluir Faculdade
+                        </span>
+                        </button>
+     </div>
                 </div>
+                
+                <div class="quadro-ex">
+                    <div class="img-ex"><img src="../../Public/assets/Img/cerimonia-de-formatura-virtual.png" alt=""></div>
+                    <div class="position-ex">
+                    <div class="text"><ul><li><b>Nome:</b> Unifunec</li>
+                        <li><b>Cidade:</b> Santa Fé do Sul</li>
+                        <li><b>CEP:</b> 12229-790</li>
+                        <li><b>CNPJ:</b> DFHJVNS3892EJKD3</li></div>
+                       
+                        <button   id="bt">
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                            Excluir Faculdade
+                        </span>
+                        </button>
+     </div>
+                </div>
+                
+              
             </div>
-
-            <div class="link">
-                <a href="questoe.html">Adicionar Nova questão?</a>
-            </div>
-        </section>
-    </main> -->
+            
+        
+    </main> 
 
         <!--RODAPÉ-->
         <footer>
