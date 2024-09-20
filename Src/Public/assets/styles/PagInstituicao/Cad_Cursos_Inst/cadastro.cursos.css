@@ -2,6 +2,7 @@
 @import '../../../Global/style/footer/footer.css';
 @import '../../../Global/style/index.css';
 @import './form.css';
+@import './mobile.css';
 
 
 * {
