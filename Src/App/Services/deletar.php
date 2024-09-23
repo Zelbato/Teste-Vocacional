@@ -1,19 +1,18 @@
 <?php
 session_start();
-require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
+require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userId = $_SESSION['id_usuario']; 
+    $userId = $_SESSION['id_usuario'];
 
     $sql = 'DELETE FROM usuario WHERE id_usuario = ?';
-
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param("i", $userId);
 
     if ($stmt->execute()) {
         echo "Cadastro excluído com sucesso!";
         session_destroy();
-        header("Location: tela_cadastro.php"); // Redireciona para a página de cadastro pois ele tem q se cadastrar novamente 
+        header("Location: tela_cadastro.php");
         exit();
     } else {
         echo "Erro: " . $stmt->error;
@@ -24,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p>Tem certeza que deseja excluir seu cadastro? Esta ação não pode ser desfeita.</p>
     <form action="deletar.php" method="post">
         <button type="submit">Excluir</button>
-        <a href="paginaP.php">Cancelar</a> <!-- Link para a pagina principal-->
+        <a href="paginaP.php">Cancelar</a>
     </form>
 </body>
 </html>
