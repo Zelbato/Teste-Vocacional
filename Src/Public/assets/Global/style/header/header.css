@@ -416,9 +416,9 @@ header .mobile-entrar, .mobile-excluir {
     
 }
 
-/* The Close Button */
-.close {
 
+/* The btn-default Button */
+.btn-default {
     font-size: 28px;
     font-weight: bold;
     background: var(--azul);
@@ -429,20 +429,19 @@ header .mobile-entrar, .mobile-excluir {
     font-size: 15px;
     transition: 0.5s;
     width: 40%;
-
-
 }
 
-.close:hover,
-.close:focus {
+.btn-default:hover,
+.btn-default:focus {
 
     text-decoration: none;
     cursor: pointer;
 
 }
 
-.btn-default {
+.close {
     background: var(--azul);
+    color: var(--white);
 
     border-radius: 8px;
     padding: 12px 20px;
@@ -453,7 +452,7 @@ header .mobile-entrar, .mobile-excluir {
 
 }
 
-.btn-default:hover {
+.close:hover {
     transform: scale(0.98);
     background-color: var(--vermelho);
 }
@@ -472,7 +471,7 @@ header .mobile-entrar, .mobile-excluir {
     gap: 200px;
 }
 
-.close:hover {
+.btn-default:hover {
     transform: scale(0.98);
     background-color: var(--azulHover);
 }

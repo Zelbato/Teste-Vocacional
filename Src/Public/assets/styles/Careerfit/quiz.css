@@ -1,0 +1,191 @@
+
+
+/* Layout principal */
+.main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+/* Seção do quiz */
+.quiz-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilo da caixa de quiz */
+.quiz-section .quiz {
+    width: 900px;
+    height: 470px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s;
+    background: var(--white);
+    /* border-radius: 8px; */
+    
+    box-shadow: 20px 20px 60px -40px var(--azul);
+}
+
+/* Efeito ao passar o mouse sobre o quiz */
+/* .quiz-section .quiz:hover {
+    transform: scale(1.02);
+} */
+
+/* Estilo das perguntas */
+.quiz-section h2 {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5% 20px 2%;
+    color: var(--preto);
+}
+
+/* Estilo das opções de resposta */
+.option-list .option {
+    width: 500px;
+    padding: 12px;
+    margin: 20px 0;
+    background: var(--white);
+    border: 2px solid #06146a33;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.option-list .option.active {
+    background: var(--azulClaro);
+    display: contents;
+}
+
+.option input {
+    display:contents;
+}
+
+.option-list .option:hover {
+    border-color: var(--azulClaro);
+    color: var(--azulClaro);
+}
+
+/* Desabilitar opções após a seleção */
+.option-list .option.disabled {
+    pointer-events: none;
+    background: #e9ecef;
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+/* Estilo do rodapé do quiz */
+.quiz-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+/* Total de questões */
+.quiz-footer .question-total {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.quiz-footer .question-total:hover {
+    color: #0056b3;
+}
+
+/* Botão de próxima pergunta */
+.quiz-footer .next-btn {
+    width: 150px;
+    height: 45px;
+    background: var(--azul);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    cursor:pointer;
+    transition: .5s;
+}
+
+.quiz-footer .next-btn:hover {
+    background: var(--azulHover); 
+}
+
+.quiz-footer .next-btn.active {
+    cursor: pointer;
+    color: #fff;
+    background: #007bff;
+    border: 2px solid #007bff;
+}
+
+.quiz-footer .next-btn.active:hover {
+    background: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+/* Estilo da caixa de resultados */
+.quiz-section .result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 500px;
+    background: #fff;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+/* Exibir caixa de resultados */
+.quiz-section .result-box.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo do título dos resultados */
+.result-box h2 {
+    font-size: 52px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo da seção de resultados */
+.result-box .result-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+
+/* Texto da pontuação */
+.result-container .score-text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
