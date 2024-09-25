@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="recuperar-senha">
-                            <a href="recuperar.view.php">Esqueceu sua senha?</a>
+                            <a href="recuperarS.view.php">Esqueceu sua senha?</a>
                         </div>
                     </div>
 
