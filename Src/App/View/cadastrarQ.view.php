@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css"> -->
-    <link rel="stylesheet" href="../../Public/assets/styles/questoes/questoes.css">
+    <link rel="stylesheet" href="../Public/assets/styles/questoes/questoes.css">
     
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,16 +31,18 @@
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
                 <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
+        
             </label>
         </div>
 
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
+
             <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
             <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
@@ -48,13 +50,13 @@
             <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
 
             <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-           
+
             <a href="#" class="menu-button">
                  <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
         
             <div class="tooltip">
-                <a href="cadastro.view.php" class="menu-item">
+                <a href="cadastro.html" class="menu-item">
                
         
                     <div class="menu-item-content">
@@ -89,6 +91,7 @@
                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
+
             <form action="../Services/deletar.php" method="POST">
                 <div id="btn-pop">
                     <button  class="btn-default">
@@ -96,6 +99,7 @@
                     <button type="submit" class="close excluir">Excluir</button>
                 </div>
                 </form>
+
         </div>
     </div>
     <main class="main">
@@ -221,9 +225,11 @@
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
+
                 <li><a href="index.view.php">Home </a></li>
                 <li><a href="vocacao.view.php">Teste Vocacional </a></li>
                 <li><a href="faculdade.view.php">Faculdades </a></li>
+
             </ul>
         </div>
         <div class="boxs">
