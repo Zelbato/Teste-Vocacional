@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -32,7 +30,7 @@
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
             </label>
         </div>
 
@@ -44,14 +42,13 @@
 
         <ul>
             <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="/Src/pages/vocacional.html" id="destaque"><span
+            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="/Src/pages/faculdade.html" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
 
-            <li><a class="mobile-entrar" href="/Src/pages/faculdade.html" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="/Src/pages/faculdade.html" id="eventos">Excluir conta</a></li>
-
+            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
+           
             <a href="#" class="menu-button">
                  <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
@@ -74,73 +71,135 @@
                     </div>
                 </a>
         
-                <a href="/Src/pages/questoe.html" class="menu-item">
-        
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                           Deseja excluir sua conta <br>
-                           Clique aqui para finalizar!
-                        </span>
-                        <span class="menu-item-content-subtitle">
-                            Excluir conta
-                         </span>
-                    </div>
-                </a> 
+               
 
         </ul>
     </header>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="quadro">
+            <div class="title-pop">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2 id="titulo">Confirmação</h2>
+            </div>
 
+            <div class="pgf">
+                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                <br>
+               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+            </div>
+
+            <form action="../Services/deletar.php" method="POST">
+                <div id="btn-pop">
+                    <button  class="btn-default">
+                        <a href="">Cancelar</a></button>
+                    <button type="submit" class="close excluir">Excluir</button>
+                </div>
+                </form>
+        </div>
+    </div>
     <main class="main">
         <article class="container">
+
             <section class="form">
-                <h1>Cadastro de Questões</h1>
-                <form id="questionForm" action="../Services/criarq.php" method="POST">
+                <form action="#">
+                    <div class="form-header">
+                        <h1>Cadastro de Questões</h1>
+                    </div>
+
+                    <!-- <div class="title">
+                        <h2>Questão </h2>
+                    </div> -->
+
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="question_text">Questão</label>
-                            <input class="criar-questao" id="question_text" type="text" name="question_text" placeholder="Digite a questão" required>
+                            <label for="questao ">Questão</label>
+                            <input class="criar-questao" id="questao" type="text" name="questao"
+                                placeholder="Digite a questão" required>
                         </div>
                     </div>
 
-                    <div id="options-container">
-                        <!-- Div para opções -->
+                    <!-- <div class="subTitle">
+                        <h2>Alternativas</h2>
+                    </div> -->
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="qustion_text">Alternativa 1</label>
+                            <input class="criar-altern" id="text" type="text" name="qustion_text" placeholder="A. " required>
+                            <select name="" id="">
+                                <option value="">Area de Atuação</option>
+                                <option value="">Administração, negócios e serviços</option>
+                                <option value="">Artes e Design</option>
+                                <option value="">Ciências Biológicas e da Terra</option>
+                                <option value="">Análise e Desenvolvimento de Sistemas</option>
+                                <option value="">Ciências Sociais e Humanas</option>
+                                <option value="">Comunicação e Informação</option>
+                                <option value="">Engenharia e Produção</option>
+                                <option value="">Saúde e Bem-estar</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-box">
+                            <label for="qustion_text">Alternativa 2</label>
+                            <input class="criar-altern" id="text" type="text" name="qustion_text" placeholder="B. " required>
+                            <select name="" id="">
+                                <option value="">Area de Atuação</option>
+                                <option value="">Administração, negócios e serviços</option>
+                                <option value="">Artes e Design</option>
+                                <option value="">Ciências Biológicas e da Terra</option>
+                                <option value="">Análise e Desenvolvimento de Sistemas</option>
+                                <option value="">Ciências Sociais e Humanas</option>
+                                <option value="">Comunicação e Informação</option>
+                                <option value="">Engenharia e Produção</option>
+                                <option value="">Saúde e Bem-estar</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="qustion_text">Alternativa 3 </label>
+                            <input class="criar-altern" id="text" type="text" name="qustion_text" placeholder="C. " required>
+                            <select name="" id="">
+                                <option value="">Area de Atuação</option>
+                                <option value="">Administração, negócios e serviços</option>
+                                <option value="">Artes e Design</option>
+                                <option value="">Ciências Biológicas e da Terra</option>
+                                <option value="">Análise e Desenvolvimento de Sistemas</option>
+                                <option value="">Ciências Sociais e Humanas</option>
+                                <option value="">Comunicação e Informação</option>
+                                <option value="">Engenharia e Produção</option>
+                                <option value="">Saúde e Bem-estar</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="qustion_text">Alternativa 4</label>
+                            <input class="criar-altern" id="text" type="text" name="qustion_text" placeholder="D. " required>
+                            <select name="" id="">
+                                <option value="">Area de Atuação</option>
+                                <option value="">Administração, negócios e serviços</option>
+                                <option value="">Artes e Design</option>
+                                <option value="">Ciências Biológicas e da Terra</option>
+                                <option value="">Análise e Desenvolvimento de Sistemas</option>
+                                <option value="">Ciências Sociais e Humanas</option>
+                                <option value="">Comunicação e Informação</option>
+                                <option value="">Engenharia e Produção</option>
+                                <option value="">Saúde e Bem-estar</option>
+                            </select>
+                        </div>
+
                     </div>
 
-                    <button type="button" onclick="addOption()">Adicionar Opção</button><br>
-                    <button type="submit">Cadastrar Questão</button>
-                </form>
+
+
+                    <aside class="continue-button">
+                        <button type="submit"><a href="#">Cadastrar Questão</a></button>
+                    </aside>
+                </form> 
             </section>
         </article>
     </main>
-
-    <script>
-        let optionCount = 1;
-
-        function addOption() {
-            const optionsContainer = document.getElementById('options-container');
-            const newOptionDiv = document.createElement('div');
-            newOptionDiv.classList.add('input-group');
-            newOptionDiv.innerHTML = `
-                <div class="input-box">
-                    <label for="option_text_${optionCount}">Alternativa ${optionCount}</label>
-                    <input class="criar-altern" id="option_text_${optionCount}" type="text" name="options[${optionCount}][text]" placeholder="${String.fromCharCode(64 + optionCount)}. " required>
-                    <select name="options[${optionCount}][career]" required>
-                        <option value="lawyer">Área de Atuação</option>
-                        <option value="math_teacher">Administração, Negócios e Serviços</option>
-                        <option value="programmer">Artes e Design</option>
-                        <option value="math_teacher">Ciências Biológicas e da Terra</option>
-                        <option value="programmer">Análise e Desenvolvimento de Sistemas</option>
-                        <option value="lawyer">Ciências Sociais e Humanas</option>
-                        <option value="lawyer">Comunicação e Informação</option>
-                        <option value="math_teacher">Engenharia e Produção</option>
-                        <option value="lawyer">Saúde e Bem-estar</option>
-                    </select>
-                </div>
-            `;
-            optionsContainer.appendChild(newOptionDiv);
-            optionCount++;
-        }
-    </script>
     
     <!--RODAPÉ-->
     <footer>
@@ -148,7 +207,7 @@
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -162,18 +221,16 @@
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="/index.html">Home </a></li>
-                <li><a href="/Src/pages/vocacional.html">Teste Vocacional </a></li>
-                <li><a href="faculdade.html">Faculdades </a></li>
+                <li><a href="index.view.php">Home </a></li>
+                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="/Src/pages/termos.html">Termos de uso </a></li>
-                <li><a href="/Src/pages/politica.html">Política de Privacidade </a>
-                </li>
-                <li><a href="#">FAQ </a></li>
+                <li><a href="termos.view.php">Termos de uso </a></li>
+                <li><a href="politica.view.php">Política de Privacidade </a></li>
             </ul>
         </div>
 
@@ -191,7 +248,7 @@
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
     </div>
 
-    <script src="/Src/assets/js/questoes.js"></script>
+    <script src="../../Public/assets/Js/questoes.js"></script>
 
 </body>
 
