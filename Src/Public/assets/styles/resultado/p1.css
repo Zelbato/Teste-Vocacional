@@ -18,6 +18,15 @@
     position: absolute;
     border-radius: 10px;
 }
+.buttons{
+    padding:20px; 
+    gap: 14px;
+    display: flex;
+}
+.buttons .acers a{
+    padding: 5px;
+    text-decoration: none;
+}
 .des h2{
     background-color: #e9a209;
 }
