@@ -1,23 +1,39 @@
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main .section-title {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    font-size: 24px;
+}
+
 .title h1 {
     font-size: 2rem;
     font-weight: 600;
     position: relative;
-    color: #111827;
-    margin-bottom: 39px;
-
-    margin-top: 29px;
+    color: var(--preto);
+    margin: 40px 0 30px;
 }
 
-.title h1::after {
+/* .title h1::after {
     content: "";
     display: block;
-    width: 50%;
+    width: 12%;
     height: 3px;
     background: var(--azul);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
-}
+} */
 
 .buttons {
     padding: 20px;
@@ -35,7 +51,26 @@
 }
 
 .subtitle h2 {
-    font-size: 1.60rem;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: var(--font);
+    color: var(--azul);
+}
+
+/* .carreiras {
+    padding:40px 20px;
+    background-color: var(--white);
+
+} */
+
+.carreira-content {
+    padding: 20px;
+
+}
+.text span {
+    color: blue;
+    text-transform: uppercase;
+    border-bottom: #e9a209;
 }
 
 .btn-aces {
@@ -48,11 +83,6 @@
     border-radius: 12px;
 }
 
-.text span {
-    color: blue;
-    text-transform: uppercase;
-    border-bottom: #e9a209;
-}
 
 
 #caixa {
