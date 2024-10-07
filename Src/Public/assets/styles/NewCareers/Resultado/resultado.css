@@ -1,0 +1,43 @@
+/*Global*/
+@import '../../../Global/style/header/header-2.css';
+@import '../../../Global/style/footer/footer.css';
+@import '../../../Global/style/index.css';
+/*Global*/
+
+
+@import './P1.resultado.css';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    font-family: var(--font);
+    background: var(--white);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+@media (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    a {
+        color: var(--white);
+        text-decoration: none;
+    }
+}
+

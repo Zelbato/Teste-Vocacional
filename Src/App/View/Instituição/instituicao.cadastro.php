@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/PagInstituicao/Cad_Instituicao/Cad.Instituicao.css">
+    <link rel="stylesheet" href="../../../Public/assets/styles/PagInstituicao/Cad_Instituicao/Cad.Instituicao.css">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -102,7 +102,7 @@
             </section> -->
 
             <section class="form">
-                <form action="#">
+                <form action="../../Services/cadastro.instituicao.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastro de Instituição</h1>
@@ -115,33 +115,38 @@
                     <div class="input-group">
                         
                         <div class="input-box">
-                            <label for="faculdade">Nome Fantasia</label>
-                            <input id="faculdade" type="text" name="faculdade" placeholder="Nome Fantasia" required>
+                            <label for="nome_fantasia">Nome Fantasia</label>
+                            <input id="nome_fantasia" type="text" name="nome_fantasia" placeholder="Nome Fantasia" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="date">URL da Instituição</label>
-                            <input id="date" type="text" name="date" placeholder="Digite a URL" required>
+                            <label for="url">URL da Instituição</label>
+                            <input id="url" type="url" name="url" placeholder="Digite a URL" required>
                         </div>
                         
                         <div class="input-box">
-                            <label for="raz-social">Razão Social</label>
-                            <input id="raz-social" type="text" name="raz-social" placeholder="Razão Social" required>
+                            <label for="razao_social">Razão Social</label>
+                            <input id="razao_social" type="text" name="razao_social" placeholder="Razão Social" required>
                         </div>
                         
                         <div class="input-box">
                             <label for="cnpj">CNPJ </label>
-                            <input id="cnpj" type="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+                            <input id="cnpj" type="text" name="cnpj" placeholder="Digite o CNPJ" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="local">CEP </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
+                            <label for="email">Email </label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu E-mail" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cep">CEP </label>
+                            <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required>
                         </div>
                         
                         <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                          
                         </div>
                     </div>

@@ -1,0 +1,23 @@
+@import '../../../Global/style/header/header-2.css';
+@import '../../../Global/style/footer/footer.css';
+@import '../../../Global/style/index.css';
+@import './form.css';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--white);
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var();
+}

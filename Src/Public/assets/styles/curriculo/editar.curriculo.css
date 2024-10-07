@@ -1,0 +1,82 @@
+
+
+main.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section.Editar {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.Editar h1 {
+    color: #206ab8;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Editar label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(25, 25, 25);
+}
+
+.Editar input[type="text"],
+.Editar input[type="email"],
+.Editar input[type="tel"],
+.Editar textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #206ab8;
+    border-radius: 4px;
+    background-color: #f3f6f9;
+    font-size: 16px;
+    color: rgb(25, 25, 25);
+}
+
+.Editar input::placeholder,
+.Editar textarea::placeholder {
+    color: rgba(25, 25, 25, 0.6);
+}
+
+.Editar textarea {
+    resize: none;
+}
+
+.Editar button {
+    background-color: #206ab8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.Editar button:hover {
+    background-color: rgb(25, 25, 25);
+    color: #f3f6f9;
+}
+
+.Editar p {
+    text-align: center;
+    color: rgb(25, 25, 25);
+    font-size: 18px;
+}

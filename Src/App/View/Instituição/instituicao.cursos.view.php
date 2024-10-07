@@ -1,253 +1,114 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+session_start();
+require '../../database/config.php';
 
+
+// Verifica se a instituição está logada
+if (!isset($_SESSION['id_instituicao'])) {
+    header("Location: ../View/Instituição/instituicao.login.php");
+    exit();
+}
+
+$id_instituicao = $_SESSION['id_instituicao'];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome_curso'])) {
+    $nome_curso = $_POST['nome_curso'];
+    $duracao = $_POST['duracao'];
+    $descricao = $_POST['descricao'];
+    $carreira_id = $_POST['carreira_id'];
+
+    // Processar upload da imagem
+    $foto_curso = $_FILES['foto_curso'];
+    $caminho_imagem = '';
+
+    if ($foto_curso['error'] === UPLOAD_ERR_OK) {
+        // Verifica se o diretório para salvar as imagens existe, se não, cria
+        $diretorio_imagens = 'uploads/';
+        if (!is_dir($diretorio_imagens)) {
+            mkdir($diretorio_imagens, 0777, true);
+        }
+
+        $nome_imagem = basename($foto_curso['name']);
+        $caminho_imagem = $diretorio_imagens . uniqid('', true) . '-' . $nome_imagem;
+
+        // Move a imagem para o diretório
+        if (!move_uploaded_file($foto_curso['tmp_name'], $caminho_imagem)) {
+            echo "Erro ao enviar a imagem.";
+            exit();
+        }
+    }
+
+    // Inserir curso no banco de dados
+    $stmt = $conexao->prepare("INSERT INTO cursos (id_instituicao, nome_curso, duracao, descricao, carreira_id, foto_curso) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("isssis", $id_instituicao, $nome_curso, $duracao, $descricao, $carreira_id, $caminho_imagem);
+    $stmt->execute();
+    $stmt->close();
+}
+
+// Excluir curso
+if (isset($_GET['delete'])) {
+    $id_curso = $_GET['delete'];
+    $stmt = $conexao->prepare("DELETE FROM cursos WHERE id_curso = ? AND id_instituicao = ?");
+    $stmt->bind_param("ii", $id_curso, $id_instituicao);
+    $stmt->execute();
+    $stmt->close();
+}
+
+// Carregar cursos da instituição
+$stmt = $conexao->prepare("SELECT * FROM cursos WHERE id_instituicao = ?");
+$stmt->bind_param("i", $id_instituicao);
+$stmt->execute();
+$result = $stmt->get_result();
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/Src/assets/styles/questoes/questoes.css"> -->
-    <link rel="stylesheet" href="../../../Public/assets/styles/PagInstituicao/Cad_Cursos_Inst/cadastro.cursos.css">
-
-    <!--Icones Bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--Icones Bootstrap-->
-
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Google Fonts-->
-    <title>Teste Vocacional</title>
+    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCursos/gerenciar.cursos.css">
+    <title>Gerenciar Cursos</title>
 </head>
-
 <body>
+    <h1>Gerenciar Cursos</h1>
 
-    <header class="header">
+    <form  method="post" enctype="multipart/form-data">
+        <label for="nome_curso">Nome do Curso:</label>
+        <input type="text" id="nome_curso" name="nome_curso" required><br>
 
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
-            </label>
-        </div>
+        <label for="duracao">Duração:</label>
+        <input type="text" id="duracao" name="duracao" required><br>
 
-        <input type="checkbox" name="" id="chk1">
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea><br>
 
-        <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-        </div>
-
-        <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span class="teste">Teste
-                        Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
-
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-            </a>
-
-            <div class="tooltip">
-                <a href="../cadastro.view.php" class="menu-item">
-
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Ainda não se cadastrou?<br>
-                            Clique aqui para se cadastrar!
-                        </span>
-
-                        <span class="menu-item-content-subtitle">
-
-                            Cadastrar-se <br>
-                            Login
-                        </span>
-                    </div>
-                </a>
-
-
-
-        </ul>
-    </header>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="quadro">
-            <div class="title-pop">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <h2 id="titulo">Confirmação</h2>
-            </div>
-
-            <div class="pgf">
-                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                <br>
-                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
-            </div>
-
-            <form action="../../../Services/deletar.php" method="POST">
-                <div id="btn-pop">
-                    <button  class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
-                </div>
-                </form>
-        </div>
-    </div>
-    <main class="main">
-        <article class="container">
-
-            <section class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <h1>Cadastro de Curso</h1>
-                    </div>
-
-                    <!-- <div class="title">
-                        <h2>Questão </h2>
-                    </div> -->
-
-                    <div class="input-group">
-
-                        <!-- <div class="input-box">
-                            <label class="picture" for="picture__input">
-                                <span class="picture__image">Imagem do curso</span>
-                            </label>
-                            <input id="picture__input" accept="image/*" type="file" name="picture" tabindex="0"
-                                placeholder="Digite sua senha " required>
-                        </div> -->
-
-                        <div class="input-box">
-                            <label for="n-fantasia ">Nome do Curso</label>
-                            <input class="n-fantasia" id="n-fantasia" type="text" name="n-fantasia"
-                                placeholder="Nome Fantasia" required>
-                        </div>
-
-
-                        <div class="input-box">
-                            <label for="temp-faculdade">Duração</label>
-                            <input class="temp-faculdade" id="text" type="text" name="temp-faculdade"
-                                placeholder="Duração do Curso" required>
-
-                        </div>
-
-
-                        <div class="input-box">
-                            <label for="carg-hr">Carga Horária </label>
-                            <input class="carg-hr" id="text" type="text" name="carg-hr"
-                                placeholder="Carga horária do Curso" required>
-
-                        </div>
-
-                        <div class="input-box">
-                            <label for="quant-aulas">Aulas na Semana</label>
-                            <input class="quant-aulas" id="text" type="text" name="quant-aulas"
-                                placeholder="Quantidade de aulas na semana " required>
-
-                        </div>
-
-                        <div class="input-box">
-                            <label for="sobre">Sobre</label>
-                            <input class="sobre" id="text" type="text" name="sobre" placeholder="Fale sobre o curso "
-                                required>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <aside class="continue-button">
-                        <button type="submit"><a href="../index.view.php">Finalizar Curso</a></button>
-                    </aside>
-                </form>
-            </section>
-        </article>
-    </main>
-
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="../index.view.php">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-    </div>
-
-    <script src="../../../Public/assets/Js/cad.cursos.facul.js"></script>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        <label for="carreira_id">Carreira:</label>
+        <select id="carreira_id" name="carreira_id" required>
+            <?php
+            $carreiras = $conexao->query("SELECT id, nome FROM carreira");
+            while ($carreira = $carreiras->fetch_assoc()) {
+                echo "<option value='{$carreira['id']}'>{$carreira['nome']}</option>";
             }
-        }
-    </script>
+            ?>
+        </select><br>
 
+        <label for="foto_curso">Foto do Curso:</label>
+        <input type="file" id="foto_curso" name="foto_curso" accept="image/*" ><br>
+
+        <button type="submit">Adicionar Curso</button>
+    </form>
+
+    <h2>Meus Cursos</h2>
+    <ul>
+        <?php while ($curso = $result->fetch_assoc()): ?>
+            <li>
+                <strong><?php echo htmlspecialchars($curso['nome_curso']); ?></strong> 
+                (<?php echo htmlspecialchars($curso['duracao']); ?>) - 
+                <?php if (!empty($curso['foto_curso'])): ?>
+                    <br><img src="<?php echo htmlspecialchars($curso['foto_curso']); ?>" alt="Foto do Curso" style="width: 100px; height: auto;"><br>
+                <?php endif; ?>
+                <a href="instituicao.editarCurso.view.php?id=<?php echo $curso['id_curso']; ?>">Editar</a> | 
+                <a href="instituicao.cursos.view.php?delete=<?php echo $curso['id_curso']; ?>" onclick="return confirm('Tem certeza que deseja excluir este curso?');">Excluir</a>
+            </li>
+        <?php endwhile; ?>
+    </ul>
 </body>
-
 </html>

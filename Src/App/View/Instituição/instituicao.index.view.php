@@ -1,3 +1,16 @@
+<?php 
+
+session_start();
+require '../../database/config.php';
+
+// Verifica se a instituição está logada
+if (!isset($_SESSION['id_instituicao'])) {
+    header("Location: ../View/Instituição/instituicao.login.view.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,25 +54,25 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="instituicao.index.view.php">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
+            <li><a id="#home" href="instituicao.index.view.php" id="inicio">Inicio</a></li>
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span class="teste">Teste
                         Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-entrar" href="instituicao.cadastro.php" id="eventos">Entrar</a></li>
+            <li><a class="mobile-excluir" href="" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
             <div class="tooltip">
                 <div class="position">
-                    <a href="../cadastro.view.php">
+                    <a href="instituicao.cadastro.php">
 
 
                         <div class="menu-item-content">
@@ -72,6 +85,25 @@
 
                                 Cadastrar-se <br>
                                 Login
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <a href="instituicao.login.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                               Deseja sair da Conta<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se <br>
+                              
                             </span>
                         </div>
                     </a>
@@ -105,7 +137,7 @@
                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
-            <form action="../../../Services/deletar.php" method="POST">
+            <form action="../../Services/deletar.php" method="POST">
                 <div id="btn-pop">
                     <button  class="btn-default">
                         <a href="">Cancelar</a></button>
@@ -125,7 +157,7 @@
 
             <aside class="card contact js-global">
                 <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
-                <h3>Cadastrar Cursos</h3>
+                <h3>Gerenciar Cursos</h3>
                 <span>
                 </span>
                 <a href="./instituicao.cursos.view.php"><button>Entrar</button></a>
@@ -136,16 +168,9 @@
                 <h3>Meus Cursos</h3>
                 <span>
                 </span>
-                <a href="instituicao.MeuCurso.view.php"><button>Entrar</button></a>
+                <a href="instituicao.MeuCurso.php"><button>Entrar</button></a>
             </aside>
 
-            <aside class="card contact js-global">
-                <img src="../../../Public/assets/Img/mao-desenhada-sem-ilustracao-de-dados.png" alt="estudante-formando">
-                <h3>Excluir Curso</h3>
-                <span>
-                </span>
-                <a href="instituicao.excluir.view.php"><button>Entrar</button></a>
-            </aside>
         </section>
 
     </main>
@@ -173,7 +198,7 @@
             <ul>
                 <li><a href="../index.view.php">Home </a></li>
                 <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
+                <li><a href="i.">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">

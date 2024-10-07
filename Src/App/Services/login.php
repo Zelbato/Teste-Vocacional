@@ -1,6 +1,7 @@
 <?php
-session_start(); 
-require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
+session_start();
+require_once "../database/config.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -17,17 +18,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->fetch();
 
         if (password_verify($senha, $hashedSenha)) {
-            echo "Login bem-sucedido! Nível de acesso: " . $nivel;
-
             $_SESSION['nivel'] = $nivel;
             $_SESSION['id_usuario'] = $id_usuario;
+            
+            if ($nivel === 'admin') {
+                header("Location: ../View/ADM/adm.view.php"); 
+                exit(); 
 
+            } else {
+                echo "Login bem-sucedido! Nível de acesso: " . $_SESSION['nivel'];
+                header("Location: ../View/index.view.php");
+            }
         } else {
-            echo "Alguma informação está incorreta.";
+            echo "Senha incorreta!";
         }
     } else {
-        echo "Usuário não encontrado.";
+        echo "Usuário não encontrado!";
     }
+
+
 
     $stmt->close();
     $conexao->close();

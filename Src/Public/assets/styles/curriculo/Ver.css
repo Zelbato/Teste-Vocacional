@@ -1,0 +1,23 @@
+@import '../../Global/style/header/header-2.css';
+@import '../../Global/style/footer/footer.css';
+@import '../../Global/style/index.css';
+@import './ver.curriculo.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: var(--font);
+    background: var(--white);
+}
+
+
+a {
+    text-decoration: none;
+    color: #f3f6f9;
+}

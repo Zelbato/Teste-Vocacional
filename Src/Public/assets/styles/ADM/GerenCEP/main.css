@@ -1,0 +1,142 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: var(--azul); /* Azul vibrante */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #343a40; /* Cinza escuro */
+}
+
+/* Formulário */
+form.form {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; /* Cinza médio */
+}
+
+input[type="text"] {
+    width: calc(100% - 16px);
+    padding: 12px;
+    border: 2px solid var(--azul); /* Azul vibrante */
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--azulHover); /* Azul escuro ao focar */
+    outline: none;
+}
+
+/* Estilo para o botão de adicionar */
+button[type="submit"] {
+    background-color: var(--azul); /* Azul vibrante */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--azulHover); /* Azul escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Lista de CEPs */
+ul.ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+ul.ul li.li {
+    background-color: var(--white); /* Cinza claro */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+ul.ul li.li form {
+    margin: 0;
+}
+
+ul.ul li.li button {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    padding: 8px 12px;
+    margin: 0px 0px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ul .li button:hover {
+    background-color: #c82333; /* Vermelho escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Link de interligação */
+a {
+
+    color: var(--azul); /* Azul vibrante */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 40px 20px;
+    /* padding: 12px 25px; */
+    /* border-radius: 8px; */
+    border-bottom: 2px solid var(--azul);
+
+    transition: background 0.3s ease;
+}
+
+
+/* Mensagens de erro/sucesso */
+.message {
+    color: #28a745; /* Verde */
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+}

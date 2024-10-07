@@ -1,0 +1,66 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+/* Estilos gerais da seção */
+.carreiras-obtidas {
+    background-color: #f3f6f9; /* Fundo claro */
+    padding: 40px 20px; /* Padding para espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Título da seção */
+.carreiras-obtidas h1 {
+    font-size: 28px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    color: #206ab8; /* Cor do título */
+    margin-bottom: 20px; /* Margem inferior */
+    text-align: center; /* Centralizar o título */
+}
+
+/* Lista de carreiras */
+.carreiras-obtidas ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0; /* Remove padding */
+}
+
+/* Itens da lista */
+.carreiras-obtidas li {
+    background-color: #fff; /* Fundo branco para itens */
+    padding: 15px; /* Padding interno */
+    border: 1px solid #d1d1d1; /* Borda sutil */
+    border-radius: 6px; /* Cantos arredondados */
+    margin-bottom: 10px; /* Margem inferior para espaçamento entre itens */
+    display: flex; /* Usar flexbox para alinhar itens */
+    justify-content: space-between; /* Espaço entre texto e botão */
+    align-items: center; /* Alinhamento vertical */
+}
+
+/* Estilos do botão */
+.carreiras-obtidas button {
+    background-color: #206ab8; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Cantos arredondados */
+    padding: 10px 15px; /* Padding do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar */
+    transition: background-color 0.3s; /* Efeito de transição para hover */
+}
+
+/* Efeito de hover para o botão */
+.carreiras-obtidas button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mensagem quando não há carreiras */
+.carreiras-obtidas li:empty {
+    text-align: center; /* Centraliza texto */
+    color: #999; /* Cor cinza para texto */
+}

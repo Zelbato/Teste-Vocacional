@@ -1,0 +1,59 @@
+
+
+section.form-curriculo {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-curriculo h1 {
+    color: #206ab8;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-curriculo ul.ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-curriculo li.li {
+    background-color: #f3f6f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-curriculo li.li strong {
+    font-size: 18px;
+    color: rgb(25, 25, 25);
+}
+
+.form-curriculo li.li a {
+    color: #206ab8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #206ab8;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form-curriculo li.li a:hover {
+    background-color: #206ab8;
+    color: white;
+}
+
+.form-curriculo li.li a + a {
+    margin-left: 10px;
+}

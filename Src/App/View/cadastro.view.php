@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
@@ -47,30 +47,31 @@
             <li><a id="#facul" href="#" id="eventos">Faculdades</a></li>
 
             <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-          
+
             <a href="#" class="menu-button">
-                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
-        
+
             <div class="tooltip">
                 <a href="cadastro.view.php" class="menu-item">
-               
-        
+
+
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                           Ainda não se cadastrou?<br>
-                           Clique aqui para se cadastrar!
+                            Ainda não se cadastrou?<br>
+                            Clique aqui para se cadastrar!
                         </span>
-                        
+
                         <span class="menu-item-content-subtitle">
-                          
+
                             Cadastrar-se <br>
-                             Login
-                         </span>
+                            Login
+                        </span>
+
                     </div>
                 </a>
-        
-               
+
+            </div>
 
         </ul>
     </header>
@@ -82,7 +83,7 @@
             </section>
 
             <section class="form">
-                <form action="#">
+                <form action="../Services/cadastro.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
@@ -95,57 +96,37 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                            <input id="name" type="text" name="name" placeholder="Digite seu name" required>
                         </div>
 
                         <div class="input-box">
                             <label for="date">Data de Nascimento</label>
-                            <input id="date" type="date" name="date" placeholder="Digite seu data de nascimento" >
+                            <input id="date" type="date" name="data_nascimento" placeholder="Digite seu data de nascimento">
                         </div>
-                      
+
 
                         <div class="input-box">
                             <label for="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                         </div>
-                        
+
                         <div class="input-box">
-                            <label for="local">Localização </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
+                            <label for="cep">CEP (formato: XXXXX-XXX):</label>
+                            <input type="text" id="cep" name="cep" required><br>
+                            <small>Exemplo: 12345-678</small><br>
                         </div>
-                        
+
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                         
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+
                         </div>
 
-                        <div class="input-box">
-                            <label for="password">Confirmar Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Confirme sua senha" required>
-                        </div>
                     </div>
 
-                    <!-- <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
-
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
-                                <label for="estudante">Estudante</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
-                                <label for="profissional">Profissional</label>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <aside class="continue-button">
-                        <button><a href="#">Cadastrar</a></button>
+                        <button><a href="index.view.php">Cadastrar</a></button>
                     </aside>
                 </form>
             </section>

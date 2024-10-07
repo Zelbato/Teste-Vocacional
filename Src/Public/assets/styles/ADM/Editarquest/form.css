@@ -1,0 +1,121 @@
+
+/* Container Principal */
+.container {
+
+
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+    color: #206ab8; /* Azul para contraste */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"], select {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #f3f6f9;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border: 2px solid #206ab8;
+    box-shadow: 0 0 10px rgba(32, 106, 184, 0.3);
+    outline: none;
+}
+
+/* Botão de Enviar */
+button[type="submit"] {
+    background: linear-gradient(135deg, #206ab8, #66a1e8); /* Gradiente de botão */
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #184f85, #4b7ac5);
+    box-shadow: 0 5px 15px rgba(32, 106, 184, 0.4);
+}
+
+/* Botão Voltar */
+.back-link {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #206ab8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #66a1e8;
+    text-decoration: underline;
+}
+
+/* Estilos das Opções */
+.option-container {
+    background-color: #f3f6f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    button[type="submit"], .back-link {
+        width: 100%;
+    }
+}

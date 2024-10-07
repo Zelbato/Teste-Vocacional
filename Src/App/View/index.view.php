@@ -1,3 +1,19 @@
+<?php 
+
+session_start();
+require '../database/config.php';
+
+
+// if ($_SESSION['nivel'] = 'admin') {
+//     header("Location: ../View/ADM/adm.view.php");
+// } if ($_SESSION['id_instituicao']) {
+//     header('Location: ../View/Instituição/instituicao.index.view.php');
+// } else {
+//     header("Location: index.view.php");
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,6 +70,7 @@
 
             <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -85,9 +102,40 @@
                             Deseja excluir sua conta <br>
                             Clique aqui para finalizar!
                         </span>
+
                         <span id="myBtn" class="menu-item-content-subtitle">
                             excluir conta
                         </span>
+
+                        <br>
+                        
+                        <a href="curriculo.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja criar seu curriculo<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Criar Curriculo <br>
+                            </span>
+                        </div>
+                        </a>
+
+                        <br>
+
+                        <a href="Ecurriculo.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu curriculo<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Editar Curriculo <br>
+                            </span>
+                        </div>
+                        </a>
                     </div>
                 </div>
 

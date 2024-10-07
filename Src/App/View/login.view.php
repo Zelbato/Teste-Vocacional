@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
@@ -50,9 +50,9 @@
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
-        
+
             <div class="tooltip">
                 <div class="position">
                     <a href="cadastro.view.php">
@@ -71,20 +71,7 @@
                             </span>
                         </div>
                     </a>
-
-                    <!-- <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-                    </div> -->
                 </div>
-
-
-             
 
         </ul>
     </header>
@@ -99,16 +86,16 @@
             <div class="pgf">
                 <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
                 <br>
-               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
             <form action="../Services/deletar.php" method="POST">
                 <div id="btn-pop">
-                    <button  class="btn-default">
+                    <button class="btn-default">
                         <a href="">Cancelar</a></button>
                     <button type="submit" class="close excluir">Excluir</button>
                 </div>
-                </form>
+            </form>
         </div>
     </div>
     <main class="main">
@@ -118,29 +105,33 @@
             </section>
 
             <section class="form">
-                <form action="#">
+                <form action="../Services/login.php" method="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Entrar</h1>
                         </div>
-        
+
+                      <div class="login-button">
+                            <button> <a href="./Instituição/instituicao.login.view.php">Login Instituição</a> </button>
+                        </div>
+
                     </div>
 
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="firstname">Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                            <label for="name">Nome</label>
+                            <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
                         </div>
 
-                        
+
                         <div class="input-box">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                            <input id="email" type="text" name="email" placeholder="Digite seu email" required>
                         </div>
 
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                         </div>
 
                         <div class="recuperar-senha">
@@ -148,7 +139,7 @@
                         </div>
                     </div>
 
-                  
+
 
                     <aside class="continue-button">
                         <button><a href="#">Entrar</a></button>
@@ -168,17 +159,17 @@
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }

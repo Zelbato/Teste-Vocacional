@@ -1,6 +1,6 @@
 <?php
-require "ver_tipo.php";
-require_once "/wamp64/www/Teste-Vocacional/Src/App/database/config.php";
+
+require_once "../database/config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $question_id = $_POST['question_id'];
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("i", $question_id);
 
     if ($stmt->execute()) {
-        echo "Questão excluída com sucesso!";
+        header("Location: ../View/ADM/gerenciar.questao.view.php");
     } else {
         echo "Erro ao excluir a questão: " . $stmt->error;
     }

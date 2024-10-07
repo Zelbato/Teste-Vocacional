@@ -1,86 +1,148 @@
-
-
-#caixa{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    
+/* Estilo para a seção "Meus Cursos" */
+h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+   color: #343a40; /* Cinza escuro */
+   text-align: center;
 }
-.caixa{
-    width: 100%;
-    height: auto;
-    padding: 40px;
+
+/* Estilo para a lista de cursos */
+ul {
+   list-style: none; /* Remove o estilo padrão da lista */
+   padding: 0;
+   margin: 20px auto;
+   max-width: 800px; /* Limita a largura máxima */
 }
-.item{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
- background-color: #fff;
- box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.185);
- padding: 20px;
- border-radius: 7px;
- }
- .foto img{
-    height: 250px;
-    width: 350px;
-    border-radius: 7px;
-    object-fit: cover;
- }
- .description{
-    display: flex;
-    flex-direction: column;
-  font: 3px;
-  margin-bottom: 10px;
- }
- .btn-acess{
-  
-    padding: 10px;
-    width: 110px;
-    background-color: rgb(0, 119, 255);
-    color: aliceblue;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    margin-top: 20px;
-    font-size: 12px;
-    font-weight: 800;
-  
-    font-family:arial;
- 
 
- }
- .btn-acess:hover{
-  
- background-color: #fff;
- transform: scale(1.1) ;  
- color:rgb(0, 119, 255);
- border: solid 2px rgb(0, 119, 255);
+/* Estilo de cada curso (li) */
+ul li {
+   background-color: #f8f9fa; /* Fundo claro */
+   padding: 20px;
+   border: 1px solid #dee2e6; /* Borda clara */
+   border-radius: 10px;
+   margin-bottom: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- .topi{
-    font-size: 15px;
-    text-align: center;
-  
- }
 
- .topi b{
-    font-size: 12px;
-    font-weight: 800;
-    text-transform:uppercase ;
-    font-family:arial;
-    color: #222;
- }
+ul li:hover {
+   transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+}
 
- .title-curso{
-   font-size: 20px;
-   font-weight: 600;
-   text-transform:uppercase ;
-   font-family:poppins;
-   color: #000000;
-   border-bottom: 3px solid #0370ff;
+/* Estilo para o nome do curso */
+ul li strong {
+   font-size: 1.5rem;
+   color: #007bff; /* Azul vibrante */
+}
+
+/* Duração do curso */
+ul li span {
+   font-size: 1.2rem;
+   color: #6c757d; /* Cinza suave */
+}
+
+/* Estilo para a imagem do curso */
+ul li img {
    margin-top: 10px;
- }
+   border-radius: 5px;
+   max-width: 150px; /* Limita a largura máxima */
+   height: auto;
+   display: block;
+}
 
+/* Estilo para os links de ação (editar, excluir) */
+ul li a {
+   color: #007bff; /* Azul vibrante */
+   text-decoration: none;
+   font-weight: bold;
+   margin: 5px;
+   transition: color 0.3s ease;
+}
+
+ul li a:hover {
+   color: #0056b3; /* Azul mais escuro ao passar o mouse */
+   text-decoration: underline;
+}
+
+/* Links organizados em uma linha */
+ul li .actions {
+   margin-top: 10px;
+   display: flex;
+   justify-content: flex-start;
+   gap: 15px;
+}
+/* Estilo para a seção "Meus Cursos" */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40; /* Cinza escuro */
+    text-align: center;
+}
+
+/* Estilo para a lista de cursos */
+ul {
+    list-style: none; /* Remove o estilo padrão da lista */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px; /* Limita a largura máxima */
+}
+
+/* Estilo de cada curso (li) */
+ul li {
+    background-color: #f8f9fa; /* Fundo claro */
+    padding: 20px;
+    border: 1px solid #dee2e6; /* Borda clara */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para o nome do curso */
+ul li strong {
+    font-size: 1.5rem;
+    color: #007bff; /* Azul vibrante */
+}
+
+/* Duração do curso */
+ul li span {
+    font-size: 1.2rem;
+    color: #6c757d; /* Cinza suave */
+}
+
+/* Estilo para a imagem do curso */
+ul li img {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 150px; /* Limita a largura máxima */
+    height: auto;
+    display: block;
+}
+
+/* Estilo para os links de ação (editar, excluir) */
+ul li a {
+    color: #007bff; /* Azul vibrante */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Links organizados em uma linha */
+ul li .actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}

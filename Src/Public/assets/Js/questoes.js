@@ -17,3 +17,4 @@ function menu() {
         document.querySelector(".icon").src = "/Src/Public/assets/Img/botao-excluir.png";
     }
 }
+

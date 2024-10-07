@@ -1,0 +1,49 @@
+/* Estilos da seção de resultados */
+.resultado {
+    background-color: #f9f9f9; /* Fundo claro */
+    padding: 30px; /* Padding interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Estilo do título */
+.resultado .title {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.resultado h1 {
+    font-size: 28px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    color: #206ab8; /* Cor do título */
+}
+
+/* Estilo para cada resposta */
+.resultado div {
+    background-color: #fff; /* Fundo branco para os blocos de resultado */
+    padding: 15px; /* Padding interno */
+    border-radius: 6px; /* Cantos arredondados */
+    border: 1px solid #e1e1e1; /* Borda sutil */
+    margin-bottom: 15px; /* Margem inferior entre resultados */
+}
+
+/* Estilo para o texto das perguntas e respostas */
+.resultado p {
+    margin: 5px 0; /* Margem superior e inferior */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para os rótulos fortes */
+.resultado strong {
+    color: #206ab8; /* Cor dos rótulos fortes */
+}
+
+/* Estilo do separador */
+.resultado hr {
+    border: 0; /* Remove a borda padrão */
+    height: 1px; /* Altura do separador */
+    background-color: #e1e1e1; /* Cor do separador */
+    margin: 15px 0; /* Margem superior e inferior do separador */
+}

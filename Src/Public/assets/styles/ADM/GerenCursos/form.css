@@ -1,0 +1,130 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Um tom suave de cinza claro */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    margin: 30px 0;
+    color: var(--azul); /* Azul vibrante */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #495057; /* Cinza médio */
+}
+
+/* Formulário */
+form {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+/* Labels e campos de entrada */
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    height: 100px; /* Altura padrão */
+}
+
+/* Estilo para botões */
+button[type="submit"] {
+    background-color: var(--azul); /* Azul vibrante */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Estilo para a lista de cursos */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+li {
+    padding: 15px;
+    border: 1px solid #ced4da; /* Borda cinza */
+    border-radius: 10px;
+    background-color: #e9ecef; /* Cinza claro */
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+li strong {
+    font-size: 1.5rem;
+    color: #343a40; /* Cinza escuro */
+}
+
+/* Imagem do curso */
+img {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Links de edição e exclusão */
+a {
+    color: var(--azul); /* Azul vibrante */
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Mensagens de erro/sucesso */
+.message {
+    color: #28a745; /* Verde */
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+}

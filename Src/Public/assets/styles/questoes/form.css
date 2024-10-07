@@ -1,151 +1,109 @@
 
-
-
 .main {
     height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0px;
+    padding: 40px 0;
 }
 
-.main .container {
-    width: 95%;
-    height: 90vh;
-    display: flex;
-    /* box-shadow: 10px 30px 30px #0000001c; */
+.container {
     border-radius: 8px;
-
+    background: transparent; /* Fundo branco */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  */
+    padding: 20px;
 }
 
-/*Cadastro de Questão*/
-.main .form {
+.form {
     width: 100%;
+    max-width: 1500px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background: transparent;
-    /* background: var(--white); */
-    /* border: 1px solid var(--azul); */
-    padding: 40px;
-    margin:0px 12% 0 12%;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    /* box-shadow: 20px 20px 60px -30px var(--azulHover); */
 }
 
-.main .form-header {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.main .form-header h1 {
-    font-size: 25px;
-    font-weight: 500;
-    position: relative;
-    color: var(--azulHover);
+.form h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--azul); /* Cor do título */
     margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
 }
 
-.main .form-header h1::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 3px;
-    background: var(--azulHover);
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
+.input-box {
+    margin-bottom: 15px;
 }
 
-
-/* .main .title {
-    font-size: 17px;
+.input-box label {
+    font-size: 16px;
     font-weight: 600;
-    margin: 40px 0;
-} */
+    color: #495057; /* Cor do texto */
+}
 
-.main .input-group {
+.input-box input, .input-box select {
+    width: 100%; /* Largura total */
+    height: auto;
+    padding: 10px 20px; 
+    margin: 5px 10px;
+    border: 1px solid #ced4da; /* Bordas suaves */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus, .input-box select:focus {
+    border-color: var(--azul); /* Cor do foco */
+}
+
+.option-group {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: auto 0 ;
+    margin:10px 20px; 
+
 }
 
-.main .input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-}
-
-.main .input-box input {
-    margin: 10px 0;
-    width: 350px;
-    height: 40px;
-    padding: 0 15px;
-    border: none;
-    border-bottom:1px solid var(--azulHover) ;
-    outline: none;
-}
-
-.main .input-box input:hover {
-    transition: all .5s;
-    background: var(--white);
-    outline: none;
-}
-
-.main .input-box input:focus-visible {
-    outline: 1px solid var(azul);
-}
-
-.main .input-box select {
-    margin: 10px 0;
-    padding: 10px 5px;
-    max-width: 200px;
-}
-
-.main .input-box select option {
-    background: var(--white);
-    color: var(--azulHover);
-    font-size: 14px;
-}
-
-.main .input-box label,
-.main .gender-title h6 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--azulHover);
-}
-
-.main .input-box::placeholder {
-    color: var(--azulHover);
-}
-
-/*Botão*/
-.main .continue-button button {
-    width: 25%;
-    margin-top: 10px;
-    background: var(--azul);
-
-    padding: 10px;
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--azul); /* Cor do botão */
+    color: white; /* Cor do texto do botão */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.5s;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
-.main .continue-button button:hover {
-    background: var(--azulHover);
-    color: var(--white);
-    transform: scale(0.95);
+.btn-submit:hover {
+    background: var(--azulHover); /* Cor do botão ao passar o mouse */
 }
 
-.main .continue-button button a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 500;
+/* Alertas */
+.alert {
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: #d4edda; /* Cor de fundo de sucesso */
+    color: #155724; /* Cor do texto de sucesso */
+    border: 1px solid #c3e6cb; /* Bordas de sucesso */
+}
+
+/* Rodapé */
+footer {
+    background: var(--preto);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }

@@ -1,0 +1,129 @@
+
+
+/* Estilo da Área Principal */
+main.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilo da Seção de Quiz */
+section.quiz-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.quiz h1 {
+    color: #206ab8;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #206ab8;
+    padding-bottom: 10px;
+}
+
+/* Estilo das Perguntas */
+.quiz p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+/* Estilo dos Inputs */
+.quiz input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.quiz input[type="radio"]:hover + label {
+    background-color: #f0f0f0;
+}
+
+.quiz input[type="radio"]:checked + label {
+    background-color: #206ab8;
+    color: white;
+    border-color: #206ab8;
+}
+
+/* Estilo dos Botões de Navegação */
+.quiz .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.quiz button {
+    background-color: #206ab8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para Hover no Botão */
+.quiz button:hover {
+    background-color: #004a88;
+    color: #fff;
+}
+
+/* Estilo do Botão de Enviar */
+.quiz button[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 0;
+    background-color: #206ab8;
+}
+
+.quiz button[type="submit"]:hover {
+    background-color: #004a88;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .quiz h1 {
+        font-size: 24px;
+    }
+
+    .quiz p {
+        font-size: 16px;
+    }
+
+    .quiz button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .quiz .nav-buttons button {
+        width: 48%;
+    }
+}
