@@ -128,7 +128,7 @@ $result = $stmt->get_result();
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <li>
                         <strong><?php echo htmlspecialchars($row['carreira_nome']); ?></strong>
-                        <form method="GET" action="ver_caminho_carreira.php" style="display:inline;">
+                        <form method="GET" action="Ver.caminho.carreira.view.php" style="display:inline;">
                             <input type="hidden" name="carreira_id" value="<?php echo $row['carreira_id']; ?>">
                             <button type="submit">Ver meu caminho</button>
                         </form>

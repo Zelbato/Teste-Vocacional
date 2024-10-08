@@ -2,21 +2,41 @@
 session_start();
 require '../database/config.php';
 
-$user_id = $_SESSION['id_usuario'];
+$user_id = $_SESSION['id_usuario']; // Certifique-se de que o ID do usuário está corretamente armazenado
 
+// Verifica se a carreira foi passada corretamente
+if (!isset($_GET['carreira_id'])) {
+    die('Carreira não foi especificada.');
+}
+
+$carreira = intval($_GET['carreira_id']); // Certifique-se de que o ID da carreira está sendo passado como parâmetro na URL
+
+// Carrega instituições próximas com base no CEP do usuário e na carreira sugerida
 $query = "
-    SELECT q.question_text, o.option_text, c.nome AS carreira 
-    FROM user_responses ur
-    JOIN questions q ON ur.question_id = q.id
-    JOIN options o ON ur.option_id = o.id
-    JOIN carreira c ON ur.carreira_id = c.id
-    WHERE ur.user_id = ?";
-    
+    SELECT i.nome_fantasia, i.url, c.nome_curso, c.duracao, c.descricao, c.foto_curso 
+    FROM instituicao_cep_proximo icp
+    JOIN instituicao i ON icp.id_instituicao = i.id_instituicao
+    JOIN cursos c ON i.id_instituicao = c.id_instituicao
+    WHERE icp.id_usuario = ? AND icp.proximidade = TRUE
+    AND c.carreira_id = ?";
+
 $stmt = $conexao->prepare($query);
-$stmt->bind_param("i", $user_id);
+
+if ($stmt === false) {
+    die('Erro ao preparar consulta: ' . $conexao->error);
+}
+
+$stmt->bind_param("ii", $user_id, $carreira);
 $stmt->execute();
 $result = $stmt->get_result();
-// ?>
+
+// Verifica se há resultados
+if ($result->num_rows == 0) {
+    $instituicoes = null;
+} else {
+    $instituicoes = $result->fetch_all(MYSQLI_ASSOC); // Pega todas as instituições
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -124,16 +144,49 @@ $result = $stmt->get_result();
 
         <section class="resultado">
             <div class="title">
-                <h1>Seu Resultado e Caminho Percorrido</h1>
+                <h1>Resultado do Teste Vocacional</h1>
             </div>
-            <?php while ($row = $result->fetch_assoc()): ?>
-                <div>
-                    <p><strong>Pergunta:</strong> <?php echo htmlspecialchars($row['question_text']); ?></p>
-                    <p><strong>Resposta:</strong> <?php echo htmlspecialchars($row['option_text']); ?></p>
-                    <p><strong>Carreira sugerida:</strong> <?php echo htmlspecialchars($row['carreira']); ?></p>
-                </div>
-                <hr>
-            <?php endwhile; ?>
+                <h2>Carreira sugerida:
+                    <?php
+                    // Consulta para pegar o nome da carreira baseado no ID da carreira
+                    $carreira_query = $conexao->prepare("SELECT nome FROM carreira WHERE id = ?");
+                    $carreira_query->bind_param("i", $carreira);
+                    $carreira_query->execute();
+                    $carreira_result = $carreira_query->get_result();
+                    $carreira_nome = $carreira_result->fetch_assoc()['nome'];
+                    echo htmlspecialchars($carreira_nome);
+                    ?>
+                </h2>
+
+                <h3>Instituições que oferecem cursos para esta carreira:</h3>
+                <?php if ($instituicoes): ?>
+                    <ul>
+                        <?php foreach ($instituicoes as $instituicao): ?>
+                            <li>
+                                <strong>
+                                    Instituição:
+                                    <!-- Nome da instituição como link que redireciona para a URL -->
+                                    <?php if (!empty($instituicao['url'])): ?>
+                                        <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
+                                            <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <!-- Caso não tenha URL cadastrada, apenas exibe o nome da instituição -->
+                                        <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
+                                    <?php endif; ?>
+                                </strong><br>
+                                Curso: <?php echo htmlspecialchars($instituicao['nome_curso']); ?><br>
+                                <?php if (!empty($instituicao['foto_curso'])): ?>
+                                    <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" width="200"><br>
+                                <?php endif; ?>
+                                Duração: <?php echo htmlspecialchars($instituicao['duracao']); ?><br>
+                                Descrição: <?php echo htmlspecialchars($instituicao['descricao']); ?><br>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php else: ?>
+                    <p>Nenhuma instituição próxima foi encontrada para essa carreira.</p>
+                <?php endif; ?>
         </section>
     </main>
 

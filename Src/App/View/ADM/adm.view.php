@@ -168,7 +168,7 @@ if (!isset($_SESSION['id_usuario'])) {
           </aside>
 
           <aside class="card contact js-global">
-            <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
+            <img src="../../../Public/assets/Img/conceito-de-universidade-plana.png" alt="estudante-formando">
               <h3>Gerenciar Carreiras</h3>
               <span>
               </span>
@@ -182,16 +182,7 @@ if (!isset($_SESSION['id_usuario'])) {
               </span>
               <a href="gerenciar.cep.view.php"><button>Entrar</button></a>
           </aside>
-
-          <aside class="card contact js-global">
-            <img src="../../../Public/assets/Img/alternar-ilustracao-do-conceito.png" alt="estudante-formando">
-              <h3>Excluir Questões</h3>
-              <span>
-              </span>
-              <a href="../deletarQ.view.php"><button>Entrar</button></a>
-          </aside>
-        
-
+     
       </section>
 
     </main>

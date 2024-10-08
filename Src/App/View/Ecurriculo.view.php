@@ -20,6 +20,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,35 +162,51 @@ if (isset($_GET['id'])) {
 
         <!--Editar Curriculo -->
 
-      <main class="main">
-        <section class="Editar">
-        <h1>Editar Currículo</h1>
-        <?php if ($curriculo): ?>
-            <form action="salvar_curriculo.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($curriculo['id']); ?>">
+        <main class="main">
+            <section class="Editar">
+                <h1>Editar Currículo</h1>
+                <?php if ($curriculo): ?>
+                    <form action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?php echo htmlspecialchars($curriculo['id']); ?>">
 
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($curriculo['nome']); ?>" required><br>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($curriculo['nome']); ?>" required><br>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($curriculo['email']); ?>" required><br>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($curriculo['email']); ?>" required><br>
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" value="<?php echo htmlspecialchars($curriculo['telefone']); ?>" required><br>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" value="<?php echo htmlspecialchars($curriculo['telefone']); ?>" required><br>
 
-                <label for="experiencia">Experiência:</label>
-                <textarea id="experiencia" name="experiencia" rows="5" required><?php echo htmlspecialchars($curriculo['experiencia']); ?></textarea><br>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" value="<?php echo htmlspecialchars($curriculo['endereco']); ?>" required><br>
 
-                <label for="formacao">Formação:</label>
-                <textarea id="formacao" name="formacao" rows="5" required><?php echo htmlspecialchars($curriculo['formacao']); ?></textarea><br>
+                        <label for="experiencia">Experiência:</label><br>
+                        <textarea id="experiencia" name="experiencia" rows="5" required><?php echo htmlspecialchars($curriculo['experiencia']); ?></textarea><br>
 
-                <button type="submit">Salvar Currículo</button>
-            </form>
-        <?php else: ?>
-            <p>Currículo não encontrado.</p>
-        <?php endif; ?>
-        </section>
-      </main>
+                        <label for="formacao">Formação:</label><br>
+                        <textarea id="formacao" name="formacao" rows="5" required><?php echo htmlspecialchars($curriculo['formacao']); ?></textarea><br>
+
+                        <label for="habilidades">Habilidades:</label>
+                        <input type="text" id="habilidades" name="habilidades" value="<?php echo htmlspecialchars($curriculo['habilidades']); ?>"><br>
+
+                        <!-- Exibir foto atual se existir -->
+                        <?php if (!empty($curriculo['foto_perfil'])): ?>
+                            <label for="foto_atual">Foto de Perfil Atual:</label><br>
+                            <img src="<?php echo htmlspecialchars($curriculo['foto_perfil']); ?>" alt="Foto de perfil" width="150"><br>
+                        <?php endif; ?>
+
+                        <label for="foto_perfil">Atualizar Foto de Perfil:</label>
+                        <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
+
+                        <button type="submit">Salvar Currículo</button>
+                    </form>
+                <?php else: ?>
+                    <p>Currículo não encontrado.</p>
+                <?php endif; ?>
+
+            </section>
+        </main>
 
 
         <!--RODAPÉ-->

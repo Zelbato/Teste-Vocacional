@@ -136,80 +136,36 @@
         </div>
 
         <section class="form-curriculo">
-            <form action="processar_curriculo.php" method="POST">
+            <form action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
+                <input type="text" name="nome" id="nome" required><br><br>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" name="email" id="email" required><br><br>
 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required><br>
+                <input type="text" name="telefone" id="telefone"><br><br>
 
-                <label for="experiencia">Experiência:</label>
-                <textarea id="experiencia" name="experiencia" rows="5" required></textarea><br>
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" required><br><br>
 
-                <label for="formacao">Formação:</label>
-                <textarea id="formacao" name="formacao" rows="5" required></textarea><br>
+                <label for="experiencia">Experiência:</label><br>
+                <textarea name="experiencia" id="experiencia" required></textarea><br><br>
+
+                <label for="formacao">Formação:</label><br>
+                <textarea name="formacao" id="formacao" required></textarea><br><br>
+
+                <label for="habilidades">Habilidades:</label>
+                <input type="text" name="habilidades" id="habilidades"><br><br>
+
+                <label for="foto_perfil">Foto de Perfil:</label>
+                <input type="file" name="foto_perfil" id="foto_perfil"><br><br>
 
                 <button type="submit">Enviar Currículo</button>
             </form>
+
         </section>
     </main>
-
-
-    <!--Sobre Nós-->
-
-
-
-
-
-
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="index.view.php">Home </a></li>
-                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="termos.view.php">Termos de uso </a></li>
-                <li><a href="politica.view.php">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
 
     </div>
 

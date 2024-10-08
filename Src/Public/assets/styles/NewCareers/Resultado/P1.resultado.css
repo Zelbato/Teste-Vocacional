@@ -1,66 +1,85 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 80vh;
+section.resultado {
+    background-color: #f3f6f9; /* Cor de fundo clara */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    margin: 40px auto;
 }
 
-/* Estilos gerais da seção */
-.carreiras-obtidas {
-    background-color: #f3f6f9; /* Fundo claro */
-    padding: 40px 20px; /* Padding para espaçamento interno */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin: 20px 0; /* Margem superior e inferior */
+.resultado .title h1 {
+    font-size: 2.5rem;
+    color: #206ab8; /* Cor do título em azul */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
 }
 
-/* Título da seção */
-.carreiras-obtidas h1 {
-    font-size: 28px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Negrito */
-    color: #206ab8; /* Cor do título */
-    margin-bottom: 20px; /* Margem inferior */
-    text-align: center; /* Centralizar o título */
+.resultado h2 {
+    font-size: 1.8rem;
+    color: #191919; /* Cor escura para o nome da carreira */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Lista de carreiras */
-.carreiras-obtidas ul {
-    list-style: none; /* Remove marcadores padrão */
-    padding: 0; /* Remove padding */
+.resultado h3 {
+    font-size: 1.4rem;
+    color: #206ab8; /* Destaque em azul para o subtítulo */
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
 }
 
-/* Itens da lista */
-.carreiras-obtidas li {
-    background-color: #fff; /* Fundo branco para itens */
-    padding: 15px; /* Padding interno */
-    border: 1px solid #d1d1d1; /* Borda sutil */
-    border-radius: 6px; /* Cantos arredondados */
-    margin-bottom: 10px; /* Margem inferior para espaçamento entre itens */
-    display: flex; /* Usar flexbox para alinhar itens */
-    justify-content: space-between; /* Espaço entre texto e botão */
-    align-items: center; /* Alinhamento vertical */
+.resultado ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Estilos do botão */
-.carreiras-obtidas button {
-    background-color: #206ab8; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none; /* Remove borda padrão */
-    border-radius: 4px; /* Cantos arredondados */
-    padding: 10px 15px; /* Padding do botão */
-    cursor: pointer; /* Cursor em forma de mão ao passar */
-    transition: background-color 0.3s; /* Efeito de transição para hover */
+.resultado ul li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #206ab8; /* Destaque na borda esquerda */
 }
 
-/* Efeito de hover para o botão */
-.carreiras-obtidas button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+.resultado ul li strong {
+    font-size: 1.3rem;
+    color: #206ab8;
+    display: block;
+    margin-bottom: 8px;
 }
 
-/* Mensagem quando não há carreiras */
-.carreiras-obtidas li:empty {
-    text-align: center; /* Centraliza texto */
-    color: #999; /* Cor cinza para texto */
+.resultado ul li a {
+    color: #206ab8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resultado ul li a:hover {
+    color: #191919;
+}
+
+.resultado ul li img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.resultado ul li p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.resultado p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
 }

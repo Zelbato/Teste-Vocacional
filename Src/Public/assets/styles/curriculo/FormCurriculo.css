@@ -4,13 +4,16 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    height: 100vh;
+    width: 100%;
+    height: auto;
 }
 
 
 /* Estilização do formulário de currículo */
 form {
-    max-width: 600px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--white);

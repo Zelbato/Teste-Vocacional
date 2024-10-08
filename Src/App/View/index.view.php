@@ -109,7 +109,7 @@ require '../database/config.php';
 
                         <br>
                         
-                        <a href="curriculo.view.php">
+                        <a href="curriculo.index.view.php">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Deseja criar seu curriculo<br>
@@ -124,18 +124,20 @@ require '../database/config.php';
 
                         <br>
 
-                        <a href="Ecurriculo.view.php">
+                        <a href="caminho.resultado.view.php">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja editar seu curriculo<br>
+                                Deseja ver as carreiras obtidas<br>
                                 Clique aqui!
                             </span>
 
                             <span class="menu-item-content-subtitle">
-                                Editar Curriculo <br>
+                              Ver Carreiras <br>
                             </span>
                         </div>
                         </a>
+
+                        
                     </div>
                 </div>
 

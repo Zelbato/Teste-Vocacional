@@ -3,7 +3,7 @@
 /* Container Principal */
 .main {
     max-width: 900px; /* Largura máxima do container */
-    height: 50vh;
+    min-height: 100vh;
     margin: 30px auto; /* Centraliza o container */
     padding: 20px; /* Espaçamento interno */
     background-color: white; /* Fundo branco para o conteúdo */
@@ -14,7 +14,7 @@
 /* Tabela de Questões */
 .questions-table {
     width: 100%; /* Largura total */
-
+    
     border-collapse: collapse; /* Remove os espaços entre bordas */
     margin-bottom: 20px; /* Espaçamento inferior */
 }
