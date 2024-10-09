@@ -178,6 +178,31 @@
       </section>
 
     </main>
+    <section class="sobre js-global">
+
+<div class="sobre-content">
+
+    <div class="image-content">
+        <img src="../../Public/assets/Imagens/estudante-formando.png" alt="image">
+    </div>
+
+    <div class="paragrafo">
+        <h3>O que é o Teste Vocacional?</h3>
+        <p>
+        O teste Vocacional é uma ferramenta utilizada por vários especialistas na área
+         da saúde com seus pacientes. O teste é realizado com a intenção de auxiliar os
+          usuários, pacientes e afins, assim ajudando a descobrir uma carreira
+           compatível com seus gostos e características.
+        </p>
+
+    </div>
+</div>
+
+</section>
+
+
+
+
 
 
     <!--RODAPÉ-->
