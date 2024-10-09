@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 require '../database/config.php';
@@ -35,7 +35,7 @@ require '../database/config.php';
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -62,15 +62,16 @@ require '../database/config.php';
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
             <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -78,29 +79,11 @@ require '../database/config.php';
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
-
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
                             Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
+                            Clique aqui!
                         </span>
 
                         <span id="myBtn" class="menu-item-content-subtitle">
@@ -108,36 +91,36 @@ require '../database/config.php';
                         </span>
 
                         <br>
-                        
-                        <a href="curriculo.index.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja criar seu curriculo<br>
-                                Clique aqui!
-                            </span>
 
-                            <span class="menu-item-content-subtitle">
-                                Criar Curriculo <br>
-                            </span>
-                        </div>
+                        <a href="curriculo.index.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Crie seu Curriculo<br>
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Criar Curriculo <br>
+                                </span>
+                            </div>
                         </a>
 
                         <br>
 
                         <a href="caminho.resultado.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja ver as carreiras obtidas<br>
-                                Clique aqui!
-                            </span>
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Veja as carreiras obtidas<br>
 
-                            <span class="menu-item-content-subtitle">
-                              Ver Carreiras <br>
-                            </span>
-                        </div>
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Ver Carreiras <br>
+                                </span>
+                            </div>
                         </a>
 
-                        
+
                     </div>
                 </div>
 
@@ -148,7 +131,7 @@ require '../database/config.php';
 
     <!--PAG-1-->
     <main class="main ">
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
@@ -158,15 +141,15 @@ require '../database/config.php';
 
                 <div class="pgf">
                     <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                   <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                    <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
                 </div>
 
                 <form action="../Services/deletar.php" method="POST">
-                <div id="btn-pop">
-                    <button  class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
-                </div>
+                    <div id="btn-pop">
+                        <button class="btn-default">
+                            <a href="">Cancelar</a></button>
+                        <button type="submit" class="close excluir">Excluir</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -200,10 +183,10 @@ require '../database/config.php';
                 <div class="paragrafo">
                     <h3>O que é o Teste Vocacional?</h3>
                     <p>
-                    O teste Vocacional é uma ferramenta utilizada por vários especialistas na área
-                     da saúde com seus pacientes. O teste é realizado com a intenção de auxiliar os
-                      usuários, pacientes e afins, assim ajudando a descobrir uma carreira
-                       compatível com seus gostos e características.
+                        O teste Vocacional é uma ferramenta utilizada por vários especialistas na área
+                        da saúde com seus pacientes. O teste é realizado com a intenção de auxiliar os
+                        usuários, pacientes e afins, assim ajudando a descobrir uma carreira
+                        compatível com seus gostos e características.
                     </p>
 
                 </div>
@@ -335,17 +318,17 @@ require '../database/config.php';
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
