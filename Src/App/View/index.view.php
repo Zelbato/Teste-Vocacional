@@ -199,14 +199,11 @@ require '../database/config.php';
 
                 <div class="paragrafo">
                     <h3>O que é o Teste Vocacional?</h3>
-                    <p>O Teste Vocacional é uma ferramenta que busca avaliar o perfil de cada pessoa
-                        e direcioná-la para a melhor escolha sobre qual carreira seguir. Esse teste
-                        vai ajudar a entender mais sobre suas habilidades e aptidões, indicando as
-                        melhores carreiras para o seu perfil, com base nos seus interesses e
-                        gostos.
-
-
-
+                    <p>
+                    O teste Vocacional é uma ferramenta utilizada por vários especialistas na área
+                     da saúde com seus pacientes. O teste é realizado com a intenção de auxiliar os
+                      usuários, pacientes e afins, assim ajudando a descobrir uma carreira
+                       compatível com seus gostos e características.
                     </p>
 
                 </div>
