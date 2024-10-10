@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 @import '../../Global/style/header/header-2.css';
-@import './form.css';
-@import './mobile.css';
+@import 'form.css';
+@import 'mobile.css';
 @import '../../Global/style/index.css';
 
 

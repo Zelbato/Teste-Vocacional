@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
@@ -25,7 +25,7 @@
 
 <body>
 
-    <header class="header">
+    <!-- <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -50,7 +50,7 @@
             <li><a class="mobile-excluir" href="./ADM/index_Adm.html" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta --
             </a>
         
             <div class="tooltip">
@@ -89,7 +89,7 @@
              
 
         </ul>
-    </header>
+    </header> -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="quadro">
@@ -101,18 +101,22 @@
             <div class="pgf">
                 <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
                 <br>
-               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
             <div id="btn-pop">
-                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
+                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a
+                        href="">Excluir</a></button>
             </div>
         </div>
     </div>
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="../Public/assets/Img/imagemLogin.svg" alt="image">
+                <div class="title-form">
+                    <h1>Faça seu login <br> e explore nosso sistema!</h1>
+                </div>
+                <img src="../Public/assets/Img/Connected world-pana.png" alt="image">
             </section>
 
             <section class="form">
@@ -121,7 +125,11 @@
                         <div class="title">
                             <h1>Entrar</h1>
                         </div>
-        
+
+                        <div class="login-button">
+                            <button> <a href="Instituição/instituicao.cadastro.php">Instituição</a> </button>
+                        </div>
+
                     </div>
 
                     <div class="input-group">
@@ -130,7 +138,7 @@
                             <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
                         </div>
 
-                        
+
                         <div class="input-box">
                             <label for="email">Email</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu email" required>
@@ -138,7 +146,8 @@
 
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            <input id="password" type="password" name="password" placeholder="Digite sua senha"
+                                required>
                         </div>
 
                         <div class="recuperar-senha">
@@ -146,7 +155,7 @@
                         </div>
                     </div>
 
-                  
+
 
                     <aside class="continue-button">
                         <button><a href="#">Entrar</a></button>

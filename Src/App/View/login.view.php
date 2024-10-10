@@ -25,7 +25,7 @@
 
 <body>
 
-    <header class="header">
+    <!-- <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -50,7 +50,7 @@
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta 
             </a>
 
             <div class="tooltip">
@@ -74,9 +74,11 @@
                 </div>
 
         </ul>
-    </header>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
+    </header> -->
+
+
+    <!-- <div id="myModal" class="modal">
+        <!-- Modal content 
         <div class="quadro">
             <div class="title-pop">
                 <i class="fa-solid fa-triangle-exclamation"></i>
@@ -97,11 +99,15 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
+
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="../../Public/assets/Img/imagemLogin.svg" alt="image">
+                <div class="title-form">
+                    <h1>Faça seu login <br> e explore nosso sistema!</h1>
+                </div>
+                <img src="../../Public/assets/Img/Connected world-pana.png" alt="image">
             </section>
 
             <section class="form">
@@ -111,7 +117,7 @@
                             <h1>Entrar</h1>
                         </div>
 
-                      <div class="login-button">
+                        <div class="login-button">
                             <button> <a href="./Instituição/instituicao.login.view.php">Login Instituição</a> </button>
                         </div>
 

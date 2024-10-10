@@ -231,7 +231,7 @@
     box-shadow: 0 0 10px #11182752;
 }
 
-.main .continue-button button a {
+.main .continue-button button {
     text-decoration: none;
     color: var(--white);
     font-size: 14px;

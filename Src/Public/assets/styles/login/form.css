@@ -7,59 +7,109 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--preto);
     padding: 0px;
 }
 
 .main .container {
-    width: 80%;
-    height: 90vh;
+    width: 90%;
+    height: 100vh;
     display: flex;
-    box-shadow: 10px 30px 30px #00000000;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 10px 30px 30px #00000000; */
     border-radius: 8px;
 
 }
 
+.form-image .title-form h1{
+    font-size: 25px;
+    color: var(--azul);
+    text-shadow: 0px 0px 10px #2289f850;
+    font-family: var(--font);
+    font-weight: 600;
+    padding: 40px 0 ;
+}
+
 .main .form-image {
-    width: 60%;
+    width: 35%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--azul);
+    flex-direction: column;
+    /* background: var(--azul); */
     padding: 10px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    margin: auto 8%;
+    /* border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; */
 }
 
 .main .form-image img {
     width: 100%;
+    animation: fly 2s infinite alternate;
+    filter: drop-shadow(0 0 10px #2289f87e);
 }
 
 .main .form {
-    width: 40%;
+    width: 30%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: transparent;
-    padding: 40px;
+
+    padding:20px 40px;
+    margin: auto 8%;
+    border-radius: 8px;
     /* border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px; box-shadow: 20px 20px 50px -30px var(--azulHover); */
+
+
+    animation: led 3s infinite ;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes led {
+    0% {
+        box-shadow: 0px 0px 25px #72b6ff50;
+    }
+
+    50% {
+        box-shadow: 0px 0px 25px #72b6ff7e;
+    }
+
+    75% {
+        box-shadow: 0px 0px 25px #72b6ffb1;
+    }
+
+    100% {
+        box-shadow: 0px 0px 25px #72b6ffe0;
+    }
 }
 
 .main .form-header {
-    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
 
 }
 
 .main .form-header h1 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
-    color: var(azulEscuro);
-    margin-bottom: 10px;
+    color: var(--azul);
 }
 
 .main .form-header h1::after {
@@ -73,62 +123,88 @@
     border-radius: 10px;
 }
 
+.main .login-button {
+    display: flex;
+    align-items: center;
+}
+
+.main .login-button button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--azul);
+    transition: all .5s;
+}
+
+.main .login-button button a {
+    font-weight: 600;
+    color: var(--white);
+}
+
+.main .login-button button:hover {
+    background-color: var(--azulClaro);
+    box-shadow: 0 0 10px #11182752;
+}
+
 .main .input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 0;
+    margin: 40px 0;
 }
 
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .main .input-box input {
-    margin: 10px 0;
-    width: 350px;
-    height: 40px;
+    margin: 5px 0 10px ;
+    width: 300px;
+    height: 30px;
     padding: 0 15px;
     border: none;
-    border-bottom:1px solid var(--azulHover) ;
+    background: transparent;
+    color: var(--white);
+    border-bottom:1px solid var(--azulClaro) ;
     outline: none;
 }
 
 .main .input-box input:hover {
-    transition: all .5s;
-    background: var(--white);
-    outline: none;
+    border-bottom: 1px solid #72b6ff;
+    transition: all 1s;
+    background: transparent;
 }
 
 .main .input-box input:focus-visible {
-    outline: 1px solid var(azul);
+    outline: none;
 }
 
 .main .input-box label,
 .main .gender-title h6 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    color: #000000c0;
+    color: var(--white);
 }
 
 .main .input-box::placeholder {
-    color: #000000be;
+    color: var(--white);
 }
 
 .main .recuperar-senha a{
-    font-size: 14px;
-    color: var(--azulHover);
+    font-size: 12px;
+    color: var(--azul);
     text-decoration: none;
 }
 
 .main .recuperar-senha a:hover {
-    color: var(--azul);
+    color: var(--vermelho);
 }
 
 .main .continue-button button {
-    width: 100%;
+    width: 100%; /*ou auto*/
     margin-top: 10px;
     background: var(--azul);
 
@@ -140,14 +216,14 @@
 }
 
 .main .continue-button button:hover {
-    background: var(--azulHover);
-    color: #f3f6f9;
-    box-shadow: 0 0 10px var(--azulEscuro)52;
+    background: var(--azulClaro);
+    color: var(--white);
+    box-shadow: 0 0 10px 11182752;
 }
 
 .main .continue-button button a {
     text-decoration: none;
-    color: #f3f6f9;
-    font-size: 18px;
+    color: var(--white);
+    font-size: 14px;
     font-weight: 600;
 }
