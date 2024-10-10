@@ -3,7 +3,7 @@
 /* Container Principal */
 .main {
     max-width: 900px; /* Largura máxima do container */
-    min-height: 100vh;
+    height: auto;
     margin: 30px auto; /* Centraliza o container */
     padding: 20px; /* Espaçamento interno */
     background-color: white; /* Fundo branco para o conteúdo */
@@ -27,7 +27,7 @@
 }
 
 .questions-table th {
-    background-color: #206ab8; /* Fundo azul no cabeçalho */
+    background-color: var(--azul); /* Fundo azul no cabeçalho */
     color: white; /* Texto branco */
     text-transform: uppercase; /* Letras maiúsculas */
 }
@@ -58,7 +58,7 @@ a.add-button:hover {
 
 /* Link de Editar */
 .edit-link {
-    background-color: #206ab8; /* Azul para o link de editar */
+    background-color: var(--azul); /* Azul para o link de editar */
     margin-right: 10px; /* Margem direita */
 }
 

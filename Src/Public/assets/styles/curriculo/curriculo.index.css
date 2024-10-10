@@ -332,7 +332,7 @@ section.cards {
     align-items: center;
     justify-content: center;
 
-    padding: 10px 40px;
+    padding: 40px 20px;
 }
 
 
@@ -379,7 +379,7 @@ section.cards {
     flex-direction: column;
 
     margin: 0px 40px 40px;
-    padding: 20px 40px;
+    padding: 40px;
 
     /* border: 1px solid var(--azul); */
     border-radius: 25px;
