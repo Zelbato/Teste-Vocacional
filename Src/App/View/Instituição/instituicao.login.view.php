@@ -25,76 +25,6 @@
 
 <body>
 
-    <header class="header">
-
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
-            </label>
-        </div>
-
-        <input type="checkbox" name="" id="chk1">
-
-        <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-        </div>
-
-        <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../../vocacao.view.php" id="destaque"><span class="teste">Teste
-                        Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../../faculdade.view.php" id="eventos">Faculdades</a></li>
-
-            <li><a class="mobile-entrar" href="../../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../../faculdade.view.php" id="eventos">Excluir conta</a></li>
-
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-            </a>
-            <div class="tooltip">
-                <div class="position">
-                    <a href="../../cadastro.view.php">
-
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                </div>
-
-
-        </ul>
-    </header>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="quadro">
-            <div class="title-pop">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <h2 id="titulo">Confirmação</h2>
-            </div>
-
-            <div class="pgf">
-                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
-            </div>
-
-            <div id="btn-pop">
-                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
-            </div>
-        </div>
-    </div>
-
     <main class="main">
         <article class="container">
             <!-- <section class="form-image">
@@ -133,53 +63,6 @@
             </section>
         </article>
     </main>
-
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="../../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="../../index.view.php">Home </a></li>
-                <li><a href="../../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../../faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="../../termos.view.php">Termos de uso </a></li>
-                <li><a href="../../politica.view.php">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-    </div>
 
     <script>
         // Get the modal
