@@ -42,7 +42,17 @@
     <title>Teste Vocacional</title>
 </head>
 <body>
-
+<div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
   <header class="header">
 
     <div class="menu-mobile">
@@ -177,29 +187,38 @@
 
       </section>
 
-    </main>
+    
     <section class="sobre js-global">
 
 <div class="sobre-content">
 
     <div class="image-content">
-        <img src="../../Public/assets/Imagens/estudante-formando.png" alt="image">
+       <img src="" alt="image">
     </div>
 
     <div class="paragrafo">
-        <h3>O que é o Teste Vocacional?</h3>
+        <h3>O que é um curriculo?</h3>
         <p>
-        O teste Vocacional é uma ferramenta utilizada por vários especialistas na área
-         da saúde com seus pacientes. O teste é realizado com a intenção de auxiliar os
-          usuários, pacientes e afins, assim ajudando a descobrir uma carreira
-           compatível com seus gostos e características.
+        É um documento que os entrevistados a alguma vaga de emprego apresentam aos recrutadores
+         ou gerentes da instituição, onde contém informações pessoais sobre o candidato, normalmente é
+          um documento simples, para facilitar a leitura do recrutador, o conteúdo de modo geral
+           fala sobre experiências profissionais, idade, nome completo, formação, telefone de 
+           contato, habilidades e email.
+        </p>
+        <br>
+        <h3>O que é experiencias profissionais?</h3>
+        <p>
+        Quando um indivíduo já trabalhou em alguma empresa ou instituição antes, ou então abriu
+         um próprio negócio, ele tem uma experiência antes no mercado de trabalho, nesse campo 
+         em um currículo, o candidato deve pôr em qual área ele já trabalhou, função e o tempo 
+         que ele ficou trabalhando.
         </p>
 
     </div>
 </div>
 
 </section>
-
+</main>
 
 
 
