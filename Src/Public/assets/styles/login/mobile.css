@@ -9,14 +9,17 @@
 
     .main .form {
         width: 100%;
+       animation: none;
+      
     }
 
     .main .input-box input {
-        margin: 0px 10px;
+      width: none;
+     
     }
 
     .main .input-group .recuperar-senha a{
-        padding: 0px 45px;
+       
     }
 
 
@@ -25,7 +28,7 @@
 @media screen and (max-width: 1064px) {
 
     .main {
-        height: auto;
+        
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -34,7 +37,7 @@
 
     .main .container {
         width: 90%;
-        height: auto;
+        
         padding: 20px 10px;
     }
 
@@ -57,6 +60,13 @@
     .main .gender-input {
         margin-top: 10px;
     }
+    .login-button button{
+        letter-spacing: 1px;
+        font-weight: 400;
+       border-radius: 7px;
+        
+    }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -68,7 +78,7 @@
 
     .main .container {
         width: 100%;
-        height: auto;
+     
         box-shadow: none;
     }
 
@@ -78,14 +88,15 @@
 
     .main .form-header h1 {
         font-size: 30px;
+       
     }
 
     .main .input-box input {
-        width: 250px;
+     
         height: 40px;
-        padding: 0 15px;
+     
         border: none;
-        border-bottom:1px solid var(--azulHover) ;
+        border-bottom:1px solid #fff ;
         outline: none;
     }
 
@@ -104,7 +115,9 @@
         margin: 10px 0;
         display: flex;
         align-items: center;
-        justify-content: end;
+       
         flex-direction: column;
+        color: rgb(83, 175, 251);
+      
     }
 }
