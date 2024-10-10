@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
@@ -25,75 +25,6 @@
 
 <body>
 
-    <header class="header">
-
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
-            </label>
-        </div>
-
-        <input type="checkbox" name="" id="chk1">
-
-        <div class="logo">
-            <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
-        </div>
-
-        <ul>
-            <li><a id="#home" href="/index.html" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacional.html" id="destaque"><span class="teste">Teste
-                        Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../faculdade.html" id="eventos">Faculdades</a></li>
-
-            <li><a class="mobile-entrar" href="../cadastro.html" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.html" id="eventos">Excluir conta</a></li>
-
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-            </a>
-            <div class="tooltip">
-                <div class="position">
-                    <a href="../cadastro.html">
-
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                </div>
-
-
-        </ul>
-    </header>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="quadro">
-            <div class="title-pop">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <h2 id="titulo">Confirmação</h2>
-            </div>
-
-            <div class="pgf">
-                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
-            </div>
-
-            <div id="btn-pop">
-                <button class="close excluir">Cancelar</button> <button class="btn-default"> <a href="">Excluir</a></button>
-            </div>
-        </div>
-    </div>
 
     <main class="main">
         <article class="container">
@@ -112,94 +43,67 @@
                         </div> -->
                     </div>
 
+                    <div class="form-content">
+
                     <div class="input-group">
-                        
+
                         <div class="input-box">
-                            <label for="faculdade">Nome Fantasia</label>
-                            <input id="faculdade" type="text" name="faculdade" placeholder="Nome Fantasia" required>
+                            <label for="nome_fantasia">Nome Fantasia</label>
+                            <input id="nome_fantasia" type="text" name="nome_fantasia" placeholder="Nome Fantasia"
+                                required>
                         </div>
 
                         <div class="input-box">
-                            <label for="date">URL da Instituição</label>
-                            <input id="date" type="text" name="date" placeholder="Digite a URL" required>
+                            <label for="url">URL da Instituição</label>
+                            <input id="url" type="url" name="url" placeholder="Digite a URL" required>
                         </div>
-                        
+
                         <div class="input-box">
-                            <label for="raz-social">Razão Social</label>
-                            <input id="raz-social" type="text" name="raz-social" placeholder="Razão Social" required>
+                            <label for="razao_social">Razão Social</label>
+                            <input id="razao_social" type="text" name="razao_social" placeholder="Razão Social"
+                                required>
                         </div>
-                        
+
                         <div class="input-box">
                             <label for="cnpj">CNPJ </label>
-                            <input id="cnpj" type="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+                            <input id="cnpj" type="text" name="cnpj" placeholder="Digite o CNPJ" required>
                         </div>
 
-                        <div class="input-box">
-                            <label for="local">CEP </label>
-                            <input id="local" type="local" name="local" placeholder="Digite seu CEP" required>
-                        </div>
-                        
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                         
-                        </div>
                     </div>
 
-                    <aside class="continue-button">
-                        <button><a href="#">Cadastrar Instituição</a></button>
-                    </aside>
+                    <div class="input-group">
+
+                        <div class="input-box">
+                            <label for="email">Email </label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu E-mail" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cep">CEP </label>
+                            <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+
+                        </div>
+
+                        <aside class="continue-button">
+                            <button><a href="#">Cadastrar Instituição</a></button>
+                        </aside>
+                        
+                    </div>
+                    
+
+                </div>
+
+                   
                 </form>
             </section>
         </article>
     </main>
 
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="/index.html">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="/index.html">Home </a></li>
-                <li><a href="../vocacional.html">Teste Vocacional </a></li>
-                <li><a href="../faculdade.html">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="../termos.html">Termos de uso </a></li>
-                <li><a href="../politica.html">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-    </div>
 
     <script>
         // Get the modal
@@ -229,7 +133,7 @@
         }
     </script>
 
-    
+
     <script src="../../Public/assets/Global/Js/instituicaoGlobal.js"></script>
     <script src="../../Public/assets/styles/cadastro/cadastro.css"></script>
 

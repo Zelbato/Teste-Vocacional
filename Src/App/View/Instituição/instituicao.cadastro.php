@@ -25,59 +25,6 @@
 
 <body>
 
-    <!-- <header class="header">
-
-        <div class="menu-mobile">
-            <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
-            </label>
-        </div>
-
-        <input type="checkbox" name="" id="chk1">
-
-        <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-        </div>
-
-        <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../../vocacao.view.php" id="destaque"><span class="teste">Teste
-                        Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../../faculdade.view.php" id="eventos">Faculdades</a></li>
-
-            <li><a class="mobile-entrar" href="../../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../../faculdade.view.php" id="eventos">Excluir conta</a></li>
-
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta --
-            </a>
-            <div class="tooltip">
-                <div class="position">
-                    <a href="../../cadastro.view.php">
-
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                </div>
-
-
-        </ul>
-    </header> -->
-
-
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="quadro">
