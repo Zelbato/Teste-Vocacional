@@ -7,7 +7,7 @@ const initTypingAnimation = () => {
   const typingAnimation = (element) => {
 
       if (element == title) {
-          element.innerHTML = 'Bem Vindo devolta,  '
+          element.innerHTML = 'Bem-Vindo   '
           const textToArray = element.innerHTML.split('')
           element.innerHTML = ''
 
@@ -16,7 +16,7 @@ const initTypingAnimation = () => {
           })
 
       } else if (element == span) {
-          element.innerHTML = 'Área do Administrador! \n '
+          element.innerHTML = 'área do Administrador! \n '
           const textToArray = element.innerHTML.split('')
           element.innerHTML = ''
 

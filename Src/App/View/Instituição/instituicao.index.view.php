@@ -63,8 +63,8 @@ if (!isset($_SESSION['id_instituicao'])) {
                         Vocacional</span></a>
             </li>
             <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
+            <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="instituicao.cadastro.php" id="eventos">Entrar</a></li>
             <li><a class="mobile-excluir" href="" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
@@ -72,25 +72,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             </a>
             <div class="tooltip">
                 <div class="position">
-                    <a href="instituicao.cadastro.php">
-
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
+                
                     <a href="instituicao.login.view.php">
 
 

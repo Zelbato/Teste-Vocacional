@@ -25,7 +25,7 @@
 
 <body>
 
-    <header class="header">
+    <!-- <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -50,7 +50,7 @@
             <li><a class="mobile-excluir" href="../../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta --
             </a>
             <div class="tooltip">
                 <div class="position">
@@ -75,7 +75,9 @@
 
 
         </ul>
-    </header>
+    </header> -->
+
+
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="quadro">
@@ -160,7 +162,7 @@
     </main>
 
     <!--RODAPÉ-->
-    <footer>
+    <!-- <footer>
         <div class="boxs">
             <h2>Logo</h2>
 
@@ -173,7 +175,7 @@
        <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
        <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
        <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> --
             </p>
         </div>
         <div class="boxs">
@@ -204,7 +206,7 @@
 
     <div class="footer">
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-    </div>
+    </div> -->
 
     <script>
         // Get the modal

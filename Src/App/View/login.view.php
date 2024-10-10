@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/login/login.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/login/login.css"><!-- ../../Public/assets/styles/login/login.css -->
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="login-button">
-                            <button> <a href="./Instituição/instituicao.login.view.php">Login Instituição</a> </button>
+                            <button> <a href="./Instituição/instituicao.login.view.php">Instituição</a> </button>
                         </div>
 
                     </div>
