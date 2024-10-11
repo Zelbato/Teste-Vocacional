@@ -134,9 +134,9 @@ $result = $stmt->get_result();
 
         <section class="carreiras-obtidas">
             <h1>Carreiras Obtidas</h1>
-            <ul>
+            <ul class="ul-carreiras">
                 <?php while ($row = $result->fetch_assoc()): ?>
-                    <li>
+                    <li class="li-carreiras">
                         <strong><?php echo htmlspecialchars($row['carreira_nome']); ?></strong>
                         <form method="GET" action="Ver.caminho.carreira.view.php" style="display:inline;">
                             <input type="hidden" name="carreira_id" value="<?php echo $row['carreira_id']; ?>">

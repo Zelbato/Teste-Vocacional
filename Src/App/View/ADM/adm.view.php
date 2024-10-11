@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 require '../../database/config.php';
@@ -41,50 +41,49 @@ if (!isset($_SESSION['id_usuario'])) {
     <!--Bootstrap-->
     <title>Teste Vocacional</title>
 </head>
+
 <body>
 
-  <header class="header">
+    <header class="header">
 
-    <div class="menu-mobile">
-        <label for="chk1" onclick="menu()">
-            <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
-        </label>
-    </div>
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
+            </label>
+        </div>
 
-    <input type="checkbox" name="" id="chk1">
+        <input type="checkbox" name="" id="chk1">
 
-    <div class="logo">
-        <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
-    </div>
+        <div class="logo">
+            <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+        </div>
 
-    <ul>
-        <li><a id="#home" href="" id="inicio">Inicio</a></li>
-        <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
-                    class="teste">Teste Vocacional</span></a>
-        </li>
-        <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+        <ul>
+            <li><a id="#home" href="" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+                        class="teste">Teste Vocacional</span></a>
+            </li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
 
-        <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-        <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
-        <a href="#" class="menu-button">
-             <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-        </a>
-    
-        <div class="tooltip">
+            <a href="#" class="menu-button">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            </a>
+
+            <div class="tooltip">
                 <div class="position">
-                    <a href="../cadastro.view.php">
+                    <a href="../login.view.php">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
+                                Clique aqui para fazer seu login!
                             </span>
 
                             <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
                                 Login
                             </span>
                         </div>
@@ -95,16 +94,16 @@ if (!isset($_SESSION['id_usuario'])) {
                     <a href="../login.view.php">
 
 
-                    <div class="menu-item-content">
+                        <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                               Deseja sair da Conta<br>
+                                Deseja sair da Conta<br>
                                 Clique aqui!
                             </span>
 
                             <span class="menu-item-content-subtitle">
 
                                 Desconectar-se <br>
-                              
+
                             </span>
                         </div>
                     </a>
@@ -125,11 +124,22 @@ if (!isset($_SESSION['id_usuario'])) {
         </ul>
     </header>
 
-    <!--Sobre Nós-->
+    <!--V-Libras-->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
     <!--PAG-1-->
     <main class="main ">
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
@@ -139,107 +149,107 @@ if (!isset($_SESSION['id_usuario'])) {
 
                 <div class="pgf">
                     <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                   <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                    <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
                 </div>
 
                 <form action="../../Services/deletar.php" method="POST">
-                <div id="btn-pop">
-                    <button  class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
-                </div>
+                    <div id="btn-pop">
+                        <button class="btn-default">
+                            <a href="">Cancelar</a></button>
+                        <button type="submit" class="close excluir">Excluir</button>
+                    </div>
                 </form>
             </div>
         </div>
 
         <section class="cards">
 
-          <div class="card-titulo js-global">
-              <h1></h1>
-              <span class="sub-title"></span>
-          </div>
+            <div class="card-titulo js-global">
+                <h1></h1>
+                <span class="sub-title"></span>
+            </div>
 
-          <aside class="card contact js-global">
-            <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
-              <h3>Gerenciar Questão</h3>
-              <span>
-              </span>
-              <a href="gerenciar.questao.view.php"><button>Entrar</button></a>
-          </aside>
+            <aside class="card contact js-global">
+                <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
+                <h3>Gerenciar Questão</h3>
+                <span>
+                </span>
+                <a href="gerenciar.questao.view.php"><button>Entrar</button></a>
+            </aside>
 
-          <aside class="card contact js-global">
-            <img src="../../../Public/assets/Img/conceito-de-universidade-plana.png" alt="estudante-formando">
-              <h3>Gerenciar Carreiras</h3>
-              <span>
-              </span>
-              <a href="gerenCarreira.view.php"><button>Entrar</button></a>
-          </aside>
+            <aside class="card contact js-global">
+                <img src="../../../Public/assets/Img/conceito-de-universidade-plana.png" alt="estudante-formando">
+                <h3>Gerenciar Carreiras</h3>
+                <span>
+                </span>
+                <a href="gerenCarreira.view.php"><button>Entrar</button></a>
+            </aside>
 
-          <aside class="card contact js-global">
-            <img src="../../../Public/assets/Img/alternar-ilustracao-do-conceito.png" alt="estudante-formando">
-              <h3>Gerenciar CEP</h3>
-              <span>
-              </span>
-              <a href="gerenciar.cep.view.php"><button>Entrar</button></a>
-          </aside>
-     
-      </section>
+            <aside class="card contact js-global">
+                <img src="../../../Public/assets/Img/alternar-ilustracao-do-conceito.png" alt="estudante-formando">
+                <h3>Gerenciar CEP</h3>
+                <span>
+                </span>
+                <a href="gerenciar.cep.view.php"><button>Entrar</button></a>
+            </aside>
+
+        </section>
 
     </main>
 
 
     <!--RODAPÉ-->
     <footer>
-      <div class="boxs">
-          <h2>Logo</h2>
+        <div class="boxs">
+            <h2>Logo</h2>
 
-          <div class="logo">
-              <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
-          </div>
+            <div class="logo">
+                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+            </div>
 
 
-          <!-- <h2>Criadores</h2>
+            <!-- <h2>Criadores</h2>
          <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
          <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
          <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
          <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-          </p>
-      </div>
-      <div class="boxs">
-          <h2>Inicio</h2>
-          <ul>
-              <li><a href="">Home </a></li>
-              <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-              <li><a href="../faculdade.view.php">Faculdades </a></li>
-          </ul>
-      </div>
-      <div class="boxs">
-          <h2>Suporte</h2>
-          <ul>
-              <li><a href="../termos.view.php">Termos de uso </a></li>
-              <li><a href="../politica.view.php">Política de Privacidade </a></li>
-          </ul>
-      </div>
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="">Home </a></li>
+                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="../termos.view.php">Termos de uso </a></li>
+                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+            </ul>
+        </div>
 
-      <div class="boxs">
-          <h2>Sobre nós</h2>
-          <p>
-              Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-              usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-              têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-          </p>
-      </div>
-  </footer>
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
 
-  <div class="footer">
-      <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
+    <div class="footer">
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
 
-  </div>
+    </div>
 
 
-      <script src="../../../Public/assets/Js/index_adm.js"></script>
+    <script src="../../../Public/assets/Js/index_adm.js"></script>
 
-      <script>
+    <script>
         // Get the modal
         var modal = document.getElementById("myModal");
 
@@ -250,17 +260,17 @@ if (!isset($_SESSION['id_usuario'])) {
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
@@ -268,4 +278,5 @@ if (!isset($_SESSION['id_usuario'])) {
     </script>
 
 </body>
+
 </html>

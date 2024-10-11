@@ -80,41 +80,49 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/assets/styles/ADM/Editarquest/editar.questao.css">
     <title>Editar Questão e Opções</title>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Editar Questão</h1>
 
-        <form method="post" action="">
-            <label for="question_text">Texto da Questão:</label>
-            <input type="text" id="question_text" name="question_text" value="<?php echo htmlspecialchars($question['question_text']); ?>" required>
+    <main class="main">
+        <section class="editarQuest">
+            <div class="container">
+                <h1>Editar Questão</h1>
 
-            <h2>Opções da Questão</h2>
-            <?php foreach ($options as $option): ?>
-                <div class="option-container">
-                    <label for="option<?php echo $option['id']; ?>">Opção:</label>
-                    <input type="text" id="option<?php echo $option['id']; ?>" name="option_text[<?php echo $option['id']; ?>]" value="<?php echo htmlspecialchars($option['option_text']); ?>" required>
+                <form method="post" action="">
+                    <label for="question_text">Texto da Questão:</label>
+                    <input type="text" id="question_text" name="question_text" value="<?php echo htmlspecialchars($question['question_text']); ?>" required>
 
-                    <label for="carreira<?php echo $option['id']; ?>">Carreira Associada:</label>
-                    <select id="carreira<?php echo $option['id']; ?>" name="carreira[<?php echo $option['id']; ?>]">
-                        <?php foreach ($carreiras as $carreira): ?>
-                            <option value="<?php echo $carreira['id']; ?>" <?php if ($option['carreira_id'] == $carreira['id']) echo 'selected'; ?>>
-                                <?php echo htmlspecialchars($carreira['nome']); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-            <?php endforeach; ?>
+                    <h2>Opções da Questão</h2>
+                    <?php foreach ($options as $option): ?>
+                        <div class="option-container">
+                            <label for="option<?php echo $option['id']; ?>">Opção:</label>
+                            <input type="text" id="option<?php echo $option['id']; ?>" name="option_text[<?php echo $option['id']; ?>]" value="<?php echo htmlspecialchars($option['option_text']); ?>" required>
 
-            <button type="submit"><a href="gerenciar.questao.view.php">Salvar Alterações</a></button>
-        </form>
+                            <label for="carreira<?php echo $option['id']; ?>">Carreira Associada:</label>
+                            <select id="carreira<?php echo $option['id']; ?>" name="carreira[<?php echo $option['id']; ?>]">
+                                <?php foreach ($carreiras as $carreira): ?>
+                                    <option value="<?php echo $carreira['id']; ?>" <?php if ($option['carreira_id'] == $carreira['id']) echo 'selected'; ?>>
+                                        <?php echo htmlspecialchars($carreira['nome']); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    <?php endforeach; ?>
 
-        <a href="gerenciar.questao.view.php" class="back-link">Voltar para Gerenciar Questões</a>
-    </div>
+                    <button type="submit"><a href="gerenciar.questao.view.php">Salvar Alterações</a></button>
+                </form>
+
+                <a href="gerenciar.questao.view.php" class="back-link">Voltar para Gerenciar Questões</a>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

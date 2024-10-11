@@ -6,9 +6,9 @@
     height: auto;
     margin: 30px auto; /* Centraliza o container */
     padding: 20px; /* Espaçamento interno */
-    background-color: white; /* Fundo branco para o conteúdo */
+    background-color:transparent; /* Fundo branco para o conteúdo */
     border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); Sombra leve */
 }
 
 /* Tabela de Questões */

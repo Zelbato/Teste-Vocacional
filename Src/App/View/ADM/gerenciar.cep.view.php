@@ -175,11 +175,11 @@ $conexao->close();
         </div>
 
         <section class="form-section">
-            <h1>Adicionar Novo CEP</h1>
+            <h1>Adicionar CEP</h1>
             <form class="form" method="post">
-                <label for="cep">CEP (formato: XXXXX-XXX):</label>
-                <input type="text" id="cep" name="cep" required><br>
-                <small>Exemplo: 12345-678</small><br>
+                <label for="cep">CEP </label>
+                <input type="text" id="cep" maxlength="9" name="cep" required><br>
+                
 
                 <button type="submit">Adicionar CEP</button>
             </form>

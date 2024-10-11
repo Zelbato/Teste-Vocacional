@@ -8,10 +8,10 @@
     padding: 40px 0;
 }
 
-.container {
+/* .container {
     border-radius: 8px;
-    background: transparent; /* Fundo branco */
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  */
+    background: transparent; /* Fundo branco *
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  *
     padding: 20px;
 }
 
@@ -27,9 +27,9 @@
 .form h1 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--azul); /* Cor do título */
+    color: var(--azul); /* Cor do título *
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o título */
+    text-align: center; /* Centraliza o título *
 }
 
 .input-box {
@@ -39,22 +39,22 @@
 .input-box label {
     font-size: 16px;
     font-weight: 600;
-    color: #495057; /* Cor do texto */
+    color: #495057; /* Cor do texto *
 }
 
 .input-box input, .input-box select {
-    width: 100%; /* Largura total */
+    width: 100%; /* Largura total *
     height: auto;
     padding: 10px 20px; 
     margin: 5px 10px;
-    border: 1px solid #ced4da; /* Bordas suaves */
+    border: 1px solid #ced4da; /* Bordas suaves *
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s;
 }
 
 .input-box input:focus, .input-box select:focus {
-    border-color: var(--azul); /* Cor do foco */
+    border-color: var(--azul); /* Cor do foco *
 }
 
 .option-group {
@@ -67,8 +67,8 @@
 .btn-submit {
     width: 100%;
     padding: 12px;
-    background: var(--azul); /* Cor do botão */
-    color: white; /* Cor do texto do botão */
+    background: var(--azul); /* Cor do botão *
+    color: white; /* Cor do texto do botão *
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -77,10 +77,10 @@
 }
 
 .btn-submit:hover {
-    background: var(--azulHover); /* Cor do botão ao passar o mouse */
+    background: var(--azulHover); /* Cor do botão ao passar o mouse *
 }
 
-/* Alertas */
+/* Alertas *
 .alert {
     padding: 10px 15px;
     margin: 15px 0;
@@ -90,12 +90,12 @@
 }
 
 .alert-success {
-    background: #d4edda; /* Cor de fundo de sucesso */
-    color: #155724; /* Cor do texto de sucesso */
-    border: 1px solid #c3e6cb; /* Bordas de sucesso */
+    background: #d4edda; /* Cor de fundo de sucesso *
+    color: #155724; /* Cor do texto de sucesso *
+    border: 1px solid #c3e6cb; /* Bordas de sucesso *
 }
 
-/* Rodapé */
+/* Rodapé *
 footer {
     background: var(--preto);
     color: #fff;
@@ -106,4 +106,96 @@ footer {
 
 footer p {
     margin: 0;
+} */
+
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h3 {
+    color: #206ab8; /* Cor preferida para títulos */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+/* Estilização do formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(25, 25, 25);
+}
+
+.input-box input, 
+.input-box select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    outline: none;
+    border-color: #206ab8;
+}
+
+h3 {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.option-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.option-group .input-box {
+    flex: 1;
+}
+
+/* Botão de envio */
+.btn-submit {
+    background-color: #206ab8;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-submit:hover {
+    background-color: #164a88;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .option-group {
+        flex-direction: column;
+    }
 }

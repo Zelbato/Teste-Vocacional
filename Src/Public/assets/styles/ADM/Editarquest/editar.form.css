@@ -1,0 +1,127 @@
+
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #206ab8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilização do formulário */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: rgb(25, 25, 25);
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #206ab8;
+}
+
+/* Estilização das opções */
+.option-container {
+    flex: 1 1 45%; /* Dois elementos lado a lado, mas que podem encolher */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #206ab8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #164a88;
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Link para voltar */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #206ab8;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para tablets (800px) */
+@media (max-width: 800px) {
+    .option-container {
+        flex: 1 1 100%; /* Elementos ocupam toda a linha em tablets */
+    }
+
+    input[type="text"],
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para celulares (550px) */
+@media (max-width: 550px) {
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

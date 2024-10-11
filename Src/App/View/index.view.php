@@ -90,6 +90,21 @@ require '../database/config.php';
             <div class="tooltip">
                 <div class="position">
 
+                 <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login<br>
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Entrar <br>
+                                </span>
+                            </div>
+                        </a>
+
+                        <br>
+
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
                             Deseja excluir sua conta <br>
@@ -187,7 +202,7 @@ require '../database/config.php';
             <div class="sobre-content">
 
                 <div class="image-content">
-                    <img src="../../Public/assets/Imagens/estudante-formando.png" alt="image">
+                    <img src="../../Public/assets/Img/estudante-formando.png" alt="image">
                 </div>
 
                 <div class="paragrafo">
