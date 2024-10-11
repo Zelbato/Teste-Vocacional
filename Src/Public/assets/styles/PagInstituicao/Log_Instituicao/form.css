@@ -122,31 +122,6 @@
     position: absolute;
     border-radius: 10px;
 }
-/* 
-.main .login-button {
-    display: flex;
-    align-items: center;
-}
-
-.main .login-button button {
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    background: var(--azul);
-    transition: all .5s;
-}
-
-.main .login-button button a {
-    font-weight: 600;
-    color: var(--white);
-}
-
-.main .login-button button:hover {
-    background-color: var(--azulClaro);
-    box-shadow: 0 0 10px #11182752;
-} */
 
 .main .input-group {
     display: flex;
