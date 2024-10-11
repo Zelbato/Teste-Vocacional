@@ -1,8 +1,8 @@
 /* Estilos gerais */
-body {
+/* body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa; /* Um tom suave de cinza claro */
-    color: #333; /* Cor do texto */
+    background-color: #f4f7fa; /* Um tom suave de cinza claro *
+    color: #333; /* Cor do texto *
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,25 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
+} */
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
 }
+
+.main .addCurso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
 
 /* Títulos */
 h1 {
@@ -33,7 +51,7 @@ form {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 90%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px 0;
 }
 

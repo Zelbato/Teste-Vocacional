@@ -1,7 +1,7 @@
 /*Inicio do Menu*/
 header {
     width: 100%;
-    height: 110px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ header .logo {
 header .logo a {
     color: var(--white);
     font-family: var(--font);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     text-decoration: none;
 }
@@ -43,6 +43,7 @@ header .gradient {
 
 header .teste {
     color: var(--azul);
+    font-size: 18px;
 }
 
 header ul {
@@ -109,13 +110,38 @@ header .mobile-entrar,
     display: none;
 }
 
-
-@media(max-width:800px) {
-
+@media(max-width:1150px) {
 
     header {
         background: var(--preto);
-        position: relative;
+        position: fixed;
+    }
+
+    header .logo a{
+        font-size: 22px;
+    }
+
+    header .gradient {
+        font-size: 20px;
+    }
+
+    header ul li {
+        margin: 2.20% 2% 0 0;
+        /* ou 1% 7% 0 0*/
+    }
+
+    #chk1:checked~ul {
+        right: 0;
+    }
+
+
+}
+
+@media(max-width:805px) {
+
+    header {
+        background: var(--preto);
+        position: fixed;
     }
 
     header ul {
@@ -132,6 +158,18 @@ header .mobile-entrar,
         display: flex;
     }
 
+    header .logo {
+        margin: 0 12%;
+    }
+
+    header .logo a{
+        font-size: 35px;
+    }
+
+    header .gradient {
+        font-size: 30px;
+    }
+
     header .menu-mobile {
         display: block;
         width: 25%;
@@ -140,8 +178,7 @@ header .mobile-entrar,
     }
 
     header .menu-mobile img {
-        margin-top: 35%;
-        margin-left: 5%;
+        margin: 100% 5% 0;
         width: 35px;
         height: 35px;
     }
@@ -159,9 +196,16 @@ header .mobile-entrar,
 }
 
 @media(max-width:600px) {
+
+    header {
+        background: var(--preto);
+        position: relative;
+    }
+
     header .logo {
         font-size: 12px;
-        margin-left: -2.5%;
+        /* margin-left: -2.5%; */
+        margin: 0;
     }
 
     header span {
@@ -170,6 +214,12 @@ header .mobile-entrar,
 
     header ul {
         width: 100%;
+    }
+
+    header .menu-mobile img {
+        margin: 35% 5% 0;
+        width: 35px;
+        height: 35px;
     }
 
     header .mobile-entrar,
@@ -352,8 +402,10 @@ header .mobile-entrar,
     margin: auto;
     padding: 20px;
     border-radius: 7px;
-    max-width: 500px; /*30%*/
-    height: auto; /*50%*/
+    max-width: 500px;
+    /*30%*/
+    height: auto;
+    /*50%*/
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -362,7 +414,7 @@ header .mobile-entrar,
 
 .title-pop {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 20px 20px 0px;
     border-bottom: 1px solid var(--azul);
@@ -372,9 +424,11 @@ header .mobile-entrar,
 .title-pop i {
     margin-right: 10px;
     font-size: 24px;
-    color: var(--azul); /*var(--vermelho)*/
+    color: var(--azul);
+    /*var(--vermelho)*/
     margin-bottom: 5px;
 }
+
 .title-pop button.excluir {
     background: var(--azul);
     width: 20px;
@@ -400,7 +454,7 @@ header .mobile-entrar,
 }
 
 
-.title-pop  h2{
+.title-pop h2 {
     font-size: 26px;
     font-family: var(--font);
     color: var(--azul);
@@ -418,7 +472,7 @@ header .mobile-entrar,
 .pgf span {
     font-size: 18px;
     color: var(--vermelho);
-    
+
 }
 
 /* The btn-default Button */

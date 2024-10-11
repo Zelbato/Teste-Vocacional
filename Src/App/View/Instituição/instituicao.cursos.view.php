@@ -62,53 +62,63 @@ $result = $stmt->get_result();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCursos/gerenciar.cursos.css">
     <title>Gerenciar Cursos</title>
 </head>
+
 <body>
-    <h1>Gerenciar Cursos</h1>
 
-    <form  method="post" enctype="multipart/form-data">
-        <label for="nome_curso">Nome do Curso:</label>
-        <input type="text" id="nome_curso" name="nome_curso" required><br>
+    <main class="main">
+        <section class="addCurso">
+            <h1>Gerenciar Cursos</h1>
 
-        <label for="duracao">Duração:</label>
-        <input type="text" id="duracao" name="duracao" required><br>
+            <form method="post" enctype="multipart/form-data">
+                <label for="nome_curso">Nome do Curso:</label>
+                <input type="text" id="nome_curso" name="nome_curso" required><br>
 
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" required></textarea><br>
+                <label for="duracao">Duração:</label>
+                <input type="text" id="duracao" name="duracao" required><br>
 
-        <label for="carreira_id">Carreira:</label>
-        <select id="carreira_id" name="carreira_id" required>
-            <?php
-            $carreiras = $conexao->query("SELECT id, nome FROM carreira");
-            while ($carreira = $carreiras->fetch_assoc()) {
-                echo "<option value='{$carreira['id']}'>{$carreira['nome']}</option>";
-            }
-            ?>
-        </select><br>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea><br>
 
-        <label for="foto_curso">Foto do Curso:</label>
-        <input type="file" id="foto_curso" name="foto_curso" accept="image/*" ><br>
+                <label for="carreira_id">Carreira:</label>
+                <select id="carreira_id" name="carreira_id" required>
+                    <?php
+                    $carreiras = $conexao->query("SELECT id, nome FROM carreira");
+                    while ($carreira = $carreiras->fetch_assoc()) {
+                        echo "<option value='{$carreira['id']}'>{$carreira['nome']}</option>";
+                    }
+                    ?>
+                </select><br>
 
-        <button type="submit">Adicionar Curso</button>
-    </form>
+                <label for="foto_curso">Foto do Curso:</label>
+                <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
 
-    <h2>Meus Cursos</h2>
-    <ul>
-        <?php while ($curso = $result->fetch_assoc()): ?>
-            <li>
-                <strong><?php echo htmlspecialchars($curso['nome_curso']); ?></strong> 
-                (<?php echo htmlspecialchars($curso['duracao']); ?>) - 
-                <?php if (!empty($curso['foto_curso'])): ?>
-                    <br><img src="<?php echo htmlspecialchars($curso['foto_curso']); ?>" alt="Foto do Curso" style="width: 100px; height: auto;"><br>
-                <?php endif; ?>
-                <a href="instituicao.editarCurso.view.php?id=<?php echo $curso['id_curso']; ?>">Editar</a> | 
-                <a href="instituicao.cursos.view.php?delete=<?php echo $curso['id_curso']; ?>" onclick="return confirm('Tem certeza que deseja excluir este curso?');">Excluir</a>
-            </li>
-        <?php endwhile; ?>
-    </ul>
+                <button type="submit">Adicionar Curso</button>
+            </form>
+        </section>
+
+        <section class="meuCurso">
+            <h2>Meus Cursos</h2>
+            <ul>
+                <?php while ($curso = $result->fetch_assoc()): ?>
+                    <li>
+                        <strong><?php echo htmlspecialchars($curso['nome_curso']); ?></strong>
+                        (<?php echo htmlspecialchars($curso['duracao']); ?>) -
+                        <?php if (!empty($curso['foto_curso'])): ?>
+                            <br><img src="<?php echo htmlspecialchars($curso['foto_curso']); ?>" alt="Foto do Curso" style="width: 100px; height: auto;"><br>
+                        <?php endif; ?>
+                        <a href="instituicao.editarCurso.view.php?id=<?php echo $curso['id_curso']; ?>">Editar</a> |
+                        <a href="instituicao.cursos.view.php?delete=<?php echo $curso['id_curso']; ?>" onclick="return confirm('Tem certeza que deseja excluir este curso?');">Excluir</a>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+        </section>
+    </main>
 </body>
+
 </html>

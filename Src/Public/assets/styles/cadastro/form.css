@@ -6,25 +6,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--preto);
     padding: 0px;
 }
 
 .main .container {
     width: 90%;
-    height: 90vh;
-    display: flex;
-  
-    border-radius:8px;
-
-}
-
-.main .form-image {
-    width: 50%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--azul);
+    border-radius:8px;
+    /* background: #111827; */
+}
+
+.form-image .title-form h1{
+    font-size: 25px;
+    color: var(--azul);
+    text-shadow: 0px 0px 10px #2289f850;
+    font-family: var(--font);
+    font-weight: 600;
+    padding: 40px 0 ;
+}
+
+.main .form-image {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: var(--azul);
+    border: 1px solid var(--azul); */
     padding: 10px;
+    margin: auto 5%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -35,30 +50,63 @@
 }
 
 .main .form {
-    width: 50%;
+    width: 30%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: transparent;
-    padding: 40px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    background:transparent;
+    /* border: 1px solid var(--azul); */
+    
+    padding: 20px 40px;
+    margin: auto 5%;
+    border-radius: 8px;
+    /* border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; */
+    animation: fly 2s infinite ;
+    animation: led 3s infinite ;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes led {
+    0% {
+        box-shadow: 0px 0px 25px #72b6ff50;
+    }
+
+    50% {
+        box-shadow: 0px 0px 25px #72b6ff7e;
+    }
+
+    75% {
+        box-shadow: 0px 0px 25px #72b6ffb1;
+    }
+
+    100% {
+        box-shadow: 0px 0px 25px #72b6ffe0;
+    }
 }
 
 .main .form-header {
-    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     
 }
 
 .main .form-header h1 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
-    color: #111827;
-    margin-bottom: 10px;
+    color: var(--azul);
 }
 
 .main .form-header h1::after {
@@ -81,7 +129,7 @@
     border: none;
     padding: 10px 25px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     background: var(--azul);
     transition: all .5s;
@@ -92,7 +140,7 @@
 }
 
 .main .login-button button:hover {
-    background-color: var(--azulHover);
+    background-color: var(--azulClaro);
     box-shadow: 0 0 10px #11182752;
 }
 
@@ -100,27 +148,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 0;
+    margin: 20px 0;
 }
 
 .main .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .main .input-box input {
-    margin: 10px 10px;
+    margin: 5px 10px 10px;
     width: 225px;
-    height: 40px;
+    height: 30px;
     padding: 0 15px;
     border: none;
-    border-bottom:1px solid var(--azulHover) ;
+    background: transparent;
+    color: var(--white);
+    border-bottom:1px solid var(--azulClaro) ;
+    /* border-radius: 0px; */
     outline: none;
 }
 
 .main .input-box input:hover {
-    border-bottom: 1px solid #2289f8;
+    border-bottom: 1px solid #72b6ff;
     transition: all 1s;
     background: transparent;
 }
@@ -131,19 +181,20 @@
 
 .main .input-box label,
 .main .gender-title h6 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    color: #000000c0;
+    color: var(--white);
 }
 
 .main .input-box::placeholder {
-    color: #000000be;
+    color: #fff;
+    background: var(--white);
 }
+
 
 .main .gender-group {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
     padding: 0 0 10px;
 }
 
@@ -157,13 +208,13 @@
 }
 
 .main .gender-input label {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    color: #000000be;
+    color: var(--white);
 }
 
 .main .continue-button button {
-    width: 100%;
+    width: auto;
     margin-top: 10px;
     background: var(--azul);
 
@@ -175,14 +226,14 @@
 }
 
 .main .continue-button button:hover {
-    background: var(--azulHover);
+    background: var(--azulClaro);
     color: var(--white);
     box-shadow: 0 0 10px #11182752;
 }
 
-.main .continue-button button a {
+.main .continue-button button {
     text-decoration: none;
     color: var(--white);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/login/login.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/login/login.css"><!-- ../../Public/assets/styles/login/login.css -->
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,8 +24,18 @@
 </head>
 
 <body>
+<div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
-    <header class="header">
+    <!-- <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -50,7 +60,7 @@
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta 
             </a>
 
             <div class="tooltip">
@@ -74,9 +84,11 @@
                 </div>
 
         </ul>
-    </header>
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
+    </header> -->
+
+
+    <!-- <div id="myModal" class="modal">
+        <!-- Modal content 
         <div class="quadro">
             <div class="title-pop">
                 <i class="fa-solid fa-triangle-exclamation"></i>
@@ -97,11 +109,15 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
+
     <main class="main">
         <article class="container">
             <section class="form-image">
-                <img src="../../Public/assets/Img/imagemLogin.svg" alt="image">
+                <div class="title-form">
+                    <h1>Faça seu login <br> e explore nosso sistema!</h1>
+                </div>
+                <img src="../../Public/assets/Img/Connected world-pana.png" alt="image">
             </section>
 
             <section class="form">
@@ -111,8 +127,8 @@
                             <h1>Entrar</h1>
                         </div>
 
-                      <div class="login-button">
-                            <button> <a href="./Instituição/instituicao.login.view.php">Login Instituição</a> </button>
+                        <div class="login-button">
+                            <button> <a href="./Instituição/instituicao.login.view.php">Instituição</a> </button>
                         </div>
 
                     </div>

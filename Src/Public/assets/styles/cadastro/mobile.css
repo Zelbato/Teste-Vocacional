@@ -1,9 +1,7 @@
 
 
 @media screen and (max-width: 1300px) {
-    .main .form-image {
-        display: none;
-    }
+
 
     .main .container {
         width: 70%;

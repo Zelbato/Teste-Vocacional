@@ -2,10 +2,14 @@
 
 
 /*Cards*/
+.main {
+    background: var(--white);
+}
 
 .main .cards {
     height: auto;
     width: 100%;
+
 }
 
 
@@ -318,4 +322,146 @@ section.cards {
 .buttons button.quit:hover {
     color: var(--white);
     background: var(--azul);
+}
+
+.sobre {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+.sobre .sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    background-color: var(--white) ;
+
+    /* animation: deslizar 2s ease-in-out infinite alternate;
+    position: relative; */
+}
+
+/* @keyframes deslizar {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+} */
+
+
+.sobre h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--preto);
+    font-style: italic;
+}
+
+.sobre .paragrafo {
+    width: 700px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0px 40px 40px;
+    padding: 40px;
+
+    /* border: 1px solid var(--azul); */
+    border-radius: 25px;
+}
+
+.sobre h3 {
+    color: var(--preto);
+    font-size: 20x;
+    font-family: var(--font);
+    font-weight: 600;
+    text-align: center;
+
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 1px var(--preto);
+}
+
+.sobre p {
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--preto);
+    text-align: justify;
+}
+
+.sobre .image-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    margin-bottom: 40px;
+}
+
+.sobre .image-content img {
+    max-width: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+@media (max-width:800px) {
+    .main .sobre {
+        height: auto;
+        width: 100%;
+
+    }
+
+    .sobre .sobre-content {
+        display: flex;
+        flex-direction: column;
+        animation: none;
+    }
+
+    .sobre .paragrafo {
+        height: auto;
+        width: 350px;
+        padding: 10px 30px;
+        
+        border: none;
+    }
+
+        .sobre h3 {
+            margin-top: 20px;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+    .sobre p {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .sobre .image-content {
+        margin-bottom: 60px;
+    }
+
+    .sobre .image-content img {
+        max-width: 350px;
+    }
+
 }
