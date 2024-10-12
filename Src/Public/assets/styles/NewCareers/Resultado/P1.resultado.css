@@ -1,107 +1,85 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    width: 100%;
-    height: auto;
+section.resultado {
+    background-color: #f3f6f9; /* Cor de fundo clara */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    margin: 40px auto;
 }
 
+.resultado .title h1 {
+    font-size: 2.5rem;
+    color: var(--azul); /* Cor do título em azul */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
 
-.carreiras-obtidas h1 {
-    color: #206ab8;
+.resultado h2 {
+    font-size: 1.8rem;
+    color: #191919; /* Cor escura para o nome da carreira */
     text-align: center;
     margin-bottom: 20px;
 }
 
-section.carreiras-obtidas {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+.resultado h3 {
+    font-size: 1.4rem;
+    color: var(--azul); /* Destaque em azul para o subtítulo */
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
 }
 
-.ul-carreiras {
+.resultado ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.li-carreiras {
-    background-color: #f0f0f0;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.resultado ul li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--azul); /* Destaque na borda esquerda */
 }
 
-.li-carreiras strong {
-    font-size: 18px;
-    color: rgb(25, 25, 25);
+.resultado ul li strong {
+    font-size: 1.3rem;
+    color: var(--azul);
+    display: block;
+    margin-bottom: 8px;
 }
 
-.li-carreiras button {
-    padding: 8px 15px;
-    background-color: #206ab8;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+.resultado ul li a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.li-carreiras button:hover {
-    background-color: #164a88;
+.resultado ul li a:hover {
+    color: var(--vermelho) ; /* ou var(--azulHover)*/
 }
 
-/* Mensagem de ausência de carreiras */
-.li-carreiras::before {
-    content: '';
+.resultado ul li img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
-.li-carreiras:last-child {
-    margin-bottom: 0;
+.resultado ul li p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.6;
 }
 
-/* Responsividade para tablets (800px) */
-@media (max-width: 800px) {
-    .li-carreiras {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .li-carreiras strong {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
-    .li-carreiras button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Responsividade para celulares (550px) */
-@media (max-width: 550px) {
-    .li-carreiras {
-        padding: 10px;
-    }
-
-    .li-carreiras strong {
-        font-size: 14px;
-    }
-
-    .li-carreiras button {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
+.resultado p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
 }

@@ -1,0 +1,105 @@
+
+h1 {
+    color: #206ab8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.carreiras-obtidas {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+ul.ul-carreiras {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.li-carreiras {
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+li.li-carreiras strong {
+    font-size: 18px;
+    color: rgb(25, 25, 25);
+}
+
+li.li-carreiras button {
+    padding: 8px 15px;
+    background-color: #206ab8;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+li.li-carreiras button:hover {
+    background-color: #164a88;
+}
+
+/* Mensagem de ausência de carreiras */
+li.li-carreiras::before {
+    content: '';
+}
+
+li.li-carreiras:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsividade para tablets (800px) */
+@media (max-width: 800px) {
+    li.li-carreiras {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li.li-carreiras strong {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    li.li-carreiras button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsividade para celulares (550px) */
+@media (max-width: 550px) {
+
+    section.carreiras-obtidas{
+        box-shadow: none;
+        background: transparent;
+    }
+
+    li.li-carreiras{
+        max-width: 550px;
+        padding: 20px;
+        background: transparent;
+        border: 1px solid var(--azul);
+        text-align: center;
+    }
+
+    li.li-carreiras strong {
+        font-size: 14px;
+    }
+
+    li.li-carreiras button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}

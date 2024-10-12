@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require '../database/config.php';
@@ -44,7 +45,7 @@ if ($result->num_rows == 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/NewCareers/Resultado/resultado.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/NewCareers/Resultado/resultado.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -66,16 +67,6 @@ if ($result->num_rows == 0) {
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
 
     <header class="header">
 
@@ -152,7 +143,7 @@ if ($result->num_rows == 0) {
             </div>
         </div>
 
-        <section class="resultado"> <!-- resultado ou  carreiras-obtidas-->
+        <section class="resultado">
             <div class="title">
                 <h1>Resultado do Teste Vocacional</h1>
             </div>
@@ -170,9 +161,9 @@ if ($result->num_rows == 0) {
 
                 <h3>Instituições que oferecem cursos para esta carreira:</h3>
                 <?php if ($instituicoes): ?>
-                    <ul class="ul-carreiras">
+                    <ul>
                         <?php foreach ($instituicoes as $instituicao): ?>
-                            <li class="li-carreiras">
+                            <li>
                                 <strong>
                                     Instituição:
                                     <!-- Nome da instituição como link que redireciona para a URL -->
@@ -199,7 +190,7 @@ if ($result->num_rows == 0) {
                 <?php endif; ?>
         </section>
     </main>
-
+    
 </body>
 
 <script src="users.js"></script>

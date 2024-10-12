@@ -1,11 +1,12 @@
 /*Global*/
 @import '../../../Global/style/header/header-2.css';
+@import '../../../Global/style/footer/footer.css';
 @import '../../../Global/style/index.css';
 /*Global*/
 
 
-@import './P1.resultado.css'; /* P1.resultado.css ou P2.resultado.css */
 
+@import './caminho.carreira.css';
 
 
 * {
