@@ -110,7 +110,7 @@ footer p {
 
 
 .container {
-    max-width: 900px;
+    max-width: 700px;
     margin: 50px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -121,7 +121,7 @@ footer p {
 h1, h3 {
     color: #206ab8; /* Cor preferida para títulos */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 25px;
 }
 
@@ -135,7 +135,7 @@ h1, h3 {
 .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .input-box label {

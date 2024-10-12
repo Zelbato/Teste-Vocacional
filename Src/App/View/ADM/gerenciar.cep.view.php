@@ -178,7 +178,7 @@ $conexao->close();
             <h1>Adicionar CEP</h1>
             <form class="form" method="post">
                 <label for="cep">CEP </label>
-                <input type="text" id="cep" maxlength="9" name="cep" required><br>
+                <input type="text" id="cep" maxlength="9" name="cep" placeholder="Digite o CEP" required><br>
                 
 
                 <button type="submit">Adicionar CEP</button>

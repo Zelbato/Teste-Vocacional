@@ -1,7 +1,6 @@
 
 /* Estilos gerais */
-body {
-    font-family: 'Arial', sans-serif;
+/* body {
     background-color: var(--white);
     color: #343a40;
     margin: 0;
@@ -11,18 +10,28 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
+} */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
 }
 
 /* Títulos */
 h1 {
-    font-size: 2.5rem;
-    margin: 20px 0;
+    font-size: 35px;
+    padding: 40px 20px;
+    margin: 40px 0 20px;
     color: var(--azul); /* Azul vibrante */
     text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 30px;
     margin: 20px 0;
     color: #495057; /* Cinza médio */
 }
@@ -32,19 +41,19 @@ form {
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 40px;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px 0;
 }
 
 /* Estilo para listas */
-ul {
+.ul-select {
     list-style: none;
     padding: 0;
 }
 
-li {
+.li-select {
     padding: 10px;
     border-radius: 10px;
     background-color: #e9ecef; /* Cinza claro */

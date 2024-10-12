@@ -76,6 +76,7 @@ if ($result->num_rows == 0) {
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
     <header class="header">
 
         <div class="menu-mobile">
@@ -151,7 +152,7 @@ if ($result->num_rows == 0) {
             </div>
         </div>
 
-        <section class="resultado">
+        <section class="carreiras-obtidas">
             <div class="title">
                 <h1>Resultado do Teste Vocacional</h1>
             </div>
@@ -169,9 +170,9 @@ if ($result->num_rows == 0) {
 
                 <h3>Instituições que oferecem cursos para esta carreira:</h3>
                 <?php if ($instituicoes): ?>
-                    <ul>
+                    <ul class="ul-carreiras">
                         <?php foreach ($instituicoes as $instituicao): ?>
-                            <li>
+                            <li class="li-carreiras">
                                 <strong>
                                     Instituição:
                                     <!-- Nome da instituição como link que redireciona para a URL -->

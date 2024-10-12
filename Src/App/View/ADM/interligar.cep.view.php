@@ -15,7 +15,8 @@ $cep_query = "SELECT id_cep, cep_numero FROM cep";
 $cep_result = $conexao->query($cep_query);
 
 // Função para marcar automaticamente as instituições com CEPs iguais como próximas
-function marcarAutomaticamenteInstituicoesProximas($conexao, $user_id) {
+function marcarAutomaticamenteInstituicoesProximas($conexao, $user_id)
+{
     // Consulta que insere proximidade automaticamente quando os CEPs forem iguais
     $stmt = $conexao->prepare("
         INSERT INTO instituicao_cep_proximo (id_usuario, id_instituicao, cep_id, proximidade) 
@@ -26,7 +27,7 @@ function marcarAutomaticamenteInstituicoesProximas($conexao, $user_id) {
         )
         ON DUPLICATE KEY UPDATE proximidade = TRUE
     ");
-    
+
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
     $stmt->close();
@@ -57,37 +58,67 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Public/assets/styles/ADM/InterligarCEP/interligar.cep.css">
+
+    <!--Icones Bootstrap--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts--
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Bootstrap-->
     <title>Selecionar Instituições Próximas</title>
 </head>
+
 <body>
-    <h1>Selecionar Instituições Próximas</h1>
 
-    <form method="post">
-        <h2>Selecione os CEPs:</h2>
-        <ul>
-            <?php while ($cep = $cep_result->fetch_assoc()): ?>
-                <li>
-                    <input type="checkbox" name="cep_selecionado[]" value="<?php echo $cep['id_cep']; ?>">
-                    <?php echo htmlspecialchars($cep['cep_numero']); ?>
-                </li>
-            <?php endwhile; ?>
-        </ul>
+    <main class="main">
+        <div class="container">
+            <section class="select-prox">
+                <h1>Selecionar Instituições Próximas</h1>
 
-        <h2>Instituições disponíveis:</h2>
-        <ul>
-            <?php while ($instituicao = $result->fetch_assoc()): ?>
-                <li>
-                    <input type="checkbox" name="instituicao_proxima[]" value="<?php echo $instituicao['id_instituicao']; ?>">
-                    <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?> - CEP: <?php echo htmlspecialchars($instituicao['cep_numero']); ?>
-                </li>
-            <?php endwhile; ?>
-        </ul>
+                <form method="post">
+                    <h2>Selecione os CEPs:</h2>
+                    <ul class="ul-select">
+                        <?php while ($cep = $cep_result->fetch_assoc()): ?>
+                            <li class="li-select">
+                                <input type="checkbox" name="cep_selecionado[]" value="<?php echo $cep['id_cep']; ?>">
+                                <?php echo htmlspecialchars($cep['cep_numero']); ?>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
 
-        <button type="submit">Salvar Instituições Próximas</button>
-    </form>
+                    <h2>Instituições disponíveis:</h2>
+                    <ul class="ul-select">
+                        <?php while ($instituicao = $result->fetch_assoc()): ?>
+                            <li class="li-select">
+                                <input type="checkbox" name="instituicao_proxima[]" value="<?php echo $instituicao['id_instituicao']; ?>">
+                                <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?> - CEP: <?php echo htmlspecialchars($instituicao['cep_numero']); ?>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+
+                    <button type="submit">Salvar Instituições Próximas</button>
+                </form>
+            </section>
+    </main>
+
 </body>
+
 </html>
