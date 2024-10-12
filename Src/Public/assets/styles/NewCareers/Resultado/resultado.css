@@ -5,8 +5,8 @@
 /*Global*/
 
 
-@import './P1.resultado.css';
-/* @import './caminho.carreira.css'; */
+@import './P2.resultado.css'; /* P1.resultado.css ou P2.resultado.css */
+@import './caminho.carreira.css';
 
 
 * {
