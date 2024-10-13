@@ -5,15 +5,51 @@
 
     .main .container {
         width: 70%;
+      
     }
-
+    .main .input-box label{
+    color: #000;
+    font-weight: 600;
+}
     .main .form {
-        width: 100%;
+        width: 100%; 
+         background-color: rgb(255, 255, 255);
+    }
+    .form-image img{
+        display: none;
+
+    }
+    .title-form{
+        display: none;
+    }
+    .form-image{
+        display: none;
+    }
+    .main .form-image{
+        display: none;
+    }
+    .main .form-image{
+        display: none;
+    }
+    .main .gender-input label{
+        color: #095399;
+    }
+    .main .input-box label, .main .gender-title h6{
+        color: #000;
+    }
+    .main .input-box input{
+        color: #000;
     }
 }
 
 @media screen and (max-width: 1064px) {
-    
+    .main .form-image{
+        display: none;
+    }
+    .main .input-box label{
+        color: #000;
+        font-weight: 600;
+    }
     .main {
         height: auto;
         width: 100%;
@@ -46,12 +82,30 @@
     .main .gender-input {
         margin-top: 10px;
     }
+    .form-image{
+        display: none;
+    }
+    .main .form-image{
+        display: none;
+    }
+    .main .gender-input label{
+        color: #095399;
+    }
+    .main .input-box label, .main .gender-title h6{
+        color: #000;
+    }
+    .main .input-box input{
+        color: #000;
+    }
 }
 
 @media screen and (max-width: 550px) {
-
+    .main .input-box label{
+        color: #000;
+        font-weight: 600;
+    }
     .main {
-        background:transparent;
+        background: #000;
     }
 
     .main .container {
@@ -67,5 +121,16 @@
     width: 95%;
     height: 40px;
 }
-
+ .main .form-image{
+    display: none;
+}
+.main .gender-input label{
+    color: #095399;
+}
+.main .input-box label, .main .gender-title h6{
+    color: #000;
+}
+.main .input-box input{
+    color: #000;
+}
 }

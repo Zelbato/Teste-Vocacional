@@ -48,12 +48,15 @@ section.resultado {
 }
 
 .resultado .description img {
-        width: 15px;
-        height: 15px;
+        width: 95px;
+        height: 95px;
         margin: auto 5px auto 0 ;
 }
 
-
+b{
+    color: rgb(12, 50, 119);
+    font-weight: 400;
+}
 .resultado ul {
     list-style: none;
     padding: 0;
@@ -74,7 +77,15 @@ section.resultado {
     display: block;
     margin-bottom: 10px;
 }
-
+#text{
+    font-size: 1rem;
+    font-weight: 600;
+gap: 9px;
+align-items: center;
+}
+i{
+    font-size: 25px;
+}
 .resultado ul li a {
     color: var(--azul);
     text-decoration: none;
@@ -94,6 +105,64 @@ section.resultado {
     display: block;
 }
 
+.calendario img{
+width: 15px;
+height: 15px;
+}
+@media only screen and (max-device-width:1170px) {
+
+    .calendario img{
+        width: 15px;
+        height: 15px;
+        }
+
+        .resultado .description img{
+            width: 95px;
+            height: 95px;
+        }
+        #text{
+            font-size: 1rem;
+            font-weight: 600;
+       gap: 9px;
+       align-items: center;
+        }
+        
+    }
+    @media only screen and (max-device-width:1100px) {
+
+        .calendario img{
+            width: 15px;
+            height: 15px;
+            }
+    
+            .resultado .description img{
+                width: 95px;
+                height: 95px;
+            }
+            #text{
+                font-size: 1rem;
+                font-weight: 600;
+           gap: 9px;
+           align-items: center;
+            }
+        }
+        @media only screen and (max-device-width:1170px) {
+            .calendario img{
+                width: 15px;
+                height: 15px;
+                }
+        
+                .resultado .description img{
+                    width: 95px;
+                    height: 95px;
+                }
+                #text{
+                    font-size: 1rem;
+                    font-weight: 600;
+               gap: 9px;
+               align-items: center;
+                }
+            }
 /* .resultado ul li p {
     font-size: 1rem;
     color: #333;

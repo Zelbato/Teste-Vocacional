@@ -48,7 +48,10 @@ if ($result->num_rows == 0) {
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--Icones Bootstrap-->
+
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -166,7 +169,7 @@ if ($result->num_rows == 0) {
                             <strong>
                                 Instituição:
                                 <!-- Nome da instituição como link que redireciona para a URL -->
-                                <?php if (!empty($instituicao['url'])): ?>
+                               <b> <?php if (!empty($instituicao['url'])): ?></b>
                                     <div class="link-url">
                                         <h3> <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
                                                 <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
@@ -183,13 +186,13 @@ if ($result->num_rows == 0) {
 
 
                             <strong> Curso: </strong>
-                            <p> <?php echo htmlspecialchars($instituicao['nome_curso']); ?> </p>
+                            <p id="text"> <?php echo htmlspecialchars($instituicao['nome_curso']); ?> </p>
 
                             <?php if (!empty($instituicao['foto_curso'])): ?>
                                 <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" width="200"><br>
                             <?php endif; ?>
 
-                            <strong> Duração: </strong> <p> <img class="calendario" src="../../Public/assets/Img/calendario (1).png" alt="calendario"> <?php echo htmlspecialchars($instituicao['duracao']); ?> </p>
+                            <strong> Duração: </strong> <p id="text"> <i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?> </p>
 
                             <strong> Descrição: </strong> <p> <?php echo htmlspecialchars($instituicao['descricao']); ?> </p>
 
