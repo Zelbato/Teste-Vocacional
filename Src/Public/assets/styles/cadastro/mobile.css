@@ -1,136 +1,129 @@
-
-
 @media screen and (max-width: 1300px) {
-
+    .main {
+        width: 100%;
+        height: 100vh;
+    }
 
     .main .container {
-        width: 70%;
-      
+        width: 100%;
     }
-    .main .input-box label{
-    color: #000;
-    font-weight: 600;
-}
+
+    .form-image .title-form h1 {
+        font-size: 24px;
+    }
+
+    .main .form-image {
+        margin: 0 auto;
+        width: 40%;
+    }
+
     .main .form {
-        width: 100%; 
-         background-color: rgb(255, 255, 255);
+        width: 40%;
     }
-    .form-image img{
-        display: none;
 
+    .main .form-header h1 {
+        font-size: 24px;
     }
-    .title-form{
-        display: none;
+
+    .main .form-header h1::after {
+        content: '';
+        display: block;
+        width: 100%;
     }
-    .form-image{
-        display: none;
+
+    .main .login-button button {
+        width: 100%;
+        font-size: 16px;
     }
-    .main .form-image{
-        display: none;
+
+    .main .input-group {
+        margin: 40px 0;
     }
-    .main .form-image{
-        display: none;
+
+    .main .input-box input {
+        width: auto;
+        margin: 10px;
     }
-    .main .gender-input label{
-        color: #095399;
+
+    .main .input-box label,
+    .main .gender-title h6 {
+        font-size: 16px;
     }
-    .main .input-box label, .main .gender-title h6{
-        color: #000;
+
+    .main .gender-input input {
+        margin: 15px 0;
     }
-    .main .input-box input{
-        color: #000;
+
+    .main .gender-input label {
+        margin: 0;
+        font-size: 16px;
     }
+
+    .main .continue-button button {
+        width: 100%;
+        margin: 0;
+    }
+
 }
 
-@media screen and (max-width: 1064px) {
-    .main .form-image{
-        display: none;
-    }
-    .main .input-box label{
-        color: #000;
-        font-weight: 600;
-    }
+@media screen and  (max-width: 1145px) {
+
+    
+}
+
+
+
+
+
+/* @media screen and (max-width: 550px) {
+
     .main {
-        height: auto;
+        flex-direction: column;
+        height: 100vh;
         width: 100%;
-        align-items: center;
-        justify-content: center;
     }
 
     .main .container {
-        width: 90%;
-        height: auto;
+        width: 100%;
+    }
+
+    .main .form {
         padding: 20px 0px;
+        animation: none;
     }
 
-    .mian .input-group {
-        flex-direction: column;
-
-        overflow: scroll;
-        flex-wrap: nowrap;
-        max-height: 100%;
-    }
-
-    .main .gender-inputs {
-        margin: 20px 0px;
-    }
-
-    .main .gender-group {
-        flex-direction: column;
-    }
-
-    .main .gender-input {
-        margin-top: 10px;
-    }
-    .form-image{
+    .main .form-image {
         display: none;
     }
-    .main .form-image{
+
+    .form-image .title-form {
         display: none;
     }
-    .main .gender-input label{
-        color: #095399;
-    }
-    .main .input-box label, .main .gender-title h6{
-        color: #000;
-    }
-    .main .input-box input{
-        color: #000;
-    }
-}
 
-@media screen and (max-width: 550px) {
-    .main .input-box label{
-        color: #000;
-        font-weight: 600;
-    }
-    .main {
-        background: #000;
+    .main .input-group {
+        margin: 40px 0;
     }
 
-    .main .container {
+    .main .input-box input {
+        width: 280px;
+        margin: 15px 0;
+        padding: 15px 0;
+        color: var(--white);
+    }
+
+
+    .main .input-box label,
+    .main .gender-title h6 {
+        font-size: 16px;
+    }
+
+    .main .gender-input label {
+        font-size: 16px;
+    }
+
+    .main .continue-button button {
         width: 100%;
-}
+        /* 280px ou 100%*
+    }
 
-.main .input-box input {
-    width: 250px;
-    height: 40px;
-}
-
-.main .continue-button button {
-    width: 95%;
-    height: 40px;
-}
- .main .form-image{
-    display: none;
-}
-.main .gender-input label{
-    color: #095399;
-}
-.main .input-box label, .main .gender-title h6{
-    color: #000;
-}
-.main .input-box input{
-    color: #000;
-}
-}
+} */

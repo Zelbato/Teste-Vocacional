@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/cadastro/cadastro.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/cadastro/cadastro.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,77 +24,6 @@
 </head>
 
 <body>
-
-
-    <!-- <header class="header">
-
-<div class="menu-mobile">
-    <label for="chk1" onclick="menu()">
-        <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
-    </label>
-</div>
-
-<input type="checkbox" name="" id="chk1">
-
-<div class="logo">
-    <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-</div>
-
-<ul>
-    <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
-    <li><a id="#vocacional destaque" href="vocacao.view.php"><span
-                class="teste">Teste Vocacional</span></a>
-    </li>
-    <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
-    <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
-
-    <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
-    <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
-    <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
-
-    <a href="#" class="menu-button">
-        <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta 
-    </a>
-
-    <div class="tooltip">
-        <div class="position">
-
-            <div class="menu-item-content">
-
-                <a href="curriculo.index.view.php">
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Crie seu Curriculo<br>
-                            Clique aqui!
-                        </span>
-
-                        <span class="menu-item-content-subtitle">
-                            Criar Curriculo <br>
-                        </span>
-                    </div>
-                </a>
-
-                <br>
-
-                <a href="caminho.resultado.view.php">
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Veja as carreiras obtidas<br>
-
-                        </span>
-
-                        <span class="menu-item-content-subtitle">
-                            Ver Carreiras <br>
-                        </span>
-                    </div>
-                </a>
-
-
-            </div>
-        </div>
-
-</ul>
-</header> -->
 
     <main class="main">
         <article class="container">
