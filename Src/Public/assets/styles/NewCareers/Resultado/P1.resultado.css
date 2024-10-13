@@ -1,6 +1,6 @@
 section.resultado {
     background-color: #f3f6f9; /* Cor de fundo clara */
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 850px;
@@ -8,7 +8,7 @@ section.resultado {
 }
 
 .resultado .title h1 {
-    font-size: 2.5rem;
+    font-size: 35px;
     color: var(--azul); /* Cor do título em azul */
     text-align: center;
     font-weight: 700;
@@ -16,19 +16,43 @@ section.resultado {
 }
 
 .resultado h2 {
-    font-size: 1.8rem;
-    color: #191919; /* Cor escura para o nome da carreira */
+    font-size: 30px;
+    color:var(--azulHover); /* Cor escura para o nome da carreira */
     text-align: center;
     margin-bottom: 20px;
 }
 
-.resultado h3 {
-    font-size: 1.4rem;
+.resultado  h3 {
+    font-size: 23px;
     color: var(--azul); /* Destaque em azul para o subtítulo */
     margin-bottom: 15px;
     text-align: left;
     font-weight: 600;
 }
+
+
+.resultado .link-url h3{
+    border-bottom: 2px solid var(--azul);
+}
+
+.resultado .description strong {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.resultado .description p {
+    display: flex;
+    font-size: 15px;
+    color: var(--preto);
+    text-align: left;
+}
+
+.resultado .description img {
+        width: 15px;
+        height: 15px;
+        margin: auto 5px auto 0 ;
+}
+
 
 .resultado ul {
     list-style: none;
@@ -48,7 +72,7 @@ section.resultado {
     font-size: 1.3rem;
     color: var(--azul);
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .resultado ul li a {
@@ -70,7 +94,7 @@ section.resultado {
     display: block;
 }
 
-.resultado ul li p {
+/* .resultado ul li p {
     font-size: 1rem;
     color: #333;
     margin-top: 10px;
@@ -82,4 +106,4 @@ section.resultado {
     color: #666;
     text-align: center;
     margin-top: 20px;
-}
+} */

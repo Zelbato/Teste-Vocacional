@@ -1,30 +1,39 @@
 /* Estilos gerais */
-body {
-    background-color: #f4f7fa; /* Um tom suave de cinza claro */
-    color: #333; /* Cor do texto */
+/* body {
+    background-color: #f4f7fa; /* Um tom suave de cinza claro *
+    color: #333; /* Cor do texto *
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:  auto;
-}
+    min-height: 100vh;
+} */
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
 
 /* Títulos */
 h1 {
     font-size: 2.5rem;
-    margin: 30px 0;
-    color: var(--azul); /* Azul vibrante */
+    margin: 20px 0 10px;
+    color: var(--azul);
+    /* Azul vibrante */
     text-align: center;
 }
 
-h2 {
+/* h2 {
     font-size: 2rem;
     margin: 20px 0;
-    color: #495057; /* Cinza médio */
-}
+    color: #495057; /* Cinza médio *
+} */
 
 /* Formulário */
 form {
@@ -34,7 +43,7 @@ form {
     padding: 30px;
     width: 90%;
     max-width: 700px;
-    margin: 20px 0;
+    margin: 20px 0 80px;
 }
 
 /* Labels e campos de entrada */
@@ -56,13 +65,16 @@ select {
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-    height: 100px; /* Altura padrão */
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+    height: 100px;
+    /* Altura padrão */
 }
 
 /* Estilo para botões */
 button[type="submit"] {
-    background-color: var(--azul); /* Azul vibrante */
+    background-color: var(--azul);
+    /* Azul vibrante */
     color: white;
     padding: 12px;
     border: none;
@@ -76,7 +88,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+    background-color: #0056b3;
+    /* Azul escuro ao passar o mouse */
     transform: translateY(-2px);
 }
 
@@ -84,46 +97,106 @@ button[type="submit"]:hover {
 ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
-    width: 90%;
-    max-width: 600px;
+    margin: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 li {
-    padding: 15px;
-    border: 1px solid #ced4da; /* Borda cinza */
+    padding: 10px 15px 15px;
+    border: 1px solid #ced4da5e;
+    /* Borda cinza */
     border-radius: 10px;
-    background-color: #e9ecef; /* Cinza claro */
-    margin: 10px 0;
+    background-color: #e9ecef;
+    /* Cinza claro */
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
 }
 
+.nome_curso {
+    margin: 10px 0;
+    border-bottom: 3px solid var(--azul);
+    /* Borda azul */
+}
+
+li h3 strong {
+    font-size: 25px;
+
+    color: #343a40;
+    /* Cinza escuro */
+}
+
 li strong {
-    font-size: 1.5rem;
-    color: #343a40; /* Cinza escuro */
+    font-size: 18px;
+    color: #343a40;
+}
+
+.descricao p {
+    font-size: 16px;
+    color: var(--preto);
+}
+
+.descricao img {
+    width: 15px;
+    height: 15px;
 }
 
 /* Imagem do curso */
 img {
-    margin-top: 10px;
     border-radius: 5px;
+    max-width: 500px;
+    height: 200px;
+}
+
+button.editar-btn,
+button.delet-btn {
+    background-color: var(--azul);
+    border: none;
+    border-radius: 8px;
+    width: 125px;
+    padding: 10px;
+    transition: all .3s;
+}
+
+button.editar-btn:hover {
+    background: var(--azulHover);
+}
+
+button.delet-btn:hover {
+    background-color: var(--vermelho);
+}
+
+.btn-pop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 10px;
+
 }
 
 /* Links de edição e exclusão */
 a {
-    color: var(--azul); /* Azul vibrante */
+    color: var(--white);
+    /* Azul vibrante */
     text-decoration: none;
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: 600;
     margin-top: 5px;
 }
 
-a:hover {
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
-}
+
 
 /* Mensagens de erro/sucesso */
 .message {
-    color: #28a745; /* Verde */
+    color: #28a745;
+    /* Verde */
     margin: 10px 0;
     font-size: 1rem;
     text-align: center;

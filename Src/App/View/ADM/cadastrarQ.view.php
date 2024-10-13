@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/assets/styles/questoes/questoes.css">
+    <link rel="stylesheet" href="../../../Public/assets/styles/questoes/questoes.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="text" id="question_text" name="question_text" placeholder="Digite a pergunta" required>
                     </div>
 
-                    <h3>Opções:</h3>
+                    <!-- <h3>Opções:</h3> -->
                     <?php
                     // Buscar carreiras para os selects
                     $carreiras_query = "SELECT id, nome FROM carreira";
@@ -187,54 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </article>
     </main>
 
-    <!--RODAPÉ-->
-    <footer>
-      <div class="boxs">
-          <h2>Logo</h2>
-
-          <div class="logo">
-              <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-          </div>
-
-
-          <!-- <h2>Criadores</h2>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-          </p>
-      </div>
-      <div class="boxs">
-          <h2>Inicio</h2>
-          <ul>
-              <li><a href="../index.view.php">Home </a></li>
-              <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-              <li><a href="../faculdade.view.php">Faculdades </a></li>
-          </ul>
-      </div>
-      <div class="boxs">
-          <h2>Suporte</h2>
-          <ul>
-              <li><a href="../termos.view.php">Termos de uso </a></li>
-              <li><a href="../politica.view.php">Política de Privacidade </a></li>
-          </ul>
-      </div>
-
-      <div class="boxs">
-          <h2>Sobre nós</h2>
-          <p>
-              Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-              usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-              têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-          </p>
-      </div>
-  </footer>
-
-  <div class="footer">
-      <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-
-  </div>
-
+   
   <script>
         // Get the modal
         var modal = document.getElementById("myModal");

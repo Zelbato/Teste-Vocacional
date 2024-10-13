@@ -1,8 +1,8 @@
 
 .main {
     width: 100%;
-    height: auto;
-    margin: 40px 0;
+    height: 100vh;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,25 +12,29 @@
 
 .form-section,
 .careers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* background-color: var(--white); */
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
-    width: 50%;
+    width: 35%;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
 
 /* Títulos */
 .form-section h1 {
-    font-size: 25px;
+    font-size: 35px;
     margin: 20px 0;
     color: var(--azul); /* Azul vibrante */
     text-align: center;
 }
 
 .careers-list h2 {
-    font-size: 25px;
+    font-size: 30px;
     margin: 20px 0;
-    color: var(--preto); /* Cinza escuro */
+    color: var(--azul); /* Cinza escuro */
 }
 
 /* Formulário */
@@ -39,25 +43,26 @@ form.form {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin: 20px 0;
 }
 
 label {
-    font-size: 1.2rem;
+    font-size: 22px;
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #495057; /* Cinza médio */
+    color: var(--preto); /* Cinza médio */
 }
 
 input[type="text"] {
     width: calc(100% - 16px);
     padding: 12px;
     border: 2px solid var(--azul); /* Azul vibrante */
+    outline: none;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 14px;
     transition: border-color 0.3s ease;
 }
 
@@ -85,17 +90,17 @@ button[type="submit"]:hover {
 }
 
 /* Lista de CEPs */
-.ul {
+.ul_existente {
     list-style: none;
     padding: 0;
     width: 100%;
     max-width: 300px;
 }
 
-.ul .li {
+.ul_existente .li_existente{
     background-color: var(--white); /* Cinza claro */
     padding: 15px;
-    margin: 10px 0;
+    margin: 20px 0 0px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -106,29 +111,28 @@ button[type="submit"]:hover {
     font-size: 18px;
 }
 
-.ul .li form {
-    margin: 0;
+.ul_existente .li_existente form {
+    margin: 5px;
 }
 
-.ul .li button {
+.ul_existente .li_existente button {
     background-color: #dc3545; /* Vermelho */
     color: white;
     padding: 8px 12px;
-    margin: 0px 0px 15px;
+    margin-top: 1px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.ul .li button:hover {
+.ul_existente .li_existente button:hover {
     background-color: #c82333; /* Vermelho escuro ao passar o mouse */
     transform: translateY(-2px);
 }
 
 /* Link de interligação */
 a {
-
     color: var(--azul); /* Azul vibrante */
     text-decoration: none;
     font-weight: bold;

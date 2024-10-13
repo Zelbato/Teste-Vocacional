@@ -1,0 +1,167 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+}
+
+.quiz-career {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Aumentado para desktops */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Leve efeito ao passar o mouse */
+}
+
+/* Títulos */
+.title-vocacional h1 {
+    text-align: center;
+    color: var(--azul);
+    font-size: 30px;
+    border-bottom: 3px solid var(--azul);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--azul);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Questões e Opções */
+
+.question .title {
+    font-size: 25px;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--azulHover);
+    margin: 20px 0;
+}
+
+.question {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Estilos das opções de resposta */
+.options label {
+    display: block;
+    width: 700px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #f4f7fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #e0e6ef;
+    border-color: var(--azul);
+}
+
+/* Input de Radio */
+input[type="radio"] {
+    display: none; /* Oculta o botão de rádio nativo */
+}
+
+input[type="radio"]:checked + label {
+    background-color: var(--azul);
+    color: #fff;
+    border-color: #164a88;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #1e3667;
+}
+
+#nextBtn, #submitBtn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Mensagem de Alerta */
+.alert {
+    color: #d9534f;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 800px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}

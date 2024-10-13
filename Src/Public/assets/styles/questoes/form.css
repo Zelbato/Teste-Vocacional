@@ -8,16 +8,15 @@
     padding: 40px 0;
 }
 
-/* .container {
+ .container {
     border-radius: 8px;
-    background: transparent; /* Fundo branco *
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  *
+    background: transparent; /* Fundo branco */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  */
     padding: 20px;
 }
 
 .form {
     width: 100%;
-    max-width: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,50 +24,74 @@
 }
 
 .form h1 {
-    font-size: 24px;
+    font-size: 35px;
     font-weight: 600;
-    color: var(--azul); /* Cor do título *
+    color: var(--azul); /* Cor do título */
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o título *
+    text-align: center; /* Centraliza o título */
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+/* form h3 {
+    font-size: 20px;
+} */
 
 .input-box {
     margin-bottom: 15px;
 }
 
 .input-box label {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #495057; /* Cor do texto *
+    color: #495057; /* Cor do texto */
 }
 
-.input-box input, .input-box select {
-    width: 100%; /* Largura total *
+.input-box input  {
+    width: 500px; /* Largura total */
     height: auto;
-    padding: 10px 20px; 
-    margin: 5px 10px;
-    border: 1px solid #ced4da; /* Bordas suaves *
+    padding: 10px 15px; 
+    margin: 5px 20px;
+    border: 1px solid #ced4da; /* Bordas suaves */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box select {
+    width: 100%; /* Largura total */
+    height: auto;
+    padding: 10px 15px; 
+    margin: 5px 20px;
+    border: 1px solid #ced4da; /* Bordas suaves */
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s;
 }
 
 .input-box input:focus, .input-box select:focus {
-    border-color: var(--azul); /* Cor do foco *
+    border-color: var(--azul); /* Cor do foco */
 }
 
 .option-group {
     display: flex;
     justify-content: space-between;
-    margin:10px 20px; 
+    margin:0 20px; 
 
 }
 
 .btn-submit {
     width: 100%;
     padding: 12px;
-    background: var(--azul); /* Cor do botão *
-    color: white; /* Cor do texto do botão *
+    background: var(--azul); /* Cor do botão */
+    color: white; /* Cor do texto do botão */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -77,10 +100,10 @@
 }
 
 .btn-submit:hover {
-    background: var(--azulHover); /* Cor do botão ao passar o mouse *
+    background: var(--azulHover); /* Cor do botão ao passar o mouse */
 }
 
-/* Alertas *
+/* Alertas */
 .alert {
     padding: 10px 15px;
     margin: 15px 0;
@@ -90,27 +113,16 @@
 }
 
 .alert-success {
-    background: #d4edda; /* Cor de fundo de sucesso *
-    color: #155724; /* Cor do texto de sucesso *
-    border: 1px solid #c3e6cb; /* Bordas de sucesso *
+    background: #d4edda; /* Cor de fundo de sucesso */
+    color: #155724; /* Cor do texto de sucesso */
+    border: 1px solid #c3e6cb; /* Bordas de sucesso */
 }
 
-/* Rodapé *
-footer {
-    background: var(--preto);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-} */
 
 
+/* 
 .container {
-    max-width: 700px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -119,13 +131,13 @@ footer p {
 }
 
 h1, h3 {
-    color: #206ab8; /* Cor preferida para títulos */
+    color: #206ab8; /* Cor preferida para títulos *
     text-align: center;
     margin-bottom: 10px;
     font-size: 25px;
 }
 
-/* Estilização do formulário */
+/* Estilização do formulário *
 .form {
     display: flex;
     flex-direction: column;
@@ -173,7 +185,7 @@ h3 {
     flex: 1;
 }
 
-/* Botão de envio */
+/* Botão de envio *
 .btn-submit {
     background-color: #206ab8;
     color: #fff;
@@ -193,9 +205,10 @@ h3 {
     background-color: #164a88;
 }
 
-/* Responsividade */
+/* Responsividade *
 @media (max-width: 768px) {
     .option-group {
         flex-direction: column;
     }
-}
+} 
+ */

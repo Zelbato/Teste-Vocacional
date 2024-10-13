@@ -61,7 +61,7 @@ $conexao->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCEP/gerenciar.cep.css">
+    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCEP/gerenciar.cep.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -87,7 +87,7 @@ $conexao->close();
 
 <body>
 
-    <header class="header">
+    <!-- <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -112,7 +112,7 @@ $conexao->close();
             <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta --
             </a>
 
             <div class="tooltip">
@@ -148,7 +148,7 @@ $conexao->close();
                 </div>
 
         </ul>
-    </header>
+    </header> -->
 
     <main class="main">
         <div id="myModal" class="modal">
@@ -188,18 +188,18 @@ $conexao->close();
         <section class="careers-list">
             <h2>CEPs Existentes</h2>
             <?php if ($ceps->num_rows > 0): ?>
-                <ul class="ul">
+                <div class="ul_existente">
                     <?php while ($cep = $ceps->fetch_assoc()): ?>
-                        <li class="li">
+                        <div class="li_existente">
                             <?php echo htmlspecialchars($cep['cep_numero']); ?>
                             <!-- Formulário para deletar o CEP -->
                             <form method="post" style="display:inline;">
                                 <input type="hidden" name="delete_cep_id" value="<?php echo $cep['id_cep']; ?>">
                                 <button type="submit">Deletar</button>
                             </form>
-                        </li>
+                    </div>
                     <?php endwhile; ?>
-                </ul>
+                    </div>
             <?php else: ?>
                 <p>Nenhum CEP cadastrado.</p>
             <?php endif; ?>
@@ -207,54 +207,6 @@ $conexao->close();
             <a href="interligar.cep.view.php">Interligação</a>
         </section>
     </main>
-
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-         <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="../index.view.php">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-
-    </div>
 
     <script>
         // Get the modal

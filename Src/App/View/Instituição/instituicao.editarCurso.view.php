@@ -74,37 +74,57 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCursos/gerenciar.cursos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCursos/gerenciar.cursos.css?v=<?php echo time(); ?>">
+
+    <!--Icones Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Editar Curso</title>
 </head>
+
 <body>
-    <h1>Editar Curso</h1>
+    <main class="main">
+        <h1>Editar Curso</h1>
 
-    <form method="post" enctype="multipart/form-data">
-        <label for="nome_curso">Nome do Curso:</label>
-        <input type="text" id="nome_curso" name="nome_curso" value="<?php echo htmlspecialchars($curso['nome_curso']); ?>" required><br>
+        <form method="post" enctype="multipart/form-data">
+            <label for="nome_curso">Nome do Curso:</label>
+            <input type="text" id="nome_curso" name="nome_curso" value="<?php echo htmlspecialchars($curso['nome_curso']); ?>" required><br>
 
-        <label for="duracao">Duração:</label>
-        <input type="text" id="duracao" name="duracao" value="<?php echo htmlspecialchars($curso['duracao']); ?>" required><br>
+            <label for="duracao">Duração:</label>
+            <input type="text" id="duracao" name="duracao" value="<?php echo htmlspecialchars($curso['duracao']); ?>" required><br>
 
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" required><?php echo htmlspecialchars($curso['descricao']); ?></textarea><br>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required><?php echo htmlspecialchars($curso['descricao']); ?></textarea><br>
 
-        <label for="carreira_id">Carreira:</label>
-        <select id="carreira_id" name="carreira_id" required>
-            <?php foreach ($carreiras as $carreira): ?>
-                <option value="<?php echo $carreira['id']; ?>" <?php if ($carreira['id'] == $curso['carreira_id']) echo 'selected'; ?>>
-                    <?php echo htmlspecialchars($carreira['nome']); ?>
-                </option>
-            <?php endforeach; ?>
-        </select><br>
+            <label for="carreira_id">Carreira:</label>
+            <select id="carreira_id" name="carreira_id" required>
+                <?php foreach ($carreiras as $carreira): ?>
+                    <option value="<?php echo $carreira['id']; ?>" <?php if ($carreira['id'] == $curso['carreira_id']) echo 'selected'; ?>>
+                        <?php echo htmlspecialchars($carreira['nome']); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select><br>
 
-        <label for="foto_curso">Foto do Curso:</label>
-        <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
+            <label for="foto_curso">Foto do Curso:</label>
+            <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
 
-        <button type="submit">Salvar Alterações</button>
-    </form>
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </main>
 </body>
+
 </html>

@@ -64,115 +64,184 @@ while ($row = $result->fetch_assoc()) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Public/assets/styles/NewCareers/NewQuiz.css?v=<?php echo time(); ?>">
     <title>Teste Vocacional</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fa;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .question {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-        .options label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #2a4d8f;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #1e3667;
-        }
-    </style>
+
 </head>
+
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+
+    <header class="header">
+
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
+            </label>
+        </div>
+
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
+                        class="teste">Teste Vocacional</span></a>
+            </li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+
+            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
+
+            <a href="#" class="menu-button">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            </a>
+
+            <div class="tooltip">
+                <div class="position">
+
+                    <a href="login.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Entrar <br>
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                            Deseja excluir sua conta <br>
+                            Clique aqui!
+                        </span>
+
+                        <span id="myBtn" class="menu-item-content-subtitle">
+                            excluir conta
+                        </span>
+
+                        <br>
+
+                        <a href="curriculo.index.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Crie seu Curriculo<br>
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Criar Curriculo <br>
+                                </span>
+                            </div>
+                        </a>
+
+                        <br>
+
+                        <a href="caminho.resultado.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Veja as carreiras obtidas<br>
+
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Ver Carreiras <br>
+                                </span>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+        </ul>
+    </header>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-<div class="container">
-    <h1>Teste Vocacional</h1>
-    <form id="quizForm" method="POST" action="">
-        <?php foreach ($questions as $question_id => $question): ?>
-            <div class="question" id="question-<?php echo $question_id; ?>">
-                <p><?php echo htmlspecialchars($question['text']); ?></p>
-                <div class="options">
-                    <?php foreach ($question['options'] as $option): ?>
-                        <input type="radio" id="option<?php echo $option['id']; ?>" name="<?php echo $question_id; ?>" value="<?php echo $option['id']; ?>" required>
-                        <label for="option<?php echo $option['id']; ?>"><?php echo htmlspecialchars($option['text']); ?></label>
-                    <?php endforeach; ?>
+    <main class="main">
+        <section class="quiz-career">
+            <div class="container">
+                <div class="title-vocacional">
+                    <h1>Teste Vocacional</h1>
                 </div>
+                <form id="quizForm" method="POST" action="">
+                    <?php foreach ($questions as $question_id => $question): ?>
+                        <div class="question" id="question-<?php echo $question_id; ?>">
+
+                            <div class="title">
+                                <p><?php echo htmlspecialchars($question['text']); ?>?</p>
+                            </div>
+
+                            <div class="options">
+                                <?php foreach ($question['options'] as $option): ?>
+                                    <input type="radio" id="option<?php echo $option['id']; ?>" name="<?php echo $question_id; ?>" value="<?php echo $option['id']; ?>" required>
+                                    <label for="option<?php echo $option['id']; ?>"><?php echo htmlspecialchars($option['text']); ?></label>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    <button type="button" class="btn" id="nextBtn" onclick="showNextQuestion()">Próxima</button>
+                    <button type="submit" class="btn" id="submitBtn" style="display:none;">Enviar Respostas</button>
+                </form>
             </div>
-        <?php endforeach; ?>
-        <button type="button" class="btn" id="nextBtn" onclick="showNextQuestion()">Próxima</button>
-        <button type="submit" class="btn" id="submitBtn" style="display:none;">Enviar Respostas</button>
-    </form>
-</div>
+        </section>
+    </main>
 
-<script>
-    let currentQuestion = 0;
-    const questions = document.querySelectorAll('.question');
-    const nextBtn = document.getElementById('nextBtn');
-    const submitBtn = document.getElementById('submitBtn');
+    <script>
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
 
-    // Mostrar a primeira pergunta
-    questions[currentQuestion].classList.add('active');
+        // Mostrar a primeira pergunta
+        questions[currentQuestion].classList.add('active');
 
-    function showNextQuestion() {
-        // Verifica se alguma opção foi selecionada
-        const selectedOption = questions[currentQuestion].querySelector('input[type="radio"]:checked');
-        if (!selectedOption) {
-            alert('Por favor, selecione uma opção.');
-            return;
+        function showNextQuestion() {
+            // Verifica se alguma opção foi selecionada
+            const selectedOption = questions[currentQuestion].querySelector('input[type="radio"]:checked');
+            if (!selectedOption) {
+                alert('Por favor, selecione uma opção.');
+                return;
+            }
+
+            // Oculta a pergunta atual
+            questions[currentQuestion].classList.remove('active');
+            currentQuestion++;
+
+            // Verifica se ainda há mais perguntas
+            if (currentQuestion < questions.length) {
+                questions[currentQuestion].classList.add('active');
+            } else {
+                // Oculta o botão "Próxima" e mostra o botão "Enviar"
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+            }
         }
-
-        // Oculta a pergunta atual
-        questions[currentQuestion].classList.remove('active');
-        currentQuestion++;
-
-        // Verifica se ainda há mais perguntas
-        if (currentQuestion < questions.length) {
-            questions[currentQuestion].classList.add('active');
-        } else {
-            // Oculta o botão "Próxima" e mostra o botão "Enviar"
-            nextBtn.style.display = 'none';
-            submitBtn.style.display = 'inline-block';
-        }
-    }
-</script>
+    </script>
 
 </body>
+
 </html>

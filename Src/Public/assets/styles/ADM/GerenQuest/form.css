@@ -59,7 +59,7 @@ a.add-button:hover {
 /* Link de Editar */
 .edit-link {
     background-color: var(--azul); /* Azul para o link de editar */
-    margin-right: 10px; /* Margem direita */
+    margin-right: 20px; /* Margem direita */
 }
 
 .edit-link:hover {
@@ -68,6 +68,7 @@ a.add-button:hover {
 
 /* Botão de Excluir */
 .delete-button {
+    margin-left: 45%;
     background-color: #dc3545; /* Vermelho para o botão de excluir */
     border: none; /* Remove borda padrão */
     cursor: pointer; /* Muda cursor ao passar o mouse */

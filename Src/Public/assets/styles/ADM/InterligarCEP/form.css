@@ -1,4 +1,4 @@
-
+li
 /* Estilos gerais */
 /* body {
     background-color: var(--white);
@@ -17,23 +17,39 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100vh;
     padding: 40px 20px;
+}
+
+.conatiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.select-prox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Títulos */
 h1 {
     font-size: 35px;
-    padding: 40px 20px;
-    margin: 40px 0 20px;
+    padding: 20px 20px 10px;
+    margin: 0px 0 20px;
     color: var(--azul); /* Azul vibrante */
     text-align: center;
 }
 
 h2 {
-    font-size: 30px;
-    margin: 20px 0;
-    color: #495057; /* Cinza médio */
+    font-size: 25px;
+    /* margin: 10px 0; */
+    color: var(--azul); /* Cinza médio */
 }
 
 /* Formulário */
@@ -41,8 +57,8 @@ form {
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 90%;
+    padding: 20px;
+    width: 100%; /* ou 90%*/
     max-width: 800px;
     margin: 20px 0;
 }
@@ -57,7 +73,7 @@ form {
     padding: 10px;
     border-radius: 10px;
     background-color: #e9ecef; /* Cinza claro */
-    margin: 8px 0;
+    margin: 15px 0;
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
@@ -97,6 +113,6 @@ button[type="submit"]:hover {
 .message {
     color: #28a745; /* Verde */
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 1rem;    
     text-align: center;
 }
