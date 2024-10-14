@@ -3,7 +3,7 @@
 @import './buttons.css';
 @import './adm-cards.css';
 @import '../../Global/style/index.css';
-
+@import './mobile.css';
 * {
     box-sizing: border-box;
     padding: 0;

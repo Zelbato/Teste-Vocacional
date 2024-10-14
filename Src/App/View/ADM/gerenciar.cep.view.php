@@ -87,7 +87,7 @@ $conexao->close();
 
 <body>
 
-    <!-- <header class="header">
+    <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -112,7 +112,7 @@ $conexao->close();
             <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta --
+                <i class="fa-solid fa-user"></i> Cadastrar-se ou <br> Excluir conta --
             </a>
 
             <div class="tooltip">
@@ -175,7 +175,7 @@ $conexao->close();
         </div>
 
         <section class="form-section">
-            <h1>Adicionar CEP</h1>
+            <h1 id="text">Adicionar CEP</h1>
             <form class="form" method="post">
                 <label for="cep">CEP </label>
                 <input type="text" id="cep" maxlength="9" name="cep" placeholder="Digite o CEP" required><br>
@@ -186,7 +186,7 @@ $conexao->close();
         </section>
 
         <section class="careers-list">
-            <h2>CEPs Existentes</h2>
+            <h2 id="text">CEPs Existentes</h2>
             <?php if ($ceps->num_rows > 0): ?>
                 <div class="ul_existente">
                     <?php while ($cep = $ceps->fetch_assoc()): ?>

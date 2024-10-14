@@ -152,3 +152,32 @@ a {
     font-size: 1rem;
     text-align: center;
 }
+@media only screen and (max-device-width:1170px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+    .form-section,
+    .careers-list{
+        width: 100%;
+        box-shadow: none; 
+        border: solid #222 1px;
+    }
+    .ul_existente .li_existente button{
+        padding: 9px;
+        font-size: 15px;
+    }
+    form.form{
+        box-shadow: none;
+       
+    }
+    .form-section,
+    .careers-list,
+  #text{
+        border-bottom: 2px solid blue;
+    }
+
+}
