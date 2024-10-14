@@ -18,7 +18,7 @@
     }
 
     .main .form {
-        width: 40%;
+        width: 50%;
     }
 
     .main .form-header h1 {
@@ -66,9 +66,10 @@
 
 }
 
-@media screen and  (max-width: 1145px) {
+@media screen and  (max-width: 1050px) {
 
     
+
 }
 
 
