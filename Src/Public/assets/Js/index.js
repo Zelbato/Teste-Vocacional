@@ -13,10 +13,10 @@ function menu() {
     let menuMobile = document.querySelector(".menu-mobile");
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "/Src/Public/assets/Img/cardapio.png";
+        document.querySelector('.icon').src = "Img/cardapio.png";
     } else {
         menuMobile.classList.add('open');
-        document.querySelector(".icon").src = "/Src/Public/assets/Img/botao-excluir.png";
+        document.querySelector(".icon").src = "Img/botao-excluir.png";
     }
 }
 

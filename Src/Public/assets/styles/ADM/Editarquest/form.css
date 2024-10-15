@@ -1,4 +1,3 @@
-
 .main {
     display: flex;
     flex-direction: column;
@@ -17,6 +16,7 @@
     height: auto;
     padding: 20px;
 }
+
 /* Container Principal */
 .container {
     background-color: var(--white);
@@ -30,12 +30,21 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-h1, h2 {
-    color: var(--azul); /* Azul para contraste */
+h1,
+h2 {
+    color: var(--azul);
+    /* Azul para contraste */
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -108,14 +117,15 @@ select {
 
 /* Botão de Enviar */
 button[type="submit"] {
-    background: linear-gradient(135deg, var(--azul), #66a1e8); /* Gradiente de botão */
+    background: linear-gradient(135deg, var(--azul), #66a1e8);
+    /* Gradiente de botão */
     color: #fff;
     padding: 14px 20px;
     font-size: 18px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition:background .3s ease-in-out;
+    transition: background .3s ease-in-out;
 }
 
 button[type="submit"]:hover {
@@ -155,13 +165,37 @@ button a {
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
+@media only screen and (max-device-width: 768px) {
+    /* Estilos para dispositivos móveis */
+
+    .main {
+        padding: 0px;
+        height: auto;
     }
 
-    button[type="submit"], .back-link {
+    .container {
+        padding: 10px;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    input[type="text"] {
         width: 100%;
+        border-radius: 0;
+        border-bottom: 1px solid var(--azul);
+    }
+
+    input[type="text"]:hover {
+        border-bottom: 1px solid var(--azul);
+
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .option-container{
+        padding: 10px;
+        border:1px solid #234f851c;
     }
 }

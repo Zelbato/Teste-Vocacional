@@ -152,7 +152,10 @@ a {
     font-size: 1rem;
     text-align: center;
 }
-@media only screen and (max-device-width:1170px){
+
+
+@media only screen and (max-device-width:700px){
+    
     .main{
         display: flex;
         flex-direction: column;

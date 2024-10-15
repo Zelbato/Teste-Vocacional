@@ -76,7 +76,7 @@ $result = $conexao->query("SELECT * FROM carreira");
 
 <div class="menu-mobile">
     <label for="chk1" onclick="menu()">
-        <img class="icon" id="icon-mobile" src="../../../Public/assets/Imagens/cardapio.png" alt="">
+        <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
     </label>
 </div>
 

@@ -77,3 +77,37 @@ a.add-button:hover {
 .delete-button:hover {
     background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
 }
+
+@media only screen and (max-device-width: 890px) {
+
+    .main {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    .questions-table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    a.add-button {
+        margin-top: 10px;
+    }
+
+   .edit-link, .delete-button {
+        margin:10px 0 10px 0;
+        padding: 10px;
+        font-size: 14px;
+        width: 60px;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .edit-link  {
+        margin: 0;
+    }
+}
