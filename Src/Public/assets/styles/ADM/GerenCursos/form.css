@@ -206,5 +206,16 @@ a {
         display: flex;
         flex-direction: column;
         padding: 30px;
+        gap: 30px;
+        background-color: transparent;
+    }
+    li{
+        background-color: transparent;
+        border: 2px solid black;
+    }
+    form{
+        box-shadow: none;
+       background-color: transparent;
+
     }
     }

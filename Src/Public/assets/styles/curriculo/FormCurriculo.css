@@ -78,6 +78,8 @@ form button:hover {
     form{
         width: 70%;
         height: auto;
+        box-shadow: none;
+      
     }
     .main{
         padding: 30px;

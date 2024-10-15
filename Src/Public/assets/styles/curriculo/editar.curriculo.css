@@ -80,3 +80,20 @@ section.Editar {
     color: rgb(25, 25, 25);
     font-size: 18px;
 }
+@media only screen and (max-device-width:700px){
+    .editar h1{
+       border-bottom: 2px solid rgb(0, 110, 255);
+    }
+    .Editar label{
+       text-transform: uppercase;
+     
+    }
+    .Editar textarea{
+       background: transparent;
+       
+    }
+    form{
+   height: auto;
+   width: 100%;
+    }
+   }
