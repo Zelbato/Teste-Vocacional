@@ -148,7 +148,7 @@ $conexao->close();
                 </div>
 
         </ul>
-    </header> -->
+    </header> 
 
     <main class="main">
         <div id="myModal" class="modal">

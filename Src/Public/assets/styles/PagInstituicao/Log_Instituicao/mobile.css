@@ -1,7 +1,3 @@
-
-
-
-
 @media screen and (max-width: 1300px) {
 
     /*Checklist Profissional*/
@@ -9,18 +5,22 @@
         width: 100%;
         height: 100vh;
     }
-    .main .form-image{
+
+    .main .form-image {
         display: none;
     }
+
     /*Criar Questões*/
     .main .form {
         width: 12%;
-    
+        animation: none;
     }
-    .form-image img{
+
+    .form-image img {
         display: none;
-        
+
     }
+
     .main .form-header {
         margin-bottom: 10px;
     }
@@ -41,26 +41,30 @@
     .main .continue-button button {
         width: 40%;
     }
-    .title-form{
+
+    .title-form {
         display: none;
     }
 }
 
 @media screen and (max-width: 1064px) {
-    
-.title-form{
-    display: none;
-}
+
+    .title-form {
+        display: none;
+    }
+
     .main .container {
         width: 100%;
         height: 100vh;
         padding: 0px 0px;
 
     }
-    .form-image img{
+
+    .form-image img {
         display: none;
-        
+
     }
+
     .main .form {
         width: 100%;
         padding: 0px 10px;
@@ -97,9 +101,10 @@
         width: 45%;
         margin-top: 30px;
     }
-    .form-image img{
+
+    .form-image img {
         display: none;
-        
+
     }
 }
 
@@ -108,13 +113,15 @@
     .main .container {
         width: 100%;
         height: 100vh;
-        padding: 0px ;
+        padding: 0px;
         flex-direction: column;
 
     }
-    .title-form{
+
+    .title-form {
         display: none;
     }
+
     /*Criar Questões*/
     .main .form {
         width: 100%;
@@ -142,7 +149,8 @@
 
     .main .input-box input {
         margin: 20px 0;
-        width: 300px;/*Teste*/
+        width: 300px;
+        /*Teste*/
     }
 
     .main .input-box input:hover {
@@ -150,9 +158,9 @@
         background: var(--white);
     }
 
-    .form-image img{
+    .form-image img {
         display: none;
-        
+
     }
 
 }
@@ -183,7 +191,7 @@
     .main .input-box select {
         margin: 10px 0;
     }
-    
+
     .main .input-box select option {
         background: var(--white);
         color: var(--azulHover);
@@ -194,21 +202,24 @@
         font-size: 25px;
         color: rgb(255, 255, 255);
     }
-    .title-form{
+
+    .title-form {
         display: none;
     }
-    .form-image{
+
+    .form-image {
         display: none;
     }
+
     /*Botão*/
     .main .continue-button button {
         width: 100%;
         height: 40px;
         margin: 20px 0;
     }
-.form-image img{
-    display: none;
 
-}
-}
+    .form-image img {
+        display: none;
 
+    }
+}
