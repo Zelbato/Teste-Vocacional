@@ -74,3 +74,13 @@ form button {
 form button:hover {
     background-color: #164a86;
 }
+@media only screen and (max-device-width:700px){
+    form{
+        width: 70%;
+        height: auto;
+    }
+    .main{
+        padding: 30px;
+    }
+  
+}
