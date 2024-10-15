@@ -165,7 +165,7 @@ $result = $conexao->query("SELECT * FROM carreira");
         </div>
 
         <section class="form-section">
-            <h2>Adicionar Carreira</h2>
+            <h2 id="text">Adicionar Carreira</h2>
             <form method="post">
                 <label for="nome_carreira">Nome da Carreira:</label>
                 <input type="text" id="nome_carreira" name="nome_carreira" required>
@@ -174,7 +174,7 @@ $result = $conexao->query("SELECT * FROM carreira");
         </section>
 
         <section class="careers-list">
-            <h2>Carreiras Atuais</h2>
+            <h2 id="text">Carreiras Atuais</h2>
             <ul>
                 <?php while ($carreira = $result->fetch_assoc()): ?>
                     <li>
