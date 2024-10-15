@@ -211,11 +211,19 @@ a {
     }
     li{
         background-color: transparent;
-        border: 2px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.548);
+        
+    }
+    li h3 strong{
+        font-size: 22px;
     }
     form{
         box-shadow: none;
        background-color: transparent;
 
+
+    }
+    h1{
+        font-size: 31px;
     }
     }

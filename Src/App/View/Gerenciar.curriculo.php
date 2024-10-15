@@ -168,7 +168,7 @@ if (!$resul) {
             <ul>
                 <?php while ($curriculo = $resul->fetch_assoc()): ?>
                     <li>
-                        <?php echo htmlspecialchars($curriculo['nome']); ?>
+                        <?php echo htmlspecialchars($curriculo['nome']); ?></li> <li>
                         <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
                         <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">baixar</a>
                     </li>

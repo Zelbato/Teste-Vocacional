@@ -60,3 +60,23 @@ section.form-curriculo {
     background-color: rgb(25, 25, 25);
     color: #f3f6f9;
 }
+@media only screen and (max-device-width:700px){
+    ul{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     
+     
+    }
+    .form-curriculo li{
+     background-color: transparent;
+     padding: 0px;
+    }
+    .form-curriculo li a{
+     padding: 7px;
+    }
+    section.form-curriculo{
+     box-shadow: none;
+    }
+ 
+    }
