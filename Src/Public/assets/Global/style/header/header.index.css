@@ -142,12 +142,13 @@ header .mobile-entrar,
     header {
         background: var(--preto);
         position: fixed;
+        height: 100px;
     }
 
     header ul {
         position: absolute;
         /*Mudar a barra*/
-        top: 100px;
+        top: 80px;
         right: 100%;
         background: var(--preto);
         height: calc(100vh - 100px);
@@ -156,6 +157,27 @@ header .mobile-entrar,
         align-items: center;
         transition: right 0.5s linear;
         display: flex;
+    }
+
+    header ul li button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-family: var(--font);
+        font-size: 18px;
+    }
+
+    header ul li button:hover {
+        color: var(--azul);
+    }
+
+    header ul li a:hover {
+        color: var(--azul);
+    }
+
+    header ul li a::after {
+        display: none;
     }
 
     header .logo {
@@ -352,6 +374,7 @@ header .mobile-entrar,
 }
 
 @media(max-width:1024px) {
+
     .menu-item {
         padding: 10px 20px;
     }
