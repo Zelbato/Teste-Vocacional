@@ -51,9 +51,15 @@ require '../database/config.php';
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
@@ -86,6 +92,14 @@ require '../database/config.php';
             </form>
             
             <li><a id="mobile-excluir" href="login.view.php">Entrar</a></li>
+            
+            <form action="../Services/deletar.php" method="POST">
+                
+                <li> <button>Excluir</button> </li>
+                
+            </form>
+            
+            <li><a id="mobile-excluir" href="login.view.php">Entrar</a></li>
             <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
@@ -95,7 +109,14 @@ require '../database/config.php';
 
             <div class="tooltip">
                 <div class="position"> 
+                <div class="position"> 
 
+                    <a href="login.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login<br>
+                                Clique aqui!
+                            </span>
                     <a href="login.view.php">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
@@ -108,7 +129,13 @@ require '../database/config.php';
                             </span>
                         </div>
                     </a>
+                            <span class="menu-item-content-subtitle">
+                                Entrar <br>
+                            </span>
+                        </div>
+                    </a>
 
+                    <br>
                     <br>
 
                     <div class="menu-item-content">
@@ -219,6 +246,7 @@ require '../database/config.php';
                         usuários, pacientes e afins, assim ajudando a descobrir uma carreira
                         compatível com seus gostos e características.
                     </p>
+
 
                 </div>
             </div>
