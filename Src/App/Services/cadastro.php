@@ -47,15 +47,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_usuario = 'INSERT INTO usuario (name, email, senha, id_cep, data_nascimento, nivel) VALUES (?, ?, ?, ?, ?, ?)';
     $stmt_usuario = $conexao->prepare($sql_usuario);
     $nivel = 'user';
-    $stmt_usuario->bind_param("ssssis", $name, $email, $hashedSenha, $id_cep, $data_nascimento, $nivel);
+    $stmt_usuario->bind_param("ssssss", $name, $email, $hashedSenha, $id_cep, $data_nascimento, $nivel);
 
     if ($stmt_usuario->execute()) {
-        echo "";
+        header('Location: ../View/login.view.php');
     } else {
         echo "Erro ao cadastrar usuário: " . $stmt_usuario->error;
     }
 
-    header('Location: ../View/login.view.php');
+   
 
     $stmt_usuario->close();
     $conexao->close();
