@@ -20,7 +20,7 @@ require '../database/config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../Public/assets/styles/index/style.css">
+    <link rel="stylesheet" type="text/css" href="../../Public/assets/styles/index/style.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -46,22 +46,22 @@ require '../database/config.php';
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
     <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="">
             </label>
         </div>
 
@@ -78,8 +78,14 @@ require '../database/config.php';
             </li>
             <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
             <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
-
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            
+            <form action="../Services/deletar.php" method="POST">
+                
+                <li> <button>Excluir</button> </li>
+                
+            </form>
+            
+            <li><a id="mobile-excluir" href="login.view.php">Entrar</a></li>
             <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
@@ -88,22 +94,22 @@ require '../database/config.php';
             </a>
 
             <div class="tooltip">
-                <div class="position">
+                <div class="position"> 
 
-                 <a href="login.view.php">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Faça seu login<br>
-                                    Clique aqui!
-                                </span>
+                    <a href="login.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login<br>
+                                Clique aqui!
+                            </span>
 
-                                <span class="menu-item-content-subtitle">
-                                    Entrar <br>
-                                </span>
-                            </div>
-                        </a>
+                            <span class="menu-item-content-subtitle">
+                                Entrar <br>
+                            </span>
+                        </div>
+                    </a>
 
-                        <br>
+                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
@@ -213,7 +219,7 @@ require '../database/config.php';
                         usuários, pacientes e afins, assim ajudando a descobrir uma carreira
                         compatível com seus gostos e características.
                     </p>
-                    
+
                 </div>
             </div>
 
@@ -244,7 +250,7 @@ require '../database/config.php';
             <aside class="card about js-global">
 
                 <h3>Inteligência espacial</h3>
-                <span>Está ligada a compreender, reconhecer e criar imagens de maneira distinta.</span>
+                <span>Está ligada a compreender, reconhecer e criar Img de maneira distinta.</span>
             </aside>
 
             <aside class="card about js-global">
