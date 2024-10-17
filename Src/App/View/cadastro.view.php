@@ -76,25 +76,6 @@
 
                     </div>
 
-                    <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Entrar como: </h6>
-                        </div>
-
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input type="radio" id="estudante" name="gender">
-                                <label for="estudante">Usuário</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input type="radio" id="profissional" name="gender">
-                                <label for="profissional">Administrador</label>
-                            </div>
-                        </div>
-                    </div>
-
-
                     <aside class="continue-button">
                         <button>Cadastrar</button>
                     </aside>
