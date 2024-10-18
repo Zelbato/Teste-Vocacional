@@ -1,9 +1,10 @@
-@media only screen and (max-device-width:1170px){
-    .card-titulo h1{
-     align-items: center;
-     font-size: 18px;
+@media only screen and (max-device-width:1170px) {
+    .card-titulo h1 {
+        align-items: center;
+        font-size: 18px;
     }
 }
+
 @media screen and (max-width: 660px) {
     section.cards {
         width: 100%;
@@ -22,7 +23,7 @@
         margin-bottom: 20px;
     }
 
-   
+
 
     .cards aside.card span {
         font-weight: 300;
@@ -44,10 +45,13 @@
     section.cards aside.card button {
         font-size: 70%;
     }
-    .card-titulo h1{
-text-align: center;
+
+    .card-titulo h1 {
+        text-align: center;
+        font-size: 35px;
     }
-    .cards span{
+
+    .cards span {
         text-align: center;
     }
 }

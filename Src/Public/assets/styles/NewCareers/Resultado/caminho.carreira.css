@@ -53,3 +53,15 @@ section.ver-caminho {
     text-align: center;
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos móveis */
+
+    section.ver-caminho {
+        box-shadow: none;
+    }
+
+    .ver-caminho div {
+        box-shadow: none;
+    }
+}

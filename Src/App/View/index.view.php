@@ -51,15 +51,15 @@ require '../database/config.php';
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
@@ -67,7 +67,7 @@ require '../database/config.php';
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" alt="image">
+                <img class="icon" id="icon-mobile" src="../../Public/assets/Img/cardapio.png" >
             </label>
         </div>
 
@@ -84,23 +84,15 @@ require '../database/config.php';
             </li>
             <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
             <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
-            
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
+
             <form action="../Services/deletar.php" method="POST">
-                
-                <li> <button>Excluir</button> </li>
-                
+
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+
             </form>
-            
-            <li><a id="mobile-excluir" href="login.view.php">Entrar</a></li>
-            
-            <form action="../Services/deletar.php" method="POST">
-                
-                <li> <button>Excluir</button> </li>
-                
-            </form>
-            
-            <li><a id="mobile-excluir" href="login.view.php">Entrar</a></li>
-            <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
@@ -108,79 +100,67 @@ require '../database/config.php';
             </a>
 
             <div class="tooltip">
-                <div class="position"> 
-                <div class="position"> 
+                <div class="position">
+                    <div class="position">
 
-                    <a href="login.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Faça seu login<br>
-                                Clique aqui!
-                            </span>
-                    <a href="login.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Faça seu login<br>
-                                Clique aqui!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                Entrar <br>
-                            </span>
-                        </div>
-                    </a>
-                            <span class="menu-item-content-subtitle">
-                                Entrar <br>
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                        <br>
-
-                        <a href="curriculo.index.view.php">
+                        <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Crie seu Curriculo<br>
+                                    Faça seu login<br>
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
+                                    Entrar <br>
                                 </span>
                             </div>
                         </a>
 
                         <br>
 
-                        <a href="caminho.resultado.view.php">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Veja as carreiras obtidas<br>
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta <br>
+                                Clique aqui!
+                            </span>
 
-                                </span>
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
 
-                                <span class="menu-item-content-subtitle">
-                                    Ver Carreiras <br>
-                                </span>
-                            </div>
-                        </a>
+                            <br>
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo<br>
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo <br>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <br>
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas<br>
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras <br>
+                                    </span>
+                                </div>
+                            </a>
 
 
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -235,7 +215,7 @@ require '../database/config.php';
             <div class="sobre-content">
 
                 <div class="image-content">
-                    <img src="../../Public/assets/Img/estudante-formando.png" alt="image">
+                    <img src="../../Public/assets/Img/estudante-formando.png" alt="">
                 </div>
 
                 <div class="paragrafo">

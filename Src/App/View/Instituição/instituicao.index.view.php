@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 require '../../database/config.php';
@@ -64,28 +64,48 @@ if (!isset($_SESSION['id_instituicao'])) {
             </li>
             <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-excluir" href="" id="eventos">Excluir conta</a></li>
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+
+            </form>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
             <div class="tooltip">
                 <div class="position">
-                
+
+                <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login<br>
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Entrar <br>
+                                </span>
+                            </div>
+                        </a>
+
+                        <br>
+
                     <a href="instituicao.login.view.php">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                               Deseja sair da Conta<br>
+                                Deseja sair da Conta<br>
                                 Clique aqui!
                             </span>
 
                             <span class="menu-item-content-subtitle">
 
                                 Desconectar-se <br>
-                              
+
                             </span>
                         </div>
                     </a>
@@ -116,16 +136,16 @@ if (!isset($_SESSION['id_instituicao'])) {
 
             <div class="pgf">
                 <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-               <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
             </div>
 
             <form action="../../Services/deletar.php" method="POST">
                 <div id="btn-pop">
-                    <button  class="btn-default">
+                    <button class="btn-default">
                         <a href="">Cancelar</a></button>
                     <button type="submit" class="close excluir">Excluir</button>
                 </div>
-                </form>
+            </form>
         </div>
     </div>
     <main class="main">
@@ -138,20 +158,20 @@ if (!isset($_SESSION['id_instituicao'])) {
             </div>
 
             <aside class="card contact js-global">
-                <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
+                <img src="../../../Public/assets/Img/Webinar-pana.png" alt="estudante-formando">
                 <h3>Gerenciar Cursos</h3>
                 <span>
                 </span>
                 <a href="./instituicao.cursos.view.php"><button>Entrar</button></a>
             </aside>
 
-            <aside class="card contact js-global">
+            <!-- <aside class="card contact js-global">
                 <img src="../../../Public/assets/Img/ilustracao-do-conceito-do-projeto-da-faculdade.png" alt="estudante-formando">
                 <h3>Meus Cursos</h3>
                 <span>
                 </span>
                 <a href="instituicao.MeuCurso.php"><button>Entrar</button></a>
-            </aside>
+            </aside> -->
 
         </section>
 
@@ -217,23 +237,23 @@ if (!isset($_SESSION['id_instituicao'])) {
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
     </script>
-    
+
     <script src="../../../Public/assets/Global/Js/instituicaoGlobal.js"></script>
     <script src="../../../Public/assets/Js/instituicao.index.js"></script>
 </body>

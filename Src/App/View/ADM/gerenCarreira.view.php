@@ -54,8 +54,8 @@ $result = $conexao->query("SELECT * FROM carreira");
     <!-- Inclui a biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-      <!--Google Fonts-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -63,7 +63,7 @@ $result = $conexao->query("SELECT * FROM carreira");
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Google Fonts-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -72,76 +72,93 @@ $result = $conexao->query("SELECT * FROM carreira");
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
 
-<div class="menu-mobile">
-    <label for="chk1" onclick="menu()">
-        <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
-    </label>
-</div>
-
-<input type="checkbox" name="" id="chk1">
-
-<div class="logo">
-    <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-</div>
-
-<ul>
-    <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-    <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
-                class="teste">Teste Vocacional</span></a>
-    </li>
-    <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-
-    <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-    <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
-    <li><a class="mobile-excluir" href="../curriculo.view.php" id="eventos">Criar curriculo</a></li>
-
-    <a href="#" class="menu-button">
-        <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-    </a>
-
-    <div class="tooltip">
-        <div class="position">
-            <a href="../cadastro.view.php">
-
-
-                <div class="menu-item-content">
-                    <span class="menu-item-content-title">
-                        Ainda não se cadastrou?<br>
-                        Clique aqui para se cadastrar!
-                    </span>
-
-                    <span class="menu-item-content-subtitle">
-
-                        Cadastrar-se <br>
-                        Login
-                    </span>
-                </div>
-            </a>
-
-            <br>
-
-            <div class="menu-item-content">
-                <span class="menu-item-content-title">
-                    Deseja excluir sua conta <br>
-                    Clique aqui para finalizar!
-                </span>
-
-                <span id="myBtn" class="menu-item-content-subtitle">
-                    excluir conta
-                </span>
-
-                <br>
-               
-            </div>
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
+            </label>
         </div>
 
-</ul>
-</header>
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home" href="" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+                        class="teste">Teste Vocacional</span></a>
+            </li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
+
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"><button>Excluir</button></li>
+
+            </form>
+
+            <a href="#" class="menu-button">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            </a>
+
+            <div class="tooltip">
+                <div class="position">
+                    <a href="../login.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Clique aqui para fazer seu login!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Login
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <a href="../login.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se <br>
+
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                            Deseja excluir sua conta <br>
+                            Clique aqui para finalizar!
+                        </span>
+                        <span id="myBtn" class="menu-item-content-subtitle">
+                            excluir conta
+                        </span>
+                    </div>
+                </div>
+
+        </ul>
+    </header>
 
     <main class="main">
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
@@ -151,15 +168,15 @@ $result = $conexao->query("SELECT * FROM carreira");
 
                 <div class="pgf">
                     <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                   <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                    <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
                 </div>
 
                 <form action="../../Services/deletar.php" method="POST">
-                <div id="btn-pop">
-                    <button  class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
-                </div>
+                    <div id="btn-pop">
+                        <button class="btn-default">
+                            <a href="">Cancelar</a></button>
+                        <button type="submit" class="close excluir">Excluir</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -188,8 +205,8 @@ $result = $conexao->query("SELECT * FROM carreira");
         </section>
     </main>
 
-     <!--RODAPÉ-->
-     <footer>
+    <!--RODAPÉ-->
+    <footer>
         <div class="boxs">
             <h2>Logo</h2>
 
@@ -248,17 +265,17 @@ $result = $conexao->query("SELECT * FROM carreira");
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }

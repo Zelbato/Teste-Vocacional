@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/styles/curriculo/Index.css">
+    <link rel="stylesheet" href="../../Public/assets/styles/curriculo/Index.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -69,14 +69,22 @@
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="" id="eventos">Excluir conta</a></li>
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -84,54 +92,66 @@
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
 
+                        <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login<br>
+                                    Clique aqui!
+                                </span>
 
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
+                                <span class="menu-item-content-subtitle">
+                                    Entrar <br>
+                                </span>
+                            </div>
+                        </a>
 
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <a href="login.view.php">
-
+                        <br>
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja sair da Conta<br>
+                                Deseja excluir sua conta <br>
                                 Clique aqui!
                             </span>
 
-                            <span class="menu-item-content-subtitle">
-
-                                Desconectar-se <br>
-
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
                             </span>
+
+                            <br>
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo<br>
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo <br>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <br>
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas<br>
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras <br>
+                                    </span>
+                                </div>
+                            </a>
+
+
                         </div>
-                    </a>
-
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -276,6 +296,7 @@
 
     </div>
 
+    <script src="../../Public/assets/Js/index.js"></script>
 
     <!-- <script src="../../Public/assets/Js/index_adm.js"></script> -->
 

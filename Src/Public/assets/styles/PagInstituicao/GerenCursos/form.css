@@ -1,0 +1,259 @@
+/* Estilos gerais */
+/* body {
+    background-color: #f4f7fa; /* Um tom suave de cinza claro *
+    color: #333; /* Cor do texto *
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+} */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+    color: var(--azul);
+    /* Azul vibrante */
+    text-align: center;
+}
+
+/* h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #495057; /* Cinza médio *
+} */
+
+/* Formulário */
+form {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px 0 80px;
+}
+
+/* Labels e campos de entrada */
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+    height: 100px;
+    /* Altura padrão */
+}
+
+/* Estilo para botões */
+button[type="submit"] {
+    background-color: var(--azul);
+    /* Azul vibrante */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Azul escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+.meuCurso {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+}
+
+.curso-content {
+    border: 1px solid #ccc;
+    padding:30px;
+    background-color: #f3f6f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.curso-content img {
+    width: 300px;
+    max-width: 100%;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.descricao p {
+    margin: 10px 0;
+}
+
+.btn-pop {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .meuCurso {
+        grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .meuCurso {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+}
+
+.nome_curso {
+    margin: 10px 0;
+    border-bottom: 3px solid var(--azul);
+    /* Borda azul */
+}
+
+.curso-content h3 strong {
+    font-size: 20px;
+
+    color: #343a40;
+    /* Cinza escuro */
+}
+
+.curso-content strong {
+    font-size: 18px;
+    color: #343a40;
+}
+
+.descricao p {
+    font-size: 16px;
+    color: var(--preto);
+}
+
+.descricao img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Imagem do curso */
+img {
+    border-radius: 5px;
+    max-width: 500px;
+    height: 200px;
+}
+
+button.editar-btn,
+button.delet-btn {
+    background-color: var(--azul);
+    border: none;
+    border-radius: 8px;
+    width: 125px;
+    padding: 10px;
+    transition: all .3s;
+}
+
+button.editar-btn:hover {
+    background: var(--azulHover);
+}
+
+button.delet-btn:hover {
+    background-color: var(--vermelho);
+}
+
+.btn-pop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 10px;
+
+}
+
+/* Links de edição e exclusão */
+a {
+    color: var(--white);
+    /* Azul vibrante */
+    text-decoration: none;
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
+/* Mensagens de erro/sucesso */
+.message {
+    color: #28a745;
+    /* Verde */
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-device-width:1170px){
+    .meuCurso{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px ;
+        background-color: transparent;
+    }
+
+    .curso-content{
+        background-color: transparent;
+        border: 1px solid var(--azul);   
+    }
+
+    .curso-content .img-curso {
+        width: 100%;
+        height: 150px;
+    }
+
+    .curso-content h3 strong{
+        font-size: 22px;
+    }
+
+    form{
+        box-shadow: none;
+       background-color: transparent;
+    }
+
+    h1{
+        font-size: 31px;
+    }
+
+    button.editar-btn,
+button.delet-btn {
+    margin: 10px;
+}
+    }

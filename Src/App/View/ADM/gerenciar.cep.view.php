@@ -102,17 +102,23 @@ $conexao->close();
         </div>
 
         <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
             <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
 
             <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> Cadastrar-se ou <br> Excluir conta --
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"><button>Excluir</button></li>
+
+            </form>
+
+           <!-- <a href="#" class="menu-button">
+                <i class="fa-solid fa-user"></i> <!-Cadastrar-se ou <br> Excluir conta --
             </a>
 
             <div class="tooltip">
@@ -145,10 +151,10 @@ $conexao->close();
                             excluir conta
                         </span>
                     </div>
-                </div>
+                </div>-->
 
         </ul>
-    </header> 
+    </header>
 
     <main class="main">
         <div id="myModal" class="modal">
@@ -179,7 +185,7 @@ $conexao->close();
             <form class="form" method="post">
                 <label for="cep">CEP </label>
                 <input type="text" id="cep" maxlength="9" name="cep" placeholder="Digite o CEP" required><br>
-                
+
 
                 <button type="submit">Adicionar CEP</button>
             </form>
@@ -188,18 +194,24 @@ $conexao->close();
         <section class="careers-list">
             <h2 id="text">CEPs Existentes</h2>
             <?php if ($ceps->num_rows > 0): ?>
-                <div class="ul_existente">
+
+                <div class="existente">
                     <?php while ($cep = $ceps->fetch_assoc()): ?>
-                        <div class="li_existente">
+                        <div class="existente-content">
+
                             <?php echo htmlspecialchars($cep['cep_numero']); ?>
+
                             <!-- Formulário para deletar o CEP -->
                             <form method="post" style="display:inline;">
                                 <input type="hidden" name="delete_cep_id" value="<?php echo $cep['id_cep']; ?>">
                                 <button type="submit">Deletar</button>
                             </form>
-                    </div>
+                        </div>
+
                     <?php endwhile; ?>
-                    </div>
+
+                </div>
+
             <?php else: ?>
                 <p>Nenhum CEP cadastrado.</p>
             <?php endif; ?>
@@ -207,6 +219,57 @@ $conexao->close();
             <a href="interligar.cep.view.php">Interligação</a>
         </section>
     </main>
+
+    <!--RODAPÉ-->
+    <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+
+            <div class="logo">
+                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+            </div>
+
+
+            <!-- <h2>Criadores</h2>
+         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
+         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
+         <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
+         <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="">Home </a></li>
+                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="../termos.view.php">Termos de uso </a></li>
+                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+            </ul>
+        </div>
+
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
+
+    </div>
+
+
+    <script src="../../../Public/assets/Js/index_adm.js"></script>
 
     <script>
         // Get the modal
@@ -235,6 +298,7 @@ $conexao->close();
             }
         }
     </script>
+
 </body>
 
 </html>

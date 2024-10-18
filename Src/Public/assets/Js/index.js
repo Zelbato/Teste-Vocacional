@@ -9,15 +9,16 @@ menuButton.addEventListener("click", () => {
 
 
 function menu() {
-
     let menuMobile = document.querySelector(".menu-mobile");
-    if (menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "../Img/cardapio.png";
-    } else {
-        menuMobile.classList.add('open');
-        document.querySelector(".icon").src = "../Img/botao-excluir.png";
-    }
+    // let icon = document.querySelector('.icon');
+
+    // if (menuMobile.classList.contains('open')) {
+    //     menuMobile.classList.remove('open');
+    //     icon.src = "Img/cardapio.png"; // Update with the path to the closed icon
+    // } else {
+    //     menuMobile.classList.add('open');
+    //     icon.src = "Img/botao-excluir.png"; // Update with the path to the open icon
+    // }
 }
 
 /*

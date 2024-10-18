@@ -66,8 +66,13 @@ if (!isset($_SESSION['id_usuario'])) {
             <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
             <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"><button>Excluir</button></li>
+
+            </form>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->

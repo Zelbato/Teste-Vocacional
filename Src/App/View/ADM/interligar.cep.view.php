@@ -92,24 +92,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <form method="post">
                     <h2>Selecione os CEPs:</h2>
-                    <ul class="ul-select">
+                    <div class="Uselect">
                         <?php while ($cep = $cep_result->fetch_assoc()): ?>
-                            <li class="li-select">
+                            <div class="Iselect">
                                 <input type="checkbox" name="cep_selecionado[]" value="<?php echo $cep['id_cep']; ?>">
                                 <?php echo htmlspecialchars($cep['cep_numero']); ?>
-                            </li>
+                            </div>
                         <?php endwhile; ?>
-                    </ul>
+                    </div>
 
                     <h2>Instituições disponíveis:</h2>
-                    <ul class="ul-select">
+                    <div class="Uselect">
                         <?php while ($instituicao = $result->fetch_assoc()): ?>
-                            <li class="li-select">
+                            <div class="Iselect">
                                 <input type="checkbox" name="instituicao_proxima[]" value="<?php echo $instituicao['id_instituicao']; ?>">
                                 <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?> - CEP: <?php echo htmlspecialchars($instituicao['cep_numero']); ?>
-                            </li>
+                        </div>
                         <?php endwhile; ?>
-                    </ul>
+                    </div>
 
                     <button type="submit">Salvar Instituições Próximas</button>
                 </form>

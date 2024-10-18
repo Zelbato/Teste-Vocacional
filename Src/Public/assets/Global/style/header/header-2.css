@@ -28,7 +28,7 @@ header .logo {
 header .logo a {
     color: var(--white);
     font-family: var(--font);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     text-decoration: none;
 }
@@ -40,6 +40,7 @@ header .gradient {
 
 header .teste {
     color: var(--azul);
+    font-size: 18px;
 }
 
 header ul {
@@ -103,7 +104,7 @@ header .mobile-entrar, .mobile-excluir {
   }
   
 
-@media(max-width:800px) {
+@media(max-width:805px) {
 
 
     header {
@@ -124,6 +125,39 @@ header .mobile-entrar, .mobile-excluir {
         align-items: center;
         transition: right 0.5s linear;
         display: flex;
+    }
+
+    header ul li button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-family: var(--font);
+        font-size: 18px;
+    }
+
+    header ul li button:hover {
+        color: var(--azul);
+    }
+
+    header ul li a:hover {
+        color: var(--azul);
+    }
+
+    header ul li a::after {
+        display: none;
+    }
+
+    header .logo {
+        margin: 0 12%;
+    }
+
+    header .logo a{
+        font-size: 35px;
+    }
+
+    header .gradient {
+        font-size: 30px;
     }
 
     header .menu-mobile {

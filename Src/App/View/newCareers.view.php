@@ -192,7 +192,7 @@ while ($row = $result->fetch_assoc()) {
                         <div class="question" id="question-<?php echo $question_id; ?>">
 
                             <div class="title">
-                                <p><?php echo htmlspecialchars($question['text']); ?>?</p>
+                                <p><?php echo htmlspecialchars($question['text']); ?></p>
                             </div>
 
                             <div class="options">

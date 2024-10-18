@@ -59,7 +59,7 @@ a.add-button:hover {
 /* Link de Editar */
 .edit-link {
     background-color: var(--azul); /* Azul para o link de editar */
-    margin-right: 20px; /* Margem direita */
+    margin-left: auto; /* Margem esquerda */
 }
 
 .edit-link:hover {
@@ -68,7 +68,7 @@ a.add-button:hover {
 
 /* Botão de Excluir */
 .delete-button {
-    margin-left: 45%;
+    margin-left: auto;
     background-color: #dc3545; /* Vermelho para o botão de excluir */
     border: none; /* Remove borda padrão */
     cursor: pointer; /* Muda cursor ao passar o mouse */
@@ -82,8 +82,10 @@ a.add-button:hover {
 
     .main {
         width: 100%;
+        height: auto;
         max-width: 500px;
         padding: 20px;
+        box-shadow: none;
     }
 
     .questions-table {

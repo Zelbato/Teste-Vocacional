@@ -84,14 +84,19 @@ li.li-carreiras:last-child {
     section.carreiras-obtidas{
         box-shadow: none;
         background: transparent;
+        margin: 20px;
+        max-width: 600px;
+        padding: 20px;
     }
 
     li.li-carreiras{
-        max-width: 550px;
+        margin-bottom: 20px;
         padding: 20px;
         background: transparent;
         border: 1px solid var(--azul);
         text-align: center;
+        display: flex;
+        align-items: center;
     }
 
     li.li-carreiras strong {
