@@ -161,6 +161,7 @@ if ($result->num_rows == 0) {
                 ?>
             </h2>
 
+            <aside class="cursos-content">
             <h3>Instituições que oferecem cursos para esta carreira:</h3>
             <?php if ($instituicoes): ?>
                 <ul>
@@ -169,32 +170,34 @@ if ($result->num_rows == 0) {
                             <strong>
                                 Instituição:
                                 <!-- Nome da instituição como link que redireciona para a URL -->
-                               <b> <?php if (!empty($instituicao['url'])): ?></b>
-                                    <div class="link-url">
-                                        <h3> <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
-                                                <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
-                                            </a> </h3>
-                                    </div>
+                                <b> <?php if (!empty($instituicao['url'])): ?></b>
+                                <div class="link-url">
+                                    <h3> <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
+                                            <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
+                                        </a> </h3>
+                                </div>
 
-                                    <div class="description">
-
-                                    <?php else: ?>
-                                        <!-- Caso não tenha URL cadastrada, apenas exibe o nome da instituição -->
-                                        <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
-                                    <?php endif; ?>
+                            <?php else: ?>
+                                <!-- Caso não tenha URL cadastrada, apenas exibe o nome da instituição -->
+                                <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
+                            <?php endif; ?>
                             </strong>
 
 
-                            <strong> Curso: </strong>
-                            <p id="text"> <?php echo htmlspecialchars($instituicao['nome_curso']); ?> </p>
+                            <div class="description">
 
-                            <?php if (!empty($instituicao['foto_curso'])): ?>
-                                <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" width="200"><br>
-                            <?php endif; ?>
+                                <strong> Curso: </strong>
+                                <p id="text"> <?php echo htmlspecialchars($instituicao['nome_curso']); ?> </p>
 
-                            <strong> Duração: </strong> <p id="text"> <i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?> </p>
+                                <?php if (!empty($instituicao['foto_curso'])): ?>
+                                    <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" width="200"><br>
+                                <?php endif; ?>
 
-                            <strong> Descrição: </strong> <p> <?php echo htmlspecialchars($instituicao['descricao']); ?> </p>
+                                <strong> Duração: </strong>
+                                <p id="text"> <i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?> </p>
+
+                                <strong> Descrição: </strong>
+                                <p> <?php echo htmlspecialchars($instituicao['descricao']); ?> </p>
 
                             </div>
                         </li>
@@ -203,6 +206,7 @@ if ($result->num_rows == 0) {
             <?php else: ?>
                 <p>Nenhuma instituição próxima foi encontrada para essa carreira.</p>
             <?php endif; ?>
+            </aside>
         </section>
     </main>
 
