@@ -4,10 +4,11 @@ session_start();
 require '../../database/config.php';
 // require '../../Services/desconectar.php';
 
-// Verifica se a instituição está logada
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: ../login.view.php");
-    exit();
+
+if ($_SESSION['nivel'] = 'admin') {
+ 
+} else {
+    header("Location: index.view.php");
 }
 
 ?>
