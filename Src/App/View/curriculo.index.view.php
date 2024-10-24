@@ -237,6 +237,31 @@
                         em um currículo, o candidato deve pôr em qual área ele já trabalhou, função e o tempo
                         que ele ficou trabalhando.
                     </p>
+                    <br><br><br><br><br>
+
+<h3> Habilidades</h3>
+<p>
+Listar as habilidades em um currículo serve para mostrar ao gerente ou quem estiver contratando, 
+o que você pode trazer à equipe que deseja entrar, e o contratante acaba por visualizar como você
+ pode contribuir para o time, com seus pontos fortes.
+</p>
+<br><br><br><br><br>
+
+<h3> Formação </h3>
+<p>
+Serve para mostrar ao empregador que voce tem conhecimento teórico para a função a qual deseja 
+ingressar, assim a sua formação serve para mostrar que você tem conhecimento em uma determinada 
+área, e concluiu a faculdade ou curso.
+</p>
+
+<br><br><br><br><br>
+
+<h3> Telefone, Email e Endereço</h3>
+<p>
+Eles servem para caso o contratante se interesse pelo seu currículo, assim ele sabe como entrar em 
+contanto e onde você mora para solicitar mais informações, marcar uma entrevista ou até mesmo oferecer a vaga ao 
+candidato.
+</p>
 
                 </div>
             </div>

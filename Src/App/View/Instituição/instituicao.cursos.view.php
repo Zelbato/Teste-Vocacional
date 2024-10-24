@@ -226,6 +226,38 @@ $result = $stmt->get_result();
 
             <?php endwhile; ?>
         </div>
+        <section class="sobre js-global">
+
+<div class="sobre-content">
+
+    <div class="image-content">
+        <img src="../../Public/assets/Img/Job_hunt_pana.svg" alt="image">
+    </div>
+
+    <div class="paragrafo">
+        <h3>O que é a descrição de um curso?</h3>
+        <p>
+        É um breve resumo que geralmente contém informações sobre o que vai ser ensinado,
+         as habilidades que os alunos terão ao concluir o curso e como ele vai ser estruturado. 
+         Também pode ser mencionado os pre requisitos necessários para adentrar ao curso e os benefícios 
+         que obterão após a conclusão.
+        </p>
+
+        <br><br><br><br><br>
+        <h3>O que é a duração?</h3>
+        <p>
+        É quanto tempo vai durar, ou seja, um ano, dois anos ou mais, pode conter a descrição de como 
+        vai ser divido o curso anualmente, 4 bimestres, 2 semestres, 3 bimestres etc...
+        </p>
+
+        <br><br><br><br><br>
+        <h3>O que é a carreira?</h3>
+        <p>
+        A carreira é para qual área específica o curso vai te levar, ou seja, medicina, 
+        análise e desenvolvimento de sistemas, assim deixa explicito para quem for se candidatar
+         ao curso para qual área ele entrará.
+        </p>
+
 
     </main>
 
