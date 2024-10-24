@@ -170,6 +170,7 @@ if (!$resul) {
                     <li>
                         <?php echo htmlspecialchars($curriculo['nome']); ?></li> <li>
                         <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
+                        <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Ver</a>
                         <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">baixar</a>
                     </li>
                 <?php endwhile; ?>

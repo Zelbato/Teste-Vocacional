@@ -149,6 +149,9 @@ if ($result->num_rows == 0) {
             <div class="title">
                 <h1>Resultado do Teste Vocacional</h1>
             </div>
+
+            <br>
+            
             <h2>Carreira sugerida:
                 <?php
                 // Consulta para pegar o nome da carreira baseado no ID da carreira
@@ -161,8 +164,10 @@ if ($result->num_rows == 0) {
                 ?>
             </h2>
 
-            <aside class="cursos-content">
+            <br>
+
             <h3>Instituições que oferecem cursos para esta carreira:</h3>
+            <aside class="cursos-content">
             <?php if ($instituicoes): ?>
                 <ul>
                     <?php foreach ($instituicoes as $instituicao): ?>
