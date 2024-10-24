@@ -192,7 +192,7 @@ $result = $stmt->get_result();
                 ?>
             </select><br>
 
-            <label for="foto_curso">Foto do Curso:</label>
+            <label for="foto_curso">Foto da Instituição:</label>
             <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
 
             <button type="submit">Adicionar Curso</button>

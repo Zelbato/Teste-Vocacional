@@ -39,109 +39,162 @@ section.resultado {
     margin-bottom: 20px;
 }
 
-.resultado .cursos-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+@media screen and (max-width: 768px) {
+    .resultado .title h1 {
+        font-size: 25px;
+        }
+        .resultado h2 {
+            font-size: 20px;
+            }
+    
 }
 
-.resultado h3 {
-    font-size: 23px;
-    color: var(--azul);
-    /* Destaque em azul para o subtítulo */
-    margin-bottom: 15px;
-    text-align: left;
-    font-weight: 600;
-}
-
-
-.resultado .link-url h3 {
-    border-bottom: 2px solid var(--azul);
-}
-
-.resultado .description strong {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.resultado .description p {
+.cursos-content {
     display: flex;
-    font-size: 15px;
-    color: var(--preto);
-    text-align: left;
-}
-
-.resultado .description img {
-    width: 95px;
-    height: 95px;
-    margin: auto 5px auto 0;
-}
-
-b {
-    color: rgb(12, 50, 119);
-    font-weight: 400;
-}
-
-.resultado ul {
-    list-style: none;
-    padding: 0;
-    
-}
-
-.resultado ul li {
-    background-color: #fff;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    /* Cor de fundo do card */
+    border: 1px solid #ccc;
+    border-left: 3px solid var(--azul);
     border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid var(--azul);
-    
-    /* Destaque na borda esquerda */
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
 }
 
-.resultado ul li strong {
-    font-size: 1.3rem;
-    color: var(--azul);
-    display: block;
-    margin-bottom: 10px;
-}
-
-#text {
-    font-size: 1rem;
-    font-weight: 600;
-    gap: 9px;
+.image-container {
+    display: flex;
+    flex-direction: row;
+    /* Exibe as imagens lado a lado */
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    /* Espaço entre as imagens */
+    margin-top: 0px;
 }
+
+.curso-img {
+    display: none; /*Back precisa funcionar*/
+    max-width: 100%;
+    height: auto;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+
+.curso-img,
+.instituicao-img {
+    max-width: 150px;
+    /* Define uma largura máxima para as imagens */
+    height: auto;
+    /* Mantém a proporção original da imagem */
+
+    /* Sombra suave */
+    transition: transform 0.3s ease;
+    /* Animação suave ao passar o mouse */
+}
+
+.curso-img:hover,
+.instituicao-img:hover {
+    transform: scale(1.05);
+    /* Aumenta a imagem levemente no hover */
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        /* Em telas menores, exibe as imagens uma embaixo da outra */
+    }
+}
+
+
+.card-description {
+    font-size: 18px;
+    color: var(--azul);
+    /* Cor do texto do card */
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.descricao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.description {
+    position: relative;
+    max-width: 100%;
+    /* Ajuste conforme o layout */
+}
+
+.full-description {
+    max-height: 80px;
+    /* Define a altura inicial visível */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    transition: max-height 0.5s ease;
+    line-height: 1.6;
+    /* Ajusta a altura da linha */
+}
+
+.full-description.expanded {
+    max-height: none;
+    /* Exibe todo o texto quando expandido */
+}
+
+.cursos-content h3 {
+    font-size: 25px;
+    color: var(--azul);
+    text-align: center;
+}
+
+.cursos-content h3 a {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 30px;
+}
+
+.cursos-content h3 a:hover {
+    color: var(--azulHover);
+    text-decoration: underline;
+}
+
+.cursos-content p.nome-fantasia {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--azul);
+
+}
+
+.card-body p {
+    color: var(--preto);
+    /* Texto em cor escura */
+    font-size: 14px;
+}
+
+
+
 
 i {
-    font-size: 25px;
+    font-size: 20px;
 }
 
-.resultado ul li a {
-    color: var(--azul);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
 
-.resultado ul li a:hover {
-    color: var(--vermelho);
-    /* ou var(--azulHover)*/
-}
-
-.resultado ul li img {
-    margin-top: 15px;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-.calendario img {
-    width: 15px;
-    height: 15px;
-}
 
 @media only screen and (max-device-width:1170px) {
 
@@ -202,17 +255,3 @@ i {
         align-items: center;
     }
 }
-
-/* .resultado ul li p {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-    line-height: 1.6;
-}
-
-.resultado p {
-    font-size: 1.2rem;
-    color: #666;
-    text-align: center;
-    margin-top: 20px;
-} */

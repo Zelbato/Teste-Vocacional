@@ -151,7 +151,7 @@ if ($result->num_rows == 0) {
             </div>
 
             <br>
-            
+
             <h2>Carreira sugerida:
                 <?php
                 // Consulta para pegar o nome da carreira baseado no ID da carreira
@@ -163,55 +163,66 @@ if ($result->num_rows == 0) {
                 echo htmlspecialchars($carreira_nome);
                 ?>
             </h2>
+            <br>
+            <h3 class="career-ofec">Instituições que oferecem cursos para esta carreira:</h3>
 
             <br>
 
-            <h3>Instituições que oferecem cursos para esta carreira:</h3>
             <aside class="cursos-content">
-            <?php if ($instituicoes): ?>
-                <ul>
-                    <?php foreach ($instituicoes as $instituicao): ?>
-                        <li>
-                            <strong>
-                                Instituição:
-                                <!-- Nome da instituição como link que redireciona para a URL -->
-                                <b> <?php if (!empty($instituicao['url'])): ?></b>
-                                <div class="link-url">
-                                    <h3> <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
-                                            <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
-                                        </a> </h3>
+                <?php if ($instituicoes): ?>
+                    <div class="cards-container">
+                        <?php foreach ($instituicoes as $instituicao): ?>
+                            <div class="card">
+                                <div class="card-header">
+                                    <!-- <strong>Instituição:</strong> -->
+                                    <?php if (!empty($instituicao['url'])): ?>
+                                        <h3>
+                                            <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
+                                                <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
+                                            </a>
+                                        </h3>
+                                    <?php else: ?>
+                                        <h3><?php echo htmlspecialchars($instituicao['nome_fantasia']); ?></h3>
+                                    <?php endif; ?>
                                 </div>
 
-                            <?php else: ?>
-                                <!-- Caso não tenha URL cadastrada, apenas exibe o nome da instituição -->
-                                <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?>
-                            <?php endif; ?>
-                            </strong>
+                                <div class="card-body">
+
+                                    <?php if (!empty($instituicao['foto_curso'])): ?>
+                                        <div class="image-container">
+                                            <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
+                                                <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
+                                                <img src="../../Public/assets/Img/etec_sfs.png" alt="Imagem da Instituição" class="instituicao-img">
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <!-- <strong>Curso:</strong> -->
+                                    <p class="nome-fantasia"><?php echo htmlspecialchars($instituicao['nome_curso']); ?></p>
+
+                                    <br>
+
+                                    <div class="card-description">
+                                        <div class="descricao">
+
+                                            <p><i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?></p>
 
 
-                            <div class="description">
+                                            <p><i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?></p>
+                                        </div>
 
-                                <strong> Curso: </strong>
-                                <p id="text"> <?php echo htmlspecialchars($instituicao['nome_curso']); ?> </p>
-
-                                <?php if (!empty($instituicao['foto_curso'])): ?>
-                                    <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" width="200"><br>
-                                <?php endif; ?>
-
-                                <strong> Duração: </strong>
-                                <p id="text"> <i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?> </p>
-
-                                <strong> Descrição: </strong>
-                                <p> <?php echo htmlspecialchars($instituicao['descricao']); ?> </p>
-
+                                        <strong>Descrição:</strong>
+                                        <p><?php echo htmlspecialchars($instituicao['descricao']); ?></p>
+                                    </div>
+                                </div>
                             </div>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else: ?>
-                <p>Nenhuma instituição próxima foi encontrada para essa carreira.</p>
-            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else: ?>
+                    <p>Nenhuma instituição próxima foi encontrada para essa carreira.</p>
+                <?php endif; ?>
             </aside>
+
         </section>
     </main>
 

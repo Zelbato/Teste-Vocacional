@@ -78,7 +78,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCursos/gerenciar.cursos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../Public/assets/styles/PagInstituicao/GerenCursos/gerenciar.cursos.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -119,7 +119,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
                 <?php endforeach; ?>
             </select><br>
 
-            <label for="foto_curso">Foto do Curso:</label>
+            <label for="foto_curso">Foto da Instituição:</label>
             <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
 
             <button type="submit">Salvar Alterações</button>
