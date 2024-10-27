@@ -1,26 +1,39 @@
-
 <?php
 require '../database/config.php';
 
-// Verificar conexão
-if ($conexao->connect_error) {
-    die("Conexão falhou: " . $conexao->connect_error);
+$id = $_GET['id'] ?? null;
+
+// Verifica se o ID foi passado
+if (!$id) {
+    echo "ID do currículo não foi fornecido!";
+    exit();
 }
 
-// Executar a consulta
-$resul = $conexao->query("SELECT * FROM curriculos");
-if (!$resul) {
-    die("Erro na consulta: " . $conexao->error);
+// Busca o currículo no banco de dados
+$stmt = $conexao->prepare("SELECT * FROM curriculos WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$curriculo = $result->fetch_assoc();
+$stmt->close();
+$conexao->close();
+
+// Verifica se o currículo foi encontrado
+if (!$curriculo) {
+    echo "Currículo não encontrado!";
+    exit();
 }
+
+// Verifica se a foto de perfil existe
+$foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : null;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../Public/assets/styles/curriculo/meuCurriculo.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -42,19 +55,93 @@ if (!$resul) {
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--Bootstrap-->
     <title>Teste Vocacional</title>
+    <title>Currículo de <?php echo htmlspecialchars($curriculo['nome']); ?></title>
+    <style>
+        @import '../../Public/assets/Global/style/index.css';
+        @import '../../Public/assets/Global/style/header/header-2.css';
+        @import '../../Public/assets/Global/style/footer/footer.css';
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: var(--font);
+            color: #333;
+            margin: 0;
+            background-color: #f4f7fa;
+        }
+
+        h1,
+        h2 {
+            color: #2a4d8f;
+            text-align: center;
+            border-bottom: 2px solid #2a4d8f;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #2a4d8f;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .info {
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            color: #2a4d8f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+
+        .section p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .label {
+            color: #2a4d8f;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photo img {
+            max-width: 150px;
+            border-radius: 50%;
+            border: 2px solid #2a4d8f;
+        }
+    </style>
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
     <header class="header">
@@ -163,111 +250,53 @@ if (!$resul) {
             </div>
         </div>
 
-        <section class="form-curriculo">
-            <h2>Currículos atuais</h2>
-            <ul>
-                <?php while ($curriculo = $resul->fetch_assoc()): ?>
-                    <li>
-                        <?php echo htmlspecialchars($curriculo['nome']); ?></li> <li>
-                        <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
-                        <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Curriculo</a>
-                        <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">baixar</a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
+        <main class="main">
+            <section class="curriculo">
+                <div class="curriculo-content">
+                    <article class="parte-1">
 
-            <?php
-            // Fechar a conexão
-            $conexao->close();
-            ?>
-        </section>
-    </main>
+                    </article>
 
+                    <article class="parte-2">
 
-    <!--Sobre Nós-->
+                    </article>
+                </div>
+            </section>
+        </main>
 
+        <h1><?php echo htmlspecialchars($curriculo['nome']); ?></h1>
 
-
-
-
-
-    <!--RODAPÉ-->
-    <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+        <?php if ($foto_perfil): ?>
+            <div class="photo">
+                <img src="<?php echo htmlspecialchars($foto_perfil); ?>" alt="Foto de Perfil">
             </div>
+        <?php endif; ?>
 
-
-            <!-- <h2>Criadores</h2>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="index.view.php">Home </a></li>
-                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="termos.view.php">Termos de uso </a></li>
-                <li><a href="politica.view.php">Política de Privacidade </a></li>
-            </ul>
+        <div class="section contact-info">
+            <div><span class="label">Nome:</span> <?php echo htmlspecialchars($curriculo['nome']); ?></div>
+            <div><span class="label">Endereço:</span> <?php echo htmlspecialchars($curriculo['endereco']); ?></div>
+            <div><span class="label">Email:</span> <?php echo htmlspecialchars($curriculo['email']); ?></div>
+            <div><span class="label">Telefone:</span> <?php echo htmlspecialchars($curriculo['telefone']); ?></div>
         </div>
 
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
+        <div class="section">
+            <h2>Experiência</h2>
+            <p><?php echo nl2br(htmlspecialchars($curriculo['experiencia'])); ?></p>
         </div>
-    </footer>
 
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
+        <div class="section">
+            <h2>Formação</h2>
+            <p><?php echo nl2br(htmlspecialchars($curriculo['formacao'])); ?></p>
+        </div>
 
-    </div>
+        <div class="section">
+            <h2>Habilidades</h2>
+            <p><?php echo htmlspecialchars($curriculo['habilidades']); ?></p>
+        </div>
 
-    <script src="../../Public/assets/js/index.js"></script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="Gerenciar.curriculo.php" style="color: #2a4d8f; text-decoration: none;">Voltar para Lista de Currículos</a>
+        </div>
 </body>
 
 </html>
