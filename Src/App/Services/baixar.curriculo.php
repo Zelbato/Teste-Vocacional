@@ -35,7 +35,7 @@ $html = '
             color: #333; 
             margin: 0; 
             padding: 20px;
-            background-color: #f4f7fa;
+            background-color: trasparent;
         }
         h1, h2 {
             color: #2a4d8f;
@@ -76,6 +76,7 @@ $html = '
         .photo {
             text-align: center;
             margin-bottom: 20px;
+            
         }
         .photo img {
             max-width: 150px;

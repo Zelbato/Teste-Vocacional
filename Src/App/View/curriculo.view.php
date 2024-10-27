@@ -30,15 +30,15 @@
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
     <header class="header">
@@ -71,51 +71,66 @@
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
 
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                        <br>
-
-                        <a href="">
+                        <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Deseja criar seu curriculo<br>
+                                    Faça seu login<br>
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
+                                    Entrar <br>
                                 </span>
                             </div>
                         </a>
+
+                        <br>
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta <br>
+                                Clique aqui!
+                            </span>
+
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
+
+                            <br>
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo<br>
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo <br>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <br>
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas<br>
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras <br>
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -159,17 +174,24 @@
                 <label for="endereco">Endereço:</label>
                 <input type="text" name="endereco" id="endereco" required><br><br>
 
-                <label for="experiencia">Experiência:</label><br>
-                <textarea name="experiencia" id="experiencia" required></textarea><br><br>
+            </form>
+        </section>
 
-                <label for="formacao">Formação:</label><br>
+
+        <section class="form-curriculo">
+            <form action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
+                <label for="experiencia">Experiência:</label>
+                <textarea name="experiencia" id="experiencia" required></textarea><br>
+
+                <label for="formacao">Formação:</label>
                 <textarea name="formacao" id="formacao" required></textarea><br><br>
 
                 <label for="habilidades">Habilidades:</label>
-                <input type="text" name="habilidades" id="habilidades"><br><br>
+                <textarea type="text" name="habilidades" id="habilidades"></textarea><br>
+                <!-- <input type="text" name="habilidades" id="habilidades"><br><br> -->
 
                 <label for="foto_perfil">Foto de Perfil:</label>
-                <input type="file" name="foto_perfil" id="foto_perfil"><br><br>
+                <input type="file" name="foto_perfil" id="foto_perfil"><br>
 
                 <button type="submit">Enviar Currículo</button>
             </form>

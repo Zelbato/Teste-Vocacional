@@ -1,33 +1,41 @@
-
 .main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 40px 20px;
     width: 100%;
     height: auto;
 }
 
+.main .form-curriculo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+
+}
+
 
 /* Estilização do formulário de currículo */
 form {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+    width: 100%;
+    max-width: 600px;
+    height: 550px;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
 }
 
 form label {
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 500;
     color: var(--azul);
     margin-top: 10px;
-    display: block;
+    display: flex;
 }
 
 form input[type="text"],
@@ -54,7 +62,7 @@ form textarea:focus {
 
 form textarea {
     resize: none;
-    height: 120px;
+    height: 60px;
 }
 
 form button {
@@ -74,15 +82,31 @@ form button {
 form button:hover {
     background-color: #164a86;
 }
-@media only screen and (max-device-width:700px){
-    form{
-        width: 70%;
+
+@media only screen and (max-device-width:700px) {
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: none;
+    }
+
+    .main .form-curriculo {
+        flex-direction: column;
+        max-width: 600px;
         height: auto;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
         box-shadow: none;
-      
+        background: none;
+        margin: auto;
+
     }
-    .main{
-        padding: 30px;
-    }
-  
+
 }
