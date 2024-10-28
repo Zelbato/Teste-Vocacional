@@ -56,14 +56,20 @@
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+        <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
+            <li class="mobile-excluir"> <button>Excluir</button> </li>
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->

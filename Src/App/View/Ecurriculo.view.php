@@ -53,15 +53,15 @@ if (isset($_GET['id'])) {
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
     <header class="header">
@@ -79,14 +79,20 @@ if (isset($_GET['id'])) {
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -94,53 +100,66 @@ if (isset($_GET['id'])) {
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
 
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                        <br>
-
-                        <a href="curriculo.view.php">
+                        <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Deseja criar seu curriculo<br>
+                                    Faça seu login<br>
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
+                                    Entrar <br>
                                 </span>
                             </div>
                         </a>
 
+                        <br>
 
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta <br>
+                                Clique aqui!
+                            </span>
+
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
+
+                            <br>
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo<br>
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo <br>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <br>
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas<br>
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras <br>
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -173,8 +192,8 @@ if (isset($_GET['id'])) {
         <!--Editar Curriculo -->
 
         <main class="main">
+            <!-- <h1>Editar Currículo</h1> -->
             <section class="Editar">
-                <h1>Editar Currículo</h1>
                 <?php if ($curriculo): ?>
                     <form action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?php echo htmlspecialchars($curriculo['id']); ?>">
@@ -194,79 +213,37 @@ if (isset($_GET['id'])) {
                         <label for="experiencia">Experiência:</label><br>
                         <textarea id="experiencia" name="experiencia" rows="5" required><?php echo htmlspecialchars($curriculo['experiencia']); ?></textarea><br>
 
-                        <label for="formacao">Formação:</label><br>
-                        <textarea id="formacao" name="formacao" rows="5" required><?php echo htmlspecialchars($curriculo['formacao']); ?></textarea><br>
-
-                        <label for="habilidades">Habilidades:</label>
-                        <input type="text" id="habilidades" name="habilidades" value="<?php echo htmlspecialchars($curriculo['habilidades']); ?>"><br>
-
-                        <!-- Exibir foto atual se existir -->
-                        <?php if (!empty($curriculo['foto_perfil'])): ?>
-                            <label for="foto_atual">Foto de Perfil Atual:</label><br>
-                            <img src="<?php echo htmlspecialchars($curriculo['foto_perfil']); ?>" alt="Foto de perfil" width="150"><br>
-                        <?php endif; ?>
-
-                        <label for="foto_perfil">Atualizar Foto de Perfil:</label>
-                        <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
-
-                        <button type="submit">Salvar Currículo</button>
                     </form>
-                <?php else: ?>
-                    <p>Currículo não encontrado.</p>
-                <?php endif; ?>
+            </section>
+
+            <section class="Editar">
+                <form action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
+                    <label for="formacao">Formação:</label><br>
+                    <textarea id="formacao" name="formacao" rows="5" required><?php echo htmlspecialchars($curriculo['formacao']); ?></textarea><br>
+
+                    <label for="habilidades">Habilidades:</label>
+                    <input type="text" id="habilidades" name="habilidades" value="<?php echo htmlspecialchars($curriculo['habilidades']); ?>"><br>
+
+                    <!-- Exibir foto atual se existir -->
+                    <?php if (!empty($curriculo['foto_perfil'])): ?>
+                        <label for="foto_atual">Foto de Perfil Atual:</label><br>
+                        <img src="<?php echo htmlspecialchars($curriculo['foto_perfil']); ?>" alt="Foto de perfil" width="150"><br>
+                    <?php endif; ?>
+
+                    <label for="foto_perfil">Atualizar Foto de Perfil:</label>
+                    <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
+
+                    <button type="submit">Salvar Currículo</button>
+                </form>
+            <?php else: ?>
+                <p>Currículo não encontrado.</p>
+            <?php endif; ?>
 
             </section>
         </main>
 
 
-        <!--RODAPÉ-->
-        <footer>
-            <div class="boxs">
-                <h2>Logo</h2>
-
-                <div class="logo">
-                    <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-                </div>
-
-
-                <!-- <h2>Criadores</h2>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-                </p>
-            </div>
-            <div class="boxs">
-                <h2>Inicio</h2>
-                <ul>
-                    <li><a href="index.view.php">Home </a></li>
-                    <li><a href="vocacao.view.php">Teste Vocacional </a></li>
-                    <li><a href="faculdade.view.php">Faculdades </a></li>
-                </ul>
-            </div>
-            <div class="boxs">
-                <h2>Suporte</h2>
-                <ul>
-                    <li><a href="termos.view.php">Termos de uso </a></li>
-                    <li><a href="politica.view.php">Política de Privacidade </a></li>
-                </ul>
-            </div>
-
-            <div class="boxs">
-                <h2>Sobre nós</h2>
-                <p>
-                    Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                    usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                    têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-                </p>
-            </div>
-        </footer>
-
-        <div class="footer">
-            <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-
-        </div>
-
+     
         <script src="../../Public/assets/js/index.js"></script>
         <script>
             // Get the modal
