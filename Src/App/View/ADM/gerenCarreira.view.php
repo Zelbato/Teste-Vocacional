@@ -10,18 +10,31 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
 // Adicionar carreira
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome_carreira'])) {
-    $nome_carreira = $_POST['nome_carreira'];
+    $nome_carreira = trim($_POST['nome_carreira']);
 
-    $stmt = $conexao->prepare("INSERT INTO carreira (nome) VALUES (?)");
+    // Verifica se a carreira já existe
+    $stmt = $conexao->prepare("SELECT COUNT(*) FROM carreira WHERE nome = ?");
     $stmt->bind_param("s", $nome_carreira);
-
-    if ($stmt->execute()) {
-        echo "<div class='alert success'>Carreira adicionada com sucesso!</div>";
-    } else {
-        echo "<div class='alert error'>Erro ao adicionar carreira: " . $stmt->error . "</div>";
-    }
-
+    $stmt->execute();
+    $stmt->bind_result($count);
+    $stmt->fetch();
     $stmt->close();
+
+    if ($count > 0) {
+        echo "<div class='alert error'>A carreira '$nome_carreira' já existe!</div>";
+    } else {
+        // Se a carreira não existir, insere no banco de dados
+        $stmt = $conexao->prepare("INSERT INTO carreira (nome) VALUES (?)");
+        $stmt->bind_param("s", $nome_carreira);
+
+        if ($stmt->execute()) {
+            echo "<div class='alert success'>Carreira adicionada com sucesso!</div>";
+        } else {
+            echo "<div class='alert error'>Erro ao adicionar carreira: " . $stmt->error . "</div>";
+        }
+
+        $stmt->close();
+    }
 }
 
 // Excluir carreira
@@ -45,35 +58,21 @@ $result = $conexao->query("SELECT * FROM carreira");
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Carreiras</title>
     <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCarreira/gerenciar.carreira.css">
-    <!-- Inclui a biblioteca de ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Google Fonts-->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--Bootstrap-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
     <header class="header">
-
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
                 <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
@@ -87,79 +86,51 @@ $result = $conexao->query("SELECT * FROM carreira");
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
-                        class="teste">Teste Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
-
+            <li><a id="inicio" href="">Inicio</a></li>
+            <li><a id="destaque" href="../vocacao.view.php"><span class="teste">Teste Vocacional</span></a></li>
+            <li><a id="eventos" href="../faculdade.view.php">Faculdades</a></li>
+            <li><a id="eventos" href="../cadastro.view.php">Cadastrar-se</a></li>
             <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
-
                 <li class="mobile-excluir"><button>Excluir</button></li>
-
             </form>
 
             <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i>
             </a>
 
             <div class="tooltip">
                 <div class="position">
                     <a href="../login.view.php">
-
-
                         <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Clique aqui para fazer seu login!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                Login
-                            </span>
+                            <span class="menu-item-content-title">Clique aqui para fazer seu login!</span>
+                            <span class="menu-item-content-subtitle">Login</span>
                         </div>
                     </a>
 
                     <br>
 
                     <a href="../login.view.php">
-
-
                         <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja sair da Conta<br>
-                                Clique aqui!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Desconectar-se <br>
-
-                            </span>
+                            <span class="menu-item-content-title">Deseja sair da Conta<br>Clique aqui!</span>
+                            <span class="menu-item-content-subtitle">Desconectar-se <br></span>
                         </div>
                     </a>
 
                     <br>
 
                     <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
+                        <span class="menu-item-content-title">Deseja excluir sua conta <br>Clique aqui para finalizar!</span>
+                        <span id="myBtn" class="menu-item-content-subtitle">excluir conta</span>
                     </div>
                 </div>
-
+            </div>
         </ul>
     </header>
 
     <main class="main">
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
                     <i class="fa-solid fa-triangle-exclamation"></i>
@@ -205,22 +176,12 @@ $result = $conexao->query("SELECT * FROM carreira");
         </section>
     </main>
 
-    <!--RODAPÉ-->
     <footer>
         <div class="boxs">
             <h2>Logo</h2>
-
             <div class="logo">
                 <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
             </div>
-
-
-            <!-- <h2>Criadores</h2>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
         </div>
         <div class="boxs">
             <h2>Inicio</h2>
@@ -237,20 +198,14 @@ $result = $conexao->query("SELECT * FROM carreira");
                 <li><a href="../politica.view.php">Política de Privacidade </a></li>
             </ul>
         </div>
-
         <div class="boxs">
             <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
+            <p>Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos usuários e indicar as redes de ensino mais próximas dele.</p>
         </div>
     </footer>
 
     <div class="footer">
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-
     </div>
 
     <script src="../../../Public/assets/js/index.js"></script>
@@ -261,17 +216,9 @@ $result = $conexao->query("SELECT * FROM carreira");
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
         // When the user clicks the button, open the modal 
         btn.onclick = function() {
             modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
@@ -284,5 +231,4 @@ $result = $conexao->query("SELECT * FROM carreira");
 
     <script src="../../Public/assets/Js/gerenciar_carreiras.js"></script>
 </body>
-
 </html>
