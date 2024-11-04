@@ -6,9 +6,9 @@ require '../../database/config.php';
 
 
 if ($_SESSION['nivel'] = 'admin') {
- 
+   
 } else {
-    header("Location: index.view.php");
+    header("Location: ../login.view.php");
 }
 
 ?>
@@ -97,7 +97,7 @@ if ($_SESSION['nivel'] = 'admin') {
 
                     <br>
 
-                    <a href="../login.view.php">
+                    <a href="../../Services/desconectar.php">
 
 
                         <div class="menu-item-content">
