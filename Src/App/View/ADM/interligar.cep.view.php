@@ -85,6 +85,75 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
+    <header class="header">
+
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+                <img class="icon" id="icon-mobile" src="../../../Public/assets/Img/cardapio.png" alt="">
+            </label>
+        </div>
+
+        <input type="checkbox" name="" id="chk1">
+
+        <div class="logo">
+            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+        </div>
+
+        <ul>
+            <li><a id="#home" href="" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+                        class="teste">Teste Vocacional</span></a>
+            </li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
+
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"><button>Excluir</button></li>
+
+            </form>
+
+            <a href="#" class="menu-button">
+                <i class="fa-solid fa-user"></i> 
+            </a>
+
+            <div class="tooltip">
+                <div class="position">
+                    <a href="cadastro.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Ainda não se cadastrou?<br>
+                                Clique aqui para se cadastrar!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Cadastrar-se <br>
+                                Login
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                            Deseja excluir sua conta <br>
+                            Clique aqui para finalizar!
+                        </span>
+                        <span id="myBtn" class="menu-item-content-subtitle">
+                            excluir conta
+                        </span>
+                    </div>
+                </div>
+
+        </ul>
+    </header>
+
     <main class="main">
         <div class="container">
             <section class="select-prox">
@@ -92,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <form method="post">
                     <h2>Selecione os CEPs:</h2>
-                    <div class="Uselect">
+                    <div class="Uselect scroll">
                         <?php while ($cep = $cep_result->fetch_assoc()): ?>
                             <div class="Iselect">
                                 <input type="checkbox" name="cep_selecionado[]" value="<?php echo $cep['id_cep']; ?>">
@@ -102,12 +171,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
 
                     <h2>Instituições disponíveis:</h2>
-                    <div class="Uselect">
+                    <div class="Uselect scroll-2">
                         <?php while ($instituicao = $result->fetch_assoc()): ?>
                             <div class="Iselect">
                                 <input type="checkbox" name="instituicao_proxima[]" value="<?php echo $instituicao['id_instituicao']; ?>">
                                 <?php echo htmlspecialchars($instituicao['nome_fantasia']); ?> - CEP: <?php echo htmlspecialchars($instituicao['cep_numero']); ?>
-                        </div>
+                            </div>
                         <?php endwhile; ?>
                     </div>
 

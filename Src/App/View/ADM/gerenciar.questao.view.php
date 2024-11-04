@@ -61,7 +61,7 @@ $result = $conexao->query($sql);
         </div>
 
         <ul>
-        <li><a id="#home" href="" id="inicio">Inicio</a></li>
+            <li><a id="#home" href="" id="inicio">Inicio</a></li>
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
@@ -117,7 +117,7 @@ $result = $conexao->query($sql);
 
     <div class="main">
 
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
@@ -127,29 +127,31 @@ $result = $conexao->query($sql);
 
                 <div class="pgf">
                     <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                   <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                    <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
                 </div>
 
                 <form action="../../Services/deletar.php" method="POST">
-                <div id="btn-pop">
-                    <button  class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
-                </div>
+                    <div id="btn-pop">
+                        <button class="btn-default">
+                            <a href="">Cancelar</a></button>
+                        <button type="submit" class="close excluir">Excluir</button>
+                    </div>
                 </form>
             </div>
         </div>
 
         <?php if ($result->num_rows > 0): ?>
-            <table class="questions-table">
-                <tr>
-                    <th>Texto da Questão</th>
-                    <th>Ação</th>
-                </tr>
+            <div class="row header-content">
+                    <div class="cell">Texto da Questão</div>
+                    <div class="cell">Ação</div>
+                </div>
+            <div class="questions-container">
+                
+
                 <?php while ($row = $result->fetch_assoc()): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($row['question_text']); ?></td>
-                        <td>
+                    <div class="row">
+                        <div class="cell"><?php echo htmlspecialchars($row['question_text']); ?></div>
+                        <div class="cell">
                             <!-- Botão de Excluir -->
                             <form method="post" action="../../Services/deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');" style="display:inline;">
                                 <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
@@ -157,10 +159,10 @@ $result = $conexao->query($sql);
                             </form>
                             <!-- Link para Editar -->
                             <a href="editar.questao.view.php?id=<?php echo $row['id']; ?>" class="edit-link">Editar</a>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 <?php endwhile; ?>
-            </table>
+            </div>
         <?php else: ?>
             <p>Nenhuma questão encontrada.</p>
         <?php endif; ?>
@@ -168,8 +170,8 @@ $result = $conexao->query($sql);
         <a href="cadastrarQ.view.php" class="add-button">Adicionar Nova Questão</a>
     </div>
 
-      <!--RODAPÉ-->
-      <footer>
+    <!--RODAPÉ-->
+    <footer>
         <div class="boxs">
             <h2>Logo</h2>
 
@@ -217,7 +219,7 @@ $result = $conexao->query($sql);
     </div>
 
 
-  <script>
+    <script>
         // Get the modal
         var modal = document.getElementById("myModal");
 
@@ -228,17 +230,17 @@ $result = $conexao->query($sql);
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }

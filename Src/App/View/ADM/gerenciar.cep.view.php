@@ -191,11 +191,11 @@ $conexao->close();
             </form>
         </section>
 
-        <section class="careers-list">
+        <section class="careers-list " >
             <h2 id="text">CEPs Existentes</h2>
             <?php if ($ceps->num_rows > 0): ?>
 
-                <div class="existente">
+                <div class="existente scroll">
                     <?php while ($cep = $ceps->fetch_assoc()): ?>
                         <div class="existente-content">
 

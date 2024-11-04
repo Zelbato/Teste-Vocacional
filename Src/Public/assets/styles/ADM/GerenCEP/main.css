@@ -1,6 +1,3 @@
-
-
-
 /*Inicio do Menu*/
 header {
     width: 100%;
@@ -8,7 +5,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:relative;
+    position: relative;
     z-index: 99;
     background: var(--preto);
     box-shadow: 0 5px 100px #00000000;
@@ -22,7 +19,7 @@ header {
 
 header .logo {
     flex: 1;
-    margin: 0px 5% 0px ;
+    margin: 0px 5% 0px;
 }
 
 header .logo a {
@@ -44,7 +41,8 @@ header .teste {
 }
 
 header ul {
-    flex: 4;/* flex 2 ou 4 */
+    flex: 4;
+    /* flex 2 ou 4 */
     display: flex;
     justify-content: space-evenly;
     margin: 0px 0 10px;
@@ -79,6 +77,7 @@ header ul li a {
 .des {
     margin-bottom: 8px;
 }
+
 header ul li a::after {
     content: " ";
     width: 15%;
@@ -99,16 +98,17 @@ header .menu-mobile {
     display: none;
 }
 
-header .mobile-entrar, .mobile-excluir {
+header .mobile-entrar,
+.mobile-excluir {
     display: none;
-  }
-  
+}
+
 
 @media(max-width:805px) {
 
 
     header {
-        background:var(--preto);
+        background: var(--preto);
         position: relative;
         height: 100px;
     }
@@ -152,7 +152,7 @@ header .mobile-entrar, .mobile-excluir {
         margin: 0 12%;
     }
 
-    header .logo a{
+    header .logo a {
         font-size: 35px;
     }
 
@@ -181,12 +181,13 @@ header .mobile-entrar, .mobile-excluir {
 
     header .mobile-entrar,
     .mobile-excluir {
-        display:inline;/*Faz aparecer*/
-      }
+        display: inline;
+        /*Faz aparecer*/
+    }
 }
 
 @media(max-width:600px) {
-    header .logo a{
+    header .logo a {
         font-size: 25px;
         text-align: center;
         margin: auto 0;
@@ -200,9 +201,10 @@ header .mobile-entrar, .mobile-excluir {
         width: 100%;
     }
 
-    header .mobile-entrar, .mobile-excluir {
+    header .mobile-entrar,
+    .mobile-excluir {
         visibility: visible;
-      }
+    }
 }
 
 .menu-button {
@@ -217,9 +219,9 @@ header .mobile-entrar, .mobile-excluir {
     align-items: center;
     justify-content: center;
     transition: all .5s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .menu-button:hover {
@@ -244,8 +246,8 @@ header .mobile-entrar, .mobile-excluir {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-    
+
+
     opacity: 0;
     visibility: hidden;
 }
@@ -294,7 +296,7 @@ header .mobile-entrar, .mobile-excluir {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
 }
 
 .tooltip .menu-item-content-title {
@@ -311,8 +313,8 @@ header .mobile-entrar, .mobile-excluir {
 }
 
 
-@media(max-width:1300px){
-    .menu-item{
+@media(max-width:1300px) {
+    .menu-item {
         padding: 10px 20px;
     }
 
@@ -333,7 +335,7 @@ header .mobile-entrar, .mobile-excluir {
 
     .tooltip {
         padding: 10px 20px;
-        left:75% ;
+        left: 75%;
     }
 
     .tooltip::before {
@@ -348,10 +350,10 @@ header .mobile-entrar, .mobile-excluir {
     }
 
     .tooltip {
-    display: none;
-    left: 0;
-    top: 0;
-    padding: 0;
+        display: none;
+        left: 0;
+        top: 0;
+        padding: 0;
     }
 }
 
@@ -376,8 +378,10 @@ header .mobile-entrar, .mobile-excluir {
     margin: auto;
     padding: 20px;
     border-radius: 7px;
-    max-width: 500px; /*30%*/
-    height: auto; /*50%*/
+    max-width: 500px;
+    /*30%*/
+    height: auto;
+    /*50%*/
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -386,7 +390,7 @@ header .mobile-entrar, .mobile-excluir {
 
 .title-pop {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     padding: 20px 20px 0px;
     border-bottom: 1px solid var(--azul);
@@ -396,9 +400,11 @@ header .mobile-entrar, .mobile-excluir {
 .title-pop i {
     margin-right: 10px;
     font-size: 24px;
-    color: var(--azul); /*var(--vermelho)*/
+    color: var(--azul);
+    /*var(--vermelho)*/
     margin-bottom: 5px;
 }
+
 .title-pop button.excluir {
     background: var(--azul);
     width: 20px;
@@ -424,7 +430,7 @@ header .mobile-entrar, .mobile-excluir {
 }
 
 
-.title-pop  h2{
+.title-pop h2 {
     font-size: 26px;
     font-family: var(--font);
     color: var(--azul);
@@ -442,7 +448,7 @@ header .mobile-entrar, .mobile-excluir {
 .pgf span {
     font-size: 18px;
     color: var(--vermelho);
-    
+
 }
 
 /* The Close Button */
@@ -533,6 +539,26 @@ header .mobile-entrar, .mobile-excluir {
     width: 35%;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
+
+.scroll {
+    width: 300px;
+    /* Largura da div */
+    height: 450px;
+    /* Altura da div */
+    overflow-y: auto;
+    /* Permite rolagem vertical */
+    overflow-x: hidden;
+    /* Oculta rolagem horizontal, se necessário */
+    padding: 10px;
+    /* Espaçamento interno */
+
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+.scroll,.scroll-2 {
+    scrollbar-color: var(--azul) var(--white); /* Cor da barra e do fundo no Firefox */
+}
+
 
 /* Títulos */
 .form-section h1 {
@@ -692,7 +718,7 @@ a {
     .careers-list {
         width: 100%;
         box-shadow: none;
-        border:none;
+        border: none;
     }
 
     .existente .existente-content button {

@@ -1,115 +1,146 @@
-
-
 /* Container Principal */
 .main {
-    max-width: 900px; /* Largura máxima do container */
+    max-width: 900px;
+    /* Largura máxima do container */
     height: auto;
-    margin: 30px auto; /* Centraliza o container */
-    padding: 20px; /* Espaçamento interno */
-    background-color:transparent; /* Fundo branco para o conteúdo */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /*Sombra leve*/
+    margin: 30px auto;
+    /* Centraliza o container */
+    padding: 20px;
+    /* Espaçamento interno */
+    background-color: transparent;
+    /* Fundo branco para o conteúdo */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /*Sombra leve*/
 }
 
-/* Tabela de Questões */
-.questions-table {
-    width: 100%; /* Largura total */
-    
-    border-collapse: collapse; /* Remove os espaços entre bordas */
-    margin-bottom: 20px; /* Espaçamento inferior */
+/* Container para as perguntas com rolagem */
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 450px;
+    /* Altura máxima com rolagem */
+    padding: 10px;
+    /* Espaçamento interno */
 }
 
-.questions-table th, 
-.questions-table td {
-    padding: 12px 15px; /* Espaçamento interno */
-    text-align: left; /* Alinha à esquerda */
-    border-bottom: 1px solid #ddd; /* Linha de separação */
+/* Estilização para a barra de rolagem */
+.questions-container {
+    scrollbar-color: var(--azul) var(--white);
+    scrollbar-width: thin;
 }
 
-.questions-table th {
-    background-color: var(--azul); /* Fundo azul no cabeçalho */
-    color: white; /* Texto branco */
-    text-transform: uppercase; /* Letras maiúsculas */
+/* Estilos para linha e célula */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* Espaçamento interno */
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    /* Linha de separação */
 }
 
-.questions-table td {
-    background-color: #f9f9f9; /* Fundo claro para as células */
+.header-content {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    background-color: var(--azul);
+    color: var(--white);
+    text-transform: uppercase;
 }
 
-/* Links e Botões */
-a.add-button, .edit-link, .delete-button {
-    display: inline-block; /* Botões em bloco */
-    padding: 10px 20px; /* Espaçamento interno */
-    text-decoration: none; /* Remove sublinhado dos links */
-    border-radius: 5px; /* Bordas arredondadas */
-    color: white; /* Texto branco */
-    transition: background-color 0.3s ease; /* Transição suave */
+.cell {
+    flex: 1;
+    padding: 12px 15px;
+    background-color: transparent;
+    text-align: left;
 }
 
-/* Botão de Adicionar Nova Questão */
+.cell:last-child {
+    border-right: none;
+    /* Remove a borda da última célula */
+}
+
+/* Estilos para links e botões */
+a.add-button,
+.edit-link,
+.delete-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
 a.add-button {
-    background-color: #28a745; /* Verde para o botão de adicionar */
-    margin-top: 20px; /* Margem superior */
+    background-color: #28a745;
+    margin-top: 20px;
 }
 
 a.add-button:hover {
-    background-color: #218838; /* Verde escuro ao passar o mouse */
+    background-color: #218838;
 }
 
-/* Link de Editar */
 .edit-link {
-    background-color: var(--azul); /* Azul para o link de editar */
-    margin-left: auto; /* Margem esquerda */
+    background-color: var(--azul);
+    margin-left: 10px;
 }
 
 .edit-link:hover {
-    background-color: #1c6fba; /* Azul escuro ao passar o mouse */
+    background-color: #1c6fba;
 }
 
-/* Botão de Excluir */
 .delete-button {
-    margin-left: auto;
-    background-color: #dc3545; /* Vermelho para o botão de excluir */
-    border: none; /* Remove borda padrão */
-    cursor: pointer; /* Muda cursor ao passar o mouse */
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
 }
 
 .delete-button:hover {
-    background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+    background-color: #c82333;
 }
 
-@media only screen and (max-device-width: 890px) {
-
+/* Responsividade */
+@media only screen and (max-width: 890px) {
     .main {
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-        padding: 20px;
+        flex-direction: column;
+        padding: 10px 20px;
         box-shadow: none;
     }
 
-    .questions-table {
+    .questions-container {
         width: 100%;
-        margin-bottom: 20px;
+        max-width: 500px;
+        scrollbar-color: none;
+        scrollbar-width: none;
+        overflow-y: none;
+        max-height: 450px;
+        /* Altura máxima com rolagem */
+        padding: 0px;
+        /* Espaçamento interno */
     }
 
     a.add-button {
         margin-top: 10px;
     }
 
-   .edit-link, .delete-button {
-        margin:10px 0 10px 0;
+    .edit-link,
+    .delete-button {
+        margin: 10px 0;
         padding: 10px;
         font-size: 14px;
         width: 60px;
         height: 40px;
         text-align: center;
+        display: flex;
         align-items: center;
         justify-content: center;
-        display: flex;
-    }
-
-    .edit-link  {
-        margin: 0;
     }
 }

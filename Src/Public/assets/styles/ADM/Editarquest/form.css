@@ -1,200 +1,165 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
     height: auto;
-}
-
-.editarQuest {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: auto;
-    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
 }
 
-/* Container Principal */
 .container {
-    background-color: var(--white);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 20px 40px;
-    max-width: 800px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form {
     width: 100%;
-    text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1,
-h2 {
-    color: var(--azul);
-    /* Azul para contraste */
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 20px;
-    margin-top: 10px;
+.form h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
     color: var(--azul);
 }
 
-/* Formulário */
+.form h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    max-width: 800px;
+    background: transparent;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #444;
-}
-
-input.quest {
-    width: auto;
-}
-
-input[type="text"] {
-    width: 100vw;
-    max-width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    /* border: 2px solid var(--azul); */
-    border-radius: 10px;
-    background-color: #f3f6f9;
-    color: #333;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-input[type="text"]:hover {
-    outline: none;
-    border: none;
-}
-
-select {
-    width: auto;
-    max-width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    /* border: 2px solid var(--azul); */
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    background-color: #f3f6f9;
-    color: #333;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* input[type="text"]:focus, select:focus {
-    border: 2px solid var(--azul);
-    box-shadow: 0 0 10px rgba(32, 106, 184, 0.3);
-    outline: none;
-} */
-
-/* Botão de Enviar */
-button[type="submit"] {
-    background: linear-gradient(135deg, var(--azul), #66a1e8);
-    /* Gradiente de botão */
-    color: #fff;
-    padding: 14px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background .3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-    background: linear-gradient(135deg, #184f85, #4b7ac5);
-}
-
-button a {
-    text-decoration: none;
-    color: var(--white);
-}
-
-
-/* Botão Voltar */
-.back-link {
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    color: var(--azul);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.back-link:hover {
-    color: #66a1e8;
-    text-decoration: underline;
-}
-
-/* Estilos das Opções */
-.option-container {
-    background-color: #f3f6f9;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+.input-box {
     margin-bottom: 15px;
-    text-align: left;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
-@media only screen and (max-device-width: 768px) {
-    /* Estilos para dispositivos móveis */
+.input-box label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--preto);
+}
 
-    .main {
-        padding: 40px 10px;
-        height: auto;
+.input-box input  {
+    width: 500px; /* Largura total */
+    height: auto;
+    padding: 10px 15px; 
+    margin: 5px 20px;
+    border: 1px solid #ced4da; /* Bordas suaves */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box select {
+    width: 100%; /* Largura total */
+    height: auto;
+    padding: 10px 15px; 
+    margin: 5px 20px;
+    border: 1px solid #ced4da; /* Bordas suaves */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: var(--azul);
+}
+
+.option-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--azul);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.back-link {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn-submit:hover {
+    background: var(--azulHover);
+}
+
+.alert {
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Responsividade para telas menores */
+@media only screen and (max-width: 768px) {
+    .form h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
     }
 
-    .container {
+    form {
+        padding: 20px;
+    }
+
+    .input-box label {
+        font-size: 0.9rem;
+    }
+
+    .btn-submit {
+        font-size: 0.9rem;
         padding: 10px;
-        background: transparent;
-        box-shadow: none;
     }
 
-    input[type="text"] {
-        width: 100%;
-        border-radius: 0;
-        border-bottom: 1px solid var(--azul);
+    .option-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form h1 {
+        font-size: 1.5rem;
     }
 
-    input[type="text"]:hover {
-        border-bottom: 1px solid var(--azul);
-
+    .container,
+    form {
+        padding: 15px;
     }
 
-    select {
-        width: 100%;
-    }
-
-    .option-container{
-        padding: 10px;
-        border:1px solid #234f8529;
+    .btn-submit {
+        font-size: 0.85rem;
+        padding: 8px;
     }
 }
