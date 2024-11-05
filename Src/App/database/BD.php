@@ -91,11 +91,3 @@ CREATE TABLE IF NOT EXISTS instituicao_cep_proximo (
     FOREIGN KEY (id_instituicao) REFERENCES instituicao(id_instituicao),
     FOREIGN KEY (cep_id) REFERENCES cep(id_cep)
 );
-
-<<<<<<< HEAD
--- Inserindo valores na tabela cep
-INSERT INTO cep (cep_numero) VALUES ('15770-000');
-=======
-
->>>>>>> cc600ffc900999bb01d6ffdbcd378a35cb74010b
-
