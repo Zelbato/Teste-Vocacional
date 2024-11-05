@@ -39,7 +39,7 @@
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/img/cardapio.png" alt="">
+            <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 

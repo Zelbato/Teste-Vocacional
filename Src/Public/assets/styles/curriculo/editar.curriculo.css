@@ -97,14 +97,25 @@ form {
     }
     .Editar label{
        text-transform: uppercase;
-     
+       width: 100%;
     }
     .Editar textarea{
        background: transparent;
-       
+         width: 100%;
     }
     form{
    height: auto;
    width: 100%;
+   box-shadow: none;
+
+    }
+    #foto_perfil{
+        width: 100%;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
    }

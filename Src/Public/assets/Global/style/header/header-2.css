@@ -14,7 +14,9 @@ header {
     box-shadow: 0 5px 100px #00000000;
     transition: all 0.5s;
 }
-
+i{
+    color: #fff;
+}
 #chk1 {
     display: none;
 

@@ -22,6 +22,9 @@ header.rolagem {
     display: none;
 
 }
+i{
+    color: #fff;
+}
 
 header .logo {
     flex: 1;
