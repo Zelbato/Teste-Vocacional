@@ -1,5 +1,6 @@
 :root {
     --azul: #206ab8;
+    --azulTrasp: #ffffffaa;
     --azulHover: #174a81;
     --azulClaro: #2289f8;
     --azulRoyal: rgb(9, 12, 175);
@@ -14,6 +15,6 @@
     --cinzaClaro: #ccc;
     --cinzaMedio: #aeaeae;
 
-    --dark: #252525;
+    --dark: #202020;
     --black: #131826;
 }
