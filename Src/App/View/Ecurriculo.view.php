@@ -68,7 +68,7 @@ if (isset($_GET['id'])) {
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-                <img class="icon" id="icon-mobile" src="../../Public/assets/Imagens/cardapio.png" alt="">
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -234,11 +234,11 @@ if (isset($_GET['id'])) {
                     <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
 
                     <button type="submit">Salvar Currículo</button>
-                </form>
+               
             <?php else: ?>
                 <p>Currículo não encontrado.</p>
             <?php endif; ?>
-
+ </form>
             </section>
         </main>
 
