@@ -97,7 +97,8 @@ form button:hover {
     .main .form-curriculo {
         flex-direction: column;
         max-width: 600px;
-        height: auto;
+        height: auto; 
+               margin-bottom: -140px;
     }
 
     form {
@@ -106,6 +107,13 @@ form button:hover {
         box-shadow: none;
         background: none;
         margin: auto;
+       
+
+    }
+    #foto_perfil{
+        width: 100%;
+    }
+    .main .form-curriculo{
 
     }
 

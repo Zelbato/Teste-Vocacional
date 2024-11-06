@@ -20,6 +20,9 @@ header.rolagem {
     background: var(--preto);
     border-bottom: 1px solid var(--preto);
 }
+i{
+    color: #fff;
+}
 
 #chk1 {
     display: none;
