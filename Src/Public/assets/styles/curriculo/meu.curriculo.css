@@ -27,6 +27,26 @@ section.form-curriculo {
     margin: 0;
 }
 
+
+.scroll {
+    width: auto;
+    /* Largura da div */
+    height: 350px;
+    /* Altura da div */
+    overflow-y: auto;
+    /* Permite rolagem vertical */
+    overflow-x: hidden;
+    /* Oculta rolagem horizontal, se necessário */
+
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+.scroll {
+    scrollbar-color: var(--azul) var(--white); /* Cor da barra e do fundo no Firefox */
+}
+
+
+
 .form-curriculo li {
     display: flex;
     justify-content: space-between;

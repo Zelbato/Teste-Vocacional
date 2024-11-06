@@ -165,6 +165,7 @@ if (!$resul) {
 
         <section class="form-curriculo">
             <h2>Currículos atuais</h2>
+            <div class="scroll">
             <ul>
                 <?php while ($curriculo = $resul->fetch_assoc()): ?>
                     <li>
@@ -175,6 +176,7 @@ if (!$resul) {
                     </li>
                 <?php endwhile; ?>
             </ul>
+            </div>
 
             <?php
             // Fechar a conexão

@@ -166,8 +166,8 @@
             </div>
         </div>
 
+        <form class="form-main" action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
         <section class="form-curriculo">
-            <form action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required><br><br>
 
@@ -180,12 +180,11 @@
                 <label for="endereco">Endereço:</label>
                 <input type="text" name="endereco" id="endereco" required><br><br>
 
-            </form>
-        </section>
+        
+        </section>  
 
 
-        <section class="form-curriculo">
-            <form action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
+         <section class="form-curriculo-2">
                 <label for="experiencia">Experiência:</label>
                 <textarea name="experiencia" id="experiencia" required></textarea><br>
 
@@ -200,10 +199,58 @@
                 <input type="file" name="foto_perfil" id="foto_perfil"><br>
 
                 <button type="submit">Enviar Currículo</button>
+            </section>
             </form>
 
-        </section>
     </main>
+
+      <!--RODAPÉ-->
+      <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+
+            <div class="logo">
+                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            </div>
+
+
+            <!-- <h2>Criadores</h2>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="index.view.php">Home </a></li>
+                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="termos.view.php">Termos de uso </a></li>
+                <li><a href="politica.view.php">Política de Privacidade </a></li>
+            </ul>
+        </div>
+
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
+
+    </div>
 
     </div>
 

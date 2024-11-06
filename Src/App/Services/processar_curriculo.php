@@ -1,5 +1,7 @@
 <?php
 require '../database/config.php';
+require '../View/curriculo.view.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Executa a consulta
     if ($stmt->execute()) {
-        header("Location: ../View/curriculo.index.view.php"); 
+   
     } else {
         echo "Erro ao salvar o currículo: " . $stmt->error;
     }

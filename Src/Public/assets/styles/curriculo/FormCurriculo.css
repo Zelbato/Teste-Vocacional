@@ -7,7 +7,7 @@
     height: auto;
 }
 
-.main .form-curriculo {
+.main form {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -18,10 +18,22 @@
 
 
 /* Estilização do formulário de currículo */
-form {
+.form-curriculo {
     width: 100%;
-    max-width: 600px;
-    height: 550px;
+    max-width: 500px;
+    height: auto;/* 550px ou auto*/
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--font);
+}
+
+.form-curriculo-2 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;/* 550px ou auto*/
     margin: 0 auto;
     padding: 20px;
     background-color: var(--white);
