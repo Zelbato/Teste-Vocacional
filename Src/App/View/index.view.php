@@ -61,7 +61,7 @@ require '../database/config.php';
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <header class="header">
+    <header class="header" role="banner">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
@@ -72,7 +72,7 @@ require '../database/config.php';
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1 data-message="Logo New Careers"><a href="index.view.php" >New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
@@ -93,8 +93,8 @@ require '../database/config.php';
             <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+                <i class="fa-solid fa-user" ></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
@@ -104,21 +104,21 @@ require '../database/config.php';
                         <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Faça seu login<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar <br>
+                                    Entrar 
                                 </span>
                             </div>
                         </a>
 
-                        <br>
+                        
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta <br>
+                                Deseja excluir sua conta 
                                 Clique aqui!
                             </span>
 
@@ -126,32 +126,32 @@ require '../database/config.php';
                                 excluir conta
                             </span>
 
-                            <br>
+                            
 
                             <a href="curriculo.index.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Crie seu Curriculo<br>
+                                        Crie seu Curriculo
                                         Clique aqui!
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo <br>
+                                        Criar Curriculo 
                                     </span>
                                 </div>
                             </a>
 
-                            <br>
+                            
 
                             <a href="caminho.resultado.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Veja as carreiras obtidas<br>
+                                        Veja as carreiras obtidas
 
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras <br>
+                                        Ver Carreiras 
                                     </span>
                                 </div>
                             </a>

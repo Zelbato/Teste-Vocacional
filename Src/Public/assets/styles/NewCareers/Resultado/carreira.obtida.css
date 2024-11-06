@@ -14,6 +14,23 @@ section.carreiras-obtidas {
     border-radius: 8px;
 }
 
+.scroll {
+    width: auto;
+    /* Largura da div */
+    height: 450px;
+    /* Altura da div */
+    overflow-y: auto;
+    /* Permite rolagem vertical */
+    overflow-x: hidden;
+    /* Oculta rolagem horizontal, se necessário */
+
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+.scroll {
+    scrollbar-color: var(--azul) var(--white); /* Cor da barra e do fundo no Firefox */
+}
+
 ul.ul-carreiras {
     list-style: none;
     padding: 0;

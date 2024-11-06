@@ -31,7 +31,7 @@ section.form-curriculo {
 .scroll {
     width: auto;
     /* Largura da div */
-    height: 350px;
+    height: 450px;
     /* Altura da div */
     overflow-y: auto;
     /* Permite rolagem vertical */

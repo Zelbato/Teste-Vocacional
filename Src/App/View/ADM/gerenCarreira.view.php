@@ -58,6 +58,7 @@ $result = $conexao->query("SELECT * FROM carreira");
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +76,7 @@ $result = $conexao->query("SELECT * FROM carreira");
     <header class="header">
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -96,7 +97,7 @@ $result = $conexao->query("SELECT * FROM carreira");
                 <li class="mobile-excluir"><button>Excluir</button></li>
             </form>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i>
             </a>
 
@@ -109,19 +110,19 @@ $result = $conexao->query("SELECT * FROM carreira");
                         </div>
                     </a>
 
-                    <br>
+
 
                     <a href="../login.view.php">
                         <div class="menu-item-content">
-                            <span class="menu-item-content-title">Deseja sair da Conta<br>Clique aqui!</span>
-                            <span class="menu-item-content-subtitle">Desconectar-se <br></span>
+                            <span class="menu-item-content-title">Deseja sair da Conta <br>Clique aqui!</span>
+                            <span class="menu-item-content-subtitle">Desconectar-se </span>
                         </div>
                     </a>
 
-                    <br>
+
 
                     <div class="menu-item-content">
-                        <span class="menu-item-content-title">Deseja excluir sua conta <br>Clique aqui para finalizar!</span>
+                        <span class="menu-item-content-title">Deseja excluir sua conta <br> Clique aqui!</span>
                         <span id="myBtn" class="menu-item-content-subtitle">excluir conta</span>
                     </div>
                 </div>
@@ -231,4 +232,5 @@ $result = $conexao->query("SELECT * FROM carreira");
 
     <script src="../../Public/assets/Js/gerenciar_carreiras.js"></script>
 </body>
+
 </html>

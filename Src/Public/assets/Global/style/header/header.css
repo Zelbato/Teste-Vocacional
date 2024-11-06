@@ -239,7 +239,7 @@ header .mobile-entrar, .mobile-excluir {
     height: auto;
 
     position: absolute;
-    padding: 0.2rem 0;
+    padding: 5px 0;
     border-radius: 12px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -310,7 +310,7 @@ header .mobile-entrar, .mobile-excluir {
     color: var(--white);
     font-weight: 600;
     font-size: 14px;
-    margin: 0 0 10px;
+    margin: 10px 0 5px;
 }
 
 .tooltip .menu-item-content-subtitle {

@@ -27,17 +27,22 @@ $result = $stmt->get_result();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Public/assets/styles/NewCareers/Resultado/caminho.resultado.css?v=<?php echo time(); ?>">
 
-    <!-- Icones Bootstrap -->
+    <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Icones Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Google Fonts -->
+    <!--Icones Bootstrap-->
+
+
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google Fonts -->
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Caminho para a Carreira</title>
 </head>
 
@@ -56,7 +61,7 @@ $result = $stmt->get_result();
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -84,7 +89,7 @@ $result = $stmt->get_result();
             <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -95,21 +100,21 @@ $result = $stmt->get_result();
                         <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Faça seu login<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar <br>
+                                    Entrar 
                                 </span>
                             </div>
                         </a>
 
-                        <br>
+                        
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta <br>
+                                Deseja excluir sua conta 
                                 Clique aqui!
                             </span>
 
@@ -117,32 +122,32 @@ $result = $stmt->get_result();
                                 excluir conta
                             </span>
 
-                            <br>
+                            
 
                             <a href="curriculo.index.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Crie seu Curriculo<br>
+                                        Crie seu Curriculo
                                         Clique aqui!
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo <br>
+                                        Criar Curriculo 
                                     </span>
                                 </div>
                             </a>
 
-                            <br>
+                            
 
                             <a href="caminho.resultado.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Veja as carreiras obtidas<br>
+                                        Veja as carreiras obtidas
 
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras <br>
+                                        Ver Carreiras 
                                     </span>
                                 </div>
                             </a>
@@ -178,8 +183,6 @@ $result = $stmt->get_result();
             </div>
         </div>
 
-
-        <main class="main">
             <section class="ver-caminho">
                 <h1>Caminho para a Carreira</h1>
                 <?php while ($row = $result->fetch_assoc()): ?>

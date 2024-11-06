@@ -219,11 +219,11 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                         </div>
                     </a>
 
-                    <br>
+                   
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
+                            Deseja excluir sua conta
                             Clique aqui para finalizar!
                         </span>
 
@@ -231,7 +231,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                             excluir conta
                         </span>
 
-                        <br>
+                       
 
                         <a href="curriculo.view.php">
                             <div class="menu-item-content">
@@ -241,7 +241,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
+                                    Criar Curriculo
                                 </span>
                             </div>
                         </a>

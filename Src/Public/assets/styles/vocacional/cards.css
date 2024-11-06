@@ -98,8 +98,10 @@ section.cards-user {
 
 
 .cards-user aside.card button {
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
     background: linear-gradient(to right, var(--azulEscuro), var(--azulHover));
     padding: 10px 25px;
     text-transform: uppercase;
@@ -110,7 +112,7 @@ section.cards-user {
     font-weight: 500;
     color: var(--white);
     margin-bottom: 20px;
-    margin: 10px 30%;
+    margin: 0 auto ;
     
     transition: all 0.5s;
 }

@@ -74,7 +74,7 @@ if ($result->num_rows == 0) {
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -93,30 +93,72 @@ if ($result->num_rows == 0) {
 
             <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
-                <a href="cadastro.view.php" class="menu-item">
+                <div class="position">
+                    <div class="position">
+
+                        <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Entrar
+                                </span>
+                            </div>
+                        </a>
 
 
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Ainda não se cadastrou?<br>
-                            Clique aqui para se cadastrar!
-                        </span>
 
-                        <span class="menu-item-content-subtitle">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta
+                                Clique aqui!
+                            </span>
 
-                            Cadastrar-se <br>
-                            Login
-                        </span>
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
 
+
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo
+                                    </span>
+                                </div>
+                            </a>
+
+
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </a>
-
-            </div>
 
         </ul>
     </header>
@@ -191,7 +233,7 @@ if ($result->num_rows == 0) {
                                     <?php if (!empty($instituicao['foto_curso'])): ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
-                                            <img src="../instituição/<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
+                                                <img src="../instituição/<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
                                             </a>
                                         </div>
                                     <?php endif; ?>

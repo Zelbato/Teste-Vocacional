@@ -120,7 +120,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
             <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos">Entrar</a></li>
             <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -131,23 +131,23 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
+                                Ainda não se cadastrou?
                                 Clique aqui para se cadastrar!
                             </span>
 
                             <span class="menu-item-content-subtitle">
 
-                                Cadastrar-se <br>
+                                Cadastrar-se 
                                 Login
                             </span>
                         </div>
                     </a>
 
-                    <br>
+                    
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
+                            Deseja excluir sua conta 
                             Clique aqui para finalizar!
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">

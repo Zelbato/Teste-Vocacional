@@ -1,4 +1,3 @@
-
 <?php
 require '../database/config.php';
 
@@ -15,7 +14,7 @@ if (!$resul) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -46,22 +45,22 @@ if (!$resul) {
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
     <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -72,14 +71,20 @@ if (!$resul) {
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -87,53 +92,66 @@ if (!$resul) {
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
 
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                        <br>
-
-                        <a href="curriculo.view.php">
+                        <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Deseja criar seu curriculo<br>
+                                    Faça seu login<br>
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
+                                    Entrar <br>
                                 </span>
                             </div>
                         </a>
 
+                        <br>
 
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta <br>
+                                Clique aqui!
+                            </span>
+
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
+
+                            <br>
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo<br>
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo <br>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <br>
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas<br>
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras <br>
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -166,16 +184,17 @@ if (!$resul) {
         <section class="form-curriculo">
             <h2>Currículos atuais</h2>
             <div class="scroll">
-            <ul>
-                <?php while ($curriculo = $resul->fetch_assoc()): ?>
-                    <li>
-                        <?php echo htmlspecialchars($curriculo['nome']); ?></li> <li>
-                        <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
-                        <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Curriculo</a>
-                        <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">baixar</a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
+                <ul>
+                    <?php while ($curriculo = $resul->fetch_assoc()): ?>
+                        <li>
+                            <?php echo htmlspecialchars($curriculo['nome']); ?></li>
+                        <li>
+                            <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
+                            <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Curriculo</a>
+                            <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">baixar</a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
             </div>
 
             <?php

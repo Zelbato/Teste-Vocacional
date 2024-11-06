@@ -73,7 +73,7 @@
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
             <div class="tooltip">
@@ -83,21 +83,21 @@
                         <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Faça seu login<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar <br>
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
-                        <br>
+
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta <br>
+                                Deseja excluir sua conta
                                 Clique aqui!
                             </span>
 
@@ -105,32 +105,32 @@
                                 excluir conta
                             </span>
 
-                            <br>
+
 
                             <a href="curriculo.index.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Crie seu Curriculo<br>
+                                        Crie seu Curriculo
                                         Clique aqui!
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo <br>
+                                        Criar Curriculo
                                     </span>
                                 </div>
                             </a>
 
-                            <br>
+
 
                             <a href="caminho.resultado.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Veja as carreiras obtidas<br>
+                                        Veja as carreiras obtidas
 
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras <br>
+                                        Ver Carreiras
                                     </span>
                                 </div>
                             </a>

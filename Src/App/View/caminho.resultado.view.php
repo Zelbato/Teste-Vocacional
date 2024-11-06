@@ -90,7 +90,7 @@ $result = $stmt->get_result();
             <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -186,7 +186,7 @@ $result = $stmt->get_result();
 
         <section class="carreiras-obtidas">
             <h1>Carreiras Obtidas</h1>
-            <ul class="ul-carreiras">
+            <ul class="ul-carreiras scroll">
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <li class="li-carreiras">
                         <strong><?php echo htmlspecialchars($row['carreira_nome']); ?></strong>

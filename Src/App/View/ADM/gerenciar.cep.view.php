@@ -117,7 +117,7 @@ $conexao->close();
 
             </form>
 
-           <!-- <a href="#" class="menu-button">
+           <!-- <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!-Cadastrar-se ou <br> Excluir conta --
             </a>
 

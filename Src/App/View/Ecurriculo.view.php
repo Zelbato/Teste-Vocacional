@@ -94,7 +94,7 @@ if (isset($_GET['id'])) {
             <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -105,21 +105,21 @@ if (isset($_GET['id'])) {
                         <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Faça seu login<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar <br>
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
-                        <br>
+
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta <br>
+                                Deseja excluir sua conta
                                 Clique aqui!
                             </span>
 
@@ -127,32 +127,32 @@ if (isset($_GET['id'])) {
                                 excluir conta
                             </span>
 
-                            <br>
+
 
                             <a href="curriculo.index.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Crie seu Curriculo<br>
+                                        Crie seu Curriculo
                                         Clique aqui!
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo <br>
+                                        Criar Curriculo
                                     </span>
                                 </div>
                             </a>
 
-                            <br>
+
 
                             <a href="caminho.resultado.view.php">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Veja as carreiras obtidas<br>
+                                        Veja as carreiras obtidas
 
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras <br>
+                                        Ver Carreiras
                                     </span>
                                 </div>
                             </a>
@@ -191,33 +191,31 @@ if (isset($_GET['id'])) {
 
         <!--Editar Curriculo -->
 
-        <main class="main">
-            <!-- <h1>Editar Currículo</h1> -->
-            <section class="Editar">
-                <?php if ($curriculo): ?>
-                    <form action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="<?php echo htmlspecialchars($curriculo['id']); ?>">
+        <!-- <h1>Editar Currículo</h1> -->
 
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($curriculo['nome']); ?>" required><br>
+        <?php if ($curriculo): ?>
+            <form class="form-main" action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
+                <section class="Editar">
+                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($curriculo['id']); ?>">
 
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($curriculo['email']); ?>" required><br>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($curriculo['nome']); ?>" required><br>
 
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" value="<?php echo htmlspecialchars($curriculo['telefone']); ?>" required><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($curriculo['email']); ?>" required><br>
 
-                        <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco" name="endereco" value="<?php echo htmlspecialchars($curriculo['endereco']); ?>" required><br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" value="<?php echo htmlspecialchars($curriculo['telefone']); ?>" required><br>
 
-                        <label for="experiencia">Experiência:</label><br>
-                        <textarea id="experiencia" name="experiencia" rows="5" required><?php echo htmlspecialchars($curriculo['experiencia']); ?></textarea><br>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" value="<?php echo htmlspecialchars($curriculo['endereco']); ?>" required><br>
 
-                    </form>
-            </section>
+                    <label for="experiencia">Experiência:</label><br>
+                    <textarea id="experiencia" name="experiencia" rows="5" required><?php echo htmlspecialchars($curriculo['experiencia']); ?></textarea><br>
 
-            <section class="Editar">
-                <form action="../Services/salvar_curriculo.php" method="POST" enctype="multipart/form-data">
+                </section>
+
+                <section class="Editar-2">
                     <label for="formacao">Formação:</label><br>
                     <textarea id="formacao" name="formacao" rows="5" required><?php echo htmlspecialchars($curriculo['formacao']); ?></textarea><br>
 
@@ -234,44 +232,90 @@ if (isset($_GET['id'])) {
                     <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
 
                     <button type="submit">Salvar Currículo</button>
-               
-            <?php else: ?>
-                <p>Currículo não encontrado.</p>
-            <?php endif; ?>
- </form>
-            </section>
-        </main>
+
+                <?php else: ?>
+                    <p>Currículo não encontrado.</p>
+                <?php endif; ?>
+                </section>
+            </form>
+    </main>
+
+     <!--RODAPÉ-->
+     <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+
+            <div class="logo">
+                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            </div>
 
 
-     
-        <script src="../../Public/assets/js/index.js"></script>
-        <script>
-            // Get the modal
-            var modal = document.getElementById("myModal");
+            <!-- <h2>Criadores</h2>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
+           <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="index.view.php">Home </a></li>
+                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="termos.view.php">Termos de uso </a></li>
+                <li><a href="politica.view.php">Política de Privacidade </a></li>
+            </ul>
+        </div>
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+    <div class="footer">
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
 
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
+    </div>
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
+    <script src="../../Public/assets/js/index.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
                 modal.style.display = "none";
             }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
+        }
+    </script>
 </body>
 
 </html>

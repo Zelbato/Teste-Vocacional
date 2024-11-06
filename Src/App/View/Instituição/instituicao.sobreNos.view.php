@@ -67,7 +67,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             <li><a class="mobile-entrar" href="instituicao.cadastro.php" id="eventos">Entrar</a></li>
             <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                  <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
             <div class="tooltip">

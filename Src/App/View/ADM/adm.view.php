@@ -73,7 +73,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
             </form>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -93,7 +93,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                         </div>
                     </a>
 
-                    <br>
+                   
 
                     <a href="../../Services/desconectar.php">
 
@@ -106,17 +106,17 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
                             <span class="menu-item-content-subtitle">
 
-                                Desconectar-se <br>
+                                Desconectar-se
 
                             </span>
                         </div>
                     </a>
 
-                    <br>
+                   
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
+                            Deseja excluir sua conta
                             Clique aqui para finalizar!
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">

@@ -76,7 +76,7 @@ $result = $conexao->query($sql);
 
             </form>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -99,7 +99,6 @@ $result = $conexao->query($sql);
                         </div>
                     </a>
 
-                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">

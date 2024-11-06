@@ -56,7 +56,7 @@
         </div>
 
         <ul>
-        <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
             <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
@@ -65,13 +65,13 @@
             <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
             <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
-            <li class="mobile-excluir"> <button>Excluir</button> </li>
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
             </form>
 
             <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -167,7 +167,7 @@
         </div>
 
         <form class="form-main" action="../Services/processar_curriculo.php" method="post" enctype="multipart/form-data">
-        <section class="form-curriculo">
+            <section class="form-curriculo">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required><br><br>
 
@@ -180,11 +180,11 @@
                 <label for="endereco">Endereço:</label>
                 <input type="text" name="endereco" id="endereco" required><br><br>
 
-        
-        </section>  
+
+            </section>
 
 
-         <section class="form-curriculo-2">
+            <section class="form-curriculo-2">
                 <label for="experiencia">Experiência:</label>
                 <textarea name="experiencia" id="experiencia" required></textarea><br>
 
@@ -200,12 +200,12 @@
 
                 <button type="submit">Enviar Currículo</button>
             </section>
-            </form>
+        </form>
 
     </main>
 
-      <!--RODAPÉ-->
-      <footer>
+    <!--RODAPÉ-->
+    <footer>
         <div class="boxs">
             <h2>Logo</h2>
 

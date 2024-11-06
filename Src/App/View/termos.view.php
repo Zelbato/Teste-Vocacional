@@ -24,21 +24,21 @@
 </head>
 
 <body>
-<div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -49,68 +49,89 @@
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+        <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
+            <form action="../Services/deletar.php" method="POST">
 
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
 
-            <a href="#" class="menu-button">
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
+
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
+
+                        <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Entrar
+                                </span>
+                            </div>
+                        </a>
+
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <a href="curriculo.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja criar seu curriculo<br>
+                                Deseja excluir sua conta
                                 Clique aqui!
                             </span>
 
-                            <span class="menu-item-content-subtitle">
-                                Criar Curriculo <br>
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
                             </span>
+
+
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo
+                                    </span>
+                                </div>
+                            </a>
+
+
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras
+                                    </span>
+                                </div>
+                            </a>
+
+
                         </div>
-                    </a>
-
-                    <br>
-
-                    <a href="Ecurriculo.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja editar seu curriculo<br>
-                                Clique aqui!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                Editar Curriculo <br>
-                            </span>
-                        </div>
-                    </a>
-                </div>
+                    </div>
 
         </ul>
 

@@ -101,71 +101,72 @@ while ($row = $result->fetch_assoc()) {
             <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
 
-            <a href="#" class="menu-button">
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
                 <div class="position">
+                    <div class="position">
 
-                    <a href="login.view.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Faça seu login<br>
-                                Clique aqui!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                Entrar <br>
-                            </span>
-                        </div>
-                    </a>
-
-                    <br>
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                        <br>
-
-                        <a href="curriculo.index.view.php">
+                        <a href="login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Crie seu Curriculo<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo <br>
-                                </span>
-                            </div>
-                        </a>
-
-                        <br>
-
-                        <a href="caminho.resultado.view.php">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Veja as carreiras obtidas<br>
-
-                                </span>
-
-                                <span class="menu-item-content-subtitle">
-                                    Ver Carreiras <br>
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
 
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta
+                                Clique aqui!
+                            </span>
+
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
+
+
+
+                            <a href="curriculo.index.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo
+                                    </span>
+                                </div>
+                            </a>
+
+
+
+                            <a href="caminho.resultado.view.php">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
