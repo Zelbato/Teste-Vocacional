@@ -17,9 +17,9 @@ $query = "
     FROM instituicao_cep_proximo icp
     JOIN instituicao i ON icp.id_instituicao = i.id_instituicao
     JOIN cursos c ON i.id_instituicao = c.id_instituicao
-    WHERE icp.id_usuario = ? AND icp.proximidade = TRUE
-    AND c.carreira_id = ?";
-
+    WHERE icp.id_usuario = ? 
+      AND icp.proximidade = TRUE
+      AND c.carreira_id = ?";
 $stmt = $conexao->prepare($query);
 
 if ($stmt === false) {
@@ -191,8 +191,7 @@ if ($result->num_rows == 0) {
                                     <?php if (!empty($instituicao['foto_curso'])): ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
-                                                <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
-                                                <img src="../../Public/assets/Img/etec_sfs.png" alt="Imagem da Instituição" class="instituicao-img">
+                                            <img src="../instituição/<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
                                             </a>
                                         </div>
                                     <?php endif; ?>
@@ -204,9 +203,6 @@ if ($result->num_rows == 0) {
 
                                     <div class="card-description">
                                         <div class="descricao">
-
-                                            <p><i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?></p>
-
 
                                             <p><i class="fa-regular fa-calendar"></i> <?php echo htmlspecialchars($instituicao['duracao']); ?></p>
                                         </div>

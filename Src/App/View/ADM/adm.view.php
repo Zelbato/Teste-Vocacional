@@ -4,11 +4,9 @@ session_start();
 require '../../database/config.php';
 // require '../../Services/desconectar.php';
 
-
-if ($_SESSION['nivel'] = 'admin') {
-   
-} else {
-    header("Location: ../login.view.php");
+if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
+    header("Location: ../View/login.view.php");
+    exit();
 }
 
 ?>

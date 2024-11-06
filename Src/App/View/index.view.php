@@ -4,13 +4,11 @@ session_start();
 require '../database/config.php';
 
 
-// if ($_SESSION['nivel'] = 'admin') {
-//     header("Location: ../View/ADM/adm.view.php");
-// } if ($_SESSION['id_instituicao']) {
-//     header('Location: ../View/Instituição/instituicao.index.view.php');
-// } else {
-//     header("Location: index.view.php");
-// }
+if ($_SESSION['nivel'] = 'admin') {
+    header("Location: ../View/ADM/adm.view.php");
+} if ($_SESSION['id_instituicao']) {
+    header('Location: ../View/Instituição/instituicao.index.view.php');
+} 
 
 ?>
 
