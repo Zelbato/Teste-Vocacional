@@ -68,37 +68,259 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Instituição</title>
+    <link rel="stylesheet" type="text/css"
+        href="../../Public/assets/styles/PagInstituicao/EditarInst/editar.instituicao.css?v=<?php echo time(); ?>">
+
+    <!--Icones Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <title>Teste Vocacional</title>
 </head>
+
 <body>
-    <h1>Editar Instituição</h1>
-    <form method="post">
-        <label for="nome_fantasia">Nome Fantasia:</label>
-        <input type="text" id="nome_fantasia" name="nome_fantasia" required><br><br>
 
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" title="Formato: XXXXX-XXX" required><br><br>
+    <header class="header">
 
-        <label for="cnpj">CNPJ:</label>
-        <input type="text" id="cnpj" name="cnpj" pattern="\d{14}" title="Deve conter 14 dígitos" required><br><br>
+        <div class="menu-mobile">
+            <label for="chk1" onclick="menu()">
+            <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="checkbox" name="" id="chk1">
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required><br><br>
+        <div class="logo">
+            <h1><a href="instituicao.index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+        </div>
 
-        <label for="razao_social">Razão Social:</label>
-        <input type="text" id="razao_social" name="razao_social" required><br><br>
+        <ul>
+            <li><a id="#home" href="instituicao.index.view.php" id="inicio">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span class="teste">Teste
+                        Vocacional</span></a>
+            </li>
+            <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
+            <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 
-        <label for="url">URL:</label>
-        <input type="url" id="url" name="url" required><br><br>
+            <form action="../Services/deletar.php" method="POST">
 
-        <button type="submit">Salvar</button>
-    </form>
+                <li class="mobile-excluir"> <button>Excluir</button> </li>
+
+            </form>
+
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            </a>
+            <div class="tooltip">
+                <div class="position">
+
+                <a href="login.view.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Faça seu login<br>
+                                    Clique aqui!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    Entrar <br>
+                                </span>
+                            </div>
+                        </a>
+
+                        <br>
+
+                    <a href="instituicao.login.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se <br>
+
+                            </span>
+                        </div>
+                    </a>
+
+                    <br>
+
+                    <div class="menu-item-content">
+                        <span class="menu-item-content-title">
+                            Deseja excluir sua conta <br>
+                            Clique aqui para finalizar!
+                        </span>
+                        <span id="myBtn" class="menu-item-content-subtitle">
+                            excluir conta
+                        </span>
+                    </div>
+                </div>
+
+
+        </ul>
+    </header>
+
+        <main class="main ">
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="quadro">
+                    <div class="title-pop">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h2 id="titulo">Confirmação</h2>
+                    </div>
+
+                    <div class="pgf">
+                        <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                        <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+                    </div>
+
+                    <form action="../Services/deletar.php" method="POST">
+                        <div id="btn-pop">
+                            <button class="btn-default">
+                                <a href="">Cancelar</a></button>
+                            <button type="submit" class="close excluir">Excluir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <section class="editar-container">
+                <div class="editarContent">
+                    <div class="title">
+                        <h1>Editar Instituição</h1>
+                    </div>
+
+                    <div class="editar-form">
+                        <form method="post">
+                            <label for="nome_fantasia">Nome Fantasia:</label>
+                            <input type="text" id="nome_fantasia" name="nome_fantasia" required><br><br>
+
+                            <label for="cep">CEP:</label>
+                            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" title="Formato: XXXXX-XXX"
+                                required><br><br>
+
+                            <label for="cnpj">CNPJ:</label>
+                            <input type="text" id="cnpj" name="cnpj" pattern="\d{14}" title="Deve conter 14 dígitos"
+                                required><br><br>
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required><br><br>
+
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha" required><br><br>
+
+                            <label for="razao_social">Razão Social:</label>
+                            <input type="text" id="razao_social" name="razao_social" required><br><br>
+
+                            <label for="url">URL:</label>
+                            <input type="url" id="url" name="url" required><br><br>
+
+                            <button type="submit">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--RODAPÉ-->
+    <footer>
+        <div class="boxs">
+            <h2>Logo</h2>
+
+            <div class="logo">
+                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            </div>
+
+
+            <!-- <h2>Criadores</h2>
+       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
+       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
+       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
+       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
+            </p>
+        </div>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="index.view.php">Home </a></li>
+                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php">Faculdades </a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="termos.view.php">Termos de uso </a></li>
+                <li><a href="politica.view.php">Política de Privacidade </a></li>
+            </ul>
+        </div>
+
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
+                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
+                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
+            </p>
+        </div>
+    </footer>
+
+    <div class="footer">
+        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
+    </div>
+
+    <!--JS-->
+    <script src="../../../Public/assets/Js/faculdade.js"></script>
+    <!--JS-->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>

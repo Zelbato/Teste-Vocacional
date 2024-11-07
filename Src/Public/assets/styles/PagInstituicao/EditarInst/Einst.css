@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.main .editar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.main .editarContent {
+    background: var(--white);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 40px;
+}
+
+.editarContent .title h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0 40px;
+    color: var(--azul);
+}
+
+.editarContent .editar-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    /* background: var(--white); */
+    /* border: 1px solid var(--azul); */
+    padding: 40px;
+    margin:0px 12% 0 12%; /* ou 12% */
+    border-radius: 8px;
+}

@@ -301,6 +301,9 @@ header .mobile-entrar,
 .tooltip.active {
     opacity: 1;
     visibility: visible;
+    transition: right 0.5s linear;
+    right: -85%;
+
 
 }
 

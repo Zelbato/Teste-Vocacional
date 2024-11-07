@@ -1,6 +1,6 @@
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding:20px;
     width: 100%;
@@ -28,24 +28,21 @@
     font-family: var(--font);
 }
 
-.Editar-2 {
-    width: 100%;
-    max-width: 500px;
-    height: 100%;
-    /* max-height: 700px; */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: var(--font);
-}
 
-.Editar h1 {
+
+.main h1 {
+    color: #206ab8;
+    font-size: 21px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.title h1{
     color: #206ab8;
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+    border-bottom: 3px solid #206ab8;
+ 
 }
 
 form label {
@@ -58,6 +55,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
+form input[type="password"],
 form textarea {
     width: 100%;
     padding: 10px;
@@ -123,7 +121,9 @@ form p {
     #foto_perfil{
         width: 100%;
     }
-
+    .title h1{
+        margin-bottom: -17px;
+    }
     .main{
         display: flex;
         flex-direction: column;
