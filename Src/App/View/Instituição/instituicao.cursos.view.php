@@ -22,21 +22,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome_curso'])) {
     $caminho_imagem = '';
 
     if ($foto_curso['error'] === UPLOAD_ERR_OK) {
+        // Caminho absoluto para o diretório de uploads na raiz do projeto
+        $diretorio_imagens = __DIR__ . '/uploads/';  // __DIR__ pega o diretório atual do script PHP
+    
         // Verifica se o diretório para salvar as imagens existe, se não, cria
-        $diretorio_imagens = 'uploads/';
         if (!is_dir($diretorio_imagens)) {
-            mkdir($diretorio_imagens, 0777, true);
+            mkdir($diretorio_imagens, 0777, true);  // Cria o diretório, se não existir, com permissões 0777
         }
-
-        $nome_imagem = basename($foto_curso['name']);
-        $caminho_imagem = $diretorio_imagens . uniqid('', true) . '-' . $nome_imagem;
-
+    
+        $nome_imagem = basename($foto_curso['name']);  // Pega o nome da imagem sem caminho
+        $caminho_imagem = $diretorio_imagens . uniqid('', true) . '-' . $nome_imagem;  // Gera um caminho único
+    
         // Move a imagem para o diretório
         if (!move_uploaded_file($foto_curso['tmp_name'], $caminho_imagem)) {
             echo "Erro ao enviar a imagem.";
             exit();
         }
+    
+        echo "Imagem enviada com sucesso!";
     }
+    
 
     // Inserir curso no banco de dados
     $stmt = $conexao->prepare("INSERT INTO cursos (id_instituicao, nome_curso, duracao, descricao, carreira_id, foto_curso) VALUES (?, ?, ?, ?, ?, ?)");
