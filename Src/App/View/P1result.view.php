@@ -2,14 +2,13 @@
 session_start();
 require '../database/config.php';
 
-$user_id = $_SESSION['id_usuario']; // Certifique-se de que o ID do usuário está corretamente armazenado
+$user_id = $_SESSION['id_usuario']; 
 
-// Verifica se a carreira foi passada corretamente
 if (!isset($_GET['carreira_id'])) {
     die('Carreira não foi especificada.');
 }
 
-$carreira = intval($_GET['carreira_id']); // Certifique-se de que o ID da carreira está sendo passado como parâmetro na URL
+$carreira = intval($_GET['carreira_id']); 
 
 // Carrega instituições próximas com base no CEP do usuário e na carreira sugerida
 $query = "
@@ -233,8 +232,8 @@ if ($result->num_rows == 0) {
                                     <?php if (!empty($instituicao['foto_curso'])): ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
-                                                <img src="../instituição/<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
                                             </a>
+                                            <img src="<?php echo htmlspecialchars($instituicao['foto_curso']); ?>" alt="Imagem do curso" class="curso-img">
                                         </div>
                                     <?php endif; ?>
 

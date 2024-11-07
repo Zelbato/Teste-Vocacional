@@ -91,3 +91,71 @@ CREATE TABLE IF NOT EXISTS instituicao_cep_proximo (
     FOREIGN KEY (id_instituicao) REFERENCES instituicao(id_instituicao),
     FOREIGN KEY (cep_id) REFERENCES cep(id_cep)
 );
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- inserções -->
+
+INSERT INTO carreira (nome) VALUES 
+('Desenvolvedor de Software'),
+('Designer Gráfico'),
+('Gerente de Projetos'),
+('Analista de Sistemas');
+
+INSERT INTO cep (cep_numero) VALUES 
+('15775-000'),
+('15770-000'),
+ ('15700-000'),
+('15773-000'); 
+
+INSERT INTO usuario (name, email, senha, id_cep, data_nascimento, nivel) VALUES 
+('João', 'joao@gmail.com', '111', 1, '1990-05-15', 'user'),
+('adm', 'adm@gmail.com', '123', 2, '1995-08-25', 'admin');
+
+
+INSERT INTO questions (question_text) VALUES 
+('Qual a sua área de atuação?'),
+('Qual a sua experiência com programação?'),
+('Você tem interesse em trabalhar em grandes empresas?');
+
+INSERT INTO options (question_id, option_text, carreira_id) VALUES 
+(1, 'Desenvolvimento de Software', 1),
+(1, 'Design Gráfico', 2),
+(1, 'Gestão de Projetos', 3),
+(1, 'Projetos web ads', 4),
+(2, 'Programação Web', 1),
+(2, 'Design Gráfico Digital', 2),
+(2, 'Projetos web ads', 4),
+(2, 'Projetos web ads', 4),
+(3, 'Sim, eu gosto de trabalhar em empresas grandes', 1),
+(3, 'Projetos web ads', 4),
+(3, 'Projetos web ads', 4),
+(3, 'Projetos web ads', 4);
+
+INSERT INTO instituicao (nome_fantasia, id_cep, cnpj, email, senha, url, razao_social) VALUES 
+('Tech School', 1, '12345678000199', 'p@gmail.com', 'senha1', 'https://www.techschool.com', 'Tech School LTDA'),
+('Design Academy', 2, '98765432000188', 's@gmail.com', 'senha2', 'https://www.designacademy.com', 'Design Academy LTDA');
+
+
+INSERT INTO cursos (id_instituicao, nome_curso, foto_curso, duracao, descricao, carreira_id) VALUES 
+(1, 'Desenvolvimento Web', 'web_course.jpg', '6 meses', 'Curso de desenvolvimento web com foco em front-end e back-end', 1),
+(2, 'Design Gráfico Avançado', 'design_course.jpg', '8 meses', 'Curso completo de design gráfico com ênfase em ferramentas digitais', 2);
+
+INSERT INTO curriculos (nome, foto_perfil, endereco, email, telefone, experiencia, formacao, habilidades) VALUES 
+('João Silva', 'joao_perfil.jpg', 'Rua A, 123', 'joao.silva@example.com', '(11) 99999-9999', 'Desenvolvedor de sistemas em Java e PHP', 'Bacharelado em Ciência da Computação', 'Java, PHP, SQL, Git'),
+('Maria Oliveira', 'maria_perfil.jpg', 'Rua B, 456', 'maria.oliveira@example.com', '(11) 98888-8888', 'Designer gráfico com 5 anos de experiência', 'Tecnólogo em Design Gráfico', 'Photoshop, Illustrator, Figma');
+
+INSERT INTO instituicao_cep_proximo (id_usuario, id_instituicao, cep_id, proximidade) VALUES 
+(1, 1, 1, TRUE),
+(1, 2, 2, FALSE),
+(2, 1, 2, TRUE),
+(2, 2, 1, FALSE);

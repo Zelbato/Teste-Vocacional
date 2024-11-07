@@ -122,11 +122,22 @@ form button:hover {
        
 
     }
+    .main form {
+        display: flex;
+        flex-direction: column;
+       
+    }
     #foto_perfil{
         width: 100%;
     }
-    .main .form-curriculo{
-
+     .form-curriculo{
+        background: transparent;
+        box-shadow: none;
+    }
+    .form-curriculo-2{
+        background: transparent;
+        box-shadow: none;
+        margin-top: 95px;
     }
 
 }
