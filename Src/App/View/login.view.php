@@ -117,7 +117,7 @@
                 <div class="title-form">
                     <h1>Faça seu login <br> e explore nosso sistema!</h1>
                 </div>
-                <img src="../../Public/assets/Img/Connected world-pana.png" alt="image">
+                <img src="../../Public/assets/Img/Connected world-pana.png" alt="Imagem ilustrativa de tres pessoas usando o celular">
             </section>
 
             <section class="form">
@@ -128,7 +128,7 @@
                         </div>
 
                         <div class="login-button">
-                            <button> <a href="./Instituição/instituicao.login.view.php">Instituição</a> </button>
+                            <button> <a href="./Instituição/instituicao.login.view.php" data-message="Botão de ir para Login de instituição">Instituição</a> </button>
                         </div>
 
                     </div>
@@ -158,7 +158,7 @@
 
 
                     <aside class="continue-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button><a href="#" data-message="Botão para entrar na sua conta">Entrar</a></button>
                     </aside>
                 </form>
             </section>
