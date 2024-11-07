@@ -278,7 +278,6 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
             </div>
         </div>
 
-        <main class="main">
             <section class="curriculo">
                 <div class="curriculo-content">
                     <h2>Curriculo de <?php echo htmlspecialchars($curriculo['nome']); ?></h2>
