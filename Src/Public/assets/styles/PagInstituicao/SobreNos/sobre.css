@@ -1,0 +1,34 @@
+@import '../../../Global/style/header/header.css';
+@import '../../../Global/style/footer/footer.css';
+@import '../../../Global/style/index.css';
+
+@import './sobre.instituicao.css';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: var(--font);
+    background-position: center;
+    background: var(--white);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

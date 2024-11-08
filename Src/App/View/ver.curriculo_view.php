@@ -202,53 +202,77 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <div class="position">
 
-
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
-                                Login
-                            </span>
-                        </div>
-                    </a>
-
-                   
-
-                    <div class="menu-item-content">
-                        <span class="menu-item-content-title">
-                            Deseja excluir sua conta
-                            Clique aqui para finalizar!
-                        </span>
-
-                        <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
-                        </span>
-
-                       
-
-                        <a href="curriculo.view.php">
+                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Deseja criar seu curriculo<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Criar Curriculo
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
+                        <a href="../editar_usuario.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
 
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+
+                        </a>
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja excluir sua conta
+                                Clique aqui!
+                            </span>
+
+                            <span id="myBtn" class="menu-item-content-subtitle">
+                                excluir conta
+                            </span>
+
+
+
+                            <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Crie seu Curriculo
+                                        Clique aqui!
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Criar Curriculo
+                                    </span>
+                                </div>
+                            </a>
+
+
+
+                            <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
+                                <div class="menu-item-content">
+                                    <span class="menu-item-content-title">
+                                        Veja as carreiras obtidas
+
+                                    </span>
+
+                                    <span class="menu-item-content-subtitle">
+                                        Ver Carreiras
+                                    </span>
+                                </div>
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
 
         </ul>
     </header>
@@ -317,6 +341,38 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                         <a href="Gerenciar.curriculo.php" style="color: #2a4d8f; text-decoration: none;">Voltar para Lista de Currículos</a>
                     </div>
         </main>
+
+        <script src="../../Public/assets/Js/index.js"></script>
+
+    <!-- <script src="../../Public/assets/Js/index_adm.js"></script> -->
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

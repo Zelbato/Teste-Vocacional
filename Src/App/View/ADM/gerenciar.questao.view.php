@@ -50,7 +50,7 @@ $result = $conexao->query($sql);
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -82,35 +82,63 @@ $result = $conexao->query($sql);
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+
+                    <a href="../editar_usuario.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+
+                    </a>
+
+                    <a href="../login.view.php">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
+                                Faça seu login!
                             </span>
 
                             <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
                                 Login
                             </span>
                         </div>
                     </a>
 
 
+
+                    <a href="../../Services/desconectar.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se
+
+                            </span>
+                        </div>
+                    </a>
+
+
+
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
+                            Deseja excluir sua conta
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
+                            Excluir conta
                         </span>
                     </div>
                 </div>
-
         </ul>
     </header>
 
@@ -141,11 +169,11 @@ $result = $conexao->query($sql);
 
         <?php if ($result->num_rows > 0): ?>
             <div class="row header-content">
-                    <div class="cell">Texto da Questão</div>
-                    <div class="cell">Ação</div>
-                </div>
+                <div class="cell">Texto da Questão</div>
+                <div class="cell">Ação</div>
+            </div>
             <div class="questions-container">
-                
+
 
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <div class="row">
@@ -216,6 +244,8 @@ $result = $conexao->query($sql);
         <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
 
     </div>
+
+    <script src="../../../Public/assets/Js/index_adm.js"></script>
 
 
     <script>

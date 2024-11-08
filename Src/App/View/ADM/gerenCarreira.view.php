@@ -103,30 +103,63 @@ $result = $conexao->query("SELECT * FROM carreira");
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="../login.view.php">
+
+                    <a href="../editar_usuario.php">
                         <div class="menu-item-content">
-                            <span class="menu-item-content-title">Clique aqui para fazer seu login!</span>
-                            <span class="menu-item-content-subtitle">Login</span>
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+
+                    </a>
+
+                    <a href="../login.view.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Login
+                            </span>
                         </div>
                     </a>
 
 
 
-                    <a href="../login.view.php">
+                    <a href="../../Services/desconectar.php">
+
+
                         <div class="menu-item-content">
-                            <span class="menu-item-content-title">Deseja sair da Conta <br>Clique aqui!</span>
-                            <span class="menu-item-content-subtitle">Desconectar-se </span>
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se
+
+                            </span>
                         </div>
                     </a>
 
 
 
                     <div class="menu-item-content">
-                        <span class="menu-item-content-title">Deseja excluir sua conta <br> Clique aqui!</span>
-                        <span id="myBtn" class="menu-item-content-subtitle">excluir conta</span>
+                        <span class="menu-item-content-title">
+                            Deseja excluir sua conta
+                        </span>
+                        <span id="myBtn" class="menu-item-content-subtitle">
+                            Excluir conta
+                        </span>
                     </div>
                 </div>
-            </div>
         </ul>
     </header>
 

@@ -65,14 +65,14 @@ require '../database/config.php';
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1 data-message="Logo New Careers"><a href="index.view.php" >New <span class="gradient">Careers</span>.</a></h1>
+            <h1 data-message="Logo New Careers"><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
@@ -94,14 +94,14 @@ require '../database/config.php';
             <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos" data-message="Opção para ver a sua carreira">Ver carreiras</a></li>
 
             <a href="#" class="menu-button" data-message="mais opções para o usuário">
-                <i class="fa-solid fa-user" ></i> <!--Cadastrar-se ou <br> Excluir conta -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
                 <div class="position">
                     <div class="position">
 
-                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta" >
+                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Faça seu login
@@ -109,16 +109,27 @@ require '../database/config.php';
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar 
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
-                        
+                        <a href="../editar_usuario.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+
+                        </a>
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta 
+                                Deseja excluir sua conta
                                 Clique aqui!
                             </span>
 
@@ -126,7 +137,7 @@ require '../database/config.php';
                                 excluir conta
                             </span>
 
-                            
+
 
                             <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
                                 <div class="menu-item-content">
@@ -136,12 +147,12 @@ require '../database/config.php';
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo 
+                                        Criar Curriculo
                                     </span>
                                 </div>
                             </a>
 
-                            
+
 
                             <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
                                 <div class="menu-item-content">
@@ -151,7 +162,7 @@ require '../database/config.php';
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras 
+                                        Ver Carreiras
                                     </span>
                                 </div>
                             </a>
@@ -180,7 +191,7 @@ require '../database/config.php';
                     <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
                 </div>
 
-                <form action="../Services/deletar.php" method="POST" >
+                <form action="../Services/deletar.php" method="POST">
                     <div id="btn-pop">
                         <button class="btn-default">
                             <a href="" data-message="Botão de cancelar">Cancelar</a></button>

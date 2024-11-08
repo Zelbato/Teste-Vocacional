@@ -109,7 +109,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="position">
                     <div class="position">
 
-                        <a href="login.view.php">
+                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Faça seu login
@@ -122,7 +122,18 @@ while ($row = $result->fetch_assoc()) {
                             </div>
                         </a>
 
+                        <a href="../editar_usuario.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
 
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+
+                        </a>
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
@@ -136,7 +147,7 @@ while ($row = $result->fetch_assoc()) {
 
 
 
-                            <a href="curriculo.index.view.php">
+                            <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Crie seu Curriculo
@@ -151,7 +162,7 @@ while ($row = $result->fetch_assoc()) {
 
 
 
-                            <a href="caminho.resultado.view.php">
+                            <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Veja as carreiras obtidas

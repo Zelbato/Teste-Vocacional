@@ -79,12 +79,26 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
             <div class="tooltip">
                 <div class="position">
+
+                <a href="../editar_usuario.php">
+                <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                            <i class="fa-solid fa-pen-to-square"></i>  Editar Usuário
+                            </span>
+                        </div>
+                   
+                </a>
+
                     <a href="../login.view.php">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Clique aqui para fazer seu login!
+                                Faça seu login!
                             </span>
 
                             <span class="menu-item-content-subtitle">
@@ -101,7 +115,6 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Deseja sair da Conta<br>
-                                Clique aqui!
                             </span>
 
                             <span class="menu-item-content-subtitle">
@@ -117,10 +130,9 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
                             Deseja excluir sua conta
-                            Clique aqui para finalizar!
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
+                            Excluir conta
                         </span>
                     </div>
                 </div>

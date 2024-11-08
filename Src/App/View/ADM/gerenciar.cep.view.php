@@ -102,7 +102,7 @@ $conexao->close();
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio">Inicio</a></li>
+           <li><a id="#home" href="" id="inicio">Inicio</a></li>
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
@@ -117,41 +117,69 @@ $conexao->close();
 
             </form>
 
-           <!-- <a href="#" class="menu-button" data-message="mais opções para o usuário">
-                <i class="fa-solid fa-user"></i> <!-Cadastrar-se ou <br> Excluir conta --
-            </a>
+            <!-- <a href="#" class="menu-button" data-message="mais opções para o usuário">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
+            </a> -->
 
-            <div class="tooltip">
+            <!-- <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+
+                    <a href="../editar_usuario.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+
+                    </a>
+
+                    <a href="../login.view.php">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?<br>
-                                Clique aqui para se cadastrar!
+                                Faça seu login!
                             </span>
 
                             <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se <br>
                                 Login
                             </span>
                         </div>
                     </a>
 
-                    <br>
+
+
+                    <a href="../../Services/desconectar.php">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se
+
+                            </span>
+                        </div>
+                    </a>
+
+
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta <br>
-                            Clique aqui para finalizar!
+                            Deseja excluir sua conta
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
+                            Excluir conta
                         </span>
                     </div>
-                </div>-->
+                </div> -->
 
         </ul>
     </header>

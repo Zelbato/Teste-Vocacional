@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_instituicao'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -43,6 +43,19 @@ if (!isset($_SESSION['id_instituicao'])) {
 
 <body>
 
+  <!--V-Libras-->
+
+  <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
     <header class="header">
 
         <div class="menu-mobile">
@@ -62,7 +75,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span class="teste">Teste
                         Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
+            <li><a id="#facul" href="instituicao.sobreNos.view.php" id="eventos">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
             <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
 

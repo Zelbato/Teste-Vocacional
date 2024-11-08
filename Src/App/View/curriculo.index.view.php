@@ -13,7 +13,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -94,24 +94,35 @@
                 <div class="position">
                     <div class="position">
 
-                        <a href="login.view.php">
+                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
-                                    Faça seu login<br>
+                                    Faça seu login
                                     Clique aqui!
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar <br>
+                                    Entrar
                                 </span>
                             </div>
                         </a>
 
-                        <br>
+                        <a href="../editar_usuario.php">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+
+                        </a>
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Deseja excluir sua conta <br>
+                                Deseja excluir sua conta
                                 Clique aqui!
                             </span>
 
@@ -119,32 +130,32 @@
                                 excluir conta
                             </span>
 
-                            <br>
 
-                            <a href="curriculo.index.view.php">
+
+                            <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Crie seu Curriculo<br>
+                                        Crie seu Curriculo
                                         Clique aqui!
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Criar Curriculo <br>
+                                        Criar Curriculo
                                     </span>
                                 </div>
                             </a>
 
-                            <br>
 
-                            <a href="caminho.resultado.view.php">
+
+                            <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
-                                        Veja as carreiras obtidas<br>
+                                        Veja as carreiras obtidas
 
                                     </span>
 
                                     <span class="menu-item-content-subtitle">
-                                        Ver Carreiras <br>
+                                        Ver Carreiras
                                     </span>
                                 </div>
                             </a>
