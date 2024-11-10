@@ -41,8 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $caminho_imagem = $curso['foto_curso'];
 
     if ($foto_curso['error'] === UPLOAD_ERR_OK) {
+        // Caminho para o diretório 'uploads' na raiz do projeto
+        $diretorio_imagens = __DIR__ . '../../../../../uploads/';
+
         // Verifica se o diretório para salvar as imagens existe, se não, cria
-        $diretorio_imagens = 'uploads/';
         if (!is_dir($diretorio_imagens)) {
             mkdir($diretorio_imagens, 0777, true);
         }
@@ -71,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $carreira_result = $conexao->query("SELECT id, nome FROM carreira");
 $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
