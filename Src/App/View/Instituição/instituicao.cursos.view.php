@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome_curso'])) {
     
         // Gerar nome único para a imagem
         $nome_imagem = basename($foto_curso['name']);
-        $caminho_imagem = '/uploads/' . uniqid('', true) . '-' . $nome_imagem;
+        $caminho_imagem = '../../../../uploads/' . uniqid('', true) . '-' . $nome_imagem;
 
         // Mover o arquivo para o diretório de uploads
         if (!move_uploaded_file($foto_curso['tmp_name'], $diretorio_imagens . basename($caminho_imagem))) {
