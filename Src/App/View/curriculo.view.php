@@ -190,8 +190,6 @@
 
                 <label for="endereco">Endereço:</label>
                 <input type="text" name="endereco" id="endereco" required><br><br>
-
-
             </section>
 
 

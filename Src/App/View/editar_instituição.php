@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -134,20 +134,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="tooltip">
                 <div class="position">
 
-                <a href="login.view.php">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Faça seu login<br>
-                                    Clique aqui!
-                                </span>
+                    <a href="login.view.php">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login<br>
+                                Clique aqui!
+                            </span>
 
-                                <span class="menu-item-content-subtitle">
-                                    Entrar <br>
-                                </span>
-                            </div>
-                        </a>
+                            <span class="menu-item-content-subtitle">
+                                Entrar <br>
+                            </span>
+                        </div>
+                    </a>
 
-                        <br>
+                    <br>
 
                     <a href="instituicao.login.view.php">
 
@@ -183,7 +183,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
     </header>
 
-        <main class="main ">
+    <main class="main">
+        <div class="title">
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="quadro">
@@ -206,45 +207,64 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </form>
                 </div>
             </div>
-            <section class="editar-container">
-                <div class="editarContent">
-                    <div class="title">
-                        <h1>Editar Instituição</h1>
-                    </div>
 
-                    <div class="editar-form">
-                        <form method="post">
-                            <label for="nome_fantasia">Nome Fantasia:</label>
-                            <input type="text" id="nome_fantasia" name="nome_fantasia" required><br><br>
+            <article class="container">
+                <section class="form">
+                    <form method="post">
+                        <div class="form-content">
 
-                            <label for="cep">CEP:</label>
-                            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" title="Formato: XXXXX-XXX"
-                                required><br><br>
+                            <div class="input-group">
 
-                            <label for="cnpj">CNPJ:</label>
-                            <input type="text" id="cnpj" name="cnpj" pattern="\d{14}" title="Deve conter 14 dígitos"
-                                required><br><br>
+                                <div class="input-box">
+                                    <label for="nome_fantasia">Nome Fantasia</label>
+                                    <input type="text" id="nome_fantasia" name="nome_fantasia"
+                                        placeholder="Nome Fantasia" required>
+                                </div>
 
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required><br><br>
+                                <div class="input-box">
+                                    <label for="url">URL da Instituição</label>
+                                    <input type="url" id="url" name="url" placeholder="Digite a URL" required>
+                                </div>
 
-                            <label for="senha">Senha:</label>
-                            <input type="password" id="senha" name="senha" required><br><br>
+                                <div class="input-box">
+                                    <label for="razao_social">Razão Social</label>
+                                    <input type="text" id="razao_social" name="razao_social" placeholder="Razão Social"
+                                        required>
+                                </div>
 
-                            <label for="razao_social">Razão Social:</label>
-                            <input type="text" id="razao_social" name="razao_social" required><br><br>
+                                <div class="input-box">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input type="text" id="cnpj" name="cnpj" maxlength="14"
+                                        placeholder="Digite seu CNPJ" required>
+                                </div>
+                                
+                                <div class="input-box">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
+                                        required>
+                                </div>
 
-                            <label for="url">URL:</label>
-                            <input type="url" id="url" name="url" required><br><br>
+                                <div class="input-box">
+                                    <label for="cep">CEP</label>
+                                    <input type="text" id="cep" name="cep" maxlength="9" placeholder="Digite seu CEP"
+                                        required>
+                                </div>
 
-                            <button type="submit">Salvar</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
+                                <div class="input-box">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                                        required>
+                                </div>
 
-        <!--RODAPÉ-->
+                                <aside class="continue-button">
+                                    <button type="submit">Salvar</button>
+                                </aside>
+                    </form>
+                </section>
+            </article>
+    </main>
+
+    <!--RODAPÉ-->
     <footer>
         <div class="boxs">
             <h2>Logo</h2>
@@ -253,13 +273,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
-
-            <!-- <h2>Criadores</h2>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> -->
-            </p>
         </div>
         <div class="boxs">
             <h2>Inicio</h2>
@@ -270,6 +283,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </div>
         <div class="boxs">
+            
             <h2>Suporte</h2>
             <ul>
                 <li><a href="termos.view.php">Termos de uso </a></li>
@@ -305,17 +319,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
+        btn.onclick = function () {
             modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
