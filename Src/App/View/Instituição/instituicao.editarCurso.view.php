@@ -50,8 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $nome_imagem = basename($foto_curso['name']);
-        $caminho_imagem = $diretorio_imagens . uniqid('', true) . '-' . $nome_imagem;
-
+        $caminho_imagem = '../../../../uploads/' . uniqid('', true) . '-' . $nome_imagem;
         // Move a imagem para o diretório
         if (!move_uploaded_file($foto_curso['tmp_name'], $caminho_imagem)) {
             echo "Erro ao enviar a imagem.";
