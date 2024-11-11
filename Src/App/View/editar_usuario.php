@@ -1,9 +1,9 @@
 <?php
 require_once "../database/config.php";
 
-// Recebe o id_usuario da URL
-if (isset($_GET['id_usuario'])) {
-    $id_usuario = $_GET['id_usuario'];
+// Recebe o usuario_id da URL
+if (isset($_GET['usuario_id'])) {
+    $usuario_id = $_GET['usuario_id'];
 } else {
     echo "ID do usuário não fornecido.";
     exit();
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Atualizar informações do usuário
     $sql_update = 'UPDATE usuario SET name = ?, email = ?, senha = ?, id_cep = ?, data_nascimento = ? WHERE id_usuario = ?';
     $stmt_update = $conexao->prepare($sql_update);
-    $stmt_update->bind_param("sssssi", $name, $email, $hashedSenha, $id_cep, $data_nascimento, $id_usuario);
+    $stmt_update->bind_param("sssssi", $name, $email, $hashedSenha, $id_cep, $data_nascimento, $usuario_id);
 
     if ($stmt_update->execute()) {
         echo "Usuário atualizado com sucesso!";

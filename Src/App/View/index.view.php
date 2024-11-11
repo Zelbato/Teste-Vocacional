@@ -3,10 +3,10 @@
 session_start();
 require '../database/config.php';
 
+
+
 $user_id = $_SESSION['id_usuario']; 
-
-
-// if ($_SESSION['nivel'] = 'admin') {
+// if ($_SESSION['nivel'] == 'admin') {
 //     header("Location: ../View/ADM/adm.view.php");
 // } if ($_SESSION['id_instituicao']) {
 //     header('Location: ../View/Instituição/instituicao.index.view.php');
@@ -115,8 +115,7 @@ $user_id = $_SESSION['id_usuario'];
                                 </span>
                             </div>
                         </a>
-
-                        <a href="editar_usuario.php?id=<?php echo $user_id['user_id']; ?>">
+                        <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
