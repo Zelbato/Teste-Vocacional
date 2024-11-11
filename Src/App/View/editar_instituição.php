@@ -283,6 +283,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </div>
         <div class="boxs">
+            
             <h2>Suporte</h2>
             <ul>
                 <li><a href="termos.view.php">Termos de uso </a></li>
