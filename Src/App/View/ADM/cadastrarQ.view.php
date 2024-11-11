@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="logo">
             <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
-
+ //mito 
         <ul>
             <li><a id="#home" href="../index.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
             <li><a id="#vocacional" href="vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
