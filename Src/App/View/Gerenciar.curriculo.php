@@ -216,13 +216,6 @@ if (!$resul) {
     </main>
 
 
-    <!--Sobre Nós-->
-
-
-
-
-
-
     <!--RODAPÉ-->
     <footer>
         <div class="boxs">

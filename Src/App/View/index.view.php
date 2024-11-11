@@ -3,6 +3,8 @@
 session_start();
 require '../database/config.php';
 
+$user_id = $_SESSION['id_usuario']; 
+
 
 // if ($_SESSION['nivel'] = 'admin') {
 //     header("Location: ../View/ADM/adm.view.php");
@@ -13,7 +15,7 @@ require '../database/config.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -114,7 +116,7 @@ require '../database/config.php';
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="editar_usuario.php?id=<?php echo $user_id['user_id']; ?>">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -124,7 +126,6 @@ require '../database/config.php';
                                     <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
                                 </span>
                             </div>
-
                         </a>
 
                         <div class="menu-item-content">
@@ -195,7 +196,7 @@ require '../database/config.php';
                     <div id="btn-pop">
                         <button class="btn-default">
                             <a href="" data-message="Botão de cancelar">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button type="submit"  data-message="Botão de excluir" class="close excluir">Excluir</button>
                     </div>
                 </form>
             </div>
