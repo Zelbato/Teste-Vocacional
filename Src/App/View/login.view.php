@@ -117,7 +117,7 @@
                 <div class="title-form">
                     <h1>Faça seu login <br> e explore nosso sistema!</h1>
                 </div>
-                <img src="../../Public/assets/Img/Connected world-pana.png" alt="Imagem ilustrativa de tres pessoas usando o celular">
+                <img src="../../Public/assets/Img/Connected world-pana.png" alt="Imagem ilustrativa de tres pessoas usando o celular" loading="lazy">
             </section>
 
             <section class="form">
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="recuperar-senha">
-                            <a href="recuperarS.view.php">Esqueceu sua senha?</a>
+                            <a href="recuperarS.view.php" data-message="opção de ir para recuperar a senha">Esqueceu sua senha?</a>
                         </div>
                     </div>
 

@@ -74,7 +74,7 @@ $user_id = $_SESSION['id_usuario'];
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1 data-message="Logo New Careers"><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php"  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
@@ -86,9 +86,9 @@ $user_id = $_SESSION['id_usuario'];
             <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
             <li><a class="mobile-excluir" href="login.view.php" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
-            <form action="../Services/deletar.php" method="POST" data-message="Opção de excluir">
+            <form action="../Services/deletar.php" method="POST" >
 
-                <li class="mobile-excluir"> <button>Excluir</button> </li>
+                <li class="mobile-excluir"> <button data-message="opção de excluir">Excluir</button> </li>
 
             </form>
 
@@ -225,7 +225,7 @@ $user_id = $_SESSION['id_usuario'];
             <div class="sobre-content">
 
                 <div class="image-content">
-                    <img src="../../Public/assets/Img/estudante-formando.png" alt="Imagem ilustrativa de estudantes se formando">
+                    <img src="../../Public/assets/Img/estudante-formando.png" alt="Imagem ilustrativa de estudantes se formando"  loading="lazy">
                 </div>
 
                 <div class="paragrafo">
@@ -313,7 +313,7 @@ $user_id = $_SESSION['id_usuario'];
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="index.view.php" data-message="Foto da Logo, que te leva para a pagina inicial">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -336,7 +336,7 @@ $user_id = $_SESSION['id_usuario'];
             <h2>Suporte</h2>
             <ul>
                 <li><a href="termos.view.php" data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
-                <li><a href="politica.view.php" data-message="Opção para ir para a Política de privacidade">Política de Privacidade </a></li>
+                <li><a href="politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

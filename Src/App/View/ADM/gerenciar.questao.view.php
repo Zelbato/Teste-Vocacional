@@ -57,22 +57,22 @@ $result = $conexao->query($sql);
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="" id="inicio"  data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos"  data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button>Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
 
             </form>
 
@@ -83,7 +83,7 @@ $result = $conexao->query($sql);
             <div class="tooltip">
                 <div class="position">
 
-                    <a href="../editar_usuario.php">
+                    <a href="../editar_usuario.php" data-message="opção de editar usuario">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Deseja editar seu usuário!
@@ -96,7 +96,7 @@ $result = $conexao->query($sql);
 
                     </a>
 
-                    <a href="../login.view.php">
+                    <a href="../login.view.php"  data-message="Opção de ir para o Login da sua conta">
 
 
                         <div class="menu-item-content">
@@ -112,7 +112,7 @@ $result = $conexao->query($sql);
 
 
 
-                    <a href="../../Services/desconectar.php">
+                    <a href="../../Services/desconectar.php" data-message="opção de desconectar">
 
 
                         <div class="menu-item-content">
@@ -159,9 +159,9 @@ $result = $conexao->query($sql);
 
                 <form action="../../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button class="btn-default" data-message="opção de cancelar">
+                            <a href="" data-message="opção de canclear">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -203,7 +203,7 @@ $result = $conexao->query($sql);
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href=""  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -217,16 +217,16 @@ $result = $conexao->query($sql);
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
+                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php"  data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php"  data-message="Opção para ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php"  data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

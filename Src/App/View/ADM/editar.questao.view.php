@@ -106,19 +106,19 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="../index.view.php" id="inicio"  data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-            <li><a href="../cadastro.view.php">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a href="../cadastro.view.php"  data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos" data-message="opção de excluir">Excluir conta</a></li>
 
             <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -126,7 +126,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <a href="cadastro.view.php" data-message="opção de cadastrar-se">
 
 
                         <div class="menu-item-content">
@@ -175,9 +175,9 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
                 <form action="../../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button class="btn-default" data-message="opção de cancelar">
+                            <a href="" data-message="opção de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -214,10 +214,10 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
                         </div>
                     <?php endforeach; ?>
 
-                    <button type="submit" class="btn-submit">Salvar Alterações</button>
+                    <button type="submit" class="btn-submit" data-message="opção de salvar alterações">Salvar Alterações</button>
                 </form>
 
-                <a href="gerenciar.questao.view.php" class="back-link">Voltar para Gerenciar Questões</a>
+                <a href="gerenciar.questao.view.php" class="back-link" data-message="opção de voltar para gerenciar questões">Voltar para Gerenciar Questões</a>
             </section>
         </article>
     </main>
@@ -227,7 +227,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -241,16 +241,16 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
+                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php" data-message="Opção para ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php" data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

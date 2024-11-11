@@ -65,26 +65,26 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php"  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
-            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
+            <li><a id="#home inicio" href="index.view.php" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php" data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
-            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"> <button>Excluir</button> </li>
+                <li class="mobile-excluir"> <button data-message="opção de excluir">Excluir</button> </li>
 
             </form>
 
-            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
-            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos" data-message="Opção para criar o seu curriculo">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos" data-message="Opção para ver a sua carreira">Ver carreiras</a></li>
 
             <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -107,7 +107,7 @@
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="../editar_usuario.php" data-message="opção de editar usuario">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -186,9 +186,9 @@
 
                 <form action="../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button class="btn-default" data-message="opção de cancelar">
+                            <a href="" data-message="opção de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -202,7 +202,7 @@
             </div>
 
             <aside class="card contact js-global">
-                <img src="../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
+                <img src="../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="ilustração de pessoas curiosas" loading="lazy">
                 <h3>Criar Curriculo</h3>
                 <span>
                 </span>
@@ -210,7 +210,7 @@
             </aside>
 
             <aside class="card contact js-global">
-                <img src="../../Public/assets/Img/fundo-de-conceito-de-universidade-plana.png" alt="estudante-formando">
+                <img src="../../Public/assets/Img/fundo-de-conceito-de-universidade-plana.png" alt="ilustração de universidade" loading="lazy">
                 <h3>Gerenciar Curriculo</h3>
                 <span>
                 </span>
@@ -226,7 +226,7 @@
             <div class="sobre-content">
 
                 <div class="image-content">
-                    <img src="../../Public/assets/Img/Job_hunt_pana.svg" alt="image">
+                    <img src="../../Public/assets/Img/Job_hunt_pana.svg" alt="image" loading="lazy">
                 </div>
 
                 <div class="paragrafo">
@@ -290,7 +290,7 @@ candidato.
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -304,16 +304,16 @@ candidato.
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="">Home </a></li>
-                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="faculdade.view.php">Faculdades </a></li>
+                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
+                <li><a href="vocacao.view.php" data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php" data-message="Opção para ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="termos.view.php">Termos de uso </a></li>
-                <li><a href="politica.view.php">Política de Privacidade </a></li>
+                <li><a href="termos.view.php" data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

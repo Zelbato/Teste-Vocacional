@@ -32,7 +32,7 @@
             <div class="title-form">
                 <h1>Faça seu cadastro <br> e descubra sua área profissional</h1>
             </div>
-                <img src="../../Public/assets/Img/Connected world-pana.png" alt="image">
+                <img src="../../Public/assets/Img/Connected world-pana.png" alt="ilustração de um mundo conectado" loading="lazy">
             </section>
 
             <section class="form">
@@ -42,7 +42,7 @@
                             <h1>Cadastre-se</h1>
                         </div>
                         <div class="login-button">
-                            <button> <a href="Instituição/instituicao.cadastro.php">Instituição</a> </button>
+                            <button> <a href="Instituição/instituicao.cadastro.php" data-message="opção de cadastrar instituição">Instituição</a> </button>
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@
                     </div>
 
                     <aside class="continue-button">
-                        <button>Cadastrar</button>
+                        <button data-message="botão de cadastrar">Cadastrar</button>
                     </aside>
                 </form>
             </section>

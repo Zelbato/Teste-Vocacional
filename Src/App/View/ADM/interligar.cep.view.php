@@ -96,22 +96,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="../index.view.php"  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
             <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button>Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
 
             </form>
 
@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php">
+                    <a href="cadastro.view.php" data-message="opção de cadastrar-se">
 
 
                         <div class="menu-item-content">
@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php endwhile; ?>
                     </div>
 
-                    <button type="submit">Salvar Instituições Próximas</button>
+                    <button type="submit" data-message="opção de salvar instituições proximas">Salvar Instituições Próximas</button>
                 </form>
             </section>
     </main>
