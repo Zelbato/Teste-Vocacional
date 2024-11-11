@@ -183,18 +183,18 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="index.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos">Faculdades</a></li>
+            <li><a id="#facul" href="faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
+            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-excluir" href="#" id="eventos" data-message="opção de excluir">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -217,7 +217,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="../editar_usuario.php" data-message="opção de editar usuario">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -296,7 +296,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                     <div id="btn-pop">
                         <button class="btn-default">
                             <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button type="submit" class="close excluir" data-message="opção de excluir" >Excluir</button>
                     </div>
                 </form>
             </div>

@@ -86,20 +86,20 @@ while ($row = $result->fetch_assoc()) {
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
-            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
+            <li><a id="#home inicio" href="index.view.php" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php" data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
-            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php"  data-message="Opção para ir para as faculdades" >Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php"  data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-excluir" href="#" id="eventos">Excluir conta</a></li>
-            <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos">Criar curriculo</a></li>
-            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
+            <li><a class="mobile-excluir" href="#" id="eventos" data-message="Opção de excluir conta">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="curriculo.view.php" id="eventos" data-message="Opção para criar o seu curriculo">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos"  data-message="Opção para ver a sua carreira">Ver carreiras</a></li>
 
             <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -122,7 +122,7 @@ while ($row = $result->fetch_assoc()) {
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="../editar_usuario.php" data-message="opção de editar usuario"> 
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!

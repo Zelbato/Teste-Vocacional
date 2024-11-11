@@ -45,7 +45,7 @@
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient" data-message="Logo do site">Careers</span>.</a></h1>
+            <h1><a href="index.view.php"data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
@@ -88,7 +88,7 @@
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="../editar_usuario.php" data-message="opção de editar usuario">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -167,7 +167,7 @@
                 <div id="btn-pop">
                     <button class="btn-default">
                         <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
+                    <button type="submit" class="close excluir"  data-message="opção de excluir" >Excluir</button>
                 </div>
             </form>
         </div>
@@ -223,7 +223,7 @@
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="index.view.php"   data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 

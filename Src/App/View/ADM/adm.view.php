@@ -12,7 +12,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -54,22 +54,22 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span
+            <li><a id="#home" href="" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional" ><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos " data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos">Entrar</a></li>
+            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button>Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
 
             </form>
 
@@ -80,7 +80,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
             <div class="tooltip">
                 <div class="position">
 
-                <a href="../editar_usuario.php">
+                <a href="../editar_usuario.php" data-message="opção de editar usuario">
                 <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Deseja editar seu usuário!
@@ -93,7 +93,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                    
                 </a>
 
-                    <a href="../login.view.php">
+                    <a href="../login.view.php" data-message="Opção de ir para o Login da sua conta">
 
 
                         <div class="menu-item-content">
@@ -109,7 +109,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
                    
 
-                    <a href="../../Services/desconectar.php">
+                    <a href="../../Services/desconectar.php" data-message="opção de desconectar">
 
 
                         <div class="menu-item-content">
@@ -170,9 +170,9 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
 
                 <form action="../../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                        <button class="btn-default" data-message="opção de cancelar">
+                            <a href="" data-message="opção de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -186,27 +186,27 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
             </div>
 
             <aside class="card contact js-global">
-                <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="estudante-formando">
+                <img src="../../../Public/assets/Img/ilustracao-do-conceito-de-pessoas-de-curiosidade.png" alt="ilustração de pessoas com curiosidade" loading="lazy">
                 <h3>Gerenciar Questão</h3>
                 <span>
                 </span>
-                <a href="gerenciar.questao.view.php"><button>Entrar</button></a>
+                <a href="gerenciar.questao.view.php" data-message="opção de gerenciar questão"><button  data-message="opção de entrar">Entrar</button></a>
             </aside>
 
             <aside class="card contact js-global">
-                <img src="../../../Public/assets/Img/conceito-de-universidade-plana.png" alt="estudante-formando">
+                <img src="../../../Public/assets/Img/conceito-de-universidade-plana.png" alt="ilustração de uma universidade"  loading="lazy">
                 <h3>Gerenciar Carreiras</h3>
                 <span>
                 </span>
-                <a href="gerenCarreira.view.php"><button>Entrar</button></a>
+                <a href="gerenCarreira.view.php" data-message="opção de gerenciar carreira"><button  data-message="opção de entrar">Entrar</button></a>
             </aside>
 
             <aside class="card contact js-global">
-                <img src="../../../Public/assets/Img/alternar-ilustracao-do-conceito.png" alt="estudante-formando">
+                <img src="../../../Public/assets/Img/alternar-ilustracao-do-conceito.png" alt="ilustração de cep"  loading="lazy">
                 <h3>Gerenciar CEP</h3>
                 <span>
                 </span>
-                <a href="gerenciar.cep.view.php"><button>Entrar</button></a>
+                <a href="gerenciar.cep.view.php" data-message="opção de gerenciar cep"><button data-message="opção de entrar">Entrar</button></a>
             </aside>
 
         </section>
@@ -220,7 +220,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href=""  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -234,16 +234,16 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php">Faculdades </a></li>
+                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php" data-message="Opção para ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php" data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 
