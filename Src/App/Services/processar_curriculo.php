@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $endereco = $_POST['endereco'];
     $habilidades = $_POST['habilidades'];
 
-    // Caminho para o diretório 'uploads' na raiz do projeto
+    // Caminho absoluto para o diretório 'uploads' na raiz do projeto
     $upload_dir = __DIR__ . '../../../../uploads/';
 
     // Verifica se o diretório para salvar as imagens existe, se não, cria
@@ -22,12 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica se um arquivo de imagem foi enviado
     if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] === UPLOAD_ERR_OK) {
         $foto = $_FILES['foto_perfil'];
-        $nome_imagem = basename($foto['name']);
-        $foto_caminho = '../../../../uploads/' . uniqid('', true) . '-' . $nome_imagem;
+        $nome_imagem = uniqid('', true) . '-' . basename($foto['name']);
+        $foto_caminho = $upload_dir . $nome_imagem;
 
         // Move a imagem para o diretório de uploads
-        if (move_uploaded_file($foto['tmp_name'], $upload_dir . $foto_caminho)) {
+        if (move_uploaded_file($foto['tmp_name'], $foto_caminho)) {
             echo "Foto de perfil enviada com sucesso!";
+            // Armazena o caminho relativo para salvar no banco de dados
+            $foto_caminho = 'uploads/' . $nome_imagem;
         } else {
             echo "Erro ao enviar a foto.";
             $foto_caminho = null;
