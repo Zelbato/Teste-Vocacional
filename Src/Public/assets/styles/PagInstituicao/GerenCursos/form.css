@@ -182,6 +182,12 @@ button.delet-btn {
     transition: all .3s;
 }
 
+.editar-btn a, 
+.delet-btn a {
+    color: var(--white);
+    text-decoration: none;
+}
+
 button.editar-btn:hover {
     background: var(--azulHover);
 }

@@ -58,9 +58,9 @@
                          
                         </div>
 
-                        <div class="recuperar-senha">
+                        <!-- <div class="recuperar-senha">
                             <a href="../recuperarS.view.php">Esqueceu sua senha?</a>
-                        </div>
+                        </div> -->
                     </div>
 
                     <aside class="continue-button">

@@ -115,6 +115,7 @@ $user_id = $_SESSION['id_usuario'];
                                 </span>
                             </div>
                         </a>
+                        
                         <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">

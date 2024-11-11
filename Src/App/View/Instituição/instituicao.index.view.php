@@ -77,9 +77,9 @@ if (!isset($_SESSION['id_instituicao'])) {
             </li>
             <li><a id="#facul" href="instituicao.sobreNos.view.php" id="eventos">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
+            <li><a class="mobile-excluir" href="instituicao.login.view.php">Entrar</a></li>
 
-            <form action="../Services/deletar.php" method="POST">
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
 
                 <li class="mobile-excluir"> <button>Excluir</button> </li>
 
@@ -91,7 +91,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             <div class="tooltip">
                 <div class="position">
 
-                <a href="login.view.php">
+                <a href="instituicao.login.view.php">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Faça seu login<br>
@@ -135,8 +135,6 @@ if (!isset($_SESSION['id_instituicao'])) {
                         </span>
                     </div>
                 </div>
-
-
         </ul>
     </header>
     <div id="myModal" class="modal">

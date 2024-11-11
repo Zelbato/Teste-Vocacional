@@ -83,19 +83,6 @@ $result = $conexao->query($sql);
             <div class="tooltip">
                 <div class="position">
 
-                    <a href="../editar_usuario.php" data-message="opção de editar usuario">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja editar seu usuário!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
-                            </span>
-                        </div>
-
-                    </a>
-
                     <a href="../login.view.php"  data-message="Opção de ir para o Login da sua conta">
 
 
@@ -110,7 +97,17 @@ $result = $conexao->query($sql);
                         </div>
                     </a>
 
+                    <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
 
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+                        </a>
 
                     <a href="../../Services/desconectar.php" data-message="opção de desconectar">
 
@@ -142,30 +139,30 @@ $result = $conexao->query($sql);
         </ul>
     </header>
 
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="quadro">
+            <div class="title-pop">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2 id="titulo">Confirmação</h2>
+            </div>
+
+            <div class="pgf">
+                <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
+                <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
+            </div>
+
+            <form action="../../Services/deletar.php" method="POST">
+                <div id="btn-pop">
+                    <button class="btn-default" data-message="opção de cancelar">
+                        <a href="" data-message="opção de canclear">Cancelar</a></button>
+                    <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="main">
 
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="quadro">
-                <div class="title-pop">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <h2 id="titulo">Confirmação</h2>
-                </div>
-
-                <div class="pgf">
-                    <p>Deseja realmente excluir essa conta? Essa opção apagará todos seus dados até agora</p>
-                    <p><span>Atenção:</span> Essa ação não poderá ser desfeita.</p>
-                </div>
-
-                <form action="../../Services/deletar.php" method="POST">
-                    <div id="btn-pop">
-                        <button class="btn-default" data-message="opção de cancelar">
-                            <a href="" data-message="opção de canclear">Cancelar</a></button>
-                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
-                    </div>
-                </form>
-            </div>
-        </div>
 
         <?php if ($result->num_rows > 0): ?>
             <div class="row header-content">

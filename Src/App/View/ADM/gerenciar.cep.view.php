@@ -98,18 +98,18 @@ $conexao->close();
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="adm.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-           <li><a id="#home" href="" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
+           <li><a id="#home" href="adm.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
             <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
             <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../login.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
@@ -118,10 +118,10 @@ $conexao->close();
             </form>
 
             <!-- <a href="#" class="menu-button" data-message="mais opções para o usuário">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
-            </a> -->
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta--
+            </a> 
 
-            <!-- <div class="tooltip">
+            <div class="tooltip">
                 <div class="position">
 
                     <a href="../editar_usuario.php">
@@ -179,9 +179,9 @@ $conexao->close();
                             Excluir conta
                         </span>
                     </div>
-                </div> -->
+                </div>
 
-        </ul>
+        </ul> -->
     </header>
 
     <main class="main">

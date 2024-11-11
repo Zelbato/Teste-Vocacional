@@ -3,6 +3,7 @@
 session_start();
 require '../../database/config.php';
 // require '../../Services/desconectar.php';
+$user_id = $_SESSION['id_usuario']; 
 
 if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
     header("Location: ../View/login.view.php");
@@ -80,19 +81,6 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
             <div class="tooltip">
                 <div class="position">
 
-                <a href="../editar_usuario.php" data-message="opção de editar usuario">
-                <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja editar seu usuário!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                            <i class="fa-solid fa-pen-to-square"></i>  Editar Usuário
-                            </span>
-                        </div>
-                   
-                </a>
-
                     <a href="../login.view.php" data-message="Opção de ir para o Login da sua conta">
 
 
@@ -107,7 +95,17 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                         </div>
                     </a>
 
-                   
+                    <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+                        </a>
 
                     <a href="../../Services/desconectar.php" data-message="opção de desconectar">
 

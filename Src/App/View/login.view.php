@@ -150,9 +150,9 @@
                             <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                         </div>
 
-                        <div class="recuperar-senha">
+                        <!-- <div class="recuperar-senha">
                             <a href="recuperarS.view.php" data-message="opção de ir para recuperar a senha">Esqueceu sua senha?</a>
-                        </div>
+                        </div> -->
                     </div>
 
 
