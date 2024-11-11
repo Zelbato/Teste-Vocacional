@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (move_uploaded_file($foto['tmp_name'], $foto_caminho)) {
             echo "Foto de perfil enviada com sucesso!";
             // Armazena o caminho relativo para salvar no banco de dados
-            $foto_caminho = 'uploads/' . $nome_imagem;
+            $foto_caminho = '../../../uploads/' . $nome_imagem;
         } else {
             echo "Erro ao enviar a foto.";
             $foto_caminho = null;

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $habilidades = $_POST['habilidades'];
 
     // Caminho para o diretório 'uploads' na raiz do projeto
-    $upload_dir = __DIR__ . '/../../../../../uploads/';
+    $upload_dir = __DIR__ . '../../../../uploads/';
 
     // Verifica se o diretório para salvar as imagens existe, se não, cria
     if (!is_dir($upload_dir)) {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica se um novo arquivo de foto foi enviado
     if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] == UPLOAD_ERR_OK) {
         $nome_imagem = basename($_FILES['foto_perfil']['name']);
-        $foto_perfil = '../../../../uploads/' . uniqid('', true) . '-' . $nome_imagem;
+        $foto_perfil = '../../../uploads/' . uniqid('', true) . '-' . $nome_imagem;
 
         // Move a imagem para o diretório de uploads
         if (!move_uploaded_file($_FILES['foto_perfil']['tmp_name'], $upload_dir . $foto_perfil)) {
