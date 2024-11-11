@@ -19,8 +19,22 @@ if (!$curriculo) {
     exit();
 }
 
-// Verifica se a foto de perfil existe
+// Verifica se a foto de perfil existe e converte para Base64
 $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : null;
+
+if ($foto_perfil) {
+    $path = __DIR__ . '/../../../../' . $foto_perfil;
+    $type = pathinfo($path, PATHINFO_EXTENSION);
+    $data = file_get_contents($path);
+    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+    $foto_html = '
+    <div class="photo">
+        <img src="' . $base64 . '" alt="Foto de Perfil">
+    </div>';
+} else {
+    $foto_html = '';
+}
 
 // HTML do currículo para gerar o PDF
 $html = '
@@ -35,7 +49,7 @@ $html = '
             color: #333; 
             margin: 0; 
             padding: 20px;
-            background-color: trasparent;
+            background-color: transparent;
         }
         h1, h2 {
             color: #2a4d8f;
@@ -76,7 +90,6 @@ $html = '
         .photo {
             text-align: center;
             margin-bottom: 20px;
-            
         }
         .photo img {
             max-width: 150px;
@@ -89,12 +102,7 @@ $html = '
     <h1>Currículo de ' . htmlspecialchars($curriculo['nome']) . '</h1>';
 
 // Adiciona a foto de perfil, se existir
-if ($foto_perfil) {
-    $html .= '
-    <div class="photo">
-        <img src="' . htmlspecialchars($foto_perfil) . '" alt="Foto de Perfil">
-    </div>';
-}
+$html .= $foto_html;
 
 $html .= '
     <div class="section contact-info">
