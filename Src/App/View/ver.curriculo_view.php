@@ -254,7 +254,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                                     </span>
                                 </div>
                             </a>
-
+a
 
 
                             <a href="caminho.resultado.view.php" data-message="Opção de ir para a sua carreira obtida">
