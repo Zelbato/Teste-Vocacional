@@ -67,24 +67,24 @@ if (!$resul) {
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="index.view.php"  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home inicio" href="index.view.php">Inicio</a></li>
-            <li><a id="#vocacional destaque" href="vocacao.view.php"><span
+            <li><a id="#home inicio" href="index.view.php" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php" data-message="Opção de ir para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul eventos" href="faculdade.view.php">Faculdades</a></li>
-            <li><a id="#cadastro cadastrar" href="cadastro.view.php">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
-                <li class="mobile-excluir"> <button>Excluir</button> </li>
+                <li class="mobile-excluir"> <button data-message="Botão de excluir">Excluir</button> </li>
             </form>
 
-            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos">Criar curriculo</a></li>
-            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos">Ver carreiras</a></li>
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos" data-message="Opção de criar o seu curriculo">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos" data-message="Opção de ver a sua carreira" >Ver carreiras</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -107,7 +107,7 @@ if (!$resul) {
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php">
+                        <a href="../editar_usuario.php" data-message="Opção de ir para o editar usuario">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -132,7 +132,7 @@ if (!$resul) {
 
 
 
-                            <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
+                            <a href="curriculo.index.view.php" data-message="Opção de ir para criar o seu curriculo">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Crie seu Curriculo
@@ -147,7 +147,7 @@ if (!$resul) {
 
 
 
-                            <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
+                            <a href="caminho.resultado.view.php" data-message="Opção de ir para a sua carreira obtida">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Veja as carreiras obtidas
@@ -185,8 +185,8 @@ if (!$resul) {
                 <form action="../Services/deletar.php" method="POST">
                     <div id="btn-pop">
                         <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir">Excluir</button>
+                            <a href="" data-message="Botão de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -222,7 +222,7 @@ if (!$resul) {
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -236,16 +236,16 @@ if (!$resul) {
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="index.view.php">Home </a></li>
-                <li><a href="vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="faculdade.view.php">Faculdades </a></li>
+                <li><a href="index.view.php" data-message="Opção de voltar para a tela inicial">Home </a></li>
+                <li><a href="vocacao.view.php" data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="faculdade.view.php" data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="termos.view.php">Termos de uso </a></li>
-                <li><a href="politica.view.php">Política de Privacidade </a></li>
+                <li><a href="termos.view.php" data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

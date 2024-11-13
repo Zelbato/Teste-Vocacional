@@ -100,28 +100,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional"><span
+            <li><a id="#home" href="" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="Botão de excluir">Excluir</button></li>
 
             </form>
 
-            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+            <a href="#" class="menu-button" data-message="Mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> 
             </a>
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php" data-message="opção de cadastrar-se">
+                    <a href="cadastro.view.php" data-message="Opção de cadastrar-se">
 
 
                         <div class="menu-item-content">
@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php endwhile; ?>
                     </div>
 
-                    <button type="submit" data-message="opção de salvar instituições proximas">Salvar Instituições Próximas</button>
+                    <button type="submit" data-message="Botão de salvar">Salvar Instituições Próximas</button>
                 </form>
             </section>
     </main>

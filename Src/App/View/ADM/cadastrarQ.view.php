@@ -75,24 +75,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
  //mito 
         <ul>
-            <li><a id="#home" href="../index.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
+            <li><a id="#home" href="../index.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"  data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
             <li><a href="../cadastro.view.php">Cadastrar-se</a></li>
 
-            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
-            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos" data-message="opção de excluir">Excluir conta</a></li>
+            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="../cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-excluir" href="../faculdade.view.php" id="eventos" data-message="Botão de excluir">Excluir conta</a></li>
 
-            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+            <a href="#" class="menu-button" data-message="Mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php" data-message="opção de cadastar-se">
+                    <a href="cadastro.view.php" data-message="Opção de cadastar-se">
 
 
                         <div class="menu-item-content">
@@ -142,9 +142,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <form action="../../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default" data-message="opção de cancelar">
-                            <a href="" data-message="opção de cancelar">Cancelar</a></button>
-                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
+                        <button class="btn-default">
+                            <a href="" data-message="Botão de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                     ?>
 
-                    <button type="submit" class="btn-submit">Salvar Questão</button>
+                    <button type="submit" class="btn-submit" data-message="Botão de salvar">Salvar Questão</button>
                 </form>
             </section>
         </article>
@@ -211,16 +211,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
-                <li><a href="../vocacao.view.php" data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php" data-message="Opção para ir para as Faculdades">Faculdades </a></li>
+                <li><a href="" data-message="Opção de voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php" data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php" data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
-                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php" data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

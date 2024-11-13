@@ -187,14 +187,14 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque" data-message="Opção para ir  para o Teste Vocacional"><span
+            <li><a id="#home" href="index.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
-            <li><a class="mobile-excluir" href="#" id="eventos" data-message="opção de excluir">Excluir conta</a></li>
+            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-excluir" href="#" id="eventos" data-message="Botão de excluir">Excluir conta</a></li>
 
             <a href="#" class="menu-button">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -217,7 +217,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                             </div>
                         </a>
 
-                        <a href="../editar_usuario.php" data-message="opção de editar usuario">
+                        <a href="../editar_usuario.php" data-message="Opção de editar usuario">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -242,7 +242,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
 
 
 
-                            <a href="curriculo.index.view.php" data-message="opção de ir para criar o seu curriculo">
+                            <a href="curriculo.index.view.php" data-message="Opção de ir para criar o seu curriculo">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Crie seu Curriculo
@@ -257,7 +257,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
 
 
 
-                            <a href="caminho.resultado.view.php" data-message="opção para ir para a sua carreira obtida">
+                            <a href="caminho.resultado.view.php" data-message="Opção de ir para a sua carreira obtida">
                                 <div class="menu-item-content">
                                     <span class="menu-item-content-title">
                                         Veja as carreiras obtidas
@@ -295,8 +295,8 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                 <form action="../Services/deletar.php" method="POST">
                     <div id="btn-pop">
                         <button class="btn-default">
-                            <a href="">Cancelar</a></button>
-                        <button type="submit" class="close excluir" data-message="opção de excluir" >Excluir</button>
+                            <a href="" data-message="Botão de cancelar">Cancelar</a></button>
+                        <button type="submit" class="close excluir" data-message="Botão de excluir" >Excluir</button>
                     </div>
                 </form>
             </div>

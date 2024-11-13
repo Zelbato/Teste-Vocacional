@@ -61,22 +61,22 @@ $result = $conexao->query($sql);
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio"  data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
+            <li><a id="#home" href="" id="inicio"  data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos"  data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos"  data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="Botão de excluir">Excluir</button></li>
 
             </form>
 
-            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+            <a href="#" class="menu-button" data-message="Mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
 
@@ -109,7 +109,7 @@ $result = $conexao->query($sql);
                             </div>
                         </a>
 
-                    <a href="../../Services/desconectar.php" data-message="opção de desconectar">
+                    <a href="../../Services/desconectar.php" data-message="Opção de desconectar">
 
 
                         <div class="menu-item-content">
@@ -154,9 +154,9 @@ $result = $conexao->query($sql);
 
             <form action="../../Services/deletar.php" method="POST">
                 <div id="btn-pop">
-                    <button class="btn-default" data-message="opção de cancelar">
-                        <a href="" data-message="opção de canclear">Cancelar</a></button>
-                    <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
+                    <button class="btn-default">
+                        <a href="" data-message="Botão de canclear">Cancelar</a></button>
+                    <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                 </div>
             </form>
         </div>
@@ -179,7 +179,7 @@ $result = $conexao->query($sql);
                             <!-- Botão de Excluir -->
                             <form method="post" action="../../Services/deletar_quest.php" onsubmit="return confirm('Tem certeza que deseja excluir esta questão?');" style="display:inline;">
                                 <input type="hidden" name="question_id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" class="delete-button">Excluir</button>
+                                <button type="submit" class="delete-button" data-message="Botão de excluir">Excluir</button>
                             </form>
                             <!-- Link para Editar -->
                             <a href="editar.questao.view.php?id=<?php echo $row['id']; ?>" class="edit-link">Editar</a>
@@ -191,7 +191,7 @@ $result = $conexao->query($sql);
             <p>Nenhuma questão encontrada.</p>
         <?php endif; ?>
 
-        <a href="cadastrarQ.view.php" class="add-button">Adicionar Nova Questão</a>
+        <a href="cadastrarQ.view.php" class="add-button" data-message="Botão de adicionar">Adicionar Nova Questão</a>
     </div>
 
     <!--RODAPÉ-->
@@ -214,16 +214,16 @@ $result = $conexao->query($sql);
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
-                <li><a href="../vocacao.view.php"  data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php"  data-message="Opção para ir para as Faculdades">Faculdades </a></li>
+                <li><a href="" data-message="Opção de voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php"  data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php"  data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php"  data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
-                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php"  data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 

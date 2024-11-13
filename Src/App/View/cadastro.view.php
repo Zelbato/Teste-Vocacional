@@ -42,7 +42,7 @@
                             <h1>Cadastre-se</h1>
                         </div>
                         <div class="login-button">
-                            <button> <a href="Instituição/instituicao.cadastro.php" data-message="opção de cadastrar instituição">Instituição</a> </button>
+                            <button> <a href="Instituição/instituicao.cadastro.php" data-message="Botão de cadastrar">Instituição</a> </button>
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@
                     </div>
 
                     <aside class="continue-button">
-                        <button data-message="botão de cadastrar">Cadastrar</button>
+                        <button data-message="Botão de cadastrar">Cadastrar</button>
                     </aside>
                 </form>
             </section>

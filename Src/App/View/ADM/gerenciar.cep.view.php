@@ -102,18 +102,18 @@ $conexao->close();
         </div>
 
         <ul>
-           <li><a id="#home" href="adm.view.php" id="inicio" data-message="Opção para voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção para ir  para o Teste Vocacional"><span
+           <li><a id="#home" href="adm.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção para ir para as faculdades">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção para ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
 
-            <li><a class="mobile-entrar" href="../login.view.php" id="eventos" data-message="Opção para entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-entrar" href="../login.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"><button data-message="opção de excluir">Excluir</button></li>
+                <li class="mobile-excluir"><button data-message="Botão de excluir">Excluir</button></li>
 
             </form>
 
@@ -202,7 +202,7 @@ $conexao->close();
                     <div id="btn-pop">
                         <button class="btn-default" data-message="opção de cancelar">
                             <a href="" data-message="opção de cancelar">Cancelar</a></button>
-                        <button type="submit" class="close excluir" data-message="opção de excluir">Excluir</button>
+                        <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
@@ -215,7 +215,7 @@ $conexao->close();
                 <input type="text" id="cep" maxlength="9" name="cep" placeholder="Digite o CEP" required><br>
 
 
-                <button type="submit" data-message="opção de adicionar cep">Adicionar CEP</button>
+                <button type="submit" data-message="Botão de adicionar">Adicionar CEP</button>
             </form>
         </section>
 
@@ -232,7 +232,7 @@ $conexao->close();
                             <!-- Formulário para deletar o CEP -->
                             <form method="post" style="display:inline;">
                                 <input type="hidden" name="delete_cep_id" value="<?php echo $cep['id_cep']; ?>">
-                                <button type="submit">Deletar</button>
+                                <button type="submit" data-message="Botão de deletar">Deletar</button>
                             </form>
                         </div>
 
@@ -268,16 +268,16 @@ $conexao->close();
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="" data-message="Opção para voltar para a tela inicial">Home </a></li>
-                <li><a href="../vocacao.view.php" data-message="Opção para ir para o Teste Vocacional">Teste Vocacional </a></li>
-                <li><a href="../faculdade.view.php" data-message="Opção para ir para as Faculdades">Faculdades </a></li>
+                <li><a href="" data-message="Opção de voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../faculdade.view.php" data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php"  data-message="Opção para ir para o Termos de uso">Termos de uso </a></li>
-                <li><a href="../politica.view.php" data-message="Opção para ir para a Politica de Privacidade">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php"  data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 
