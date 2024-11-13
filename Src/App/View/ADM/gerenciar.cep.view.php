@@ -117,8 +117,8 @@ $conexao->close();
 
             </form>
 
-            <!-- <a href="#" class="menu-button" data-message="mais opções para o usuário">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta--
+            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta-->
             </a> 
 
             <div class="tooltip">
@@ -180,8 +180,8 @@ $conexao->close();
                         </span>
                     </div>
                 </div>
-
-        </ul> -->
+            
+        </ul>
     </header>
 
     <main class="main">
@@ -244,7 +244,7 @@ $conexao->close();
                 <p>Nenhum CEP cadastrado.</p>
             <?php endif; ?>
 
-            <a href="interligar.cep.view.php">Interligação</a>
+            <a class="interligar" href="interligar.cep.view.php">Interligação</a>
         </section>
     </main>
 
