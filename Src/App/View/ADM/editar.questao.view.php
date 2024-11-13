@@ -155,7 +155,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
                         </span>
                     </div>
                 </div>
-
+            </div>
         </ul>
     </header>
 
