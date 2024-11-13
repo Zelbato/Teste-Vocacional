@@ -200,7 +200,7 @@ $result = $conexao->query("SELECT * FROM carreira");
                     <li>
                         <?php echo htmlspecialchars($carreira['nome']); ?>
                         <a href="gerenCarreira.view.php?delete=<?php echo $carreira['id']; ?>" class="delete-button" onclick="return confirm('Tem certeza que deseja excluir esta carreira?');">
-                            <i class="bi bi-trash"></i> Excluir
+                            <i class="bi bi-trash lixeira"></i> Excluir
                         </a>
                     </li>
                 <?php endwhile; ?>
