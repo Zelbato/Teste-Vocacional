@@ -182,16 +182,14 @@ section.resultado {
 }
 
 .card-body p {
-    color: var(--preto);
+    color: var(--azul);
     /* Texto em cor escura */
     font-size: 14px;
 }
 
-
-
-
-i {
-    font-size: 20px;
+.card-body i {
+    font-size: 18px;
+    color: var(--azul);
 }
 
 

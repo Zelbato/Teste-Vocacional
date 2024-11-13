@@ -2,13 +2,13 @@
 session_start();
 require '../database/config.php';
 
-$user_id = $_SESSION['id_usuario']; 
+$user_id = $_SESSION['id_usuario'];
 
 if (!isset($_GET['carreira_id'])) {
     die('Carreira não foi especificada.');
 }
 
-$carreira = intval($_GET['carreira_id']); 
+$carreira = intval($_GET['carreira_id']);
 
 // Carrega instituições próximas com base no CEP do usuário e na carreira sugerida
 $query = "
@@ -84,13 +84,22 @@ if ($result->num_rows == 0) {
         </div>
 
         <ul>
-            <li><a id="#home" href="index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="vocacao.view.php" id="destaque"><span
+            <li><a id="#home inicio" href="index.view.php" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional destaque" href="vocacao.view.php" data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="#" id="eventos">Faculdades</a></li>
+            <li><a id="#facul eventos" href="faculdade.view.php" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
-            <li><a class="mobile-entrar" href="cadastro.view.php" id="eventos">Entrar</a></li>
+            <form action="../Services/deletar.php" method="POST">
+
+                <li class="mobile-excluir"> <button data-message="Botão de excluir">Excluir</button> </li>
+
+            </form>
+
+            <li><a class="mobile-excluir" href="curriculo.index.view.php" id="eventos" data-message="Opção de criar o seu curriculo">Criar curriculo</a></li>
+            <li><a class="mobile-excluir" href="caminho.resultado.view.php" id="eventos" data-message="Opção de ver a sua carreira">Ver carreiras</a></li>
 
             <a href="#" class="menu-button" data-message="mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
@@ -237,20 +246,20 @@ if ($result->num_rows == 0) {
                                         <h3><?php echo htmlspecialchars($instituicao['nome_fantasia']); ?></h3>
                                     <?php endif; ?>
                                 </div>
-                                
+
                                 <div class="card-body">
 
                                     <?php if (!empty($instituicao['foto_curso'])): ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
                                             </a>
-                                            <img src= "<?php echo htmlspecialchars('/teste-vocacional/uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
-                                            </div>
-                                            <?php else: ?>
-                                                <div class="image-container">
-                                                    <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank"></a>
-                                                    <img src="/teste-vocacional/uploads/default.png">
-                                                    </div>
+                                            <img src="<?php echo htmlspecialchars('/teste-vocacional/uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="image-container">
+                                            <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank"></a>
+                                            <img src="/teste-vocacional/uploads/default.png">
+                                        </div>
                                     <?php endif; ?>
 
                                     <!-- <strong>Curso:</strong> -->
