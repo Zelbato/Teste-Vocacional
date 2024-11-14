@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+require '../database/config.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
