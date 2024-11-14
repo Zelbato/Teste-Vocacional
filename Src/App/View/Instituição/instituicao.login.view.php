@@ -31,7 +31,7 @@
                 <div class="title-form">
                     <h1>Faça seu login <br> e explore nosso sistema!</h1>
                 </div>
-                <img src="../../../Public/assets/Img/Connected world-pana.png" alt="image">
+                <img src="../../../Public/assets/Img/Connected world-pana.png" alt="Ilustração de um mundo conectado" loading="lazy">
             </section>
 
             <section class="form">
@@ -64,7 +64,7 @@
                     </div>
 
                     <aside class="continue-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button data-message="Botão de entrar"><a href="#">Entrar</a></button>
                     </aside>
                 </form>
             </section>

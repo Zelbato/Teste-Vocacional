@@ -86,7 +86,7 @@
                             </div>
 
                             <aside class="continue-button">
-                                <button><a href="#">Cadastrar Instituição</a></button>
+                                <button><a href="#" data-message="Botão de cadastrar">Cadastrar Instituição</a></button>
                             </aside>
 
                         </div>
