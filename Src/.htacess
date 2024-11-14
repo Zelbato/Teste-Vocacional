@@ -1,1 +1,11 @@
-ls 
+# Permite o acesso ao diretório uploads
+<Directory "/Src/uploads">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+
+# Opcional: Definir diretivas de segurança, como limitar o acesso a arquivos específicos
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf|webp|SVG)$">
+    Require all granted
+</FilesMatch>
