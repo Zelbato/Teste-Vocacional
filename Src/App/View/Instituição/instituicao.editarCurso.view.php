@@ -124,31 +124,31 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
         <input type="checkbox" name="" id="chk1">
 
         <div class="logo">
-            <h1><a href="instituicao.index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+            <h1><a href="instituicao.index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
         </div>
 
         <ul>
-            <li><a id="#home" href="instituicao.index.view.php" id="inicio">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"><span class="teste">Teste
+            <li><a id="#home" href="instituicao.index.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span class="teste">Teste
                         Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="i." id="eventos">Sobre Nós</a></li>
-            <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="login.view.php">Entrar</a></li>
+            <li><a id="#facul" href="i." id="eventos" data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
+            <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-excluir" href="login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
 
-                <li class="mobile-excluir"> <button>Excluir</button> </li>
+                <li class="mobile-excluir"> <button data-message="Botão de excluir">Excluir</button> </li>
 
             </form>
 
-            <a href="#" class="menu-button" data-message="mais opções para o usuário">
+            <a href="#" class="menu-button" data-message="Mais opções para o usuário">
                 <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta -->
             </a>
             <div class="tooltip">
                 <div class="position">
 
-                    <a href="login.view.php">
+                    <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Faça seu login<br>
@@ -163,7 +163,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
                     <br>
 
-                    <a href="instituicao.login.view.php">
+                    <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da instituição">
 
 
                         <div class="menu-item-content">
@@ -214,8 +214,8 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
             <form action="../../Services/deletar.php" method="POST">
                 <div id="btn-pop">
                     <button class="btn-default">
-                        <a href="">Cancelar</a></button>
-                    <button type="submit" class="close excluir">Excluir</button>
+                        <a href="" data-message="Botão de cancelar">Cancelar</a></button>
+                    <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                 </div>
             </form>
         </div>
@@ -245,7 +245,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
             <label for="foto_curso">Foto da Instituição:</label>
             <input type="file" id="foto_curso" name="foto_curso" accept="image/*"><br>
 
-            <button type="submit">Salvar Alterações</button>
+            <button type="submit" data-message="Botão de salvar">Salvar Alterações</button>
         </form>
     </main>
 
@@ -255,7 +255,7 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
             <h2>Logo</h2>
 
             <div class="logo">
-                <h1><a href="../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
 
 
@@ -269,16 +269,16 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
         <div class="boxs">
             <h2>Inicio</h2>
             <ul>
-                <li><a href="../index.view.php">Home </a></li>
-                <li><a href="../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="i.">Faculdades </a></li>
+                <li><a href="../index.view.php" data-message="Opção de voltar para a tela inicial">Home </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="i." data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php">Termos de uso </a></li>
-                <li><a href="../politica.view.php">Política de Privacidade </a></li>
+                <li><a href="../termos.view.php" data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
 
