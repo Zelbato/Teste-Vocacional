@@ -81,13 +81,13 @@
 
                             <div class="input-box">
                                 <label for="senha">Senha</label>
-                                <!-- <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required> -->
-                                <div class="password-container">
+                                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                                <!-- <div class="password-container">
                                     <input type="password" id="senha" placeholder="Sua senha" required>
                                     <button type="button" id="togglePassword" aria-label="Mostrar senha">
                                         <i class="fas fa-eye" id="passwordIcon"></i>
                                     </button>
-                                </div>
+                                </div> -->
 
                             </div>
 
