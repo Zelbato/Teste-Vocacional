@@ -58,14 +58,15 @@
                          
                         </div>
 
-                        <!-- <div class="recuperar-senha">
-                            <a href="../recuperarS.view.php">Esqueceu sua senha?</a>
-                        </div> -->
                     </div>
-
+                    
                     <aside class="continue-button">
                         <button data-message="Botão de entrar"><a href="#">Entrar</a></button>
                     </aside>
+
+                    <div class="cadastre">
+                        <a href="instituicao.cadastro.php">Cadastrar-se</a>
+                    </div>
                 </form>
             </section>
         </article>

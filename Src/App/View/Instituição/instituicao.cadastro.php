@@ -65,7 +65,7 @@
 
                             <div class="input-box">
                                 <label for="cnpj">CNPJ </label>
-                                <input id="cnpj" type="text" maxlength="14" name="cnpj" placeholder="Digite o CNPJ" required>
+                                <input id="cnpj" type="text" maxlength="18" name="cnpj" placeholder="Digite o CNPJ" required>
                             </div>
 
 
@@ -81,7 +81,13 @@
 
                             <div class="input-box">
                                 <label for="senha">Senha</label>
-                                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                                <!-- <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required> -->
+                                <div class="password-container">
+                                    <input type="password" id="senha" placeholder="Sua senha" required>
+                                    <button type="button" id="togglePassword" aria-label="Mostrar senha">
+                                        <i class="fas fa-eye" id="passwordIcon"></i>
+                                    </button>
+                                </div>
 
                             </div>
 
@@ -96,54 +102,69 @@
         </article>
     </main>
 
-    <!--RODAPÉ-->
-    <!-- <footer>
-        <div class="boxs">
-            <h2>Logo</h2>
-
-            <div class="logo">
-                <h1><a href="../../index.view.php">New <span class="gradient">Careers</span>.</a></h1>
-            </div>
-
-
-            <!-- <h2>Criadores</h2>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Heitor Zelbato</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Calebe Farias</a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/">Eduardo </a>
-       <p>Desenvolvido por <a href="https://github.com/Zelbato/"> Franzin </a> --
-            </p>
-        </div>
-        <div class="boxs">
-            <h2>Inicio</h2>
-            <ul>
-                <li><a href="../../index.view.php">Home </a></li>
-                <li><a href="../../vocacao.view.php">Teste Vocacional </a></li>
-                <li><a href="../../faculdade.view.php">Faculdades </a></li>
-            </ul>
-        </div>
-        <div class="boxs">
-            <h2>Suporte</h2>
-            <ul>
-                <li><a href="../../termos.view.php">Termos de uso </a></li>
-                <li><a href="../../politica.view.php">Política de Privacidade </a></li>
-            </ul>
-        </div>
-
-        <div class="boxs">
-            <h2>Sobre nós</h2>
-            <p>
-                Somos uma empresa brasileira focada em encontrar a melhor área de atuação para nossos
-                usuários e indicar as redes de ensino mais próximas dele. As maiores redes de ensino
-                têm uma breve explicação de como funciona seu processo e bolsas para entrar.
-            </p>
-        </div>
-    </footer>
-
-    <div class="footer">
-        <p>Copyright © 2024 New Careers. Todos os direitos reservados.</p>
-    </div> -->
 
     <script>
+        const cnpjInput = document.getElementById('cnpj'); //CNPJ
+
+        cnpjInput.addEventListener('input', () => {
+            let cnpj = cnpjInput.value;
+
+            // Remove caracteres que não sejam números
+            cnpj = cnpj.replace(/\D/g, '');
+
+            // Adiciona os separadores automaticamente
+            if (cnpj.length > 2 && cnpj.length <= 5) {
+                cnpj = cnpj.replace(/(\d{2})(\d+)/, '$1.$2');
+            } else if (cnpj.length > 5 && cnpj.length <= 8) {
+                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d+)/, '$1.$2.$3');
+            } else if (cnpj.length > 8 && cnpj.length <= 12) {
+                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1.$2.$3/$4');
+            } else if (cnpj.length > 12) {
+                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{1,2})/, '$1.$2.$3/$4-$5');
+            }
+
+            // Atualiza o valor no campo
+            cnpjInput.value = cnpj;
+        });
+
+        const cepInput = document.getElementById('cep'); //CEP 
+
+        cepInput.addEventListener('input', () => {
+            let cep = cepInput.value;
+
+            // Remove caracteres que não sejam números
+            cep = cep.replace(/\D/g, '');
+
+            // Adiciona o traço automaticamente após os 5 primeiros números
+            if (cep.length > 5) {
+                cep = cep.replace(/(\d{5})(\d+)/, '$1-$2');
+            }
+
+            // Atualiza o valor no campo
+            cepInput.value = cep;
+        });
+
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('senha');
+        const passwordIcon = document.getElementById('passwordIcon');
+
+        togglePassword.addEventListener('click', () => {
+            // Alterna o tipo do campo entre 'password' e 'text'
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+
+            // Alterna o ícone entre olho aberto e olho fechado
+            if (type === 'password') {
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            } else {
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            }
+        });
+
+
+
         // Get the modal
         var modal = document.getElementById("myModal");
 

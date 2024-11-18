@@ -18,8 +18,6 @@ if ($_SESSION['nivel'] === 'user') {
 // Se o usuário for um usuário comum, ele não será redirecionado e poderá continuar na página principal
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

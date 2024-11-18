@@ -242,3 +242,28 @@
     color: var(--white);
     box-shadow: 0 0 10px #11182752;
 }
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  input[type="password"], input[type="text"] {
+    flex: 1;
+    font-size: 16px;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: -18px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  button i {
+    font-size: 14px;
+  }

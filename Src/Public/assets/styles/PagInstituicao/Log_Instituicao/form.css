@@ -170,14 +170,19 @@
     color: var(--white);
 }
 
-.main .recuperar-senha a{
-    font-size: 15px;
+.main .cadastre a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+
+    font-size: 16px;
     color: var(--azul);
     text-decoration: none;
 }
 
-.main .recuperar-senha a:hover {
-    color: var(--vermelho);
+.main .cadastre a:hover {
+    color: var(--azulClaro);
 }
 
 .main .continue-button button {

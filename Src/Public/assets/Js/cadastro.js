@@ -1,3 +1,23 @@
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('senha');
+const passwordIcon = document.getElementById('passwordIcon');
+
+togglePassword.addEventListener('click', () => {
+  // Alterna o tipo do campo entre 'password' e 'text'
+  const type = passwordInput.type === 'password' ? 'text' : 'password';
+  passwordInput.type = type;
+
+  // Alterna o ícone entre olho aberto e olho fechado
+  if (type === 'password') {
+    passwordIcon.classList.remove('fa-eye-slash');
+    passwordIcon.classList.add('fa-eye');
+  } else {
+    passwordIcon.classList.remove('fa-eye');
+    passwordIcon.classList.add('fa-eye-slash');
+  }
+});
+
+
 const tooltip = document.querySelector(".tooltip");
 const menuButton = document.querySelector(".menu-button");
 
@@ -34,5 +54,6 @@ lupa.addEventListener('click', ()=> {
    boxBusca.classList.add('ativar')
 
 })
+
 
 

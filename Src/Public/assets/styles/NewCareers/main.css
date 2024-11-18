@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
 .quiz-career {
@@ -121,6 +121,7 @@ input[type="radio"]:checked + label {
 
 #nextBtn, #submitBtn {
     width: 100%;
+    margin-top: 20px;
     text-align: center;
 }
 

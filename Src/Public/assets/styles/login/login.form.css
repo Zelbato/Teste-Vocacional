@@ -227,3 +227,22 @@
     font-size: 14px;
     font-weight: 600;
 }
+
+.main .cadastre {
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.main .cadastre a {
+    text-decoration:none;
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main .cadastre a:hover {
+    color: var(--azulClaro);
+}
