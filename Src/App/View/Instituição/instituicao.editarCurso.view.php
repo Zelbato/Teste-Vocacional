@@ -129,8 +129,8 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
         <ul>
             <li><a id="#home" href="instituicao.index.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span class="teste">Teste
-                        Vocacional</span></a>
+            <!-- <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span class="teste">Teste
+                        Vocacional</span></a> -->
             </li>
             <li><a id="#facul" href="i." id="eventos" data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>

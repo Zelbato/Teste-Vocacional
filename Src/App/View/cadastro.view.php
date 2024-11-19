@@ -54,7 +54,7 @@
 
                         <div class="input-box">
                             <label for="date">Data de Nascimento</label>
-                            <input class="data" id="date" type="text" name="data_nascimento" maxlength="10" placeholder="DD/MM/AAAA">
+                            <input class="data" id="date" type="date" name="data_nascimento" maxlength="10" placeholder="DD/MM/AAAA">
                         </div>
 
 
@@ -70,13 +70,13 @@
 
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <!-- <input id="password" type="password" name="senha" placeholder="Digite sua senha" required> -->
-                            <div class="password-container">
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                            <!-- <div class="password-container">
                                 <input type="password" id="senha" placeholder="Sua senha" required>
                                 <button type="button" id="togglePassword" aria-label="Mostrar senha" >
                                 <i class="fas fa-eye" id="passwordIcon"></i>
                                 </button>
-                            </div>
+                            </div> -->
 
                         </div>
 
@@ -93,41 +93,41 @@
     <script src="../../Public/assets/Js/cadastro.js"></script>
 
     <script>
-        const cepInput = document.getElementById('cep'); //CEP 
+        // const cepInput = document.getElementById('cep'); //CEP 
 
-        cepInput.addEventListener('input', () => {
-            let cep = cepInput.value;
+        // cepInput.addEventListener('input', () => {
+        //     let cep = cepInput.value;
 
-            // Remove caracteres que não sejam números
-            cep = cep.replace(/\D/g, '');
+        //     // Remove caracteres que não sejam números
+        //     cep = cep.replace(/\D/g, '');
 
-            // Adiciona o traço automaticamente após os 5 primeiros números
-            if (cep.length > 5) {
-                cep = cep.replace(/(\d{5})(\d+)/, '$1-$2');
-            }
+        //     // Adiciona o traço automaticamente após os 5 primeiros números
+        //     if (cep.length > 5) {
+        //         cep = cep.replace(/(\d{5})(\d+)/, '$1-$2');
+        //     }
 
-            // Atualiza o valor no campo
-            cepInput.value = cep;
-        });
+        //     // Atualiza o valor no campo
+        //     cepInput.value = cep;
+        // });
 
-        const dataInput = document.getElementById('date'); //DATA 
+        // const dataInput = document.getElementById('date'); //DATA 
 
-        dataInput.addEventListener('input', () => {
-            let data = dataInput.value;
+        // dataInput.addEventListener('input', () => {
+        //     let data = dataInput.value;
 
-            // Remove caracteres que não sejam números
-            data = data.replace(/\D/g, '');
+        //     // Remove caracteres que não sejam números
+        //     data = data.replace(/\D/g, '');
 
-            // Adiciona as barras automaticamente
-            if (data.length > 2 && data.length <= 4) {
-                data = data.replace(/(\d{2})(\d+)/, '$1/$2');
-            } else if (data.length > 4) {
-                data = data.replace(/(\d{2})(\d{2})(\d+)/, '$1/$2/$3');
-            }
+        //     // Adiciona as barras automaticamente
+        //     if (data.length > 2 && data.length <= 4) {
+        //         data = data.replace(/(\d{2})(\d+)/, '$1/$2');
+        //     } else if (data.length > 4) {
+        //         data = data.replace(/(\d{2})(\d{2})(\d+)/, '$1/$2/$3');
+        //     }
 
-            // Atualiza o valor no campo
-            dataInput.value = data;
-        });
+        //     // Atualiza o valor no campo
+        //     dataInput.value = data;
+        // });
     </script>
 
 </body>
