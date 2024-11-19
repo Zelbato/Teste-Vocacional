@@ -65,7 +65,7 @@
 
                             <div class="input-box">
                                 <label for="cnpj">CNPJ </label>
-                                <input id="cnpj" type="text" maxlength="18" name="cnpj" placeholder="Digite o CNPJ" required>
+                                <input id="cnpj" type="text" maxlength="14" name="cnpj" placeholder="Digite o CNPJ" required>
                             </div>
 
 
@@ -104,28 +104,29 @@
 
 
     <script>
-        const cnpjInput = document.getElementById('cnpj'); //CNPJ
+    
+    //    const cnpjInput = document.getElementById('cnpj'); //CNPJ
 
-        cnpjInput.addEventListener('input', () => {
-            let cnpj = cnpjInput.value;
+    //     cnpjInput.addEventListener('input', () => {
+    //         let cnpj = cnpjInput.value;
 
-            // Remove caracteres que não sejam números
-            cnpj = cnpj.replace(/\D/g, '');
+    //         // Remove caracteres que não sejam números
+    //         cnpj = cnpj.replace(/\D/g, '');
 
-            // Adiciona os separadores automaticamente
-            if (cnpj.length > 2 && cnpj.length <= 5) {
-                cnpj = cnpj.replace(/(\d{2})(\d+)/, '$1.$2');
-            } else if (cnpj.length > 5 && cnpj.length <= 8) {
-                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d+)/, '$1.$2.$3');
-            } else if (cnpj.length > 8 && cnpj.length <= 12) {
-                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1.$2.$3/$4');
-            } else if (cnpj.length > 12) {
-                cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{1,2})/, '$1.$2.$3/$4-$5');
-            }
+    //         // Adiciona os separadores automaticamente
+    //         if (cnpj.length > 2 && cnpj.length <= 5) {
+    //             cnpj = cnpj.replace(/(\d{2})(\d+)/, '$1.$2');
+    //         } else if (cnpj.length > 5 && cnpj.length <= 8) {
+    //             cnpj = cnpj.replace(/(\d{2})(\d{3})(\d+)/, '$1.$2.$3');
+    //         } else if (cnpj.length > 8 && cnpj.length <= 12) {
+    //             cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1.$2.$3/$4');
+    //         } else if (cnpj.length > 12) {
+    //             cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{1,2})/, '$1.$2.$3/$4-$5');
+    //         }
 
-            // Atualiza o valor no campo
-            cnpjInput.value = cnpj;
-        });
+    //         // Atualiza o valor no campo
+    //         cnpjInput.value = cnpj;
+    //     });
 
         const cepInput = document.getElementById('cep'); //CEP 
 
@@ -144,24 +145,24 @@
             cepInput.value = cep;
         });
 
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('senha');
-        const passwordIcon = document.getElementById('passwordIcon');
+        // const togglePassword = document.getElementById('togglePassword');
+        // const passwordInput = document.getElementById('senha');
+        // const passwordIcon = document.getElementById('passwordIcon');
 
-        togglePassword.addEventListener('click', () => {
-            // Alterna o tipo do campo entre 'password' e 'text'
-            const type = passwordInput.type === 'password' ? 'text' : 'password';
-            passwordInput.type = type;
+        // togglePassword.addEventListener('click', () => {
+        //     // Alterna o tipo do campo entre 'password' e 'text'
+        //     const type = passwordInput.type === 'password' ? 'text' : 'password';
+        //     passwordInput.type = type;
 
-            // Alterna o ícone entre olho aberto e olho fechado
-            if (type === 'password') {
-                passwordIcon.classList.remove('fa-eye-slash');
-                passwordIcon.classList.add('fa-eye');
-            } else {
-                passwordIcon.classList.remove('fa-eye');
-                passwordIcon.classList.add('fa-eye-slash');
-            }
-        });
+        //     // Alterna o ícone entre olho aberto e olho fechado
+        //     if (type === 'password') {
+        //         passwordIcon.classList.remove('fa-eye-slash');
+        //         passwordIcon.classList.add('fa-eye');
+        //     } else {
+        //         passwordIcon.classList.remove('fa-eye');
+        //         passwordIcon.classList.add('fa-eye-slash');
+        //     }
+        // });
 
 
 
