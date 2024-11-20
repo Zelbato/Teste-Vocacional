@@ -1,6 +1,19 @@
 <?php
+// Inicia o buffer de saída para evitar problemas com headers
+ob_start();
+
 require '../database/config.php';
-require '../View/curriculo.view.php';
+
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: login.view.php");
+    exit();
+}
+
+// Obtém o ID do usuário logado
+$id_usuario = $_SESSION['id_usuario'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -27,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Move a imagem para o diretório de uploads
         if (move_uploaded_file($foto['tmp_name'], $foto_caminho)) {
-            echo "Foto de perfil enviada com sucesso!";
             // Armazena o caminho relativo para salvar no banco de dados
             $foto_caminho = '../../../uploads/' . $nome_imagem;
         } else {
@@ -39,21 +51,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $foto_caminho = null;
     }
 
-    // Prepara a consulta para inserir os dados no banco de dados
+    // Prepara a consulta para inserir os dados no banco de dados, incluindo o ID do usuário
     $stmt = $conexao->prepare("
-        INSERT INTO curriculos (nome, email, telefone, experiencia, formacao, endereco, habilidades, foto_perfil)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO curriculos (id_usuario, nome, email, telefone, experiencia, formacao, endereco, habilidades, foto_perfil)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
-    $stmt->bind_param("ssssssss", $nome, $email, $telefone, $experiencia, $formacao, $endereco, $habilidades, $foto_caminho);
+    $stmt->bind_param("issssssss", $id_usuario, $nome, $email, $telefone, $experiencia, $formacao, $endereco, $habilidades, $foto_caminho);
 
     // Executa a consulta
     if ($stmt->execute()) {
-        echo "Currículo salvo com sucesso!";
+        header("Location: ../View/Gerenciar.curriculo.php");
     } else {
-        echo "Erro ao salvar o currículo: " . $stmt->error;
+        echo "<div class='alert error'>Erro ao salvar o currículo: " . $stmt->error . "</div>";
     }
 
     $stmt->close();
     $conexao->close();
 }
+
+// Encerra o buffer de saída
+ob_end_flush();
 ?>

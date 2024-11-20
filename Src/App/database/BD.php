@@ -69,6 +69,9 @@ CREATE TABLE IF NOT EXISTS curriculos (
     habilidades VARCHAR(255)
 );
 
+ALTER TABLE curriculos ADD COLUMN id_usuario INT NOT NULL, ADD FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE;
+
+
 CREATE TABLE IF NOT EXISTS user_responses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
