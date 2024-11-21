@@ -126,36 +126,60 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
             <div class="tooltip">
                 <div class="position">
-                    <a href="cadastro.view.php" data-message="Opção de cadastrar-se">
+
+                    <a href="../login.view.php"  data-message="Opção de ir para o Login da sua conta">
 
 
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
-                                Ainda não se cadastrou?
-                                Clique aqui para se cadastrar!
+                                Faça seu login!
                             </span>
 
                             <span class="menu-item-content-subtitle">
-
-                                Cadastrar-se 
                                 Login
                             </span>
                         </div>
                     </a>
 
-                    
+                    <a href="../editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                            <div class="menu-item-content">
+                                <span class="menu-item-content-title">
+                                    Deseja editar seu usuário!
+                                </span>
+
+                                <span class="menu-item-content-subtitle">
+                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                </span>
+                            </div>
+                        </a>
+
+                    <a href="../../Services/desconectar.php" data-message="Opção de desconectar">
+
+
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+
+                                Desconectar-se
+
+                            </span>
+                        </div>
+                    </a>
+
+
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
-                            Deseja excluir sua conta 
-                            Clique aqui para finalizar!
+                            Deseja excluir sua conta
                         </span>
                         <span id="myBtn" class="menu-item-content-subtitle">
-                            excluir conta
+                            Excluir conta
                         </span>
                     </div>
                 </div>
-            </div>
         </ul>
     </header>
 
@@ -269,7 +293,8 @@ $carreiras = $carreira_result->fetch_all(MYSQLI_ASSOC);
 
     </div>
 
-    <script src="../../../Public/assets/Js/index_adm.js"></script>
+    <!-- <script src="../../../Public/assets/Js/index_adm.js"></script> -->
+    <script src="../../../Public/assets/js/index.js"></script>
 
     <script>
         // Get the modal

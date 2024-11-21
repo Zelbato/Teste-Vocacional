@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cep'])) {
     $stmt->bind_param("s", $cep);
 
     if ($stmt->execute()) {
-        echo "CEP adicionado com sucesso!";
+        echo "<div class='alert success'>CEP adicionado com sucesso!</div>";
     } else {
-        echo "Erro ao adicionar o CEP: " . $stmt->error;
+        echo "<div class='alert error'>Erro ao adicionar o CEP: " . $stmt->error . "</div>";
     }
 
     $stmt->close();
@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_cep_id'])) {
     $stmt->bind_param("i", $cep_id);
 
     if ($stmt->execute()) {
-        echo "CEP excluído com sucesso!";
+        echo "<div class='alert success'>Cep excluída com sucesso!</div>";
     } else {
-        echo "Erro ao excluir o CEP: " . $stmt->error;
+        echo "<div class='alert error'>Erro ao adicionar carreira: " . $stmt->error . "</div>";
     }
 
     $stmt->close();
@@ -91,7 +91,7 @@ $conexao->close();
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -102,42 +102,24 @@ $conexao->close();
         </div>
 
         <ul>
-           <li><a id="#home" href="adm.view.php" id="inicio" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção de ir  para o Teste Vocacional"><span
-                        class="teste">Teste Vocacional</span></a>
-            </li>
-            <li><a id="#facul" href="../faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
-            <li><a id="#facul" href="../cadastro.view.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
-
-            <li><a class="mobile-entrar" href="../login.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
+            <li><a id="inicio" href="adm.view.php" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="destaque" href="../vocacao.view.php"><span class="teste" data-message="Opção de ir  para o Teste Vocacional">Teste Vocacional</span></a></li>
+            <li><a id="eventos" href="../faculdade.view.php" data-message="Opção de ir para as faculdades">Faculdades</a></li>
+            <li><a id="eventos" href="../cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
             <form action="../Services/deletar.php" method="POST">
-
                 <li class="mobile-excluir"><button data-message="Botão de excluir">Excluir</button></li>
-
             </form>
 
-            <a href="#" class="menu-button" data-message="mais opções para o usuário">
-                <i class="fa-solid fa-user"></i> <!--Cadastrar-se ou <br> Excluir conta-->
-            </a> 
+            <a href="#" class="menu-button" data-message="Mais opções para o usuário">
+                <i class="fa-solid fa-user"></i>
+            </a>
 
             <div class="tooltip">
                 <div class="position">
 
-                    <a href="../editar_usuario.php">
-                        <div class="menu-item-content">
-                            <span class="menu-item-content-title">
-                                Deseja editar seu usuário!
-                            </span>
-
-                            <span class="menu-item-content-subtitle">
-                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
-                            </span>
-                        </div>
-
-                    </a>
-
-                    <a href="../login.view.php">
+                    <a href="../login.view.php" data-message="Opção de ir para o Login da sua conta">
 
 
                         <div class="menu-item-content">
@@ -151,9 +133,19 @@ $conexao->close();
                         </div>
                     </a>
 
+                    <a href="../editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
 
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+                    </a>
 
-                    <a href="../../Services/desconectar.php">
+                    <a href="../../Services/desconectar.php" data-message="Opção de desconectar">
 
 
                         <div class="menu-item-content">
@@ -180,13 +172,11 @@ $conexao->close();
                         </span>
                     </div>
                 </div>
-            
         </ul>
     </header>
 
     <main class="main">
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="quadro">
                 <div class="title-pop">
                     <i class="fa-solid fa-triangle-exclamation"></i>
@@ -200,8 +190,8 @@ $conexao->close();
 
                 <form action="../../Services/deletar.php" method="POST">
                     <div id="btn-pop">
-                        <button class="btn-default" data-message="opção de cancelar">
-                            <a href="" data-message="opção de cancelar">Cancelar</a></button>
+                        <button class="btn-default">
+                            <a href="" data-message="Botão de cancelar">Cancelar</a></button>
                         <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                     </div>
                 </form>
@@ -219,7 +209,7 @@ $conexao->close();
             </form>
         </section>
 
-        <section class="careers-list " >
+        <section class="careers-list ">
             <h2 id="text">CEPs Existentes</h2>
             <?php if ($ceps->num_rows > 0): ?>
 
@@ -276,7 +266,7 @@ $conexao->close();
         <div class="boxs">
             <h2>Suporte</h2>
             <ul>
-                <li><a href="../termos.view.php"  data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
+                <li><a href="../termos.view.php" data-message="Opção de ir para o Termos de uso">Termos de uso </a></li>
                 <li><a href="../politica.view.php" data-message="Opção de ir para a Politica de Privacidade">Política de Privacidade </a></li>
             </ul>
         </div>
@@ -297,7 +287,8 @@ $conexao->close();
     </div>
 
 
-    <script src="../../../Public/assets/Js/index_adm.js"></script>
+    <!-- <script src="../../../Public/assets/Js/index_adm.js"></script> -->
+    <script src="../../../Public/assets/js/index.js"></script>
 
     <script>
         // Get the modal

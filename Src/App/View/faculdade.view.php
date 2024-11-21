@@ -61,7 +61,7 @@
             </li>
             <li><a id="#facul" href="faculdade.view.php" id="eventos" data-message="Opção de ir para as faculdades">Faculdades</a></li>
             <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
-            <li><a class="mobile-excluir" href="login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
+            <li><a class="mobile-excluir" href="../Services/desconectar.php" data-message="Opção de desconectar sua conta">Desconectar-se</a></li>
 
             <form action="../Services/deletar.php" method="POST">
 
@@ -80,15 +80,15 @@
                 <div class="position">
                     <div class="position">
 
-                        <a href="login.view.php" data-message="Opção de ir para o Login da sua conta">
+                    <a href="../Services/desconectar.php" data-message="Opção de desconectar sua conta">
                             <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Faça seu login
-                                    Clique aqui!
-                                </span>
+                            <span class="menu-item-content-title">
+                                Deseja sair da Conta<br>
+                            </span>
+
 
                                 <span class="menu-item-content-subtitle">
-                                    Entrar
+                                    Desconectar-se
                                 </span>
                             </div>
                         </a>

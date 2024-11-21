@@ -61,7 +61,7 @@ $result = $conexao->query($sql);
         </div>
 
         <ul>
-            <li><a id="#home" href="" id="inicio"  data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="#home" href="../index.view.php" id="inicio"  data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
             <li><a id="#vocacional" href="../vocacao.view.php" id="destaque"  data-message="Opção de ir  para o Teste Vocacional"><span
                         class="teste">Teste Vocacional</span></a>
             </li>
@@ -97,7 +97,7 @@ $result = $conexao->query($sql);
                         </div>
                     </a>
 
-                    <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                    <a href="../editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!
@@ -242,8 +242,8 @@ $result = $conexao->query($sql);
 
     </div>
 
-    <script src="../../../Public/assets/Js/index_adm.js"></script>
-
+    <!-- <script src="../../../Public/assets/Js/index_adm.js"></script> -->
+    <script src="../../../Public/assets/js/index.js"></script>
 
     <script>
         // Get the modal

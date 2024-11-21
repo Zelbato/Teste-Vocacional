@@ -95,7 +95,7 @@ if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
                         </div>
                     </a>
 
-                    <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                    <a href="../editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
                             <div class="menu-item-content">
                                 <span class="menu-item-content-title">
                                     Deseja editar seu usuário!

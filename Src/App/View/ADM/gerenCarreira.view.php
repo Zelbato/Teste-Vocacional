@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../../database/config.php';
-$user_id = $_SESSION['id_usuario']; 
+$user_id = $_SESSION['id_usuario'];
 
 // Verifica se o usuário tem nível de acesso "admin"
 if (!isset($_SESSION['nivel']) || $_SESSION['nivel'] != 'admin') {
@@ -65,12 +65,25 @@ $result = $conexao->query("SELECT * FROM carreira");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Carreiras</title>
     <link rel="stylesheet" href="../../../Public/assets/styles/ADM/GerenCarreira/gerenciar.carreira.css">
+    <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icones Bootstrap-->
+
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Bootstrap-->
 </head>
 
 <body>
@@ -88,8 +101,8 @@ $result = $conexao->query("SELECT * FROM carreira");
         </div>
 
         <ul>
-            <li><a id="inicio" href="" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="destaque" href="../vocacao.view.php"><span class="teste"  data-message="Opção de ir  para o Teste Vocacional">Teste Vocacional</span></a></li>
+            <li><a id="inicio" href="adm.view.php" data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
+            <li><a id="destaque" href="../vocacao.view.php"><span class="teste" data-message="Opção de ir  para o Teste Vocacional">Teste Vocacional</span></a></li>
             <li><a id="eventos" href="../faculdade.view.php" data-message="Opção de ir para as faculdades">Faculdades</a></li>
             <li><a id="eventos" href="../cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
             <li><a class="mobile-entrar" href="../cadastro.view.php" id="eventos" data-message="Opção de entrar na sua conta">Entrar</a></li>
@@ -119,17 +132,17 @@ $result = $conexao->query("SELECT * FROM carreira");
                         </div>
                     </a>
 
-                    <a href="editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Deseja editar seu usuário!
-                                </span>
+                    <a href="../editar_usuario.php?usuario_id=<?php echo $_SESSION['id_usuario']; ?>">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
 
-                                <span class="menu-item-content-subtitle">
-                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
-                                </span>
-                            </div>
-                        </a>
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+                    </a>
 
                     <a href="../../Services/desconectar.php" data-message="Opção de desconectar">
 
@@ -212,7 +225,7 @@ $result = $conexao->query("SELECT * FROM carreira");
         <div class="boxs">
             <h2>Logo</h2>
             <div class="logo">
-                <h1><a href="../index.view.php"  data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
+                <h1><a href="../index.view.php" data-message="Logo New Careers">New <span class="gradient">Careers</span>.</a></h1>
             </div>
         </div>
         <div class="boxs">

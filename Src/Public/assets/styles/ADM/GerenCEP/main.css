@@ -702,6 +702,25 @@ a.interligar {
     text-align: center;
 }
 
+.alert {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.alert.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+
 
 @media only screen and (max-device-width:700px) {
 
