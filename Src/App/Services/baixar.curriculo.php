@@ -4,8 +4,15 @@ require_once '../../dompdf-3.0.0/dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
-$id = $_GET['id'];
+// Obtém o ID do currículo
+$id = $_GET['id'] ?? null;
 
+if (!$id) {
+    echo "ID do currículo não fornecido.";
+    exit();
+}
+
+// Consulta o banco de dados para buscar os dados do currículo
 $stmt = $conexao->prepare("SELECT * FROM curriculos WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -19,11 +26,15 @@ if (!$curriculo) {
     exit();
 }
 
-// Verifica se a foto de perfil existe e converte para Base64
-$foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : null;
+// Define o diretório base para as imagens
+$base_dir = realpath(__DIR__ . '/../../../uploads');
 
-if ($foto_perfil) {
-    $path = __DIR__ . '/../../../../' . $foto_perfil;
+// Extrai o nome do arquivo da foto e monta o caminho seguro
+$foto_perfil = basename($curriculo['foto_perfil'] ?? '');
+$path = $base_dir . '/' . $foto_perfil;
+
+// Valida e processa a imagem da foto de perfil
+if ($foto_perfil && file_exists($path) && is_readable($path) && strpos($path, $base_dir) === 0) {
     $type = pathinfo($path, PATHINFO_EXTENSION);
     $data = file_get_contents($path);
     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
@@ -33,7 +44,7 @@ if ($foto_perfil) {
         <img src="' . $base64 . '" alt="Foto de Perfil">
     </div>';
 } else {
-    $foto_html = '';
+    $foto_html = '<div class="photo">Foto não disponível</div>';
 }
 
 // HTML do currículo para gerar o PDF
@@ -45,47 +56,53 @@ $html = '
     <title>Currículo de ' . htmlspecialchars($curriculo['nome']) . '</title>
     <style>
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: "Segoe UI", Arial, sans-serif; 
             color: #333; 
             margin: 0; 
             padding: 20px;
-            background-color: transparent;
+            background-color: #f9f9f9;
         }
         h1, h2 {
-            color: #2a4d8f;
+            color: #1e5aa4;
             text-align: center;
-            border-bottom: 2px solid #2a4d8f;
-            padding-bottom: 5px;
+            border-bottom: 3px solid #1e5aa4;
+            padding-bottom: 10px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .section {
             margin-bottom: 30px;
-            padding: 15px;
-            border: 1px solid #2a4d8f;
+            padding: 20px;
+            border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #ffffff;
-        }
-        .info {
-            margin-bottom: 10px;
-        }
-        .section h2 {
-            font-size: 20px;
-            color: #2a4d8f;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .section p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-        }
-        .label {
-            color: #2a4d8f;
-            font-weight: bold;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
         }
         .contact-info {
-            font-size: 14px;
+            padding: 10px 20px;
+            background-color: #e9f2fb;
+            border: 1px solid #1e5aa4;
+            border-radius: 8px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info div {
+            margin-bottom: 10px;
+        }
+        .label {
+            color: #1e5aa4;
+            font-weight: bold;
         }
         .photo {
             text-align: center;
@@ -93,19 +110,31 @@ $html = '
         }
         .photo img {
             max-width: 150px;
+            height: auto;
             border-radius: 50%;
-            border: 2px solid #2a4d8f;
+            border: 4px solid #1e5aa4;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-title {
+            font-size: 20px;
+            color: #1e5aa4;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ddd;
+        }
+        .info {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Currículo de ' . htmlspecialchars($curriculo['nome']) . '</h1>';
+    <h1></h1>';
 
 // Adiciona a foto de perfil, se existir
 $html .= $foto_html;
 
 $html .= '
-    <div class="section contact-info">
+    <div class="contact-info">
         <div><span class="label">Nome:</span> ' . htmlspecialchars($curriculo['nome']) . '</div>
         <div><span class="label">Endereço:</span> ' . htmlspecialchars($curriculo['endereco']) . '</div>
         <div><span class="label">Email:</span> ' . htmlspecialchars($curriculo['email']) . '</div>
@@ -113,24 +142,25 @@ $html .= '
     </div>
 
     <div class="section">
-        <h2>Experiência</h2>
+        <h2 class="section-title">Experiência</h2>
         <p>' . nl2br(htmlspecialchars($curriculo['experiencia'])) . '</p>
     </div>
 
     <div class="section">
-        <h2>Formação</h2>
+        <h2 class="section-title">Formação</h2>
         <p>' . nl2br(htmlspecialchars($curriculo['formacao'])) . '</p>
     </div>
 
     <div class="section">
-        <h2>Habilidades</h2>
-        <p>' . htmlspecialchars($curriculo['habilidades']) . '</p>
+        <h2 class="section-title">Habilidades</h2>
+        <p>' . nl2br(htmlspecialchars($curriculo['habilidades'])) . '</p>
     </div>
 </body>
 </html>
 ';
 
-// Gera o PDF
+
+// Gera o PDF usando o DOMPDF
 $dompdf = new Dompdf();
 $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');

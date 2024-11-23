@@ -56,6 +56,8 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
     <!--Bootstrap-->
     <title>Teste Vocacional</title>
     <title>Currículo de <?php echo htmlspecialchars($curriculo['nome']); ?></title>
+
+    
     <style>
         @import '../../Public/assets/Global/style/index.css';
         @import '../../Public/assets/Global/style/header/header-2.css';
@@ -304,7 +306,7 @@ a
 
             <section class="curriculo">
                 <div class="curriculo-content">
-                    <h2>Curriculo de <?php echo htmlspecialchars($curriculo['nome']); ?></h2>
+                    <h2></h2>
 
                     <?php if ($foto_perfil): ?>
                         <div class="photo">
@@ -337,6 +339,12 @@ a
                     
                 </div>
             </section>
+            <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
+            <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
+            <form action="../Services/deletar_curriculo.php" method="POST" style="display:inline;">
+                <input type="hidden" name="id_curriculo" value="<?php echo $curriculo['id']; ?>">
+                <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
+            </form>
             <div style="text-align: center; margin-top: 20px;">
                         <a href="Gerenciar.curriculo.php" style="color: #2a4d8f; text-decoration: none;">Voltar para Lista de Currículos</a>
                     </div>

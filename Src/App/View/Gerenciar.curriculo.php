@@ -179,17 +179,21 @@ $result = $stmt->get_result();
             <div class="scroll">
                 <?php if ($result->num_rows > 0): ?>
                     <ul>
-                        <?php while ($curriculo = $result->fetch_assoc()): ?>
-                            <li>
-                                <strong><?php echo htmlspecialchars($curriculo['nome']); ?></strong>
-                            </li>
-                            <li>
-                                <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
-                                <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Visualizar</a>
-                                <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
-                            </li>
-                        <?php endwhile; ?>
-                    </ul>
+    <?php while ($curriculo = $result->fetch_assoc()): ?>
+        <li>
+            <strong><?php echo htmlspecialchars($curriculo['nome']); ?></strong>
+        </li>
+        <li>
+            <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
+            <a href="ver.curriculo_view.php?id=<?php echo $curriculo['id']; ?>">Visualizar</a>
+            <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
+            <form action="../Services/deletar_curriculo.php" method="POST" style="display:inline;">
+                <input type="hidden" name="id_curriculo" value="<?php echo $curriculo['id']; ?>">
+                <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
+            </form>
+        </li>
+    <?php endwhile; ?>
+</ul>
                 <?php else: ?>
                     <p>Você ainda não possui currículos cadastrados.</p>
                 <?php endif; ?>

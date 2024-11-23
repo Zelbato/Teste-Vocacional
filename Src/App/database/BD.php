@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS cursos (
 
 CREATE TABLE IF NOT EXISTS curriculos (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
     nome VARCHAR(255) NOT NULL,
     foto_perfil varchar(255),
     endereco VARCHAR(255) NOT NULL,
@@ -66,7 +67,8 @@ CREATE TABLE IF NOT EXISTS curriculos (
     telefone VARCHAR(20),
     experiencia TEXT NOT NULL,
     formacao TEXT NOT NULL,
-    habilidades VARCHAR(255)
+    habilidades VARCHAR(255),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
 ALTER TABLE curriculos ADD COLUMN id_usuario INT NOT NULL, ADD FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE;

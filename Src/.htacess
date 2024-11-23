@@ -1,5 +1,5 @@
 # Permite o acesso ao diretório uploads
-<Directory "/Src/uploads">
+<Directory "/uploads/">
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
