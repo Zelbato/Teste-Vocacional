@@ -8,10 +8,10 @@ if (isset($_SESSION['id_instituicao'])) {
     $_SESSION = [];
     
     session_destroy();
-    header("Location: ../View/login.view.php"); 
+    header("Location: ../View/Instituição/instituicao.login.view.php"); 
     exit;
 } else {
-    header("Location: ../View/login.view.php"); 
+    header("Location: ../View/Instituição/instituicao.login.view.php"); 
     exit;
 }
 ?>
