@@ -1,5 +1,5 @@
 <?php
-require '../database/config.php';
+require '../../database/config.php';
 
 // Recebe o id_instituicao da URL
 if (isset($_GET['id_instituicao'])) {
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css"
-        href="../../Public/assets/styles/PagInstituicao/EditarInst/editar.instituicao.css?v=<?php echo time(); ?>">
+        href="../../../Public/assets/styles/PagInstituicao/EditarInst/editar.instituicao.css?v=<?php echo time(); ?>">
 
     <!--Icones Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -115,14 +115,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <ul>
             <li><a id="#home" href="instituicao.index.view.php" id="inicio"  data-message="Opção de voltar para a pagina inicial">Inicio</a></li>
-            <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span class="teste">Teste
-                        Vocacional</span></a>
             </li>
-            <li><a id="#facul" href="i." id="eventos" data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
+            <li><a id="#facul" href="instituicao.sobreNos.view.php" id="eventos" data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos"  data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
             <li><a class="mobile-excluir" href="login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
-            <form action="../Services/deletar.php" method="POST">
+            <form class="mobile-excluir" action="../Services/deletar.php" method="POST">
 
                 <li class="mobile-excluir"> <button data-message="Botão de excluir">Excluir</button> </li>
 
@@ -134,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="tooltip">
                 <div class="position">
 
-                    <a href="" data-message="Opção de ir para o Login da sua conta">
+                    <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da sua conta">
                         <div class="menu-item-content">
                             <span class="menu-item-content-title">
                                 Faça seu login<br>
@@ -147,9 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                     </a>
 
-                    <br>
-
-                    <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da instituição">
+                    <a href="../../Services/desconectar.instituicao.php" data-message="Opção de ir para o Login da instituição">
 
 
                         <div class="menu-item-content">
@@ -166,7 +162,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                     </a>
 
-                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">

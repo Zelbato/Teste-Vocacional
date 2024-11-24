@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['question_text'])) {
             }
         }
     }
-    header("Location: editar_quest.php?id=$question_id");
+    header("Location: gerenciar.questao.view.php");
     exit();
 }
 

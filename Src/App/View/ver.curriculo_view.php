@@ -57,7 +57,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
     <title>Teste Vocacional</title>
     <title>Currículo de <?php echo htmlspecialchars($curriculo['nome']); ?></title>
 
-    
+
     <style>
         @import '../../Public/assets/Global/style/index.css';
         @import '../../Public/assets/Global/style/header/header-2.css';
@@ -67,14 +67,6 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-
-        body {
-            height: 100vh;
-            width: 100%;
-            font-family: var(--font);
-            background: var(--white);
         }
 
         .main {
@@ -95,7 +87,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
             flex-direction: column;
             width: 700px;
             height: auto;
-            background: transparent;
+            background: #f9f9f9;
         }
 
         .curriculo .curriculo-content {
@@ -105,21 +97,24 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
             padding: 40px;
         }
 
-        
+
         h2 {
-            color: #2a4d8f;
+            color: #1e5aa4;
             text-align: center;
-            border-bottom: 2px solid #2a4d8f;
-            padding-bottom: 5px;
+            border-bottom: 3px solid #1e5aa4;
+            padding-bottom: 10px;
         }
+
 
         .section {
             margin-bottom: 30px;
-            padding: 15px;
-            border: 1px solid #2a4d8f;
+            padding: 20px;
+            border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
 
         .info {
             margin-bottom: 10px;
@@ -145,8 +140,16 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
         }
 
         .contact-info {
-            font-size: 14px;
+            padding: 10px 20px;
+            background-color: #e9f2fb;
+            border: 1px solid #1e5aa4;
+            border-radius: 8px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
         }
 
         .photo {
@@ -156,8 +159,50 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
 
         .photo img {
             max-width: 150px;
-            /* border-radius: 50%;
-            border: 2px solid #2a4d8f; */
+            height: auto;
+            border-radius: 50%;
+            border: 4px solid #1e5aa4;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #1e5aa4;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .btns {
+            margin-top: 20px;
+        }
+
+        .link-btn {
+            background-color: #206ab8;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: all .5s;
+        }
+
+        .form-curriculo .link-btn:hover {
+            background-color: var(--azulHover);
+            color: #f3f6f9;
+        }
+
+        .btn-delete {
+            background-color: #206ab8;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: all .5s;
         }
     </style>
 </head>
@@ -178,7 +223,7 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -256,7 +301,6 @@ $foto_perfil = !empty($curriculo['foto_perfil']) ? $curriculo['foto_perfil'] : n
                                     </span>
                                 </div>
                             </a>
-a
 
 
                             <a href="caminho.resultado.view.php" data-message="Opção de ir para a sua carreira obtida">
@@ -298,59 +342,63 @@ a
                     <div id="btn-pop">
                         <button class="btn-default">
                             <a href="" data-message="Botão de cancelar">Cancelar</a></button>
-                        <button type="submit" class="close excluir" data-message="Botão de excluir" >Excluir</button>
+                        <button type="submit" class="close excluir" data-message="Botão de excluir">Excluir</button>
                     </div>
                 </form>
             </div>
         </div>
 
-            <section class="curriculo">
-                <div class="curriculo-content">
-                    <h2></h2>
+        <section class="curriculo">
+            <div class="curriculo-content">
+                <h2></h2>
 
-                    <?php if ($foto_perfil): ?>
-                        <div class="photo">
-                            <img src="<?php echo htmlspecialchars($foto_perfil); ?>" alt="Foto de Perfil">
-                        </div>
-                    <?php endif; ?>
-
-                    <div class="section contact-info">
-                        <div><span class="label">Nome:</span> <?php echo htmlspecialchars($curriculo['nome']); ?></div>
-                        <div><span class="label">Endereço:</span> <?php echo htmlspecialchars($curriculo['endereco']); ?></div>
-                        <div><span class="label">Email:</span> <?php echo htmlspecialchars($curriculo['email']); ?></div>
-                        <div><span class="label">Telefone:</span> <?php echo htmlspecialchars($curriculo['telefone']); ?></div>
+                <?php if ($foto_perfil): ?>
+                    <div class="photo">
+                        <img src="<?php echo htmlspecialchars($foto_perfil); ?>" alt="Foto de Perfil">
                     </div>
+                <?php endif; ?>
 
-                    <div class="section">
-                        <h2>Experiência</h2>
-                        <p><?php echo nl2br(htmlspecialchars($curriculo['experiencia'])); ?></p>
-                    </div>
-
-                    <div class="section">
-                        <h2>Formação</h2>
-                        <p><?php echo nl2br(htmlspecialchars($curriculo['formacao'])); ?></p>
-                    </div>
-
-                    <div class="section">
-                        <h2>Habilidades</h2>
-                        <p><?php echo htmlspecialchars($curriculo['habilidades']); ?></p>
-                    </div>
-
-                    
+                <div class="section contact-info">
+                    <div><span class="label">Nome:</span> <?php echo htmlspecialchars($curriculo['nome']); ?></div>
+                    <div><span class="label">Endereço:</span> <?php echo htmlspecialchars($curriculo['endereco']); ?></div>
+                    <div><span class="label">Email:</span> <?php echo htmlspecialchars($curriculo['email']); ?></div>
+                    <div><span class="label">Telefone:</span> <?php echo htmlspecialchars($curriculo['telefone']); ?></div>
                 </div>
-            </section>
-            <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
-            <a href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
+
+                <div class="section">
+                    <h2>Experiência</h2>
+                    <p><?php echo nl2br(htmlspecialchars($curriculo['experiencia'])); ?></p>
+                </div>
+
+                <div class="section">
+                    <h2>Formação</h2>
+                    <p><?php echo nl2br(htmlspecialchars($curriculo['formacao'])); ?></p>
+                </div>
+
+                <div class="section">
+                    <h2>Habilidades</h2>
+                    <p><?php echo htmlspecialchars($curriculo['habilidades']); ?></p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <div class="btns">
+            <a class="link-btn" href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
+            <a class="link-btn" href="Ecurriculo.view.php?id=<?php echo $curriculo['id']; ?>">Editar</a>
             <form action="../Services/deletar_curriculo.php" method="POST" style="display:inline;">
                 <input type="hidden" name="id_curriculo" value="<?php echo $curriculo['id']; ?>">
-                <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
+                <button class="btn-delete" type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
             </form>
-            <div style="text-align: center; margin-top: 20px;">
-                        <a href="Gerenciar.curriculo.php" style="color: #2a4d8f; text-decoration: none;">Voltar para Lista de Currículos</a>
-                    </div>
-        </main>
+        </div>
 
-        <script src="../../Public/assets/Js/index.js"></script>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="Gerenciar.curriculo.php" style="color: #2a4d8f; text-decoration: none;">Voltar para Lista de Currículos</a>
+        </div>
+    </main>
+
+    <script src="../../Public/assets/Js/index.js"></script>
 
     <!-- <script src="../../Public/assets/Js/index_adm.js"></script> -->
 

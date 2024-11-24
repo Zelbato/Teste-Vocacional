@@ -156,9 +156,20 @@ $result = $stmt->get_result();
                         </div>
                     </a>
 
-                    <br>
+                    <a href="editar_instituição.php?id_instituicao=<?php echo $_SESSION['id_instituicao']; ?>">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
 
-                    <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da instituição">
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+                    </a>
+
+
+                    <a href="../../Services/desconectar.instituicao.php" data-message="Opção de ir para o Login da instituição">
 
 
                         <div class="menu-item-content">
@@ -174,8 +185,6 @@ $result = $stmt->get_result();
                             </span>
                         </div>
                     </a>
-
-                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">

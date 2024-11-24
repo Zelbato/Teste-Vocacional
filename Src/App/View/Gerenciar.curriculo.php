@@ -189,7 +189,7 @@ $result = $stmt->get_result();
             <a href="../Services/baixar.curriculo.php?id=<?php echo $curriculo['id']; ?>">Baixar</a>
             <form action="../Services/deletar_curriculo.php" method="POST" style="display:inline;">
                 <input type="hidden" name="id_curriculo" value="<?php echo $curriculo['id']; ?>">
-                <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
+                <button class="btn-delete" type="submit" onclick="return confirm('Tem certeza que deseja deletar este currículo?');">Deletar</button>
             </form>
         </li>
     <?php endwhile; ?>

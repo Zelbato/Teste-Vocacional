@@ -35,6 +35,16 @@ if ($result->num_rows == 0) {
 } else {
     $instituicoes = $result->fetch_all(MYSQLI_ASSOC); // Pega todas as instituições
 }
+
+$base_dir = realpath(__DIR__ . '/../../../uploads');
+
+// Extrai o nome do arquivo da foto e monta o caminho seguro
+$foto_Curso = basename($stmt['foto_curso'] ?? '');
+$path = $base_dir . '/' . $foto_Curso;
+$fotoInstituicao = $foto_Curso;
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -253,17 +263,17 @@ if ($result->num_rows == 0) {
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
                                             </a>
-                                            <img src="<?php echo htmlspecialchars('/teste-vocacional/uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
+                                            <img src="<?php echo htmlspecialchars('/Teste-Vocacional/uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
                                         </div>
                                     <?php else: ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank"></a>
-                                            <img src="/teste-vocacional/uploads/default.png">
+                                            <!-- <img src="/teste-vocacional/uploads/default.png"> -->
                                         </div>
                                     <?php endif; ?>
 
                                     <!-- <strong>Curso:</strong> -->
-                                    <p class="nome-fantasia"><?php echo htmlspecialchars($instituicao['nome_curso']); ?></p>
+                                    <p  class="nome-fantasia" style="text-align: center;"><?php echo htmlspecialchars($instituicao['nome_curso']); ?></p>
 
                                     <br>
 

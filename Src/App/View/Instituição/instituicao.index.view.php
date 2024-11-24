@@ -43,9 +43,9 @@ if (!isset($_SESSION['id_instituicao'])) {
 
 <body>
 
-  <!--V-Libras-->
+    <!--V-Libras-->
 
-  <div vw class="enabled">
+    <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
@@ -55,12 +55,12 @@ if (!isset($_SESSION['id_instituicao'])) {
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
+
     <header class="header">
 
         <div class="menu-mobile">
             <label for="chk1" onclick="menu()">
-            <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
         </div>
 
@@ -75,7 +75,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             <!-- <li><a id="#vocacional" href="../vocacao.view.php" id="destaque" data-message="Opção de ir  para o Teste Vocacional"><span class="teste">Teste
                         Vocacional</span></a> -->
             </li>
-            <li><a id="#facul" href="instituicao.sobreNos.view.php" id="eventos"  data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
+            <li><a id="#facul" href="instituicao.sobreNos.view.php" id="eventos" data-message="Opção de ir para o sobre nós">Sobre Nós</a></li>
             <li><a id="#cadastro" href="instituicao.cadastro.php" id="eventos" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
             <li><a class="mobile-excluir" href="instituicao.login.view.php" data-message="Opção de entrar na sua conta">Entrar</a></li>
 
@@ -91,22 +91,33 @@ if (!isset($_SESSION['id_instituicao'])) {
             <div class="tooltip">
                 <div class="position">
 
-                <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da instituição">
-                            <div class="menu-item-content">
-                                <span class="menu-item-content-title">
-                                    Faça seu login<br>
-                                    Clique aqui!
-                                </span>
-
-                                <span class="menu-item-content-subtitle">
-                                    Entrar <br>
-                                </span>
-                            </div>
-                        </a>
-
-                        <br>
-
                     <a href="instituicao.login.view.php" data-message="Opção de ir para o Login da instituição">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Faça seu login<br>
+                                Clique aqui!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                Entrar <br>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="editar_instituição.php?id_instituicao=<?php echo $_SESSION['id_instituicao']; ?>">
+                        <div class="menu-item-content">
+                            <span class="menu-item-content-title">
+                                Deseja editar seu usuário!
+                            </span>
+
+                            <span class="menu-item-content-subtitle">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                            </span>
+                        </div>
+                    </a>
+
+
+                    <a href="../../Services/desconectar.instituicao.php" data-message="Opção de ir para o Login da instituição">
 
 
                         <div class="menu-item-content">
@@ -122,8 +133,6 @@ if (!isset($_SESSION['id_instituicao'])) {
                             </span>
                         </div>
                     </a>
-
-                    <br>
 
                     <div class="menu-item-content">
                         <span class="menu-item-content-title">
@@ -210,7 +219,7 @@ if (!isset($_SESSION['id_instituicao'])) {
             <h2>Inicio</h2>
             <ul>
                 <li><a href="../index.view.php" data-message="Opção de voltar para a tela inicial">Home </a></li>
-                <li><a href="../vocacao.view.php"  data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
+                <li><a href="../vocacao.view.php" data-message="Opção de ir para o Teste Vocacional">Teste Vocacional </a></li>
                 <li><a href="i." data-message="Opção de ir para as Faculdades">Faculdades </a></li>
             </ul>
         </div>

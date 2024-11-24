@@ -81,6 +81,23 @@ section.form-curriculo {
     background-color:var(--azulHover);
     color: #f3f6f9;
 }
+
+.form-curriculo .btn-delete {
+    background-color: #206ab8;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all .5s;
+}
+
+.form-curriculo .btn-delete:hover {
+    background-color:var(--azulHover);
+    color: #f3f6f9;
+}
 @media only screen and (max-device-width:600px){
 
     section.form-curriculo {
