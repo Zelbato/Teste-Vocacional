@@ -16,7 +16,7 @@ const initTypingAnimation = () => {
           })
 
       } else if (element == span) {
-          element.innerHTML = 'área do Administrador! \n '
+          element.innerHTML = 'Área do Administrador! \n '
           const textToArray = element.innerHTML.split('')
           element.innerHTML = ''
 

@@ -252,8 +252,9 @@ if ($result->num_rows == 0) {
                                     <?php if (!empty($instituicao['foto_curso'])): ?>
                                         <div class="image-container">
                                             <a href="<?php echo htmlspecialchars($instituicao['url']); ?>" target="_blank">
+                                            
+                                            <img src="<?php echo htmlspecialchars('../../../uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
                                             </a>
-                                            <img src="<?php echo htmlspecialchars('/teste-vocacional/uploads/' . basename($instituicao['foto_curso'])); ?>" alt="Imagem do curso" class="curso-img">
                                         </div>
                                     <?php else: ?>
                                         <div class="image-container">

@@ -76,7 +76,7 @@ const initTypingAnimation = () => {
     const typingAnimation = (element) => {
 
         if (element == title) {
-            element.innerHTML = 'Começe a Estudar Agora Mesmo! '
+            element.innerHTML = 'Comece a Estudar Agora Mesmo! '
             const textToArray = element.innerHTML.split('')
             element.innerHTML = ''
 

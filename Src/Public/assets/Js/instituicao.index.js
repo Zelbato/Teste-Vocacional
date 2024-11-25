@@ -16,7 +16,7 @@ const initTypingAnimation = () => {
             })
   
         } else if (element == span) {
-            element.innerHTML = 'área da Instituição! \n '
+            element.innerHTML = 'Área da Instituição! \n '
             const textToArray = element.innerHTML.split('')
             element.innerHTML = ''
   

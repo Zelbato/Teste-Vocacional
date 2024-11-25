@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     echo "<div class='alert alert-success'>Questão e opções adicionadas com sucesso!</div>";
+    header("Location: gerenciar.questao.view.php");
 }
 ?>
 <!DOCTYPE html>
