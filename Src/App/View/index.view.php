@@ -87,7 +87,7 @@ if ($_SESSION['nivel'] === 'user') {
                         class="teste">Teste Vocacional</span></a>
             </li>
             <li><a id="#facul eventos" href="faculdade.view.php" data-message="Opção de ir para as faculdades">Faculdades</a></li>
-            <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li>
+            <!-- <li><a id="#cadastro cadastrar" href="cadastro.view.php" data-message="Opção de ir para o cadastro da sua conta">Cadastrar-se</a></li> -->
             <li><a class="mobile-excluir" href="../Services/desconectar.php" data-message="Opção de desconectar sua conta">Desconectar-se</a></li>
 
             <form action="../Services/deletar.php" method="POST" >
@@ -127,7 +127,7 @@ if ($_SESSION['nivel'] === 'user') {
                                 </span>
 
                                 <span class="menu-item-content-subtitle">
-                                    <i class="fa-solid fa-pen-to-square"></i> Editar Usuário
+                                    <!-- <i class="fa-solid fa-pen-to-square"></i>--> Editar Usuário 
                                 </span>
                             </div>
                         </a>

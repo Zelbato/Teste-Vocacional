@@ -1,5 +1,6 @@
 :root {
     --azul: #206ab8;
+    --azulReverse:rgb(72, 100, 178);
     --azulTrasp: #ffffffaa;
     --azulHover: #174a81;
     --azulClaro: #2289f8;
@@ -7,6 +8,7 @@
     --verdeAgua:  rgba(83, 127, 208, 0.416);
     --azulEscuro: #111827;
     --white: #f3f6f9;
+    --whiteFull:#d2d2d2;
     --preto: rgb(25, 25, 25);
     --font: 'Poppins', sans-serif;
     --vermelho: #d94c4c;
@@ -14,6 +16,8 @@
     --txtTitulo: #7a7a7a;
     --cinzaClaro: #ccc;
     --cinzaMedio: #aeaeae;
+    --yellow: rgb(255, 204, 0);
+    --green:rgb(80, 185, 80);
 
     --dark: #202020;
     --black: #131826;

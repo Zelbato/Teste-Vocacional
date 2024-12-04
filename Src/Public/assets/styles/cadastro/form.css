@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--preto);
+    background: var(--white); /* ou --white*/
     padding: 0px;
 }
 
@@ -20,7 +20,7 @@
 
 .form-image .title-form h1 {
     font-size: 25px;
-    color: var(--azul);
+    color: var(--azul);/* azul*/
     text-shadow: 0px 0px 10px #2289f850;
     font-family: var(--font);
     font-weight: 600;
@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: transparent;
+    background: var(--white); /* transparent*/
     /* border: 1px solid var(--azul); */
 
     padding: 20px 40px;
@@ -78,21 +78,21 @@
     }
 }
 
-@keyframes led {
+@keyframes led { /* azul*/
     0% {
-        box-shadow: 0px 0px 25px #72b6ff50;
+        box-shadow: 0px 0px 25px #a2a2a29c;
     }
 
     50% {
-        box-shadow: 0px 0px 25px #72b6ff7e;
+        box-shadow: 0px 0px 25px #a2a2a2bb;
     }
 
     75% {
-        box-shadow: 0px 0px 25px #72b6ffb1;
+        box-shadow: 0px 0px 25px #a2a2a2d6;
     }
 
     100% {
-        box-shadow: 0px 0px 25px #72b6ffe0;
+        box-shadow: 0px 0px 25px #a2a2a2;
     }
 }
 
@@ -150,7 +150,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .main .input-box {
@@ -170,7 +170,7 @@
     padding: 0 15px;
     border: none;
     background: transparent;
-    color: var(--white);
+    color: var(--preto);
     border-bottom: 1px solid var(--azulClaro);
     /* border-radius: 0px; */
     outline: none;
@@ -190,12 +190,12 @@
 .main .gender-title h6 {
     font-size: 14px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--azul);
 }
 
 .main .input-box::placeholder {
-    color: #fff;
-    background: var(--white);
+    color: var(--azul);
+    background: var(--azul);
 }
 
 
@@ -217,7 +217,7 @@
 .main .gender-input label {
     font-size: 14px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--azul);
 }
 
 .main .continue-button button {
