@@ -17,8 +17,8 @@ header {
 
 
 header.rolagem {
-    background: var(--white);
-    border-bottom: 1px solid var(--white);
+    background: var(--preto);
+    border-bottom: 1px solid var(--preto);
 }
 i{
     color: #fff;
