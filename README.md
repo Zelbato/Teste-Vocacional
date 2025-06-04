@@ -107,14 +107,14 @@ Siga estes passos simples:
 
 1.  **Clonar o Repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/nome-do-seu-repositorio.git](https://github.com/seu-usuario/nome-do-seu-repositorio.git)
+    git clone [https://github.com/Zelbato/Teste-Vocacional](https://github.com/Zelbato/Teste-Vocacional)
     ```
 2.  **Mover os Arquivos para o Servidor Web:**
-    * Copie a pasta `nome-do-seu-repositorio` (que você acabou de clonar) para o diretório de documentos do seu servidor web (geralmente `htdocs` no XAMPP/WAMP ou `www` no MAMP).
+    * Copie a pasta `Teste-Vocacional` (que você acabou de clonar) para o diretório de documentos do seu servidor web (geralmente `htdocs` no XAMPP/WAMP ou `www` no MAMP).
     * *Exemplo para XAMPP (Windows):* Cole a pasta em `C:\xampp\htdocs\`
 3.  **Acessar o Projeto no Navegador:**
     * Com seu servidor web iniciado, abra seu navegador preferido e digite o seguinte endereço:
-        `http://localhost/nome-do-seu-repositorio/`
+        `http://localhost/Teste-Vocacional/`
     * *(Lembre-se de substituir `nome-do-seu-repositorio` pelo nome exato da pasta que você copiou para o `htdocs`)*
 
 ---
@@ -123,8 +123,8 @@ Siga estes passos simples:
 
 Sua colaboração é muito bem-vinda! Se você encontrar algum bug, tiver sugestões de melhoria ou quiser adicionar novas funcionalidades, sinta-se à vontade para:
 
-* Abrir uma [Issue](https://github.com/seu-usuario/nome-do-seu-repositorio/issues)
-* Criar um [Pull Request](https://github.com/seu-usuario/nome-do-seu-repositorio/pulls)
+* Abrir uma [Issue](https://github.com/Zelbato/Teste-Vocacional/issues)
+* Criar um [Pull Request]([https://github.com/Zelbato/Teste-Vocacional/pulls)
 
 ---
 
@@ -139,7 +139,7 @@ Este projeto está sob a licença **MIT License**. Para mais detalhes, consulte 
 Desenvolvido com dedicação por:
 
 * **[Heitor André Dublado Araujo]** - Desenvolvedor(a) do TCC
-    * [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-linkedin) * [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seu-github) ---
+    * [![LinkedIn](https://www.linkedin.com/in/heitor-zelbato-9693a92a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) * [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Zelbato) ---
 
 ### 🙏 Agradecimentos
 
