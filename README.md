@@ -34,35 +34,28 @@ Confira algumas capturas de tela do NewCareers em funcionamento:
 
 ### Tela Inicial / Dashboard
 
-![Tela Inicial](Teste-Vocacional/Src/Public/assets/Img/Dashborn/Tela-Inicial.png)
+![Tela Inicial](Src/Public/assets/Img/Dashborn/Tela-Inicial.png)
 *Uma visão geral da interface principal do sistema ao iniciar.*
 
 ---
 
 ### Teste Vocacional
 
-![Teste Vocacional](caminho/para/sua/imagem2.png)
+![Teste Vocacional](Src/Public/assets/Img/Dashborn/Teste-Vocacional.png)
 *Exemplo de uma das perguntas do teste vocacional.*
 
 ---
 
-### Resultados do Teste e Sugestão de Áreas
+### Resultados do Teste e Busca de Faculdades
 
-![Resultados do Teste](caminho/para/sua/imagem3.png)
+![Resultados do Teste](Src/Public/assets/Img/Dashborn/Resultado.png)
 *Mostra o resultado do teste e as áreas profissionais sugeridas.*
-
----
-
-### Busca de Faculdades/Cursos Próximos
-
-![Faculdades Próximas](caminho/para/sua/imagem4.png)
-*Interface que exibe as opções de ensino baseadas no resultado do teste e localização.*
 
 ---
 
 ### Criação de Currículo
 
-![Criador de Currículo](caminho/para/sua/imagem5.png)
+![Criador de Currículo](Src/Public/assets/Img/Dashborn/Criar-Curriculo.png)
 *O ambiente para preencher e gerar o currículo profissional.*
 
 ---
