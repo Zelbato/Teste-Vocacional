@@ -34,7 +34,7 @@ Confira algumas capturas de tela do NewCareers em funcionamento:
 
 ### Tela Inicial / Dashboard
 
-![Tela Inicial](caminho/para/sua/imagem1.png)
+![Tela Inicial](Teste-Vocacional/Src/Public/assets/Img/Dashborn/Tela-Inicial.png)
 *Uma visão geral da interface principal do sistema ao iniciar.*
 
 ---
