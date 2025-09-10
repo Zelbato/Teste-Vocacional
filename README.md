@@ -131,7 +131,7 @@ Este projeto está sob a licença **MIT License**. Para mais detalhes, consulte 
 
 Desenvolvido com dedicação por:
 
-* **[Heitor André Dublado Araujo]** - Desenvolvedor(a) do TCC
+* **[Heitor André Zelbato Araujo]** - Desenvolvedor(a) do TCC
     *   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/heitor-zelbato-9693a92a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) * [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Zelbato) ---
 
 ### 🙏 Agradecimentos
