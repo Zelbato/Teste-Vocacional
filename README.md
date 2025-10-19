@@ -34,35 +34,28 @@ Confira algumas capturas de tela do NewCareers em funcionamento:
 
 ### Tela Inicial / Dashboard
 
-![Tela Inicial](Teste-Vocacional/Src/Public/assets/Img/Dashborn/Tela-Inicial.png)
+![Tela Inicial](Src/Public/assets/Img/Dashborn/Tela-Inicial.png)
 *Uma visão geral da interface principal do sistema ao iniciar.*
 
 ---
 
 ### Teste Vocacional
 
-![Teste Vocacional](caminho/para/sua/imagem2.png)
+![Teste Vocacional](Src/Public/assets/Img/Dashborn/Teste-Vocacional.png)
 *Exemplo de uma das perguntas do teste vocacional.*
 
 ---
 
-### Resultados do Teste e Sugestão de Áreas
+### Resultados do Teste e Busca de Faculdades
 
-![Resultados do Teste](caminho/para/sua/imagem3.png)
+![Resultados do Teste](Src/Public/assets/Img/Dashborn/Resultado.png)
 *Mostra o resultado do teste e as áreas profissionais sugeridas.*
-
----
-
-### Busca de Faculdades/Cursos Próximos
-
-![Faculdades Próximas](caminho/para/sua/imagem4.png)
-*Interface que exibe as opções de ensino baseadas no resultado do teste e localização.*
 
 ---
 
 ### Criação de Currículo
 
-![Criador de Currículo](caminho/para/sua/imagem5.png)
+![Criador de Currículo](Src/Public/assets/Img/Dashborn/Criar-Curriculo.png)
 *O ambiente para preencher e gerar o currículo profissional.*
 
 ---
@@ -138,7 +131,7 @@ Este projeto está sob a licença **MIT License**. Para mais detalhes, consulte 
 
 Desenvolvido com dedicação por:
 
-* **[Heitor André Dublado Araujo]** - Desenvolvedor(a) do TCC
+* **[Heitor André Zelbato Araujo]** - Desenvolvedor(a) do TCC
     *   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/heitor-zelbato-9693a92a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) * [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Zelbato) ---
 
 ### 🙏 Agradecimentos
