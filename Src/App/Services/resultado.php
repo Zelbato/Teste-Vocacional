@@ -11,7 +11,8 @@ $careers_count = [
 
 foreach ($_POST as $key => $value) {
     if (isset($careers_count[$value])) {
-        $careers_count[$value]++;
+        $careers_count[$value]++; 
+        
     } 
 }
 
